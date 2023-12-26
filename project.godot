@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Crater-Province-Level"
+run/main_scene="res://Main.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://Textures/icon.png"
+
+[display]
+
+window/size/mode=2
+window/vsync/vsync_mode=0
+
+[rendering]
+
+lights_and_shadows/use_physical_light_units=true
+textures/default_filters/anisotropic_filtering_level=3
+textures/decals/filter=5
+textures/light_projectors/filter=5
+occlusion_culling/use_occlusion_culling=true

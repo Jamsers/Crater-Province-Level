@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccnpmrm87lee7"]
+
+[ext_resource type="PackedScene" uid="uid://b7jhv1tc6iycy" path="res://Models/Tree_Pine.glb" id="1_cg1s5"]
+
+[node name="Tree_Pine" instance=ExtResource("1_cg1s5")]
+
+[node name="Tree_Pine" parent="." index="0"]
+visible = false

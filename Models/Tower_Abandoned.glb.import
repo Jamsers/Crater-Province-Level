@@ -1,0 +1,41 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c0t6vtnl6kh75"
+path="res://.godot/imported/Tower_Abandoned.glb-9e6a09c1638df37b9404857cc6763b1c.scn"
+
+[deps]
+
+source_file="res://Models/Tower_Abandoned.glb"
+dest_files=["res://.godot/imported/Tower_Abandoned.glb-9e6a09c1638df37b9404857cc6763b1c.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=2
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"Concrete": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Generic/Concrete_Tower.tres"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

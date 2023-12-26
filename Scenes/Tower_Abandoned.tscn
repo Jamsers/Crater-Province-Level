@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://rftjlwpq1vd8"]
+
+[ext_resource type="PackedScene" uid="uid://c0t6vtnl6kh75" path="res://Models/Tower_Abandoned.glb" id="1_sphbu"]
+
+[node name="Tower_Abandoned" instance=ExtResource("1_sphbu")]
