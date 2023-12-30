@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmdirl3sce2qt"]
+
+[ext_resource type="PackedScene" uid="uid://cf1frtvlhh24j" path="res://Models/Torch_Village.glb" id="1_adl3s"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5w4u3"]
+size = Vector3(0.2, 0.01, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lx848"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_intensity = 10.0
+
+[node name="Torch_Village" instance=ExtResource("1_adl3s")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82032, 0)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+omni_shadow_mode = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2"]
+visible = false
+mesh = SubResource("BoxMesh_5w4u3")
+surface_material_override/0 = SubResource("StandardMaterial3D_lx848")

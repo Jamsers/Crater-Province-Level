@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Lighting" load_steps=2 format=3 uid="uid://dmjapq17u51xm"]
+
+[ext_resource type="Script" path="res://Scripts/Lighting.gd" id="1_lkjaf"]
+
+[resource]
+script = ExtResource("1_lkjaf")
+sun_intensity_lux = 100000.0
+sun_temperature = 5500.0
+sun_rotation = Vector3(-90, 90, 0)
+sky_intensity_nits = 30000.0
+sky_top_color = Color(0.384, 0.455, 0.549, 1)
+sky_horizon_color = Color(0.658824, 0.654902, 0.639216, 1)
+exposure_sensitivity = 125.0
+auto_exposure_scale = 0.36
+auto_exposure_min_sensitivity = 50.0
+auto_exposure_max_sensitivity = 350.0

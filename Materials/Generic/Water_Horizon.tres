@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://urihdi48hpen"]
+
+[ext_resource type="Texture2D" uid="uid://bqyhvb4qj0rbe" path="res://Textures/Water/Water_Normal.png" id="1_1rvm6"]
+
+[resource]
+cull_mode = 2
+albedo_color = Color(0.433204, 0.635733, 0.873328, 1)
+metallic = 0.98
+roughness = 0.02
+normal_enabled = true
+normal_scale = 0.05
+normal_texture = ExtResource("1_1rvm6")
+uv1_scale = Vector3(2000, 2000, 2000)

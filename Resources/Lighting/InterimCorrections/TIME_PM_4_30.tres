@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Lighting" load_steps=2 format=3 uid="uid://c54tbxt88hwjd"]
+
+[ext_resource type="Script" path="res://Scripts/Lighting.gd" id="1_06leb"]
+
+[resource]
+script = ExtResource("1_06leb")
+military_time_hour = 16
+military_time_mins = 30
+sun_intensity_lux = 25250.0
+sun_temperature = 2875.0
+sun_rotation = Vector3(-157.5, 90, 0)
+sky_intensity_nits = 7575.0
+sky_top_color = Color(0.384, 0.455, 0.549, 1)
+sky_horizon_color = Color(0.778432, 0.609804, 0.535294, 1)
+exposure_sensitivity = 700.0
+auto_exposure_scale = 0.44
+auto_exposure_min_sensitivity = 150.0
+auto_exposure_max_sensitivity = 2500.0

@@ -61,6 +61,7 @@ spring_length = 2.1
 
 [node name="Camera" type="Camera3D" parent="CameraPivot/SpringArm"]
 fov = 60.0
+far = 20000.0
 
 [node name="AudioListener3D" type="AudioListener3D" parent="CameraPivot/SpringArm/Camera"]
 

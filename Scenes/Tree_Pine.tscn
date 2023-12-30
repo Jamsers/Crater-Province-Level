@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccnpmrm87lee7"]
+[gd_scene load_steps=3 format=3 uid="uid://ccnpmrm87lee7"]
 
 [ext_resource type="PackedScene" uid="uid://b7jhv1tc6iycy" path="res://Models/Tree_Pine.glb" id="1_cg1s5"]
+[ext_resource type="Script" path="res://Scripts/PlantMe.gd" id="2_dbl0u"]
 
-[node name="Tree_Pine" instance=ExtResource("1_cg1s5")]
+[node name="Tree_Pine" node_paths=PackedStringArray("mesh") instance=ExtResource("1_cg1s5")]
+script = ExtResource("2_dbl0u")
+mesh = NodePath("Tree_Pine")
 
 [node name="Tree_Pine" parent="." index="0"]
 visible = false
