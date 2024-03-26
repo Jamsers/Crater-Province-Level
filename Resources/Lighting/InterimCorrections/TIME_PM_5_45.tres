@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="Lighting" load_steps=2 format=3 uid="uid://md4iq5t55s6u"]
+[gd_resource type="Resource" script_class="Lighting" load_steps=2 format=3 uid="uid://cy5nrm66j1g7o"]
 
-[ext_resource type="Script" path="res://Scripts/Lighting.gd" id="1_w15kc"]
+[ext_resource type="Script" path="res://Scripts/Lighting.gd" id="1_2w538"]
 
 [resource]
-script = ExtResource("1_w15kc")
+script = ExtResource("1_2w538")
 military_time_hour = 17
 military_time_mins = 45
 sun_intensity_lux = 4625.0
@@ -13,6 +13,6 @@ sky_intensity_nits = 1387.5
 sky_top_color = Color(0.384, 0.455, 0.549, 1)
 sky_horizon_color = Color(0.848693, 0.578758, 0.500981, 1)
 exposure_sensitivity = 2500.0
-auto_exposure_scale = 0.32
+auto_exposure_scale = 0.283333
 auto_exposure_min_sensitivity = 250.0
 auto_exposure_max_sensitivity = 6500.0

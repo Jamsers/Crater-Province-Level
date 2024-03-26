@@ -19,9 +19,6 @@ class_name LightingChanger
 @export_category("Lighting to apply")
 @export var lighting: Array[Lighting]
 
-@export_category("Curve")
-@export var exposure_curve: Curve
-
 @export_category("References")
 @export var environment: WorldEnvironment
 @export var sun: DirectionalLight3D
@@ -70,11 +67,11 @@ func apply_lighting(time_hour, time_mins):
 	environment.environment.sky.sky_material.sky_horizon_color = lerp(bottom_lerp.sky_horizon_color, top_lerp.sky_horizon_color, lerp_hour)
 	environment.environment.sky.sky_material.ground_horizon_color = lerp(bottom_lerp.sky_horizon_color, top_lerp.sky_horizon_color, lerp_hour)
 	 
-	environment.camera_attributes.exposure_sensitivity = lerp(bottom_lerp.exposure_sensitivity, top_lerp.exposure_sensitivity, sample_curve(lerp_hour))
+	environment.camera_attributes.exposure_sensitivity = lerp(bottom_lerp.exposure_sensitivity, top_lerp.exposure_sensitivity, lerp_hour)
 	
-	environment.camera_attributes.auto_exposure_scale = lerp(bottom_lerp.auto_exposure_scale, top_lerp.auto_exposure_scale, sample_curve(lerp_hour))
-	environment.camera_attributes.auto_exposure_min_sensitivity = lerp(bottom_lerp.auto_exposure_min_sensitivity, top_lerp.auto_exposure_min_sensitivity, sample_curve(lerp_hour))
-	environment.camera_attributes.auto_exposure_max_sensitivity = lerp(bottom_lerp.auto_exposure_max_sensitivity, top_lerp.auto_exposure_max_sensitivity, sample_curve(lerp_hour))
+	environment.camera_attributes.auto_exposure_scale = lerp(bottom_lerp.auto_exposure_scale, top_lerp.auto_exposure_scale, lerp_hour)
+	environment.camera_attributes.auto_exposure_min_sensitivity = lerp(bottom_lerp.auto_exposure_min_sensitivity, top_lerp.auto_exposure_min_sensitivity, lerp_hour)
+	environment.camera_attributes.auto_exposure_max_sensitivity = lerp(bottom_lerp.auto_exposure_max_sensitivity, top_lerp.auto_exposure_max_sensitivity, lerp_hour)
 	
 	if Engine.is_editor_hint():
 		environment.environment.sdfgi_enabled = false
@@ -113,6 +110,3 @@ func current_lighting_dump():
 	if military_time_mins != 0:
 		file_name += "_" + str(military_time_mins)
 	ResourceSaver.save(lighting_dump, "res://Resources/Lighting/" + file_name + ".tres")
-
-func sample_curve(x):
-	return exposure_curve.sample(x)

@@ -11,19 +11,74 @@ config_version=5
 [application]
 
 config/name="Crater-Province-Level"
+config/version="0.1"
 run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Textures/icon.png"
+
+[autoload]
+
+SimpleGrass="*res://addons/simplegrasstextured/singleton.tscn"
 
 [display]
 
 window/size/mode=2
 window/vsync/vsync_mode=0
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
+
 [rendering]
 
 lights_and_shadows/use_physical_light_units=true
 textures/default_filters/anisotropic_filtering_level=3
+camera/depth_of_field/depth_of_field_bokeh_quality=2
+environment/ssao/half_size=false
+environment/ssil/half_size=false
+anti_aliasing/screen_space_roughness_limiter/enabled=false
 textures/decals/filter=5
 textures/light_projectors/filter=5
+environment/screen_space_reflection/roughness_quality=2
+environment/subsurface_scattering/subsurface_scattering_quality=2
+global_illumination/sdfgi/probe_ray_count=2
 occlusion_culling/use_occlusion_culling=true
+
+[shader_globals]
+
+sgt_player_position={
+"type": "vec3",
+"value": Vector3(1e+06, 1e+06, 1e+06)
+}
+sgt_player_mov={
+"type": "vec3",
+"value": Vector3(0, 0, 0)
+}
+sgt_normal_displacement={
+"type": "sampler2D",
+"value": "res://addons/simplegrasstextured/images/normal.png"
+}
+sgt_motion_texture={
+"type": "sampler2D",
+"value": "res://addons/simplegrasstextured/images/motion.png"
+}
+sgt_wind_direction={
+"type": "vec3",
+"value": Vector3(0, 0, 0)
+}
+sgt_wind_movement={
+"type": "vec3",
+"value": Vector2(0, 0)
+}
+sgt_wind_strength={
+"type": "float",
+"value": 0.0
+}
+sgt_wind_turbulence={
+"type": "float",
+"value": 0.0
+}
+sgt_wind_pattern={
+"type": "sampler2D",
+"value": "res://addons/simplegrasstextured/images/wind_pattern.png"
+}

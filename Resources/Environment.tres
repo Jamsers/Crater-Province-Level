@@ -7,11 +7,23 @@ sky_material = ExtResource("1_lgao2")
 
 [resource]
 background_mode = 2
-background_intensity = 15000.0
+background_intensity = 5100.0
 sky = SubResource("Sky_f1e2m")
 tonemap_mode = 3
 tonemap_white = 8.0
+ssr_max_steps = 512
+ssr_fade_in = 0.01
+ssr_fade_out = 0.01
+ssao_enabled = true
+ssao_radius = 1.2
+ssao_intensity = 2.3
+ssao_horizon = 0.0
+ssao_sharpness = 1.0
+ssil_radius = 2.3
+ssil_intensity = 1.1
+ssil_sharpness = 1.0
 sdfgi_enabled = true
+sdfgi_use_occlusion = true
 sdfgi_bounce_feedback = 1.0
 sdfgi_cascades = 7
 glow_enabled = true

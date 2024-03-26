@@ -11,3 +11,4 @@ normal_enabled = true
 normal_scale = 0.05
 normal_texture = ExtResource("1_1rvm6")
 uv1_scale = Vector3(2000, 2000, 2000)
+texture_filter = 5
