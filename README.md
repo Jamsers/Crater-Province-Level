@@ -1,7 +1,7 @@
 # Crater-Province-Level
 A level meant to test and showcase Godot features and use cases for big and open worlds.
 
-https://github.com/Jamsers/Crater-Province-Level/assets/39361911/06a0347a-3c72-4615-9bbf-f895daca5368
+https://github.com/Jamsers/Crater-Province-Level/assets/39361911/a8b2c1a0-f4ca-438a-ab34-b87037e7e4e9
 
 Featured:
 
