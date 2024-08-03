@@ -1,5 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://rftjlwpq1vd8"]
+[gd_scene load_steps=5 format=3 uid="uid://rftjlwpq1vd8"]
 
 [ext_resource type="PackedScene" uid="uid://c0t6vtnl6kh75" path="res://Models/Tower_Abandoned.glb" id="1_sphbu"]
+[ext_resource type="PackedScene" uid="uid://dj5kaxvjiyf2a" path="res://Scenes/Tower_Abandoned/Sub_Scenes/Tower_Ground_Floor.tscn" id="2_gupjh"]
+[ext_resource type="PackedScene" uid="uid://ddfm3heb0ft7" path="res://Scenes/Tower_Abandoned/Sub_Scenes/Tower_Floor.tscn" id="3_tp03s"]
+[ext_resource type="PackedScene" uid="uid://clwc6fcklq46u" path="res://Scenes/Tower_Abandoned/Sub_Scenes/Tower_Top_Floor.tscn" id="4_o8xo0"]
 
 [node name="Tower_Abandoned" instance=ExtResource("1_sphbu")]
+
+[node name="Tower_Floors" type="Node3D" parent="." index="14"]
+
+[node name="Tower_Ground_Floor" parent="Tower_Floors" index="0" instance=ExtResource("2_gupjh")]
+
+[node name="Tower_Floor2" parent="Tower_Floors" index="1" instance=ExtResource("3_tp03s")]
+transform = Transform3D(-0.194234, 0, 0.980955, 0, 1, 0, -0.980955, 0, -0.194234, 0, 9.57246, 0)
+
+[node name="Tower_Floor3" parent="Tower_Floors" index="2" instance=ExtResource("3_tp03s")]
+transform = Transform3D(-0.924546, 0, -0.38107, 0, 1, 0, 0.38107, 0, -0.924546, 0, 19.144, 0)
+
+[node name="Tower_Floor4" parent="Tower_Floors" index="3" instance=ExtResource("3_tp03s")]
+transform = Transform3D(0.556296, 0, -0.830984, 0, 1, 0, 0.830984, 0, 0.556296, 0, 28.716, 0)
+
+[node name="Tower_Floor5" parent="Tower_Floors" index="4" instance=ExtResource("3_tp03s")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 38.288, 0)
+
+[node name="Tower_Floor6" parent="Tower_Floors" index="5" instance=ExtResource("3_tp03s")]
+transform = Transform3D(-0.830984, 0, 0.556296, 0, 1, 0, -0.556296, 0, -0.830984, 0, 47.8445, 0)
+
+[node name="Tower_Floor7" parent="Tower_Floors" index="6" instance=ExtResource("3_tp03s")]
+transform = Transform3D(-0.38107, 0, -0.924546, 0, 1, 0, 0.924546, 0, -0.38107, 0, 57.407, 0)
+
+[node name="Tower_Floor8" parent="Tower_Floors" index="7" instance=ExtResource("3_tp03s")]
+transform = Transform3D(0.980955, 0, -0.194234, 0, 1, 0, 0.194234, 0, 0.980955, 0, 66.974, 0)
+
+[node name="Tower_Floor9" parent="Tower_Floors" index="8" instance=ExtResource("3_tp03s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 76.546, 0)
+
+[node name="Tower_Top_Floor" parent="Tower_Floors" index="9" instance=ExtResource("4_o8xo0")]
+transform = Transform3D(-0.980955, 0, -0.194234, 0, 1, 0, 0.194234, 0, -0.980955, 0, 86.103, 0)

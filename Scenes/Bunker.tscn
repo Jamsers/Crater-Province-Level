@@ -1,5 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdvii5s8ms0aq"]
+[gd_scene load_steps=3 format=3 uid="uid://bdvii5s8ms0aq"]
 
 [ext_resource type="PackedScene" uid="uid://bno3vs1m6yv8" path="res://Models/Bunker.glb" id="1_bfxcd"]
+[ext_resource type="PackedScene" uid="uid://dbkqysbsh2pdf" path="res://Scenes/Bunker/Sub_Scenes/Bunker_Interior.tscn" id="2_tifr4"]
 
 [node name="Bunker" instance=ExtResource("1_bfxcd")]
+
+[node name="Bunker_Interior" parent="." index="4" instance=ExtResource("2_tifr4")]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://6uo55qutx466"]
+
+[ext_resource type="Script" path="res://Scripts/Placement_Tools/VegetationPlant.gd" id="1_8bcpx"]
+[ext_resource type="PackedScene" uid="uid://bcxbebw2h7h2a" path="res://Models/Bush.glb" id="1_dk6ho"]
+
+[node name="Bush" type="Node3D"]
+script = ExtResource("1_8bcpx")
+
+[node name="Bush" parent="." instance=ExtResource("1_dk6ho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.784198, 0)
+
+[node name="Plane_007" parent="Bush" index="0"]
+visibility_range_end = 200.0
+
+[editable path="Bush"]

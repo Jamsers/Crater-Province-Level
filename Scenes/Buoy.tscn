@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsjfgvq8nsgll"]
+
+[ext_resource type="PackedScene" uid="uid://fsrnxkph8fup" path="res://Models/Buoy.glb" id="1_040ns"]
+
+[node name="Buoy" instance=ExtResource("1_040ns")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.03462, 0)
+light_intensity_lumens = 15000.0
+light_color = Color(1, 0.376471, 0.34902, 1)
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 13.0
+omni_attenuation = 1.75

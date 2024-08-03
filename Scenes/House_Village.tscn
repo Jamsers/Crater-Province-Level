@@ -1,5 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://divn0owvdsbq7"]
+[gd_scene load_steps=3 format=3 uid="uid://divn0owvdsbq7"]
 
 [ext_resource type="PackedScene" uid="uid://dmqlb7spteknv" path="res://Models/House_Village.glb" id="1_06sag"]
+[ext_resource type="PackedScene" uid="uid://44le7ujg8bos" path="res://Scenes/House_Village/Sub_Scenes/Village_Interior.tscn" id="2_g5vc8"]
 
 [node name="House_Village" instance=ExtResource("1_06sag")]
+
+[node name="Village_Interior" parent="." index="25" instance=ExtResource("2_g5vc8")]

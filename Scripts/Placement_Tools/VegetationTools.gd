@@ -19,16 +19,20 @@ func plant_exec(dummy: bool) -> void:
 		child.scale_range_min = self.scale_range_min
 		child.scale_range_max = self.scale_range_max
 		child.plant_target = self.plant_target
+		await get_tree().process_frame
 		child.plant_exec(true)
 
 func unplant_exec(dummy: bool) -> void:
 	for child in get_children():
+		await get_tree().process_frame
 		child.unplant_exec(true)
 
 func instance_exec(dummy: bool) -> void:
 	for child in get_children():
+		await get_tree().process_frame
 		child.instance_exec(true)
 
 func uninstance_exec(dummy: bool) -> void:
 	for child in get_children():
+		await get_tree().process_frame
 		child.uninstance_exec(true)

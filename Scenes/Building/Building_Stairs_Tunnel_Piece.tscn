@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b07rcnl0sdnlf"]
+
+[ext_resource type="PackedScene" uid="uid://bhreafy2tos0e" path="res://Models/Building/Building_Stairs_Tunnel_Piece.glb" id="1_ji81v"]
+
+[node name="Building_Stairs_Tunnel_Piece" instance=ExtResource("1_ji81v")]
+
+[node name="Rails" parent="." index="2"]
+visibility_range_end = 250.0

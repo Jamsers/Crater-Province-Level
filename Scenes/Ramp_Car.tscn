@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://qi1put0t14na"]
+
+[ext_resource type="PackedScene" uid="uid://c02i3wl5llnwq" path="res://Models/Ramp_Car.glb" id="1_yjsvp"]
+
+[node name="Ramp_Car2" instance=ExtResource("1_yjsvp")]
+
+[node name="Ramp_Car" parent="." index="0"]
+visibility_range_end = 300.0

@@ -7,6 +7,12 @@ size = Vector3(1, 0.01, 1)
 
 [node name="Lamppost_City" instance=ExtResource("1_7abun")]
 
+[node name="Cylinder" parent="." index="0"]
+visibility_range_end = 400.0
+
+[node name="Cube" parent="." index="1"]
+visibility_range_end = 400.0
+
 [node name="SpotLight3D" type="SpotLight3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 0.13345, 0.991056, 0, -0.991056, 0.13345, 0, 7.91863, -2.46888)
 light_intensity_lumens = 10000.0

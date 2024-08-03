@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cpo5y8y5ebq6a"]
+
+[ext_resource type="Texture2D" uid="uid://bj82mxcbbuc51" path="res://Textures/Glass/Glass_Metal_Rough_Occ.png" id="2_74fbh"]
+[ext_resource type="Texture2D" uid="uid://c0fnqpgirhf3j" path="res://Textures/Glass/Glass_Normal.png" id="3_sghkt"]
+
+[resource]
+albedo_color = Color(0.609197, 0.0441334, 0.124138, 1)
+metallic = 1.0
+metallic_texture = ExtResource("2_74fbh")
+roughness_texture = ExtResource("2_74fbh")
+roughness_texture_channel = 1
+emission_enabled = true
+emission = Color(0.776471, 0.235294, 0.235294, 1)
+emission_intensity = 30.0
+normal_enabled = true
+normal_texture = ExtResource("3_sghkt")
+uv1_scale = Vector3(2.35, 2.35, 2.35)
+texture_filter = 5

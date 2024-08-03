@@ -1,5 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfnq80nuv2dea"]
+[gd_scene load_steps=3 format=3 uid="uid://dfnq80nuv2dea"]
 
 [ext_resource type="PackedScene" uid="uid://cc6wyqmamab3w" path="res://Models/Cave.glb" id="1_kglmu"]
+[ext_resource type="PackedScene" uid="uid://cxf3j2xjqhq8u" path="res://Scenes/Cave/Sub_Scenes/Cave_Interior.tscn" id="2_kixjw"]
 
 [node name="Cave" instance=ExtResource("1_kglmu")]
+
+[node name="Cave_Interior" parent="." index="3" instance=ExtResource("2_kixjw")]

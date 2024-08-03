@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cp5e1dcc2d6dy"]
+
+[ext_resource type="Texture2D" uid="uid://c76yh1fxy358o" path="res://Textures/Car_Paint/Car_Paint_Albedo.png" id="1_v7yk4"]
+[ext_resource type="Texture2D" uid="uid://bgxp831hhua30" path="res://Textures/Car_Paint/Car_Paint_Metal_Rough_Occ.png" id="2_wep8g"]
+[ext_resource type="Texture2D" uid="uid://bebp82avvodso" path="res://Textures/Car_Paint/Car_Paint_Normal.png" id="3_qfqum"]
+
+[resource]
+albedo_color = Color(0.218061, 0.218061, 0.218061, 1)
+albedo_texture = ExtResource("1_v7yk4")
+metallic = 0.25
+metallic_texture = ExtResource("2_wep8g")
+roughness = 0.05
+roughness_texture = ExtResource("2_wep8g")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_qfqum")
+texture_filter = 5

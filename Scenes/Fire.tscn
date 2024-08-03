@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlg0mdfc71nad"]
+
+[ext_resource type="Material" uid="uid://cs3s0shbw7t2t" path="res://Materials/Generic/Fire.tres" id="1_cclke"]
+
+[sub_resource type="Curve" id="Curve_qjmk2"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.156398, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_rwkln"]
+curve = SubResource("Curve_qjmk2")
+
+[sub_resource type="Curve" id="Curve_r6uwj"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.483516), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_h16e0"]
+curve = SubResource("Curve_r6uwj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_udgmo"]
+lifetime_randomness = 0.25
+emission_shape = 1
+emission_sphere_radius = 0.08
+gravity = Vector3(0, 0.8, 0)
+scale_curve = SubResource("CurveTexture_h16e0")
+alpha_curve = SubResource("CurveTexture_rwkln")
+
+[sub_resource type="QuadMesh" id="QuadMesh_1twon"]
+size = Vector2(0.3, 0.3)
+center_offset = Vector3(0, 0.03, 0)
+
+[node name="Fire" type="GPUParticles3D"]
+material_override = ExtResource("1_cclke")
+gi_mode = 2
+visibility_range_end = 75.0
+visibility_aabb = AABB(-0.356281, -0.368259, -0.360598, 0.720648, 1.1125, 0.700363)
+process_material = SubResource("ParticleProcessMaterial_udgmo")
+draw_pass_1 = SubResource("QuadMesh_1twon")

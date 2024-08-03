@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://cla22m3tfqe16"]
+
+[ext_resource type="PackedScene" uid="uid://bh6kftr5cmcrt" path="res://Scenes/Placeholder.tscn" id="1_x5dh1"]
+
+[node name="Cathedral_Interior" type="Node3D"]
+
+[node name="Placeholder" parent="." instance=ExtResource("1_x5dh1")]
+
+[node name="Placeholder2" parent="." instance=ExtResource("1_x5dh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.72617, 0, 0)
+
+[node name="Placeholder3" parent="." instance=ExtResource("1_x5dh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.726, 0, 0)
+
+[node name="Placeholder4" parent="." instance=ExtResource("1_x5dh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.523)
+
+[node name="Placeholder5" parent="." instance=ExtResource("1_x5dh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.72617, 0, -19.523)
+
+[node name="Placeholder6" parent="." instance=ExtResource("1_x5dh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.726, 0, -19.523)
+
+[node name="Placeholder7" parent="." instance=ExtResource("1_x5dh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.523)
+
+[node name="Placeholder8" parent="." instance=ExtResource("1_x5dh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.72617, 0, 19.523)
+
+[node name="Placeholder9" parent="." instance=ExtResource("1_x5dh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.726, 0, 19.523)

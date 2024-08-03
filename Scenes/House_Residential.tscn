@@ -1,5 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1rhqeynbbr7n"]
+[gd_scene load_steps=3 format=3 uid="uid://c1rhqeynbbr7n"]
 
 [ext_resource type="PackedScene" uid="uid://cebkhga36neys" path="res://Models/House_Residential.glb" id="1_i727n"]
+[ext_resource type="PackedScene" uid="uid://cq3owdh0p1re8" path="res://Scenes/House_Residential/Sub_Scenes/Residential_Interior.tscn" id="2_tedak"]
 
 [node name="House_Residential" instance=ExtResource("1_i727n")]
+
+[node name="Residential_Interior" parent="." index="16" instance=ExtResource("2_tedak")]

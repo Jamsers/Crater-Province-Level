@@ -1,0 +1,1432 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpj0ekfentggn"]
+
+[ext_resource type="PackedScene" uid="uid://cvm5ywd24cxir" path="res://Scenes/Railing_Post.tscn" id="1_gygxf"]
+[ext_resource type="PackedScene" uid="uid://bxf7lol4vw5ap" path="res://Scenes/Railing_Post_Short.tscn" id="2_afs4d"]
+
+[node name="Railing_Posts" type="Node3D"]
+
+[node name="Normal" type="Node3D" parent="."]
+
+[node name="Post_Group" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.201095, 0, 0.979572, 0, 1, 0, -0.979572, 0, -0.201095, 220.164, -20.2034, -278.537)
+
+[node name="Railing_Post2" parent="Normal/Post_Group" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.222849, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.414185, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.594025, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.794041, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.993324, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -1.18024, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -1.37668, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -1.56668, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -1.77139, 3.05176e-05)
+
+[node name="Post_Group2" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.201095, 0, 0.979572, 0, 1, 0, -0.979572, 0, -0.201095, 229.932, -22.1504, -230.956)
+
+[node name="Railing_Post2" parent="Normal/Post_Group2" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group2" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.181555, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group2" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.381287, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group2" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.362461, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group2" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.356888, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group2" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.374329, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group2" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.365068, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group2" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.443115, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group2" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -0.598761, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group2" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -0.755865, 3.05176e-05)
+
+[node name="Post_Group3" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.201095, 0, 0.979572, 0, 1, 0, -0.979572, 0, -0.201095, 239.653, -23.0772, -183.605)
+
+[node name="Railing_Post2" parent="Normal/Post_Group3" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group3" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.148827, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group3" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.305664, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group3" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.459518, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group3" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.472506, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group3" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.468042, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group3" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.458574, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group3" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.47024, 3.05176e-05)
+
+[node name="Post_Group4" type="Node3D" parent="Normal"]
+transform = Transform3D(0.979576, 0, 0.201078, 0, 1, 0, -0.201078, 0, 0.979576, 218.035, -23.5486, -163.696)
+
+[node name="Railing_Post2" parent="Normal/Post_Group4" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group4" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.119616, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group4" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.267586, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group4" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.413548, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group4" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.572618, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group4" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.730309, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group4" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.871143, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group4" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -1.04447, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group4" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -1.11183, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group4" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -1.11001, 3.05176e-05)
+
+[node name="Post_Group5" type="Node3D" parent="Normal"]
+transform = Transform3D(0.979576, 0, 0.201078, 0, 1, 0, -0.201078, 0, 0.979576, 170.311, -24.6326, -153.9)
+
+[node name="Railing_Post2" parent="Normal/Post_Group5" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group5" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group5" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group5" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.128668, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group5" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.249601, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group5" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.374748, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group5" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.498922, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group5" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.608065, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group5" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -0.728491, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group5" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -0.843845, 3.05176e-05)
+
+[node name="Post_Group6" type="Node3D" parent="Normal"]
+transform = Transform3D(0.979576, 0, 0.201078, 0, 1, 0, -0.201078, 0, 0.979576, 122.752, -25.5815, -144.137)
+
+[node name="Railing_Post2" parent="Normal/Post_Group6" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group6" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.121754, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group6" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.251099, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group6" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.359499, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group6" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.477491, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group6" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.595192, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group6" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.723372, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group6" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.841003, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group6" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -0.942469, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group6" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -0.935259, 3.05176e-05)
+
+[node name="Post_Group7" type="Node3D" parent="Normal"]
+transform = Transform3D(0.979576, 0, 0.201078, 0, 1, 0, -0.201078, 0, 0.979576, 75.0284, -26.5225, -134.341)
+
+[node name="Railing_Post2" parent="Normal/Post_Group7" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group7" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group7" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group7" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.0295506, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group7" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.118595, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group7" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.212412, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group7" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.300873, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group7" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.378136, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group7" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -0.464169, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group7" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -0.553482, 3.05176e-05)
+
+[node name="Post_Group8" type="Node3D" parent="Normal"]
+transform = Transform3D(0.979576, 0, 0.201078, 0, 1, 0, -0.201078, 0, 0.979576, 27.5059, -27.1247, -124.586)
+
+[node name="Railing_Post2" parent="Normal/Post_Group8" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group8" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group8" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group8" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group8" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group8" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group8" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.0207806, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group8" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.0223217, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group8" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -0.042923, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group8" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -0.0655441, 3.05176e-05)
+
+[node name="Post_Group9" type="Node3D" parent="Normal"]
+transform = Transform3D(0.979576, 0, 0.201078, 0, 1, 0, -0.201078, 0, 0.979576, -20.218, -27.195, -114.79)
+
+[node name="Railing_Post2" parent="Normal/Post_Group9" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.007267, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group9" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.0242481, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group9" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.03232, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group9" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.0614872, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group9" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.0734024, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group9" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.0940552, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group9" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.115759, 3.05176e-05)
+
+[node name="Post_Group10" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.201078, 0, 0.979576, 0, 1, 0, -0.979576, 0, -0.201078, -25.2254, -26.1644, -89.0247)
+
+[node name="Railing_Post2" parent="Normal/Post_Group10" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -1.11919, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group10" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.982809, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group10" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.861145, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group10" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.750532, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group10" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.614536, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group10" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.498676, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group10" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.377203, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group10" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.239027, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group10" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -0.117884, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group10" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group11" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.201078, 0, 0.979576, 0, 1, 0, -0.979576, 0, -0.201078, -15.5087, -25.0679, -41.6887)
+
+[node name="Railing_Post2" parent="Normal/Post_Group11" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.970518, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group11" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.86898, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group11" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.724813, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group11" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.609116, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group11" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.499205, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group11" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.36591, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group11" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.245756, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group11" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.119795, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group11" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Post_Group13" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.979575, 0, -0.201078, 0, 1, 0, 0.201078, 0, -0.979575, 154.789, -24.9748, -56.5718)
+
+[node name="Railing_Post2" parent="Normal/Post_Group13" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group13" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group13" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Post_Group14" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.979575, 0, -0.201078, 0, 1, 0, 0.201078, 0, -0.979575, 107.231, -24.9748, -46.8094)
+
+[node name="Railing_Post2" parent="Normal/Post_Group14" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group14" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group14" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group14" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group14" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group14" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group14" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group14" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group14" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group14" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group15" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.979575, 0, -0.201078, 0, 1, 0, 0.201078, 0, -0.979575, 59.5067, -24.9748, -37.0131)
+
+[node name="Railing_Post2" parent="Normal/Post_Group15" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group15" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group15" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group15" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group15" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group15" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group15" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group15" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group15" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group15" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group16" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.979575, 0, -0.201078, 0, 1, 0, 0.201078, 0, -0.979575, 11.9842, -24.9748, -27.2581)
+
+[node name="Railing_Post2" parent="Normal/Post_Group16" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group16" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group16" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group16" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group16" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group16" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group16" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group16" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group16" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group16" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group12" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.201095, 0, 0.979572, 0, 1, 0, -0.979572, 0, -0.201095, 150.361, -24.9854, -29.8618)
+
+[node name="Railing_Post2" parent="Normal/Post_Group12" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group12" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group12" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group12" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group12" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group12" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group12" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group12" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group12" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group12" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group17" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.201095, 0, 0.979572, 0, 1, 0, -0.979572, 0, -0.201095, 160.129, -24.9854, 17.7197)
+
+[node name="Railing_Post2" parent="Normal/Post_Group17" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group17" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group17" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group17" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group17" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group17" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Post_Group18" type="Node3D" parent="Normal"]
+transform = Transform3D(0.979576, 0, 0.201078, 0, 1, 0, -0.201078, 0, 0.979576, 137.587, -24.9923, 28.185)
+
+[node name="Railing_Post2" parent="Normal/Post_Group18" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group18" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group18" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group18" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group18" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group18" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group18" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group18" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group18" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group18" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group19" type="Node3D" parent="Normal"]
+transform = Transform3D(0.979576, 0, 0.201078, 0, 1, 0, -0.201078, 0, 0.979576, 89.8633, -24.9923, 37.9813)
+
+[node name="Railing_Post2" parent="Normal/Post_Group19" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group19" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group19" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group19" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group19" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group19" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group19" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group19" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group19" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group19" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group20" type="Node3D" parent="Normal"]
+transform = Transform3D(0.979576, 0, 0.201078, 0, 1, 0, -0.201078, 0, 0.979576, 42.3045, -24.9923, 47.7437)
+
+[node name="Railing_Post2" parent="Normal/Post_Group20" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group20" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group20" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group20" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group20" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group20" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group20" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group20" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group20" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group20" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group21" type="Node3D" parent="Normal"]
+transform = Transform3D(0.979576, 0, 0.201078, 0, 1, 0, -0.201078, 0, 0.979576, -5.41933, -24.9923, 57.54)
+
+[node name="Railing_Post2" parent="Normal/Post_Group21" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group21" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group21" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group21" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group21" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group21" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group21" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group21" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group21" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Post_Group22" type="Node3D" parent="Normal"]
+transform = Transform3D(0.201078, 0, -0.979575, 0, 1, 0, 0.979575, 0, 0.201078, -38.0246, -24.9856, -7.51978)
+
+[node name="Railing_Post2" parent="Normal/Post_Group22" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group22" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group22" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group22" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group22" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group22" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group22" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Post_Group23" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.979575, 0, -0.201078, 0, 1, 0, 0.201078, 0, -0.979575, -36.706, -24.9856, -17.2632)
+
+[node name="Railing_Post6" parent="Normal/Post_Group23" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group23" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Post_Group24" type="Node3D" parent="Normal"]
+transform = Transform3D(0.201078, 0, -0.979575, 0, 1, 0, 0.979575, 0, 0.201078, -38.6781, -25.0506, -42.0071)
+
+[node name="Railing_Post2" parent="Normal/Post_Group24" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group24" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.150658, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group24" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.265785, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group24" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.388145, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group24" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.514679, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group24" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.629488, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group24" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.76062, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group24" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.884933, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group24" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -1.00008, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group24" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -1.11595, 3.05176e-05)
+
+[node name="Post_Group25" type="Node3D" parent="Normal"]
+transform = Transform3D(0.201078, 0, -0.979575, 0, 1, 0, 0.979575, 0, 0.201078, -48.3747, -26.2833, -89.2453)
+
+[node name="Railing_Post2" parent="Normal/Post_Group25" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group25" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.125132, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group25" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.239704, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group25" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.3724, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group25" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.492083, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group25" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.613247, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group25" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.739912, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group25" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.864233, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group25" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -0.985146, 0)
+
+[node name="Post_Group26" type="Node3D" parent="Normal"]
+transform = Transform3D(0.979576, 0, 0.201078, 0, 1, 0, -0.201078, 0, 0.979576, -75.9966, -27.0905, -103.34)
+
+[node name="Railing_Post2" parent="Normal/Post_Group26" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.226887, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group26" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.20793, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group26" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.177202, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group26" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.166672, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group26" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.134102, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group26" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.108198, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group26" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.084837, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group26" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.0759373, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group26" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -0.0496445, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group26" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -0.0128899, 3.05176e-05)
+
+[node name="Post_Group27" type="Node3D" parent="Normal"]
+transform = Transform3D(0.979576, 0, 0.201078, 0, 1, 0, -0.201078, 0, 0.979576, -123.72, -27.0905, -93.5439)
+
+[node name="Railing_Post2" parent="Normal/Post_Group27" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Post_Group28" type="Node3D" parent="Normal"]
+transform = Transform3D(0.201078, 0, -0.979575, 0, 1, 0, 0.979575, 0, 0.201078, -114, -26.1534, -142.125)
+
+[node name="Railing_Post2" parent="Normal/Post_Group28" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.882999, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group28" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.75239, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group28" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.598074, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group28" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.444372, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group28" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.314793, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group28" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.169029, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group28" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.0395927, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group28" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group28" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group28" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group29" type="Node3D" parent="Normal"]
+transform = Transform3D(0.201078, 0, -0.979575, 0, 1, 0, 0.979575, 0, 0.201078, -123.761, -24.8152, -189.676)
+
+[node name="Railing_Post2" parent="Normal/Post_Group29" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -1.35374, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group29" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -1.31352, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group29" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -1.16084, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group29" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.991056, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group29" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.827545, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group29" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.667366, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group29" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.501175, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group29" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.334578, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group29" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -0.176554, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group29" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -0.0148716, 3.05176e-05)
+
+[node name="Post_Group30" type="Node3D" parent="Normal"]
+transform = Transform3D(0.201078, 0, -0.979575, 0, 1, 0, 0.979575, 0, 0.201078, -133.512, -23.7933, -237.184)
+
+[node name="Railing_Post2" parent="Normal/Post_Group30" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.886974, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group30" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.717468, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group30" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.555859, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group30" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.391294, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group30" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.347919, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group30" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.352118, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group30" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.346687, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group30" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.351751, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group30" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -0.307486, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group30" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -0.0239544, 3.05176e-05)
+
+[node name="Post_Group31" type="Node3D" parent="Normal"]
+transform = Transform3D(0.201078, 0, -0.979575, 0, 1, 0, 0.979575, 0, 0.201078, -143.273, -22.1443, -284.735)
+
+[node name="Railing_Post2" parent="Normal/Post_Group31" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -1.4006, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group31" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -1.13422, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group31" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -0.848547, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group31" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.562941, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group31" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.286184, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group31" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.0235653, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group31" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group31" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group31" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group31" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group32" type="Node3D" parent="Normal"]
+transform = Transform3D(0.202787, 0, -0.979223, 0, 1, 0, 0.979223, 0, 0.202787, -152.998, -20.5425, -331.729)
+
+[node name="Railing_Post2" parent="Normal/Post_Group32" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -1.55947, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group32" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -1.31882, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group32" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -1.0668, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group32" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.811357, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group32" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.567797, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group32" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.311155, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group32" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.0683422, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group32" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Post_Group33" type="Node3D" parent="Normal"]
+transform = Transform3D(0.679441, 0, -0.73373, 0, 1, 0, 0.73373, 0, 0.679441, -301.262, -15.8675, 338.358)
+
+[node name="Railing_Post6" parent="Normal/Post_Group33" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group33" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Post_Group34" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.728969, 0, -0.684547, 0, 1, 0, 0.684547, 0, -0.728969, -305.337, -15.8675, 348.708)
+
+[node name="Railing_Post5" parent="Normal/Post_Group34" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group34" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group34" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group34" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Post_Group35" type="Node3D" parent="Normal"]
+transform = Transform3D(0.684547, 0, -0.728969, 0, 1, 0, 0.728969, 0, 0.684547, -295.316, -15.8675, 374.3)
+
+[node name="Railing_Post2" parent="Normal/Post_Group35" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group35" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group35" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group35" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group35" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group35" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group35" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group35" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group35" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group35" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group41" type="Node3D" parent="Normal"]
+transform = Transform3D(0.684547, 0, -0.728969, 0, 1, 0, 0.728969, 0, 0.684547, -262.243, -15.8675, 409.519)
+
+[node name="Railing_Post6" parent="Normal/Post_Group41" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group41" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group41" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group41" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group41" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group41" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group36" type="Node3D" parent="Normal"]
+transform = Transform3D(0.728969, 0, 0.684547, 0, 1, 0, -0.684547, 0, 0.728969, -240.376, -15.8675, 396.895)
+
+[node name="Railing_Post2" parent="Normal/Post_Group36" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8844, -0.000404358, 0.000396729)
+
+[node name="Railing_Post3" parent="Normal/Post_Group36" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -0.000404358, 0.000396729)
+
+[node name="Railing_Post4" parent="Normal/Post_Group36" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group36" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group36" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group36" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group36" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group36" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group36" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group36" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group42" type="Node3D" parent="Normal"]
+transform = Transform3D(0.728969, 0, 0.684547, 0, 1, 0, -0.684547, 0, 0.728969, -205.326, -15.8675, 363.981)
+
+[node name="Railing_Post9" parent="Normal/Post_Group42" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Railing_Post10" parent="Normal/Post_Group42" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, 0, 0)
+
+[node name="Railing_Post11" parent="Normal/Post_Group42" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, 0, 3.05176e-05)
+
+[node name="Post_Group37" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.684547, 0, 0.728969, 0, 1, 0, -0.728969, 0, -0.684547, -222.874, -15.8675, 359.231)
+
+[node name="Railing_Post5" parent="Normal/Post_Group37" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group37" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group37" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group37" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group37" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Post_Group38" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.684547, 0, 0.728969, 0, 1, 0, -0.728969, 0, -0.684547, -256.325, -15.8675, 323.611)
+
+[node name="Railing_Post4" parent="Normal/Post_Group38" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, 0, 3.05176e-05)
+
+[node name="Railing_Post5" parent="Normal/Post_Group38" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group38" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group38" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group38" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Railing_Post9" parent="Normal/Post_Group38" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, 0, 3.05176e-05)
+
+[node name="Post_Group39" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.728969, 0, -0.684547, 0, 1, 0, 0.684547, 0, -0.728969, -274.127, -15.8675, 319.38)
+
+[node name="Railing_Post5" parent="Normal/Post_Group39" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, 0, 3.05176e-05)
+
+[node name="Railing_Post6" parent="Normal/Post_Group39" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group39" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Railing_Post8" parent="Normal/Post_Group39" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, 0, 3.05176e-05)
+
+[node name="Post_Group40" type="Node3D" parent="Normal"]
+transform = Transform3D(-0.67816, 0, 0.734914, 0, 1, 0, -0.734914, 0, -0.67816, -284.757, -15.8675, 322.859)
+
+[node name="Railing_Post6" parent="Normal/Post_Group40" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, 0, 3.05176e-05)
+
+[node name="Railing_Post7" parent="Normal/Post_Group40" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, 0, 3.05176e-05)
+
+[node name="Special" type="Node3D" parent="."]
+
+[node name="Post_Group43" type="Node3D" parent="Special"]
+transform = Transform3D(0.924752, 0, 0.38057, 0, 1, 0, -0.38057, 0, 0.924752, -127.249, -7.98203, -87.5535)
+
+[node name="Railing_Post2" parent="Special/Post_Group43" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999958, 0, -0.00921521, 0, 1, 0, 0.00921521, 0, 0.999958, 21.8902, -18.0179, -0.634445)
+
+[node name="Railing_Post3" parent="Special/Post_Group43" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999314, 0, -0.0370274, 0, 1, 0, 0.0370274, 0, 0.999314, 17.0494, -16.2138, -0.761049)
+
+[node name="Railing_Post4" parent="Special/Post_Group43" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999837, 0, -0.0180632, 0, 1, 0, 0.0180632, 0, 0.999837, 12.174, -14.4008, -0.886563)
+
+[node name="Railing_Post5" parent="Special/Post_Group43" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999411, 0, -0.0343239, 0, 1, 0, 0.0343239, 0, 0.999411, 7.32988, -12.6028, -1.01461)
+
+[node name="Railing_Post6" parent="Special/Post_Group43" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999036, 0, -0.0438984, 0, 1, 0, 0.0438984, 0, 0.999036, 2.48196, -10.7929, -1.13655)
+
+[node name="Railing_Post7" parent="Special/Post_Group43" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999935, 0, 0.0113618, 0, 1, 0, -0.0113618, 0, 0.999935, -2.44344, -8.50081, -1.09658)
+
+[node name="Railing_Post8" parent="Special/Post_Group43" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999369, 0, 0.03551, 0, 1, 0, -0.03551, 0, 0.999369, -7.32816, -6.02661, -0.961735)
+
+[node name="Railing_Post9" parent="Special/Post_Group43" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999805, 0, 0.0197558, 0, 1, 0, -0.0197558, 0, 0.999805, -12.1734, -3.58233, -0.829564)
+
+[node name="Railing_Post10" parent="Special/Post_Group43" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999904, 0, 0.0138749, 0, 1, 0, -0.0138749, 0, 0.999904, -17.0296, -1.1305, -0.693766)
+
+[node name="Railing_Post11" parent="Special/Post_Group43" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.998817, 0, 0.0486231, 0, 1, 0, -0.0486231, 0, 0.998817, -21.9089, 1.36923, -0.532063)
+
+[node name="Post_Group44" type="Node3D" parent="Special"]
+transform = Transform3D(0.856844, 0, 0.515577, 0, 1, 0, -0.515577, 0, 0.856844, -170.618, -0.977433, -65.1491)
+
+[node name="Railing_Post2" parent="Special/Post_Group44" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999339, 0, -0.0363472, 0, 1, 0, 0.0363472, 0, 0.999339, 21.9187, -3.85883, -0.942636)
+
+[node name="Railing_Post3" parent="Special/Post_Group44" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.998679, 0, -0.0513773, 0, 1, 0, 0.0513773, 0, 0.998679, 17.0795, -2.57519, -1.13284)
+
+[node name="Railing_Post4" parent="Special/Post_Group44" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999178, 0, -0.0405503, 0, 1, 0, 0.0405503, 0, 0.999178, 12.2374, -1.62062, -1.32237)
+
+[node name="Railing_Post5" parent="Special/Post_Group44" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.998583, 0, -0.0532248, 0, 1, 0, 0.0532248, 0, 0.998583, 7.3805, -1.00293, -1.51321)
+
+[node name="Railing_Post6" parent="Special/Post_Group44" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.998448, 0, 0.0556995, 0, 1, 0, -0.0556995, 0, 0.998448, 2.34331, -0.358944, -1.5902)
+
+[node name="Railing_Post7" parent="Special/Post_Group44" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.998468, 0, 0.0553336, 0, 1, 0, -0.0553336, 0, 0.998468, -2.47874, -0.143264, -1.3211)
+
+[node name="Railing_Post8" parent="Special/Post_Group44" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.99854, 0, 0.0540091, 0, 1, 0, -0.0540091, 0, 0.99854, -7.35042, -0.128553, -1.04318)
+
+[node name="Railing_Post9" parent="Special/Post_Group44" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.997997, 0, 0.0632608, 0, 1, 0, -0.0632608, 0, 0.997997, -12.2059, -0.109676, -0.771285)
+
+[node name="Railing_Post10" parent="Special/Post_Group44" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.997966, 0, 0.0637485, 0, 1, 0, -0.0637485, 0, 0.997966, -17.0518, -0.121894, -0.497146)
+
+[node name="Railing_Post11" parent="Special/Post_Group44" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.997997, 0, 0.0632608, 0, 1, 0, -0.0632608, 0, 0.997997, -21.8971, -0.130721, -0.221632)
+
+[node name="Post_Group45" type="Node3D" parent="Special"]
+transform = Transform3D(0.827542, 0, 0.561405, 0, 1, 0, -0.561405, 0, 0.827542, -194.408, -0.905058, -49.7125)
+
+[node name="Railing_Post6" parent="Special/Post_Group45" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.207962, -0.821243)
+
+[node name="Railing_Post7" parent="Special/Post_Group45" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999953, 0, 0.00965152, 0, 1, 0, -0.00965152, 0, 0.999953, -2.43884, -0.187281, -0.814712)
+
+[node name="Post_Group46" type="Node3D" parent="Special"]
+transform = Transform3D(-0.928926, 0, -0.370266, 0, 1, 0, 0.370266, 0, -0.928926, -134.281, -8.24623, -110.699)
+
+[node name="Railing_Post2" parent="Special/Post_Group46" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999063, 0, 0.0432881, 0, 1, 0, -0.0432881, 0, 0.999063, 21.8388, 0.11629, -1.0524)
+
+[node name="Railing_Post3" parent="Special/Post_Group46" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999489, 0, 0.031969, 0, 1, 0, -0.031969, 0, 0.999489, 16.9934, -2.30669, -0.870002)
+
+[node name="Railing_Post4" parent="Special/Post_Group46" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999199, 0, 0.0400272, 0, 1, 0, -0.0400272, 0, 0.999199, 12.1306, -4.73469, -0.683151)
+
+[node name="Railing_Post5" parent="Special/Post_Group46" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.99955, 0, 0.0299803, 0, 1, 0, -0.0299803, 0, 0.99955, 7.28015, -7.14938, -0.496104)
+
+[node name="Railing_Post6" parent="Special/Post_Group46" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999971, 0, -0.0075572, 0, 1, 0, 0.0075572, 0, 0.999971, 2.43488, -9.37906, -0.378921)
+
+[node name="Railing_Post7" parent="Special/Post_Group46" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999938, 0, -0.011135, 0, 1, 0, 0.011135, 0, 0.999938, -2.4263, -11.183, -0.419825)
+
+[node name="Railing_Post8" parent="Special/Post_Group46" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999981, 0, -0.00610861, 0, 1, 0, 0.00610861, 0, 0.999981, -7.29118, -12.984, -0.460007)
+
+[node name="Railing_Post9" parent="Special/Post_Group46" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999832, 0, -0.0183075, 0, 1, 0, 0.0183075, 0, 0.999832, -12.1478, -14.779, -0.502772)
+
+[node name="Railing_Post10" parent="Special/Post_Group46" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999782, 0, -0.0208726, 0, 1, 0, 0.0208726, 0, 0.999782, -17.0086, -16.5701, -0.544821)
+
+[node name="Railing_Post11" parent="Special/Post_Group46" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.998276, 0, -0.0586966, 0, 1, 0, 0.0586966, 0, 0.998276, -21.8429, -18.0265, -0.682159)
+
+[node name="Post_Group47" type="Node3D" parent="Special"]
+transform = Transform3D(-0.85615, 0, -0.516728, 0, 1, 0, 0.516728, 0, -0.85615, -178.563, -0.487617, -89.3709)
+
+[node name="Railing_Post2" parent="Special/Post_Group47" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.997827, 0, 0.0658908, 0, 1, 0, -0.0658908, 0, 0.997827, 21.7788, -0.625114, -1.59909)
+
+[node name="Railing_Post3" parent="Special/Post_Group47" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.99867, 0, 0.0515516, 0, 1, 0, -0.0515516, 0, 0.99867, 16.9522, -0.614799, -1.33608)
+
+[node name="Railing_Post4" parent="Special/Post_Group47" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.99881, 0, 0.04878, 0, 1, 0, -0.04878, 0, 0.99881, 12.1059, -0.622297, -1.066)
+
+[node name="Railing_Post5" parent="Special/Post_Group47" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.99914, 0, 0.0414571, 0, 1, 0, -0.0414571, 0, 0.99914, 7.26205, -0.614253, -0.794727)
+
+[node name="Railing_Post6" parent="Special/Post_Group47" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.99986, 0, 0.0167195, 0, 1, 0, -0.0167195, 0, 0.99986, 2.42182, -0.921219, -0.610147)
+
+[node name="Railing_Post7" parent="Special/Post_Group47" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999107, 0, -0.0422593, 0, 1, 0, 0.0422593, 0, 0.999107, -2.40076, -1.47425, -0.714431)
+
+[node name="Railing_Post8" parent="Special/Post_Group47" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.998578, 0, -0.053312, 0, 1, 0, 0.053312, 0, 0.998578, -7.24545, -2.10149, -0.909119)
+
+[node name="Railing_Post9" parent="Special/Post_Group47" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.998505, 0, -0.0546539, 0, 1, 0, 0.0546539, 0, 0.998505, -12.0963, -3.02542, -1.10812)
+
+[node name="Railing_Post10" parent="Special/Post_Group47" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.997783, 0, -0.0665525, 0, 1, 0, 0.0665525, 0, 0.997783, -16.9285, -4.31344, -1.37163)
+
+[node name="Railing_Post11" parent="Special/Post_Group47" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.997587, 0, -0.0694257, 0, 1, 0, 0.0694257, 0, 0.997587, -21.7682, -5.67812, -1.64939)
+
+[node name="Post_Group48" type="Node3D" parent="Special"]
+transform = Transform3D(-0.8228, 0, -0.568332, 0, 1, 0, 0.568332, 0, -0.8228, -207.509, -0.635491, -70.5685)
+
+[node name="Railing_Post6" parent="Special/Post_Group48" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999945, 0, -0.0104892, 0, 1, 0, 0.0104892, 0, 0.999945, 2.44401, -0.470562, -1.14253)
+
+[node name="Railing_Post7" parent="Special/Post_Group48" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999907, 0, -0.0136306, 0, 1, 0, 0.0136306, 0, 0.999907, -2.41497, -0.476133, -1.17465)
+
+[node name="Railing_Post8" parent="Special/Post_Group48" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999986, 0, -0.00528832, 0, 1, 0, 0.00528832, 0, 0.999986, -7.2876, -0.470248, -1.2085)
+
+[node name="Post_Group49" type="Node3D" parent="Special"]
+transform = Transform3D(0.126511, 0, -0.991966, 0, 1, 0, 0.991966, 0, 0.126511, -379.191, -6.16002, 161.406)
+
+[node name="Railing_Post2" parent="Special/Post_Group49" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.990748, 0, 0.135716, 0, 1, 0, -0.135716, 0, 0.990748, 21.6457, -9.68622, -2.30119)
+
+[node name="Railing_Post3" parent="Special/Post_Group49" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.997354, 0, 0.0726986, 0, 1, 0, -0.0726986, 0, 0.997354, 16.9395, -9.54976, -1.80782)
+
+[node name="Railing_Post4" parent="Special/Post_Group49" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999838, 0, 0.0179759, 0, 1, 0, -0.0179759, 0, 0.999838, 12.1301, -8.73949, -1.55287)
+
+[node name="Railing_Post5" parent="Special/Post_Group49" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999893, 0, 0.0146253, 0, 1, 0, -0.0146253, 0, 0.999893, 7.27431, -7.56267, -1.41621)
+
+[node name="Railing_Post6" parent="Special/Post_Group49" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999733, 0, 0.0231236, 0, 1, 0, -0.0231236, 0, 0.999733, 2.40245, -6.34928, -1.27826)
+
+[node name="Railing_Post7" parent="Special/Post_Group49" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999717, 0, 0.0237691, 0, 1, 0, -0.0237691, 0, 0.999717, -2.45807, -5.1703, -1.13947)
+
+[node name="Railing_Post8" parent="Special/Post_Group49" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999616, 0, -0.0276948, 0, 1, 0, 0.0276948, 0, 0.999616, -7.26604, -4.02121, -1.00887)
+
+[node name="Railing_Post9" parent="Special/Post_Group49" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.999228, 0, -0.0392773, 0, 1, 0, 0.0392773, 0, 0.999228, -12.1113, -3.45324, -1.16164)
+
+[node name="Railing_Post10" parent="Special/Post_Group49" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.971924, 0, -0.235295, 0, 1, 0, 0.235295, 0, 0.971924, -16.6219, -2.48385, -1.64439)
+
+[node name="Railing_Post11" parent="Special/Post_Group49" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.969991, 0, -0.243141, 0, 1, 0, 0.243141, 0, 0.969991, -21.1984, -0.805865, -2.73118)
+
+[node name="Post_Group50" type="Node3D" parent="Special"]
+transform = Transform3D(-0.172703, 0, -0.984974, 0, 1, 0, 0.984974, 0, -0.172703, -379.582, -0.730122, 127.827)
+
+[node name="Railing_Post5" parent="Special/Post_Group50" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.99798, 0, 0.0635221, 0, 1, 0, -0.0635221, 0, 0.99798, 7.15567, -4.52161, -2.18942)
+
+[node name="Railing_Post6" parent="Special/Post_Group50" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.997868, 0, 0.0652638, 0, 1, 0, -0.0652638, 0, 0.997868, 2.3104, -2.77909, -1.85958)
+
+[node name="Railing_Post7" parent="Special/Post_Group50" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.998907, 0, 0.0467403, 0, 1, 0, -0.0467403, 0, 0.998907, -2.5024, -1.05611, -1.52639)
+
+[node name="Railing_Post8" parent="Special/Post_Group50" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.994815, 0, -0.101699, 0, 1, 0, 0.101699, 0, 0.994815, -7.02454, -0.789609, -1.95335)
+
+[node name="Railing_Post9" parent="Special/Post_Group50" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.993572, 0, -0.113203, 0, 1, 0, 0.113203, 0, 0.993572, -11.8465, -0.535712, -2.44012)
+
+[node name="Post_Group51" type="Node3D" parent="Special"]
+transform = Transform3D(-0.0716193, 0, 0.997432, 0, 1, 0, -0.997432, 0, -0.0716193, -353.584, -2.25912, 153.503)
+
+[node name="Railing_Post2" parent="Special/Post_Group51" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.985178, 0, -0.171534, 0, 1, 0, 0.171534, 0, 0.985178, 21.9471, -0.82612, -0.359704)
+
+[node name="Railing_Post3" parent="Special/Post_Group51" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.985175, 0, -0.171551, 0, 1, 0, 0.171551, 0, 0.985175, 17.2309, -2.54111, -1.20392)
+
+[node name="Railing_Post4" parent="Special/Post_Group51" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.984549, 0, -0.175109, 0, 1, 0, 0.175109, 0, 0.984549, 12.5217, -4.25128, -2.04464)
+
+[node name="Railing_Post5" parent="Special/Post_Group51" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.982058, 0, -0.188581, 0, 1, 0, 0.188581, 0, 0.982058, 7.8487, -5.94649, -2.88327)
+
+[node name="Railing_Post6" parent="Special/Post_Group51" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.994611, 0, 0.103678, 0, 1, 0, -0.103678, 0, 0.994611, 2.13328, -8.13715, -2.86589)
+
+[node name="Railing_Post7" parent="Special/Post_Group51" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.99673, 0, 0.0808078, 0, 1, 0, -0.0808078, 0, 0.99673, -2.63097, -9.31002, -2.46676)
+
+[node name="Railing_Post8" parent="Special/Post_Group51" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.996864, 0, 0.0791377, 0, 1, 0, -0.0791377, 0, 0.996864, -7.45748, -10.5128, -2.0594)
+
+[node name="Railing_Post9" parent="Special/Post_Group51" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.997538, 0, 0.0701221, 0, 1, 0, -0.0701221, 0, 0.997538, -12.2735, -11.6849, -1.65744)
+
+[node name="Railing_Post10" parent="Special/Post_Group51" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.995886, 0, 0.0906152, 0, 1, 0, -0.0906152, 0, 0.995886, -17.1337, -12.8835, -1.24952)
+
+[node name="Railing_Post11" parent="Special/Post_Group51" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.983885, 0, 0.178802, 0, 1, 0, -0.178802, 0, 0.983885, -21.9841, -13.5864, -0.612968)
+
+[node name="Post_Group52" type="Node3D" parent="Special"]
+transform = Transform3D(0.0854691, 0, 0.996341, 0, 1, 0, -0.996341, 0, 0.0854691, -354.142, -0.634583, 124.825)
+
+[node name="Railing_Post7" parent="Special/Post_Group52" instance=ExtResource("1_gygxf")]
+transform = Transform3D(0.990904, 0, -0.134574, 0, 1, 0, 0.134574, 0, 0.990904, -2.34924, -0.974077, -0.601855)
+
+[node name="Post_Group53" type="Node3D" parent="Special"]
+transform = Transform3D(-0.567844, 0, -0.823137, 0, 1, 0, 0.823137, 0, -0.567844, -220.043, 2.48349, 29.8755)
+
+[node name="Railing_Post3" parent="Special/Post_Group53" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -3.58178, 0.000396729)
+
+[node name="Railing_Post_Short2" parent="Special/Post_Group53" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -1.57094, 3.05176e-05)
+
+[node name="Railing_Post_Short3" parent="Special/Post_Group53" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.727185, 3.05176e-05)
+
+[node name="Railing_Post_Short4" parent="Special/Post_Group53" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.3066, 3.05176e-05)
+
+[node name="Railing_Post_Short5" parent="Special/Post_Group53" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.168013, 3.05176e-05)
+
+[node name="Railing_Post_Short6" parent="Special/Post_Group53" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.303659, 3.05176e-05)
+
+[node name="Railing_Post_Short7" parent="Special/Post_Group53" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.713564, 3.05176e-05)
+
+[node name="Railing_Post_Short8" parent="Special/Post_Group53" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -1.53064, 0)
+
+[node name="Railing_Post11" parent="Special/Post_Group53" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -3.59754, 3.05176e-05)
+
+[node name="Post_Group54" type="Node3D" parent="Special"]
+transform = Transform3D(0.567844, 0, 0.823137, 0, 1, 0, -0.823137, 0, 0.567844, -198.586, 2.48349, 38.6393)
+
+[node name="Railing_Post3" parent="Special/Post_Group54" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0212, -3.58729, 0.000396729)
+
+[node name="Railing_Post_Short2" parent="Special/Post_Group54" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.158, -1.55882, 3.05176e-05)
+
+[node name="Railing_Post_Short3" parent="Special/Post_Group54" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29503, -0.714855, 3.05176e-05)
+
+[node name="Railing_Post_Short4" parent="Special/Post_Group54" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43202, -0.302484, 3.05176e-05)
+
+[node name="Railing_Post_Short5" parent="Special/Post_Group54" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43098, -0.173796, 3.05176e-05)
+
+[node name="Railing_Post_Short6" parent="Special/Post_Group54" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29399, -0.308754, 3.05176e-05)
+
+[node name="Railing_Post_Short7" parent="Special/Post_Group54" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.157, -0.717913, 3.05176e-05)
+
+[node name="Railing_Post_Short8" parent="Special/Post_Group54" instance=ExtResource("2_afs4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.02, -1.54255, 0)
+
+[node name="Railing_Post11" parent="Special/Post_Group54" instance=ExtResource("1_gygxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.883, -3.60871, 3.05176e-05)

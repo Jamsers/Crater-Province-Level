@@ -17,16 +17,20 @@ func randomize_exec(dummy: bool) -> void:
 		child.position_range = position_range
 		child.rotation_range = rotation_range
 		child.scale_range = scale_range
+		await get_tree().process_frame
 		child.randomize_exec(true)
 
 func store_base_transform_exec(dummy: bool) -> void:
 	for child in get_children():
+		await get_tree().process_frame
 		child.store_base_transform_exec(true)
 
 func instance_exec(dummy: bool) -> void:
 	for child in get_children():
+		await get_tree().process_frame
 		child.instance_exec(true)
 
 func uninstance_exec(dummy: bool) -> void:
 	for child in get_children():
+		await get_tree().process_frame
 		child.uninstance_exec(true)

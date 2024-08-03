@@ -1,0 +1,63 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://e3pkxpf7rx26"
+path="res://.godot/imported/Car.glb-0bf494a03051c25c7d43f8d748be8425.scn"
+
+[deps]
+
+source_file="res://Models/Car.glb"
+dest_files=["res://.godot/imported/Car.glb-0bf494a03051c25c7d43f8d748be8425.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=3
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"Back_Light": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Generic/Glass_BackLight_On.tres"
+},
+"Car": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Generic/Car_Paint_Black.tres"
+},
+"Front_Light": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Generic/Glass_FrontLight_On.tres"
+},
+"Metal": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Generic/Metal_Lamppost.tres"
+},
+"Rubber": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Generic/Rubber.tres"
+},
+"Window": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Generic/Car_Window.tres"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

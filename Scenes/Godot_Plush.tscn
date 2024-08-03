@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://crxxn1gf780xe"]
+
+[ext_resource type="PackedScene" uid="uid://cc04jmg0sgc6o" path="res://Models/Godot_Plush/Godot_Plush.glb" id="1_mnmyg"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_p70te"]
+radius = 0.343415
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cp7ja"]
+height = 0.295412
+radius = 0.0693581
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qagyl"]
+height = 0.372572
+radius = 0.0693581
+
+[node name="GodotPlush" type="RigidBody3D"]
+mass = 2.0
+
+[node name="Godot_Plush" parent="." instance=ExtResource("1_mnmyg")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="godot_plush_sitted" parent="Godot_Plush" index="0"]
+visibility_range_end = 250.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.316112, 0.0521011)
+shape = SubResource("SphereShape3D_p70te")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.555076, 0.820955, 0.133882, -0.828413, -0.560119, 5.0521e-09, 0.07499, -0.11091, 0.990997, 0.39028, 0.149769, 0.0247828)
+shape = SubResource("CylinderShape3D_cp7ja")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.555584, -0.820594, -0.133986, 0.82806, -0.560639, 0, -0.0751179, -0.110949, 0.990983, -0.39, 0.15, 0.025)
+shape = SubResource("CylinderShape3D_cp7ja")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.999991, 0.00166786, -0.00386937, -0.00371363, -0.0849881, -0.996375, -0.00199067, 0.996381, -0.0849811, 0.166189, 0.0763616, -0.219333)
+shape = SubResource("CylinderShape3D_qagyl")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.999991, 0.00166776, -0.00386931, -0.00371358, -0.0849869, -0.996375, -0.00199056, 0.996381, -0.0849799, -0.156039, 0.0730913, -0.214392)
+shape = SubResource("CylinderShape3D_qagyl")
+
+[editable path="Godot_Plush"]

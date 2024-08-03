@@ -4,6 +4,9 @@
 
 [node name="Light_Tunnel" instance=ExtResource("1_8qklj")]
 
+[node name="Cube" parent="." index="0"]
+visibility_range_end = 150.0
+
 [node name="SpotLight3D" type="SpotLight3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.533, 1.08451e-08)
 light_intensity_lumens = 10000.0

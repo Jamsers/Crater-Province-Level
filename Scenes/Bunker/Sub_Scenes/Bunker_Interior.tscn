@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbkqysbsh2pdf"]
+
+[ext_resource type="PackedScene" uid="uid://bh6kftr5cmcrt" path="res://Scenes/Placeholder.tscn" id="1_2ba24"]
+
+[node name="Bunker_Interior" type="Node3D"]
+
+[node name="Placeholder" parent="." instance=ExtResource("1_2ba24")]
+
+[node name="Placeholder2" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.212, 0, 0)
+
+[node name="Placeholder3" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.212, 0, 0)
+
+[node name="Placeholder10" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -28.218)
+
+[node name="Placeholder11" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.212, 0, -28.218)
+
+[node name="Placeholder12" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.212, 0, -28.218)
+
+[node name="Placeholder13" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 28.218)
+
+[node name="Placeholder14" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.212, 0, 28.218)
+
+[node name="Placeholder15" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.212, 0, 28.218)
+
+[node name="Placeholder4" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -56.4355)
+
+[node name="Placeholder5" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.212, 0, -56.4355)
+
+[node name="Placeholder6" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.212, 0, -56.4355)
+
+[node name="Placeholder7" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 56.435)
+
+[node name="Placeholder16" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.106, 0, 0)
+
+[node name="Placeholder17" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.106, 0, -28.218)
+
+[node name="Placeholder18" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.106, 0, 28.218)
+
+[node name="Placeholder19" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.106, 0, -56.4355)
+
+[node name="Placeholder20" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.106, 0, 56.435)
+
+[node name="Placeholder21" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.106, 0, 0)
+
+[node name="Placeholder22" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.106, 0, -28.218)
+
+[node name="Placeholder23" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.106, 0, 28.218)
+
+[node name="Placeholder24" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.106, 0, -56.4355)
+
+[node name="Placeholder25" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.106, 0, 56.435)
+
+[node name="Placeholder8" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.212, 0, 56.435)
+
+[node name="Placeholder9" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.212, 0, 56.435)

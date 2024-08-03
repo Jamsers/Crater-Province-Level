@@ -1,5 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvjx65vi248jm"]
+[gd_scene load_steps=3 format=3 uid="uid://bvjx65vi248jm"]
 
 [ext_resource type="PackedScene" uid="uid://d21wpka58q76t" path="res://Models/Cathedral.glb" id="1_hnlwb"]
+[ext_resource type="PackedScene" uid="uid://cla22m3tfqe16" path="res://Scenes/Cathedral/Sub_Scenes/Cathedral_Interior.tscn" id="2_pt7gk"]
 
 [node name="Cathedral" instance=ExtResource("1_hnlwb")]
+
+[node name="Cathedral_Interior" parent="." index="4" instance=ExtResource("2_pt7gk")]

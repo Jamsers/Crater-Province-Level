@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://44le7ujg8bos"]
+
+[ext_resource type="PackedScene" uid="uid://bh6kftr5cmcrt" path="res://Scenes/Placeholder.tscn" id="1_m844w"]
+
+[node name="Village_Interior" type="Node3D"]
+
+[node name="Placeholder" parent="." instance=ExtResource("1_m844w")]
+
+[node name="Placeholder5" parent="." instance=ExtResource("1_m844w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39355, 0, -2.57934)
+
+[node name="Placeholder6" parent="." instance=ExtResource("1_m844w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.394, 0, -2.57934)
+
+[node name="Placeholder8" parent="." instance=ExtResource("1_m844w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39355, 0, 2.579)
+
+[node name="Placeholder9" parent="." instance=ExtResource("1_m844w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.394, 0, 2.579)

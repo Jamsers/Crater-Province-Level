@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd2pxibi1hn8q"]
+
+[ext_resource type="PackedScene" uid="uid://jp3pvomi2muy" path="res://Models/Fences_Residential.glb" id="1_320jm"]
+
+[node name="Fences_Residential" instance=ExtResource("1_320jm")]
+
+[node name="Rails_001" parent="." index="0"]
+visibility_range_end = 250.0
+
+[node name="Rails_003" parent="." index="1"]
+visibility_range_end = 250.0
+
+[node name="Rails_013" parent="." index="2"]
+visibility_range_end = 250.0

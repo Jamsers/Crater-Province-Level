@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://bscldb0gb5nty"]
+
+[ext_resource type="PackedScene" uid="uid://dpabj4misf7po" path="res://Models/Fences_Residential_Special.glb" id="1_1cmm5"]
+
+[node name="Fences_Residential_Special" instance=ExtResource("1_1cmm5")]
+
+[node name="Rails_001" parent="." index="30"]
+visibility_range_end = 250.0
+
+[node name="Rails_002" parent="." index="31"]
+visibility_range_end = 250.0
+
+[node name="Rails_003" parent="." index="32"]
+visibility_range_end = 250.0
+
+[node name="Rails_004" parent="." index="33"]
+visibility_range_end = 250.0
+
+[node name="Rails_005" parent="." index="34"]
+visibility_range_end = 250.0
+
+[node name="Rails_006" parent="." index="35"]
+visibility_range_end = 250.0
+
+[node name="Rails_007" parent="." index="36"]
+visibility_range_end = 250.0
+
+[node name="Rails_008" parent="." index="37"]
+visibility_range_end = 250.0
+
+[node name="Rails_009" parent="." index="38"]
+visibility_range_end = 250.0
+
+[node name="Rails_010" parent="." index="39"]
+visibility_range_end = 250.0
+
+[node name="Rails_013" parent="." index="40"]
+visibility_range_end = 250.0
+
+[node name="Rails_014" parent="." index="41"]
+visibility_range_end = 250.0
+
+[node name="Rails_015" parent="." index="42"]
+visibility_range_end = 250.0
+
+[node name="Rails_016" parent="." index="43"]
+visibility_range_end = 250.0
+
+[node name="Rails_017" parent="." index="44"]
+visibility_range_end = 250.0

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://boor8o87nx7qo"]
+
+[ext_resource type="PackedScene" uid="uid://da32ytnsupbfh" path="res://Models/Park_Ground_Light.glb" id="1_uvi6j"]
+
+[node name="Park_Ground_Light" instance=ExtResource("1_uvi6j")]
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+visibility_range_end = 250.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.752277, -0.658847, 0, 0.658847, 0.752277, 0, 0.462768, -0.197262)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 30.0
+spot_attenuation = 1.75
+spot_angle = 60.0

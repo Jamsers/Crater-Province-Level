@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddfm3heb0ft7"]
+
+[ext_resource type="PackedScene" uid="uid://bh6kftr5cmcrt" path="res://Scenes/Placeholder.tscn" id="1_nw8kb"]
+
+[node name="Tower_Floor" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Placeholder" parent="." instance=ExtResource("1_nw8kb")]
+
+[node name="Placeholder2" parent="." instance=ExtResource("1_nw8kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.1626, 0, -2.38419e-07)
+
+[node name="Placeholder3" parent="." instance=ExtResource("1_nw8kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9241, 0, 0)
+
+[node name="Placeholder4" parent="." instance=ExtResource("1_nw8kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23.062)
+
+[node name="Placeholder5" parent="." instance=ExtResource("1_nw8kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 16)
+
+[node name="Placeholder6" parent="." instance=ExtResource("1_nw8kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 16)
+
+[node name="Placeholder7" parent="." instance=ExtResource("1_nw8kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18976e-07, 0, -15.5896)
+
+[node name="Placeholder8" parent="." instance=ExtResource("1_nw8kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -16)
+
+[node name="Placeholder9" parent="." instance=ExtResource("1_nw8kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5298, 0, -10.4965)

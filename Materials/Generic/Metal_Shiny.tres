@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ddntragn7vs7y"]
+
+[ext_resource type="Texture2D" uid="uid://b4sviqn70i3a8" path="res://Textures/Metal/Metal_Metal_Rough_Occ.png" id="2_bcmcj"]
+[ext_resource type="Texture2D" uid="uid://cnklb85s7weru" path="res://Textures/Metal/Metal_Normal.png" id="3_ecikx"]
+
+[resource]
+albedo_color = Color(0.784314, 0.784314, 0.784314, 1)
+metallic = 1.0
+metallic_texture = ExtResource("2_bcmcj")
+roughness = 0.2
+roughness_texture = ExtResource("2_bcmcj")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_scale = 0.25
+normal_texture = ExtResource("3_ecikx")
+texture_filter = 5

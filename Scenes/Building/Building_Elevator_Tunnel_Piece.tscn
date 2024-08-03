@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpse5hctsql4f"]
+
+[ext_resource type="PackedScene" uid="uid://cp3603sl23aqh" path="res://Models/Building/Building_Elevator_Tunnel_Piece.glb" id="1_ew85x"]
+
+[node name="Building_Elevator_Tunnel_Piece" instance=ExtResource("1_ew85x")]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://6rrd5jcd7h52"]
+
+[ext_resource type="PackedScene" uid="uid://c4i8umtnvq6x8" path="res://Models/Tree_Pine_Trunk.glb" id="1_tefpg"]
+
+[node name="Tree_Pine_Trunk" instance=ExtResource("1_tefpg")]
+
+[node name="Tree_Pine" parent="." index="0"]
+visibility_range_end = 225.0
