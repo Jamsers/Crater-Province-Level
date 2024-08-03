@@ -1,34 +1,11 @@
 # Crater-Province-Level
 A level meant to test and showcase Godot features and use cases for big and open worlds.
 
-https://github.com/Jamsers/Crater-Province-Level/assets/39361911/a8b2c1a0-f4ca-438a-ab34-b87037e7e4e9
+![day](https://github.com/user-attachments/assets/4f9af73d-4d0e-434f-825a-a685d9bc6c13)
 
-Featured:
+![night](https://github.com/user-attachments/assets/0d269fdc-3e05-4ead-80c1-11d9242ae5d1)
 
-- SDFGI  
-
-- Dynamic time of day  
-  Physically based lighting values  
-  Dynamic (range) auto exposure  
-  Seamless interior/exterior locations  
-
-- Far sun shadows  
-  Far volumetric fog  
-  Far pointlights (à la GTA V lampposts)  
-  
-- GPU Instancing  
-  Occlusion culling  
-  Auto LOD  
-
-Not featured:
-
-- Asset streaming  
-  World partitioning  
-
-- Landscape system  
-  Water system  
-  Cloud system  
-  Weather system  
+![plushe](https://github.com/user-attachments/assets/c6666bec-a653-458a-a7b2-3852f7c50136)
 
 Currently in active development, but development happens on a private Azure DevOps repo due to GitHub's 100 MB file limit. Updates will be pushed to this repo periodically.
 
@@ -51,4 +28,5 @@ You can change time of day speed and pause time of day in the TimeOfDaySystem no
 ## Credits
 
 Uses IcterusGames' [SimpleGrassTextured](https://github.com/IcterusGames/SimpleGrassTextured) plugin.  
-Uses Jamsers' [Godot-Human-For-Scale](https://github.com/Jamsers/Godot-Human-For-Scale).
+Uses Jamsers' [Godot-Human-For-Scale](https://github.com/Jamsers/Godot-Human-For-Scale).  
+Uses FR3NKD's [Godot Plush](https://fr3nkd.gumroad.com/l/vhfvy).
