@@ -15,7 +15,6 @@ emission_intensity = 10.0
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82032, 0)
 light_temperature = 2000.0
-shadow_enabled = true
 distance_fade_enabled = true
 distance_fade_begin = 1000.0
 omni_range = 10.0

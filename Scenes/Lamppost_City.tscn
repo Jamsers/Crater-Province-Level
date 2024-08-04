@@ -11,7 +11,6 @@ size = Vector3(1, 0.01, 1)
 transform = Transform3D(1, 0, 0, 0, 0.13345, 0.991056, 0, -0.991056, 0.13345, 0, 7.91863, -2.46888)
 light_intensity_lumens = 10000.0
 light_temperature = 3000.0
-shadow_enabled = true
 distance_fade_enabled = true
 distance_fade_begin = 1000.0
 spot_range = 20.0

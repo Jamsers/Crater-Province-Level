@@ -8,7 +8,6 @@
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.533, 1.08451e-08)
 light_intensity_lumens = 10000.0
 light_color = Color(0.341176, 0.690196, 0.6, 1)
-shadow_enabled = true
 distance_fade_enabled = true
 distance_fade_begin = 1000.0
 spot_range = 16.0

@@ -4123,7 +4123,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_w2rsi")
 [node name="OmniLight3D" type="OmniLight3D" parent="Bonfire/forestfire"]
 light_intensity_lumens = 10000.0
 light_color = Color(0.862745, 0.529412, 0.243137, 1)
-shadow_enabled = true
 distance_fade_enabled = true
 distance_fade_begin = 1000.0
 distance_fade_shadow = 500.0
