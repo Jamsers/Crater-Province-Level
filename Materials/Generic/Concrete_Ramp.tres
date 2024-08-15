@@ -12,5 +12,5 @@ roughness_texture = ExtResource("2_uwr7j")
 roughness_texture_channel = 1
 normal_enabled = true
 normal_texture = ExtResource("3_8g7fb")
-uv1_scale = Vector3(2, 2, 2)
+uv1_scale = Vector3(0.8, 0.8, 0.8)
 texture_filter = 5

@@ -35,7 +35,7 @@ _subresources={
 "materials": {
 "Cement": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Concrete_Residential.tres"
+"use_external/path": "res://Materials/Generic/Concrete_Cathedral.tres"
 },
 "Metal": {
 "use_external/enabled": true,

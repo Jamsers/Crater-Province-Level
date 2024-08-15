@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://hqhck5se3mdx" path="res://Scenes/Building/Building_Elevator_Tunnel_Piece_Top.tscn" id="6_a3jh3"]
 [ext_resource type="Texture2D" uid="uid://c0fnqpgirhf3j" path="res://Textures/Glass/Glass_Normal.png" id="7_34e4h"]
 [ext_resource type="Texture2D" uid="uid://bk8nqo3xhsox8" path="res://Textures/Glass/Glass_Albedo.png" id="7_cewn3"]
-[ext_resource type="Texture2D" uid="uid://cyakhc8ashb14" path="res://Textures/Grass/Grass_Metal_Rough_Occ.png" id="8_4sao8"]
 [ext_resource type="Texture2D" uid="uid://bj82mxcbbuc51" path="res://Textures/Glass/Glass_Metal_Rough_Occ.png" id="8_88jat"]
+[ext_resource type="Texture2D" uid="uid://cm6wradcjo6j4" path="res://Textures/Glass/Glass_Metal_Rough_Occ_Window.png" id="10_7ok74"]
 [ext_resource type="PackedScene" uid="uid://uxt3w80586m3" path="res://Scenes/Building/Sub_Scenes/Building_Ground_Floor.tscn" id="11_bpf77"]
 [ext_resource type="PackedScene" uid="uid://ce2hkuwdb7nyq" path="res://Scenes/Building/Sub_Scenes/Building_Floor.tscn" id="12_0idk7"]
 
@@ -22,7 +22,7 @@ albedo_color = Color(1, 1, 1, 0.627451)
 albedo_texture = ExtResource("7_cewn3")
 metallic = 1.0
 metallic_texture = ExtResource("8_88jat")
-roughness_texture = ExtResource("8_4sao8")
+roughness_texture = ExtResource("10_7ok74")
 roughness_texture_channel = 1
 normal_enabled = true
 normal_texture = ExtResource("7_34e4h")

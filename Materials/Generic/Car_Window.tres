@@ -5,11 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://bebp82avvodso" path="res://Textures/Car_Paint/Car_Paint_Normal.png" id="3_tsh1v"]
 
 [resource]
-albedo_color = Color(0.819228, 0.819228, 0.819228, 1)
+albedo_color = Color(0.670689, 0.67069, 0.670689, 1)
 albedo_texture = ExtResource("1_au3hu")
 metallic = 1.0
-metallic_texture = ExtResource("2_84kdg")
-roughness = 0.05
+roughness = 0.5
 roughness_texture = ExtResource("2_84kdg")
 roughness_texture_channel = 1
 normal_enabled = true

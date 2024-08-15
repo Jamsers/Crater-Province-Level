@@ -61,10 +61,10 @@
 [ext_resource type="Texture2D" uid="uid://bj82mxcbbuc51" path="res://Textures/Glass/Glass_Metal_Rough_Occ.png" id="44_62gd7"]
 [ext_resource type="Texture2D" uid="uid://c0fnqpgirhf3j" path="res://Textures/Glass/Glass_Normal.png" id="45_6rb27"]
 [ext_resource type="PackedScene" uid="uid://cmdirl3sce2qt" path="res://Scenes/Torch_Village.tscn" id="45_k4lx4"]
-[ext_resource type="Texture2D" uid="uid://cyakhc8ashb14" path="res://Textures/Grass/Grass_Metal_Rough_Occ.png" id="46_36bbv"]
 [ext_resource type="PackedScene" uid="uid://bpj0ekfentggn" path="res://Scenes/Sub_Scenes/Railing_Posts.tscn" id="48_ul5yf"]
 [ext_resource type="PackedScene" uid="uid://sigubqqxaeiy" path="res://Scenes/Park_Structures.tscn" id="51_2aows"]
 [ext_resource type="PackedScene" uid="uid://boor8o87nx7qo" path="res://Scenes/Park_Ground_Light.tscn" id="52_5ukpe"]
+[ext_resource type="Texture2D" uid="uid://cm6wradcjo6j4" path="res://Textures/Glass/Glass_Metal_Rough_Occ_Window.png" id="53_vnrfi"]
 [ext_resource type="PackedScene" uid="uid://qi1put0t14na" path="res://Scenes/Ramp_Car.tscn" id="54_d0jco"]
 [ext_resource type="PackedScene" uid="uid://b6m5mrtx5tgxs" path="res://Scenes/Walls_Residential.tscn" id="54_nmd5d"]
 [ext_resource type="PackedScene" uid="uid://te6y3kupfupp" path="res://Scenes/Ramp_Path.tscn" id="55_718c0"]
@@ -87,7 +87,7 @@ albedo_color = Color(1, 1, 1, 0.627451)
 albedo_texture = ExtResource("43_nxdem")
 metallic = 1.0
 metallic_texture = ExtResource("44_62gd7")
-roughness_texture = ExtResource("46_36bbv")
+roughness_texture = ExtResource("53_vnrfi")
 roughness_texture_channel = 1
 normal_enabled = true
 normal_texture = ExtResource("45_6rb27")
