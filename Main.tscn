@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=4 uid="uid://c77e1yn8ifgkx"]
+[gd_scene load_steps=61 format=4 uid="uid://c77e1yn8ifgkx"]
 
 [ext_resource type="Script" path="res://Scripts/LightingChanger.gd" id="1_c06e6"]
 [ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="1_wutcc"]
@@ -31,12 +31,12 @@
 [ext_resource type="Script" path="res://Scripts/Profiler.gd" id="22_xngbd"]
 [ext_resource type="PackedScene" uid="uid://yemviufpvob3" path="res://Scenes/Sub_Scenes/Everything_Else.tscn" id="30_eqdje"]
 [ext_resource type="Animation" uid="uid://xlds8frktbmr" path="res://Animations/Car_Scenario.res" id="31_3riuw"]
-[ext_resource type="PackedScene" uid="uid://l221c3nfg2w3" path="res://Scenes/Plane.tscn" id="31_3xw6t"]
 [ext_resource type="Script" path="res://Scripts/Scenario.gd" id="31_5vdeh"]
 [ext_resource type="PackedScene" uid="uid://e3pkxpf7rx26" path="res://Models/Car.glb" id="31_h4jea"]
 [ext_resource type="Material" uid="uid://b4qc68g4c5xa2" path="res://Materials/Generic/Car_Paint_Red.tres" id="33_qpygn"]
 [ext_resource type="Material" uid="uid://dpmaiendl00sw" path="res://Materials/Generic/Glass_FrontLight_On.tres" id="34_at2fh"]
 [ext_resource type="Material" uid="uid://cpo5y8y5ebq6a" path="res://Materials/Generic/Glass_BackLight_On.tres" id="35_gn6j3"]
+[ext_resource type="Animation" uid="uid://7cnr31x5e3a2" path="res://Animations/Plane_Scenario.res" id="37_pvakd"]
 [ext_resource type="Material" uid="uid://l7arlkarpt8b" path="res://Materials/Generic/Car_Paint_White.tres" id="38_8cy26"]
 [ext_resource type="Material" uid="uid://w7x7mj8tckm3" path="res://Materials/Generic/Car_Window.tres" id="39_7m7bm"]
 
@@ -87,6 +87,39 @@ size = Vector3(1.14331, 1.15636, 0.648886)
 size = Vector3(1.14691, 0.674832, 1.12945)
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_xemv2"]
+
+[sub_resource type="Animation" id="Animation_pwg7l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Plane Container:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-290.387, 16.3964, 2.67211)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Plane Container:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -2.1741, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hil6l"]
+_data = {
+"Plane_Scenario": ExtResource("37_pvakd"),
+"RESET": SubResource("Animation_pwg7l")
+}
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_v58is"]
 _surfaces = [{
@@ -357,33 +390,6 @@ current = true
 fov = 60.0
 far = 20000.0
 
-[node name="Plane2" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.853, 0, 232.462)
-
-[node name="Plane3" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.6515, 0, 244.017)
-
-[node name="Plane4" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.879, 0, 264.472)
-
-[node name="Plane5" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.8794, 0, 251.472)
-
-[node name="Plane6" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.8122, 0, 268.984)
-
-[node name="Plane7" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.1168, 0, 268.014)
-
-[node name="Plane8" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0886, 0, 256.609)
-
-[node name="Plane9" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -144.783, 0, 239.824)
-
-[node name="Plane10" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -147.057, 0, 268.709)
-
 [node name="Car Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player", "menu", "quit", "reloading_label", "menu_camera", "camera")]
 script = ExtResource("31_5vdeh")
 animation_player = NodePath("AnimationPlayer")
@@ -392,6 +398,7 @@ quit = NodePath("../UI/Button")
 reloading_label = NodePath("../UI/RichTextLabel")
 menu_camera = NodePath("../MenuCamera")
 camera = NodePath("Car Container/SpringArm/Camera")
+scenario_name = "Car_Scenario"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Car Scenario"]
 callback_mode_process = 0
@@ -495,14 +502,25 @@ spring_length = 5.725
 fov = 60.0
 far = 20000.0
 
-[node name="Plane Scenario" type="Node" parent="."]
+[node name="Plane Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player", "menu", "quit", "reloading_label", "menu_camera", "camera")]
+script = ExtResource("31_5vdeh")
+animation_player = NodePath("AnimationPlayer")
+menu = NodePath("../UI/GridContainer")
+quit = NodePath("../UI/Button")
+reloading_label = NodePath("../UI/RichTextLabel")
+menu_camera = NodePath("../MenuCamera")
+camera = NodePath("Plane Container/SpringArm2/Camera")
+scenario_name = "Plane_Scenario"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Plane Scenario"]
 callback_mode_process = 0
 callback_mode_discrete = 2
+libraries = {
+"": SubResource("AnimationLibrary_hil6l")
+}
 
 [node name="Plane Container" type="Node3D" parent="Plane Scenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.1855, -20.1901, 16.2013)
+transform = Transform3D(-0.56737, 0, -0.823463, 0, 1, 0, 0.823463, 0, -0.56737, -290.387, 16.3964, 2.67211)
 
 [node name="Plane2" type="AnimatableBody3D" parent="Plane Scenario/Plane Container"]
 sync_to_physics = false
@@ -551,7 +569,17 @@ shape = SubResource("ConvexPolygonShape3D_5fd80")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000288023, 0.0294657, 4.62013)
 shape = SubResource("ConvexPolygonShape3D_vwx1k")
 
+[node name="SpringArm2" type="SpringArm3D" parent="Plane Scenario/Plane Container"]
+transform = Transform3D(0.999997, 0, 0, 0, 0.991444, 0.130526, 0, -0.130526, 0.991442, 0, 0.53093, 0)
+shape = SubResource("SeparationRayShape3D_xemv2")
+spring_length = 17.5
+
+[node name="Camera" type="Camera3D" parent="Plane Scenario/Plane Container/SpringArm2"]
+fov = 60.0
+far = 20000.0
+
 [connection signal="pressed" from="UI/GridContainer/Button4" to="Car Scenario" method="play_scenario"]
+[connection signal="pressed" from="UI/GridContainer/Button5" to="Plane Scenario" method="play_scenario"]
 [connection signal="pressed" from="UI/Button" to="Car Scenario" method="stop_scenario"]
 
 [editable path="Car Scenario/Car Container/Car2/Car2"]

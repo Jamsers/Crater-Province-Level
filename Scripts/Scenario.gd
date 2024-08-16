@@ -6,6 +6,7 @@ extends Node
 @export var reloading_label: RichTextLabel
 @export var menu_camera: Camera3D
 @export var camera: Camera3D
+@export var scenario_name: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,7 +18,7 @@ func _process(delta: float) -> void:
 	pass
 
 func play_scenario():
-	animation_player.play("Car_Scenario")
+	animation_player.play(scenario_name)
 	camera.current = true
 	menu.visible = false
 	quit.visible = true
