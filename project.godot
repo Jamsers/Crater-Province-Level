@@ -58,7 +58,6 @@ textures/light_projectors/filter=5
 environment/screen_space_reflection/roughness_quality=2
 environment/subsurface_scattering/subsurface_scattering_quality=2
 global_illumination/sdfgi/probe_ray_count=2
-anti_aliasing/quality/screen_space_aa=1
 occlusion_culling/use_occlusion_culling=true
 lights_and_shadows/positional_shadow/atlas_size=2048
 

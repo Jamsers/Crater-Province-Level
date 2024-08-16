@@ -225,6 +225,8 @@ menu_camera = NodePath("../MenuCamera")
 camera = NodePath("Car/SpringArm/Camera")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Car Scenario"]
+callback_mode_process = 0
+callback_mode_discrete = 2
 libraries = {
 "": SubResource("AnimationLibrary_4fypr")
 }
