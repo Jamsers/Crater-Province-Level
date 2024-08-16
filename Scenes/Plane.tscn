@@ -1,92 +1,7 @@
-[gd_scene load_steps=59 format=4 uid="uid://c77e1yn8ifgkx"]
+[gd_scene load_steps=15 format=4 uid="uid://l221c3nfg2w3"]
 
-[ext_resource type="Script" path="res://Scripts/LightingChanger.gd" id="1_c06e6"]
-[ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="1_wutcc"]
-[ext_resource type="Resource" uid="uid://oqnojdtn008i" path="res://Resources/Lighting/Core/TIME_AM_0.tres" id="2_fjhij"]
-[ext_resource type="Resource" uid="uid://fdswb8pn8erx" path="res://Resources/Lighting/Core/TIME_PM_3.tres" id="2_p04ay"]
-[ext_resource type="CameraAttributesPractical" uid="uid://det73xlqhmppv" path="res://Resources/CameraAttributes.tres" id="2_qbce3"]
-[ext_resource type="Script" path="res://Scripts/Lighting.gd" id="2_tykvi"]
-[ext_resource type="Resource" uid="uid://buivpb86yw5p0" path="res://Resources/Lighting/Core/TIME_AM_5_20.tres" id="3_0d4dm"]
-[ext_resource type="Material" uid="uid://dv3nmr37d666h" path="res://Materials/FogMaterial.tres" id="3_denfd"]
-[ext_resource type="Resource" uid="uid://b1u0xjy8gj3rw" path="res://Resources/Lighting/InterimCorrections/TIME_AM_5_22.tres" id="4_a1kk8"]
-[ext_resource type="Resource" uid="uid://c7kl22jqdcch7" path="res://Resources/Lighting/Core/TIME_AM_5_40.tres" id="4_olts1"]
-[ext_resource type="Resource" uid="uid://bu4k1pg0qwo8p" path="res://Resources/Lighting/Core/TIME_AM_6.tres" id="5_dxjhp"]
-[ext_resource type="Resource" uid="uid://c8nmwfaxnfbnb" path="res://Resources/Lighting/InterimCorrections/TIME_AM_5_27.tres" id="5_p1or3"]
-[ext_resource type="Resource" uid="uid://bve7hd1e5ug01" path="res://Resources/Lighting/InterimCorrections/TIME_AM_6_7.tres" id="6_43l3o"]
-[ext_resource type="Resource" uid="uid://o4dfgkexhdw5" path="res://Resources/Lighting/Core/TIME_AM_9.tres" id="6_adwvh"]
-[ext_resource type="Resource" uid="uid://cvjfqmqm5imlk" path="res://Resources/Lighting/InterimCorrections/TIME_AM_7.tres" id="6_ctalx"]
-[ext_resource type="Resource" uid="uid://dmjapq17u51xm" path="res://Resources/Lighting/Core/TIME_PM_0.tres" id="7_7ieaj"]
-[ext_resource type="Resource" uid="uid://4hmf6lrbu60o" path="res://Resources/Lighting/InterimCorrections/TIME_AM_6_15.tres" id="7_kf61e"]
-[ext_resource type="Resource" uid="uid://d0dbaf8m6fcpr" path="res://Resources/Lighting/InterimCorrections/TIME_AM_6_30.tres" id="8_gy806"]
-[ext_resource type="Resource" uid="uid://dao7mgcw8uxe1" path="res://Resources/Lighting/Core/TIME_PM_6.tres" id="9_jg74e"]
-[ext_resource type="Resource" uid="uid://bekndudr2hjh2" path="res://Resources/Lighting/Core/TIME_PM_6_20.tres" id="10_2jb5e"]
-[ext_resource type="Resource" uid="uid://dudf03rsqucg0" path="res://Resources/Lighting/Core/TIME_PM_6_40.tres" id="11_8o1sm"]
-[ext_resource type="Resource" uid="uid://cou3iw1liph4g" path="res://Resources/Lighting/InterimCorrections/TIME_PM_4_30.tres" id="13_3wbjl"]
-[ext_resource type="Resource" uid="uid://ccqsjbqatofuf" path="res://Resources/Lighting/InterimCorrections/TIME_PM_5_15.tres" id="14_vr08g"]
-[ext_resource type="Resource" uid="uid://cy5nrm66j1g7o" path="res://Resources/Lighting/InterimCorrections/TIME_PM_5_45.tres" id="15_0msdb"]
-[ext_resource type="Resource" uid="uid://v7ef2bbfyi5s" path="res://Resources/Lighting/InterimCorrections/TIME_PM_5_53.tres" id="16_4udgj"]
-[ext_resource type="Resource" uid="uid://c1733xu6yotvp" path="res://Resources/Lighting/InterimCorrections/TIME_PM_6_33.tres" id="21_j4ty0"]
-[ext_resource type="Script" path="res://Scripts/TimeOfDaySystem.gd" id="21_yw3r5"]
-[ext_resource type="Resource" uid="uid://cym57oestwev2" path="res://Resources/Lighting/InterimCorrections/TIME_PM_6_38.tres" id="22_5rbir"]
-[ext_resource type="Script" path="res://Scripts/Profiler.gd" id="22_xngbd"]
-[ext_resource type="PackedScene" uid="uid://yemviufpvob3" path="res://Scenes/Sub_Scenes/Everything_Else.tscn" id="30_eqdje"]
-[ext_resource type="Animation" uid="uid://xlds8frktbmr" path="res://Animations/Car_Scenario.res" id="31_3riuw"]
-[ext_resource type="PackedScene" uid="uid://l221c3nfg2w3" path="res://Scenes/Plane.tscn" id="31_3xw6t"]
-[ext_resource type="Script" path="res://Scripts/Scenario.gd" id="31_5vdeh"]
-[ext_resource type="PackedScene" uid="uid://e3pkxpf7rx26" path="res://Models/Car.glb" id="31_h4jea"]
-[ext_resource type="Material" uid="uid://b4qc68g4c5xa2" path="res://Materials/Generic/Car_Paint_Red.tres" id="33_qpygn"]
-[ext_resource type="Material" uid="uid://dpmaiendl00sw" path="res://Materials/Generic/Glass_FrontLight_On.tres" id="34_at2fh"]
-[ext_resource type="Material" uid="uid://cpo5y8y5ebq6a" path="res://Materials/Generic/Glass_BackLight_On.tres" id="35_gn6j3"]
-[ext_resource type="Material" uid="uid://l7arlkarpt8b" path="res://Materials/Generic/Car_Paint_White.tres" id="38_8cy26"]
-[ext_resource type="Material" uid="uid://w7x7mj8tckm3" path="res://Materials/Generic/Car_Window.tres" id="39_7m7bm"]
-
-[sub_resource type="Animation" id="Animation_7qhat"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Car Container:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(38.3689, -16.2105, -421.178)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Car Container:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.0547155, -2.93377, -0.000259057)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fypr"]
-_data = {
-"Car_Scenario": ExtResource("31_3riuw"),
-"RESET": SubResource("Animation_7qhat")
-}
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_ix8ou"]
-height = 0.221604
-radius = 0.312538
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_jdoxy"]
-size = Vector3(1.79117, 0.809448, 4.48178)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_f466h"]
-size = Vector3(1.14331, 1.15636, 0.648886)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_asahx"]
-size = Vector3(1.14691, 0.674832, 1.12945)
-
-[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_xemv2"]
+[ext_resource type="Material" uid="uid://l7arlkarpt8b" path="res://Materials/Generic/Car_Paint_White.tres" id="1_t1dt5"]
+[ext_resource type="Material" uid="uid://w7x7mj8tckm3" path="res://Materials/Generic/Car_Window.tres" id="2_p3q5n"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_v58is"]
 _surfaces = [{
@@ -120,7 +35,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 336,
 "index_data": PackedByteArray("NQCWADAAkwBvAGoANQCTAJYAkwA1AG8AEABFAEoAEAALAEUANAByAG4ANAA4AHIAGABNAFIAGAATAE0AIgCaAJgAIgCAAJoAFABJAE4AFAAPAEkAGwBYAFUAGwAeAFgAIwBZAB8AWQCcAF0AmQBZACMAWQCZAJwAAwA7AD0AAwABADsAAABWADoAAAAcAFYAdwBBAAcAQQA+AHQAPgB3AAQAQQB3AD4AKABmAGIAKAAsAGYADABCAEYADAAIAEIAegBlACsAZQCUAHwAlAB6AJcAZQB6AJQAGgBRAFQAGgAXAFEAVwBAADwAVwBbAEAAHQAGACEAHQACAAYAdQBaAF4AdQA/AFoAeAAgAAUAeAAkACAAuAB2AGAAdgCQAEMAdgC4AJAAJQCoAIEAJQCmAKgAiwAKAA4ACgCkAI0AoAAKAIsACgCgAKQARACPAEgAsgCRAK4ARACyAI8AsgBEAJEARwBsAEwAbACOALQAbABHAI4AMgANABIADQCqAIoADQAyAKoAUABrAHEAUABLAGsAFgAxABEAFgA3ADEAGQA2ABUAGQA5ADYAUwBwAHMAUwBPAHAAZACtAIMArQCFALEAhQBkAGgArQBkAIUAhAB9ALYAhABnAH0AfwCCALkAfwBjAIIAewAtAKkAqQAtAIYAiAApAKgAqAApAIEALgCfAIcAnwCJAKMAiQAuACoAnwAuAIkAegCVAJcAegAvAJUAJwCaAIAAnQBhAH4AJwCdAJoAnQAnAGEAMwCpAKsAMwB7AKkApwAJAIwACQAmAHkACQCnACYAkgB8AJQAkgBpAHwAnQBcAJsAnQB+AFwAngClAKEAngCiAKUArACzAK8ArACwALMAtgBtALUAtgB9AG0AtwB/ALkAtwBfAH8A"),
-"material": ExtResource("38_8cy26"),
+"material": ExtResource("1_t1dt5"),
 "name": "Plane",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -132,7 +47,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 60,
 "index_data": PackedByteArray("CQAYABkACQAFABgADwAgACEADwABACAADAAlACQADAACACUADgAnAAAADgAmACcAEgARABMAEgAQABEAFQAWABQAFQAXABYAGgALABsAGgAHAAsAHAAGAB0AHAAKAAYAHgAIAB8AHgAEAAgAIgANACMAIgADAA0A"),
-"material": ExtResource("39_7m7bm"),
+"material": ExtResource("2_p3q5n"),
 "name": "Window",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -164,7 +79,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 60,
 "index_data": PackedByteArray("AQATACYAAQAkABMACAAaAB0ACAALABoABQAnACAABQACACcAGwAUABAAGwAYABQADwAfABcADwAEAB8ACgAVABkACgANABUAIgAcABEAIgAHABwAEgAeACUAEgAWAB4ADAAGACEADAAJAAYAAAAOACMAAAADAA4A"),
-"material": ExtResource("38_8cy26"),
+"material": ExtResource("1_t1dt5"),
 "name": "Plane",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -198,7 +113,7 @@ _surfaces = [{
 "index_count": 84,
 "index_data": PackedByteArray("FAA0ABgAFAAwADQABAArAA8ABAAgACsACwAkAAgACwAnACQAAgAhAAUAAgAeACEABgAzABYABgAjADMADAAsABAADAAoACwAGgAdAAAAGgA3AB0AEwAmAAoAEwAvACYADQAVABkADQARABUAAQAOABsAAQADAA4AEgAHABcAEgAJAAcAKQAxAC0AKQA1ADEAHAAqAB8AHAA2ACoALgAiACUALgAyACIA"),
 "lods": [0.355769, PackedByteArray("CQA5AAAACQA4ADkAAAA0AB0AKAAJAAAAKAAmAAkAAAAgACgACwAnACQAAgAeACEAHAApAB8AHAA1ACkAKQA1ACIAKQAiACUA")],
-"material": ExtResource("38_8cy26"),
+"material": ExtResource("1_t1dt5"),
 "name": "Plane",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -226,332 +141,48 @@ points = PackedVector3Array(-2.66589, -0.0801352, -0.744089, -5.61128, -0.046809
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vwx1k"]
 points = PackedVector3Array(-0.00028801, -0.0668842, -0.70956, -1.74956, -0.0383123, -0.413353, -0.00028801, 0.0813586, -0.634921, 1.74899, -0.0383123, -0.413353, -0.00028801, -0.0668842, 0.653022, -1.74956, -0.0383123, 0.383353, -1.7071, 0.0176125, -0.383635, -0.00028801, 0.0813586, 0.702505, 1.70618, 0.0176125, -0.383635, 1.74899, -0.0383123, 0.383353, -1.7071, 0.0176125, 0.397313, 1.70618, 0.0176125, 0.397313)
 
-[node name="Main" type="Node"]
+[node name="Plane2" type="RigidBody3D"]
 
-[node name="LightingChanger" type="Node" parent="." node_paths=PackedStringArray("environment", "sun")]
-script = ExtResource("1_c06e6")
-military_time_hour = 9.0
-lighting = Array[ExtResource("2_tykvi")]([ExtResource("2_fjhij"), ExtResource("3_0d4dm"), ExtResource("4_a1kk8"), ExtResource("5_p1or3"), ExtResource("4_olts1"), ExtResource("5_dxjhp"), ExtResource("6_43l3o"), ExtResource("7_kf61e"), ExtResource("8_gy806"), ExtResource("6_ctalx"), ExtResource("6_adwvh"), ExtResource("7_7ieaj"), ExtResource("2_p04ay"), ExtResource("13_3wbjl"), ExtResource("14_vr08g"), ExtResource("15_0msdb"), ExtResource("16_4udgj"), ExtResource("9_jg74e"), ExtResource("10_2jb5e"), ExtResource("21_j4ty0"), ExtResource("22_5rbir"), ExtResource("11_8o1sm")])
-environment = NodePath("../WorldEnvironment")
-sun = NodePath("../DirectionalLight3D")
+[node name="Plane2" type="Node3D" parent="."]
 
-[node name="TimeOfDaySystem" type="Node" parent="." node_paths=PackedStringArray("lighting_changer")]
-script = ExtResource("21_yw3r5")
-time_pause = true
-lighting_changer = NodePath("../LightingChanger")
-
-[node name="UI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-
-[node name="Profiler" type="RichTextLabel" parent="UI"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-text = "FPS: 60
-Frame time: 16 ms
-Physics frame time: 16 ms
-Draw calls: 1000
-RAM: 1024 MB
-VRAM: 1024 MB"
-script = ExtResource("22_xngbd")
-
-[node name="GridContainer" type="GridContainer" parent="UI"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -89.0
-offset_top = -85.5
-offset_right = 89.0
-offset_bottom = 85.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Button" type="Button" parent="UI/GridContainer"]
-layout_mode = 2
-text = "Third Person Scenario"
-
-[node name="Button2" type="Button" parent="UI/GridContainer"]
-layout_mode = 2
-text = "First Person Scenario"
-
-[node name="Button3" type="Button" parent="UI/GridContainer"]
-layout_mode = 2
-text = "Objects Scenario"
-
-[node name="Button4" type="Button" parent="UI/GridContainer"]
-layout_mode = 2
-text = "Car Scenario"
-
-[node name="Button5" type="Button" parent="UI/GridContainer"]
-layout_mode = 2
-text = "Plane Scenario"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="UI"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -82.5
-offset_top = -16.5
-offset_right = 82.5
-offset_bottom = 16.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Reloading scene..."
-
-[node name="Button" type="Button" parent="UI"]
-visible = false
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -42.0
-offset_top = -31.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Quit
-"
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("1_wutcc")
-camera_attributes = ExtResource("2_qbce3")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-4.37114e-08, -0.707106, 0.707106, 0, 0.707106, 0.707106, -1, 3.09086e-08, -3.09086e-08, 0, 0, 0)
-light_intensity_lux = 50000.0
-light_temperature = 3750.0
-shadow_enabled = true
-directional_shadow_split_1 = 0.03
-directional_shadow_split_2 = 0.09
-directional_shadow_split_3 = 0.2
-directional_shadow_max_distance = 1000.0
-
-[node name="FogVolume" type="FogVolume" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -26.664, 0)
-shape = 4
-material = ExtResource("3_denfd")
-
-[node name="Everything Else" parent="." instance=ExtResource("30_eqdje")]
-
-[node name="MenuCamera" type="Camera3D" parent="."]
-transform = Transform3D(0.878817, 0.0622816, -0.473076, 0, 0.991445, 0.130526, 0.477158, -0.114709, 0.871299, -127.721, 10.291, 323.047)
-current = true
-fov = 60.0
-far = 20000.0
-
-[node name="Plane2" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.853, 0, 232.462)
-
-[node name="Plane3" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.6515, 0, 244.017)
-
-[node name="Plane4" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.879, 0, 264.472)
-
-[node name="Plane5" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.8794, 0, 251.472)
-
-[node name="Plane6" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.8122, 0, 268.984)
-
-[node name="Plane7" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.1168, 0, 268.014)
-
-[node name="Plane8" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0886, 0, 256.609)
-
-[node name="Plane9" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -144.783, 0, 239.824)
-
-[node name="Plane10" parent="." instance=ExtResource("31_3xw6t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -147.057, 0, 268.709)
-
-[node name="Car Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player", "menu", "quit", "reloading_label", "menu_camera", "camera")]
-script = ExtResource("31_5vdeh")
-animation_player = NodePath("AnimationPlayer")
-menu = NodePath("../UI/GridContainer")
-quit = NodePath("../UI/Button")
-reloading_label = NodePath("../UI/RichTextLabel")
-menu_camera = NodePath("../MenuCamera")
-camera = NodePath("Car Container/SpringArm/Camera")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Car Scenario"]
-callback_mode_process = 0
-callback_mode_discrete = 2
-libraries = {
-"": SubResource("AnimationLibrary_4fypr")
-}
-
-[node name="Car Container" type="Node3D" parent="Car Scenario"]
-transform = Transform3D(-0.978484, 0.0110303, -0.206022, -0.000258669, 0.998502, 0.0546881, 0.206317, 0.0535648, -0.977017, 38.3689, -16.2105, -421.178)
-
-[node name="Car2" type="AnimatableBody3D" parent="Car Scenario/Car Container"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-sync_to_physics = false
-
-[node name="Car2" parent="Car Scenario/Car Container/Car2" instance=ExtResource("31_h4jea")]
-
-[node name="Wheel_Front_Left" parent="Car Scenario/Car Container/Car2/Car2" index="0"]
-visibility_range_end = 600.0
-
-[node name="Wheel_Back_Right" parent="Car Scenario/Car Container/Car2/Car2" index="1"]
-visibility_range_end = 600.0
-
-[node name="Car" parent="Car Scenario/Car Container/Car2/Car2" index="2"]
-visibility_range_end = 600.0
-surface_material_override/0 = ExtResource("33_qpygn")
-surface_material_override/3 = ExtResource("34_at2fh")
-surface_material_override/4 = ExtResource("35_gn6j3")
-
-[node name="Wheel_Front_Right" parent="Car Scenario/Car Container/Car2/Car2" index="3"]
-visibility_range_end = 600.0
-
-[node name="Wheel_Back_Left" parent="Car Scenario/Car Container/Car2/Car2" index="4"]
-visibility_range_end = 600.0
-
-[node name="Axle_Front" parent="Car Scenario/Car Container/Car2/Car2" index="5"]
-visibility_range_end = 600.0
-
-[node name="Axle_Back" parent="Car Scenario/Car Container/Car2/Car2" index="6"]
-visibility_range_end = 600.0
-
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
-transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, -0.781105, 0.309319, -1.43595)
-shape = SubResource("CylinderShape3D_ix8ou")
-
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
-transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, 0.781962, 0.309319, -1.43595)
-shape = SubResource("CylinderShape3D_ix8ou")
-
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
-transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, -0.781105, 0.309319, 1.31062)
-shape = SubResource("CylinderShape3D_ix8ou")
-
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
-transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, 0.781962, 0.309319, 1.31062)
-shape = SubResource("CylinderShape3D_ix8ou")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00172424, 0.607008, -0.00108337)
-shape = SubResource("BoxShape3D_jdoxy")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
-transform = Transform3D(-1, 7.78665e-08, -3.97434e-08, 0, 0.454612, 0.890689, 8.74228e-08, 0.890689, -0.454612, 0.00500482, 0.969465, -0.634884)
-shape = SubResource("BoxShape3D_f466h")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
-transform = Transform3D(-1, -7.76896e-08, -4.00882e-08, 0, 0.458556, -0.888665, 8.74228e-08, -0.888665, -0.458556, 1.05075e-07, 0.955408, 1.20192)
-shape = SubResource("BoxShape3D_f466h")
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0032654, 1.17779, 0.285099)
-shape = SubResource("BoxShape3D_asahx")
-
-[node name="Headlights" type="SpotLight3D" parent="Car Scenario/Car Container/Car2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.613525, -2.40953)
-light_intensity_lumens = 3000.0
-light_temperature = 5000.0
-shadow_enabled = true
-distance_fade_enabled = true
-distance_fade_begin = 300.0
-spot_range = 15.0
-spot_attenuation = 1.75
-spot_angle = 60.0
-spot_angle_attenuation = 5.0
-
-[node name="Brakelights" type="SpotLight3D" parent="Car Scenario/Car Container/Car2"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.03932e-08, 0.613525, 2.38187)
-light_intensity_lumens = 400.0
-light_color = Color(0.776197, 0.234777, 0.234157, 1)
-distance_fade_enabled = true
-distance_fade_begin = 300.0
-spot_attenuation = 1.75
-spot_angle = 80.0
-
-[node name="SpringArm" type="SpringArm3D" parent="Car Scenario/Car Container"]
-transform = Transform3D(0.999998, 0, 0, 0, 0.993572, 0.113203, 0, -0.113203, 0.99357, -9.73932e-09, 1.32371, -6.47372e-09)
-shape = SubResource("SeparationRayShape3D_xemv2")
-spring_length = 5.725
-
-[node name="Camera" type="Camera3D" parent="Car Scenario/Car Container/SpringArm"]
-fov = 60.0
-far = 20000.0
-
-[node name="Plane Scenario" type="Node" parent="."]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Plane Scenario"]
-callback_mode_process = 0
-callback_mode_discrete = 2
-
-[node name="Plane Container" type="Node3D" parent="Plane Scenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.1855, -20.1901, 16.2013)
-
-[node name="Plane2" type="AnimatableBody3D" parent="Plane Scenario/Plane Container"]
-sync_to_physics = false
-
-[node name="Plane2" type="Node3D" parent="Plane Scenario/Plane Container/Plane2"]
-
-[node name="Plane" type="MeshInstance3D" parent="Plane Scenario/Plane Container/Plane2/Plane2"]
+[node name="Plane" type="MeshInstance3D" parent="Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0720738, 1.27111)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_b2c4v")
 skeleton = NodePath("")
 
-[node name="TailWings" type="MeshInstance3D" parent="Plane Scenario/Plane Container/Plane2/Plane2"]
+[node name="TailWings" type="MeshInstance3D" parent="Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70023e-05, 0.0226938, 4.61643)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_p2be2")
 skeleton = NodePath("")
 
-[node name="Wings" type="MeshInstance3D" parent="Plane Scenario/Plane Container/Plane2/Plane2"]
+[node name="Wings" type="MeshInstance3D" parent="Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38905e-05, 0.780281, 0.0977366)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_ao8cx")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0353518, -1.74797)
 shape = SubResource("ConvexPolygonShape3D_7ms42")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0100012, 0.0813013)
 shape = SubResource("ConvexPolygonShape3D_we3i0")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0533339, 2.84407)
 shape = SubResource("ConvexPolygonShape3D_fvyfp")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.656753, 4.89247)
 shape = SubResource("ConvexPolygonShape3D_qpxrv")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00462851, 0.787881, 0.0821953)
 shape = SubResource("ConvexPolygonShape3D_5fd80")
 
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000288023, 0.0294657, 4.62013)
 shape = SubResource("ConvexPolygonShape3D_vwx1k")
-
-[connection signal="pressed" from="UI/GridContainer/Button4" to="Car Scenario" method="play_scenario"]
-[connection signal="pressed" from="UI/Button" to="Car Scenario" method="stop_scenario"]
-
-[editable path="Car Scenario/Car Container/Car2/Car2"]
