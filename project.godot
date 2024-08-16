@@ -33,6 +33,12 @@ window/vsync/vsync_mode=0
 
 enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
 
+[physics]
+
+common/physics_ticks_per_second=200
+3d/physics_engine="JoltPhysics3D"
+jolt_3d/limits/max_bodies=20480
+
 [rendering]
 
 lights_and_shadows/use_physical_light_units=true
