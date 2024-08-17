@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=4 uid="uid://c77e1yn8ifgkx"]
+[gd_scene load_steps=81 format=4 uid="uid://c77e1yn8ifgkx"]
 
 [ext_resource type="Script" path="res://Scripts/LightingChanger.gd" id="1_c06e6"]
 [ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="1_wutcc"]
@@ -33,12 +33,175 @@
 [ext_resource type="Animation" uid="uid://xlds8frktbmr" path="res://Animations/Car_Scenario.res" id="31_3riuw"]
 [ext_resource type="Script" path="res://Scripts/Scenario.gd" id="31_5vdeh"]
 [ext_resource type="PackedScene" uid="uid://e3pkxpf7rx26" path="res://Models/Car.glb" id="31_h4jea"]
+[ext_resource type="Animation" uid="uid://dq1g8r1bgfslj" path="res://Animations/Third_Person_Scenario.res" id="32_8165t"]
+[ext_resource type="PackedScene" uid="uid://cuhiiv3vccg28" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/mannequiny-0.3.0.gltf" id="33_aotau"]
 [ext_resource type="Material" uid="uid://b4qc68g4c5xa2" path="res://Materials/Generic/Car_Paint_Red.tres" id="33_qpygn"]
 [ext_resource type="Material" uid="uid://dpmaiendl00sw" path="res://Materials/Generic/Glass_FrontLight_On.tres" id="34_at2fh"]
+[ext_resource type="Animation" uid="uid://dqgcxkllsr3rc" path="res://Animations/First_Person_Scenario.res" id="34_ifrjn"]
+[ext_resource type="Material" uid="uid://lj0pon4qrur8" path="res://Models/Placeholder/Placeholder_Material.tres" id="35_aq1aa"]
 [ext_resource type="Material" uid="uid://cpo5y8y5ebq6a" path="res://Materials/Generic/Glass_BackLight_On.tres" id="35_gn6j3"]
+[ext_resource type="Animation" uid="uid://dlhi51mkssqci" path="res://Animations/Objects_Scenario.res" id="36_5qdfn"]
 [ext_resource type="Animation" uid="uid://7cnr31x5e3a2" path="res://Animations/Plane_Scenario.res" id="37_pvakd"]
 [ext_resource type="Material" uid="uid://l7arlkarpt8b" path="res://Materials/Generic/Car_Paint_White.tres" id="38_8cy26"]
 [ext_resource type="Material" uid="uid://w7x7mj8tckm3" path="res://Materials/Generic/Car_Window.tres" id="39_7m7bm"]
+
+[sub_resource type="Animation" id="Animation_ujows"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Position Container:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-84.4517, -23.8739, 245.412)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Position Container:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.00317, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_av501"]
+_data = {
+"RESET": SubResource("Animation_ujows"),
+"Third_Person_Scenario": ExtResource("32_8165t")
+}
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_xemv2"]
+
+[sub_resource type="Animation" id="Animation_7sigu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Position Container:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(301.094, -21.246, -26.1471)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Position Container:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_la5cj"]
+_data = {
+"First_Person_Scenario": ExtResource("34_ifrjn"),
+"RESET": SubResource("Animation_7sigu")
+}
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2671y"]
+_surfaces = [{
+"aabb": AABB(-0.682698, -0.700722, -0.682698, 1.3654, 1.97423, 1.3654),
+"format": 34896613377,
+"index_count": 828,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAFAAMAAgAEAAUABAAHAAUABAAGAAcABgAJAAcABgAIAAkACAALAAkACAAKAAsACgANAAsACgAMAA0ADAAPAA0ADAAOAA8ADgARAA8ADgAQABEAEAATABEAEAASABMAEgAVABMAEgAUABUAFAAXABUAFAAWABcAFgAZABcAFgAYABkAGAAbABkAGAAaABsAGgAdABsAGgAcAB0AHAAfAB0AHAAeAB8AHgAhAB8AHgAgACEAIAAjACEAIAAiACMAIgAlACMAIgAkACUAJAAnACUAJAAmACcAJgApACcAJgAoACkAKAArACkAKAAqACsAKgAtACsAKgAsAC0ALAAvAC0ALAAuAC8ALgAxAC8ALgAwADEAMAAzADEAMAAyADMAMgA1ADMAMgA0ADUANAA3ADUANAA2ADcANgA5ADcANgA4ADkAOAA7ADkAOAA6ADsAOgA9ADsAOgA8AD0APAA/AD0APAA+AD8APgABAD8APgAAAAEAPAAAAD4AAAAEAAIABAAIAAYACAAMAAoADAAQAA4AEAAUABIAFAAYABYAGAAcABoAHAAgAB4AIAAkACIAJAAoACYAKAAsACoALAAwAC4AMAA0ADIANAA4ADYAOAA8ADoAPAAEAAAABAAMAAgADAAUABAAFAAcABgAHAAkACAAJAAsACgALAA0ADAANAA8ADgAPAAMAAQADAAcABQAHAAsACQALAA8ADQAPAAcAAwAHAA8ACwAUgB0AHAAUgBWAHQASABqAGYASABMAGoAYgCDAGUAYgCAAIMAVwB5AFsAVwB1AHkASQBmAGcASQBIAGYAUAB+AG4AUABgAH4AWAB1AFcAWAB2AHUASgBnAGgASgBJAGcAWQB2AFgAWQB3AHYASwBoAGkASwBKAGgAWgB3AFkAWgB4AHcATABrAGoATABNAGsAWwB6AFwAWwB5AHoATQBsAGsATQBOAGwAXAB7AF0AXAB6AHsATgBtAGwATgBPAG0AXQB8AF4AXQB7AHwATwBuAG0ATwBQAG4AXgB9AF8AXgB8AH0AUQBpAG8AUQBLAGkAXwB+AGAAXwB9AH4AUwBwAHEAUwBSAHAAYQB4AFoAYQB/AHgAYwCAAGIAYwCBAIAAVQBvAHMAVQBRAG8AZAB/AGEAZACCAH8AVgBzAHQAVgBVAHMAZQCCAGQAZQCDAIIAfQBuAH4AbgBsAG0AbgBrAGwAewB9AHwAfQBrAG4AagBnAGYAfQBqAGsAegB9AHsAdgB5AHUAeQB9AHoAfQBnAGoAaABvAGkAfQBoAGcAdwB5AHYAeQBoAH0AaABzAG8AcwBwAHQAcAByAHEAcgCAAIEAgACCAIMAggB4AH8AeAB5AHcAeQBzAGgAcwByAHAAcgCCAIAAggB5AHgAeQByAHMAcgB5AIIAUgBVAFYAVQBLAFEASgBIAEkAVQBKAEsAUwBVAFIAYwBTAFQAZQBjAGIAYQBlAGQAWQBhAFoAVwBZAFgAWwBZAFcAWQBlAGEAZQBTAGMAUwBKAFUASgBMAEgATQBPAE4ASgBNAEwAZQBKAFMAWwBlAFkAXgBcAF0AXABlAFsAZQBNAEoATQBQAE8AUABfAGAAXwBcAF4AXABNAGUATQBfAFAATQBcAF8AUwCHAFQAUwCKAIcAiABxAHIAiQBxAIgAcQCKAFMAiwBxAIkAigBxAIsAgQCIAHIAgQCGAIgAhwBjAFQAhQBjAIcAYwCGAIEAhABjAIUAYwCEAIYARgCHAIoARgBEAIcARQCKAIsARQBGAIoARQCJAEcARQCLAIkARwCIAEIARwCJAIgAQgCGAEMAQgCIAIYAQwCEAEEAQwCGAIQAQACEAIUAQABBAIQARACFAIcARABAAIUAAwBCAAEAAwBHAEIABwADAAUACwAHAAkADwALAA0AEwAPABEAFwATABUAGwAXABkAHwAbAB0ARAAfACEARgAfAEQAHwAXABsAFwAPABMADwAHAAsABwBHAAMARQAfAEYABwBFAEcAFwAHAA8ARQAXAB8ARQAHABcAIwBEACEAIwBAAEQAJwAjACUAKwAnACkALwArAC0AMwAvADEANwAzADUAOwA3ADkAPwA7AD0AQgA/AAEAQwA/AEIAPwA3ADsANwAvADMALwAnACsAJwBAACMAQQA/AEMAJwBBAEAANwAnAC8AQQA3AD8AQQAnADcA"),
+"lods": [0.30512, PackedByteArray("CAAXAD8ACAAZABcAOAAIAD8ACAAYABkAGAAfABkAGAAcAB8AHAAoACkAHAApAB8AKAA3ACkAKAAsADcALAA5ADcALAA4ADkAOAA/ADkACAAcABgAHAAIACwALAAIADgAHAAsACgASABqAGYASABMAGoAVwB5AFsAVwB1AHkASQBmAGcASQBIAGYAUAB+AG4AUABgAH4AXwB+AGAAXwB9AH4AWAB1AFcAWAB2AHUASgBnAGkASgBJAGcAVQBKAGkAVQBpAHMAWgB2AFgAWgB4AHYAZAB4AFoAZACCAHgATABrAGoATABNAGsAWwB6AFwAWwB5AHoATQBsAGsATQBOAGwAXAB7AF0AXAB6AHsATgBtAGwATgBPAG0AXQB8AF4AXQB7AHwATwBuAG0ATwBQAG4AXgB9AF8AXgB8AH0AUwBzAHAAUwBVAHMAcACKAFMAUwCKAIcAhwBlAFMAigBwAIsAiwBwAIkAiQBwAIgAgACIAHAAgACGAIgAZQCGAIAAhQBlAIcAZQCEAIYAhABlAIUAZQCAAIIAZQCCAGQAfQBuAH4AbgBsAG0AbgBrAGwAfQBrAG4AfQBqAGsAagBnAGYAfQBnAGoAfQBpAGcAewB9AHwAegB9AHsAeQB9AHoAeQBpAH0AeQBzAGkAeQBwAHMAcAB5AIIAcACCAIAAggB5AHgAeAB5AHYAdgB5AHUASgBIAEkASgBMAEgASgBNAEwAUwBKAFUAZQBKAFMAZQBNAEoAWgBlAGQAVwBaAFgAWwBaAFcAWwBlAFoAXABlAFsAXABNAGUAXgBcAF0AXwBcAF4ATQBcAF8ATQBfAFAAUABfAGAATQBQAE8ATQBPAE4ARgCHAIoARgBEAIcARACFAIcARABAAIUARQCKAIsARQBGAIoARQCLAIkARQCJAEcARwCIAEIARwCJAIgAQgCIAIYAQgCGAEMAQwCEAEEAQwCGAIQAQABBAIQAQACEAIUAPwBHAEIAQwA/AEIAPwBFAEcAQQA/AEMARQA/ABcAQQA3AD8APwA3ADkAQQAfADcARQAXAB8AHwAXABkANwAfACkARQAfAEYAHwBBAEAARgAfAEQAHwBAAEQA")],
+"name": "Placeholder",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 140,
+"vertex_data": PackedByteArray("/38AAAAAAAD/fzENAAAAAPiYAAB1AgAA+JgxDXUCAAD7sAAAvgkAAPuwMQ2+CQAAHMcAAJIVAAAcxzENkhUAAIHaAAB9JQAAgdoxDX0lAABs6gAA4jgAAGzqMQ3iOAAAQPYAAANPAABA9jENA08AAIn9AAAGZwAAif0xDQZnAAD//wAA/38AAP//MQ3/fwAAif0AAPiYAACJ/TEN+JgAAED2AAD7sAAAQPYxDfuwAABs6gAAHMcAAGzqMQ0cxwAAgdoAAIHaAACB2jENgdoAABzHAABs6gAAHMcxDWzqAAD7sAAAQPYAAPuwMQ1A9gAA+JgAAIn9AAD4mDENif0AAP9/AAD//wAA/38xDf//AAAGZwAAif0AAAZnMQ2J/QAAA08AAED2AAADTzENQPYAAOI4AABs6gAA4jgxDWzqAAB9JQAAgdoAAH0lMQ2B2gAAkhUAABzHAACSFTENHMcAAL4JAAD7sAAAvgkxDfuwAAB1AgAA+JgAAHUCMQ34mAAAAAAAAP9/AAAAADEN/38AAHUCAAAGZwAAdQIxDQZnAAC+CQAAA08AAL4JMQ0DTwAAkhUAAOI4AACSFTEN4jgAAH0lAAB9JQAAfSUxDX0lAADiOAAAkhUAAOI4MQ2SFQAAA08AAL4JAAADTzENvgkAAAZnAAB1AgAABmcxDXUCAACEdzENeogAAAB0MQ3/fwAA/38xDQB0AACEdzENhHcAAP9/MQ3+iwAA/osxDf9/AAB6iDENeogAAHqIMQ2EdwAAYOMI4w+XAABK+SnPD5cAAG/qV8APlwAAb+q9hQ+XAAC0zXHaD5cAANG2EOYPlwAAQLlr+A+XAABhmP//D5cAAHOM1O8PlwAAWObWew+XAAB+tMZlD5cAALmWvmIPlwAA/3/vYQ+XAAC/3o90D5cAAAPOV2wPlwAAnhwI4w+XAAC0BinPD5cAAI8VV8APlwAAjxW9hQ+XAABKMnHaD5cAAC1JEOYPlwAAvkZr+A+XAACdZ///D5cAAItz1O8PlwAA/3+T8A+XAACmGdZ7D5cAAIBLxmUPlwAARWm+Yg+XAAA/IY90D5cAAPsxV2wPlwAAYOMI4+9oAABK+SnP72gAAG/qV8DvaAAAb+q9he9oAAC0zXHa72gAANG2EObvaAAAQLlr+O9oAABhmP//72gAAHOM1O/vaAAAWObWe+9oAAB+tMZl72gAALmWvmLvaAAA/3/vYe9oAAC/3o9072gAAAPOV2zvaAAAnhwI4+9oAAC0BinP72gAAI8VV8DvaAAAjxW9he9oAABKMnHa72gAAC1JEObvaAAAvkZr+O9oAACdZ///72gAAItz1O/vaAAA/3+T8O9oAACmGdZ772gAAIBLxmXvaAAARWm+Yu9oAAA/IY9072gAAPsxV2zvaAAAAHRcYv9/AACEdzxieogAAIR3PGKEdwAA/3/vYf6LAAD/f+9hAHQAAHqIPGKEdwAAeog8YnqIAAD+i1xi/38AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q806f"]
+resource_name = "Placeholder_Cylinder"
+_surfaces = [{
+"aabb": AABB(-0.682698, -0.700722, -0.682698, 1.3654, 1.97423, 1.3654),
+"attribute_data": PackedByteArray("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"),
+"format": 34896613399,
+"index_count": 828,
+"index_data": PackedByteArray("AAAHAAIAAAAFAAcABQALAAcABQAJAAsACQAPAAsACQANAA8ADQAVAA8ADQASABUAEQAZABQAEQAXABkAFwAdABkAFwAbAB0AGwAhAB0AGwAfACEAHwAlACEAHwAjACUAIwApACUAIwAnACkAJwAtACkAJwArAC0AKwAxAC0AKwAvADEALwA2ADEALwAzADYANAA7ADcANAA5ADsAOQA/ADsAOQA9AD8APQBDAD8APQBBAEMAQQBGAEMAQQBEAEYARABLAEYARABJAEsASQBPAEsASQBNAE8ATQBTAE8ATQBRAFMAUQBZAFMAUQBWAFkAVQBdAFgAVQBbAF0AWwBhAF0AWwBfAGEAXwBlAGEAXwBjAGUAYwBpAGUAYwBnAGkAZwBtAGkAZwBrAG0AawBxAG0AawBvAHEAbwB1AHEAbwBzAHUAcwB7AHUAcwB3AHsAeAB/AHoAeAB9AH8AfQCDAH8AfQCBAIMAgQCHAIMAgQCFAIcAhQACAIcAhQAAAAIAgAABAIQAAQAIAAQACAAQAAwAEAAaABYAGgAiAB4AIgAqACYAKgAyAC4AMgA8ADgAPABFAEAARQBMAEgATABUAFAAVABeAFoAXgBmAGIAZgBuAGoAbgB2AHIAdgCAAHwAgAAIAAEACAAaABAAGgAqACIAKgA8ADIAPABMAEUATABeAFQAXgBuAGYAbgCAAHYAgAAaAAgAGgA8ACoAPABeAEwAXgCAAG4AgAA8ABoAPACAAF4AugATAQoBugDDABMBngD6AO4AngCqAPoA5AA7AesA5AA0ATsBxQAhAdEAxQAVASEBoADtAPAAoACdAO0AtQAwAQUBtQDgADAByAAWAcYAyAAYARYBowDxAPMAowChAPEAywAZAckAywAbARkBpwD0APcApwCkAPQAzwAcAcwAzwAfARwBqQD8APkAqQCsAPwA0gAkAdQA0gAiASQBrQAAAf0ArQCwAAAB1QAoAdgA1QAlASgBrwACAf8ArwCyAAIB1wArAdsA1wAnASsBswAGAQMBswC2AAYB2gAtAd0A2gAqAS0BuAD2AAgBuACmAPYA3gAwAeAA3gAuATABvAAKAQwBvAC6AAoB4gAeAc4A4gAyAR4B5gA0AeQA5gA2ATQBwQAIARABwQC4AAgB6AAyAeIA6AA4ATIBwwARARMBwwDAABEB6wA5AekA6wA7ATkBLAEEAS8BBAH+AAEBBAH7AP4AJgEsASkBLAH7AAQB+ADvAOwALAH4APsAIwEsASYBFwEgARQBIAEsASMBLAHvAPgA8gAHAfUALAHyAO8AGgEgARcBIAHyACwB8gAPAQcBDwEJARIBCQENAQsBDQEzATUBMwE3AToBNwEdATEBHQEgARoBIAEPAfIADwENAQkBDQE3ATMBNwEgAR0BIAENAQ8BDQEgATcBuQC/AMIAvwClALcAogCcAJ8AvwCiAKUAuwC/ALkA5QC7AL0A6gDlAOMA4QDqAOcAygDhAM0AxADKAMcA0ADKAMQAygDqAOEA6gC7AOUAuwCiAL8AogCoAJwAqwCxAK4AogCrAKgA6gCiALsA0ADqAMoA2QDTANYA0wDqANAA6gCrAKIAqwC0ALEAtADcAN8A3ADTANkA0wCrAOoAqwDcALQAqwDTANwAvABFAb4AvABLAUUBRwEMAQ4BSAEMAUcBDAFLAbwATgEMAUgBSwEMAU4BNgFHAQ4BNgFBAUcBRQHmAL4APgHmAEUB5gBBATYBPAHmAD4B5gA8AUEBmABEAU0BmACSAEQBlQBMAU8BlQCXAEwBlQBJAZoAlQBPAUkBmwBGAY0AmwBKAUYBjQBCAZAAjQBGAUIBkQA9AYwAkQBDAT0BiQA9AT8BiQCMAD0BkgBAAUQBkgCKAEABBgCOAAMABgCZAI4ADgAGAAoAGAAOABMAIAAYABwAKAAgACQAMAAoACwAOgAwADUAQgA6AD4AkwBCAEcAlgBCAJMAQgAwADoAMAAgACgAIAAOABgADgCZAAYAlABCAJYADgCUAJkAMAAOACAAlAAwAEIAlAAOADAASgCTAEcASgCIAJMAUgBKAE4AXABSAFcAZABcAGAAbABkAGgAdABsAHAAfgB0AHkAhgB+AIIAjgCGAAMAjwCGAI4AhgB0AH4AdABkAGwAZABSAFwAUgCIAEoAiwCGAI8AUgCLAIgAdABSAGQAiwB0AIYAiwBSAHQA"),
+"lods": [0.30512, PackedByteArray("UAFTAWABUQE2ADEAXgFRAWEBUgFUAVUBNABDADcANABWAUMAVgFWAFkAVwFZAVgBVQBcAVgAVQBfAF0BWgFfAXUAWwF3AHsAeACHAHoAEAA8ADIAPAAQAF4AXgAQAHYAPABeAFQAngD6AO4AngCqAPoAxQAhAdEAxQAVASEBoADtAPAAoACdAO0AtQAwAQUBtQDgADAB3gAwAeAA3gAuATAByAAWAcYAyAAYARYBagHxAPYAagGhAPEAawFqAfYAawH2ABABzgBuAckAzgAeAW4B6AAeAc4A6AA4AR4BqQD8APkAqQCsAPwA0gAkAdQA0gAiASQBrQAAAf0ArQCwAAAB1QAoAdgA1QAlASgBrwACAf8ArwCyAAIB1wArAdsA1wAnASsBswAGAQMBswC2AAYB2gAtAd0A2gAqAS0BvAARAQoBvADAABEBCgFLAbwAvABLAUUBRQFsAbwASwEKAU4BTgEKAUgBSAEKAUcBNAFHAW0BNAFBAUcB6wBBATQBPgHrAEUB6wA8AUEBPAHrAD4B6wA0ATkB6wA5AekALAEEAS8BBAH+AAEBBAH7AP4ALAH7AAQBLAH4APsA+ADvAOwALAHvAPgALAH1AO8AJgEsASkBIwEsASYBIAEsASMBIAH1ACwBIAEPAfUAIAEJAQ8BCQEgATcBCQE3ATMBNwEgAR0BHQEgARcBFwEgARQBogCcAJ8AogCoAJwAogCrAKgAuwCiAL8A6gCiALsA6gCrAKIAzQDqAOcAxADNAMcA0ADNAMQA0ADqAM0A0wDqANAA0wCrAOoA2QDTANYA3ADTANkAqwDTANwAqwDcALQAtADcAN8AqwC0ALEAqwCxAK4AaAFzAU0BaAFlAXMBZQFxAXMBZQGKAHEBZgF3AU8BZgFnAXcBZgFPAXUBZgF1AZoAaQF0AWMBaQF2AXQBYwF0AXIBYwFyAZAAZAFvAYwAZAFDAW8BYgGMAG8BYgFwAT8BhgCZAI4AjwCGAI4AhgCUAJkAiwCGAI8AlACGADAAiwB0AIYAhgB0AHkAiwBCAHQAlAAwAEIAQgAwADUAdABCAFcAlABCAJYAQgCLAIgAlgBCAJMAQgCIAJMA")],
+"material": ExtResource("35_aq1aa"),
+"name": "Placeholder",
+"primitive": 3,
+"uv_scale": Vector4(2, 2, 0, 0),
+"vertex_count": 376,
+"vertex_data": PackedByteArray("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phnWew+X/7+mGdZ7D5cI84BLxmUPl/+/gEvGZQ+Xd9tFab5iD5f/v0VpvmIPl7DXPyGPdA+X/78/IY90D5eO6T8hj3QPl47p+zFXbA+X/7/7MVdsD5eS4WDjCOPvaP//YOMI4+9oZO1g4wjj72iywkr5Kc/vaP//Svkpz+9oZO1K+SnP72ir7m/qV8DvaP//b+pXwO9oq+5v6lfA72j//2/qvYXvaP//b+q9he9o/fdv6r2F72j//7TNcdrvaP//tM1x2u9o88O0zXHa72iywtG2EObvaP//0bYQ5u9o88PRthDm72iD10C5a/jvaP//QLlr+O9oCsFAuWv472iD12GY///vaP//YZj//+9oCsFhmP//72gt4XOM1O/vaP//c4zU7+9oEsBzjNTv72gt4Vjm1nvvaP//WObWe+9oCPN+tMZl72j//360xmXvaLDPuZa+Yu9o//+5lr5i72gM0/9/72HvaP///3/vYe9oVNW/3o9072j//7/ej3TvaI7pv96PdO9oC8YDzlds72j//wPOV2zvaPjKnhwI4+9o//+eHAjj72iywp4cCOPvaGTttAYpz+9o//+0BinP72hk7bQGKc/vaKvujxVXwO9o//+PFVfA72ir7o8VV8DvaP//jxW9he9o//+PFb2F72j9948VvYXvaP//SjJx2u9o//9KMnHa72iywkoycdrvaPPDLUkQ5u9o//8tSRDm72jzwy1JEObvaDXTvkZr+O9o//++Rmv472gKwb5Ga/jvaDXTnWf//+9o//+dZ///72hAy51n///vaArBi3PU7+9o//+Lc9Tv72hAy4tz1O/vaBLA/3+T8O9o////f5Pw72j/v6YZ1nvvaP//phnWe+9oCPOAS8Zl72j//4BLxmXvaHfbRWm+Yu9o//9Fab5i72iw1z8hj3TvaP//PyGPdO9ojuk/IY9072iO6fsxV2zvaP//+zFXbO9okuEAdFxi/3+L1gB0XGL/f///hHc8YnqIi9aEdzxieojg/4R3PGJ6iP//hHc8YoR3i9aEdzxihHf//4R3PGKEd/L//3/vYf6L////f+9h/otU1f9/72EAdP///3/vYQB0VNV6iDxihHci1HqIPGKEd/L/eog8YoR3//96iDxieogi1HqIPGJ6iOD/eog8YnqI///+i1xi/38i1P6LXGL/f///gdoAAH0lVNWB2gAA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")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2671y")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ncn4t"]
+points = PackedVector3Array(-0.000111103, 0.576003, 0.122982, 0.545813, -0.324387, 0.123006, 0.0663512, 0.570189, 0.122982, -0.000111103, 0.576003, -0.123006, -0.0664623, 0.570189, 0.122982, -0.545924, -0.324387, 0.123006, 0.505358, -0.380486, 0.123006, 0.545813, -0.324387, -0.123006, 0.567708, -0.247936, 0.122982, 0.567708, 0.203981, 0.122982, 0.414445, 0.405229, 0.122982, 0.292301, 0.494923, 0.122982, 0.0663512, 0.570189, -0.123006, -0.0664623, 0.570189, -0.123006, -0.292412, 0.494923, 0.122982, -0.414556, 0.405229, 0.122982, -0.567708, 0.203981, 0.122982, -0.567708, -0.247936, 0.122982, -0.545924, -0.324387, -0.123006, -0.505469, -0.380486, 0.123006, 0.416112, -0.4438, 0.123006, 0.505358, -0.380486, -0.123006, 0.567708, -0.247936, -0.123006, 0.567708, 0.203981, -0.123006, 0.414445, 0.405229, -0.123006, 0.292301, 0.494923, -0.123006, -0.292412, 0.494923, -0.123006, -0.414556, 0.405229, -0.123006, -0.567708, 0.203981, -0.123006, -0.567708, -0.247936, -0.123006, -0.505469, -0.380486, -0.123006, -0.416223, -0.4438, 0.123006, 0.416112, -0.4438, -0.123006, 0.279964, -0.494515, 0.123006, -0.416223, -0.4438, -0.123006, -0.280075, -0.494515, 0.123006, 0.279964, -0.494515, -0.123006, 0.121144, -0.517881, 0.123006, -0.280075, -0.494515, -0.123006, -0.121255, -0.517881, 0.123006, 0.121144, -0.517881, -0.123006, -0.000111103, -0.524019, 0.123006, -0.121255, -0.517881, -0.123006, -0.000111103, -0.524019, -0.123006)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3smw8"]
+points = PackedVector3Array(0.00755068, 0.123807, 0.122982, 0.00755068, 0.123807, -0.123006, -0.109319, -0.029441, 0.122982, 0.123146, 0.0575531, 0.122982, 0.123146, 0.0575531, -0.123006, -0.109319, -0.029441, -0.123006, -0.0301088, -0.143722, 0.122982, -0.0301088, -0.143722, -0.123006)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_x0cm2"]
+points = PackedVector3Array(-0.00757346, 0.123807, 0.122982, -0.00757346, 0.123807, -0.123006, -0.123146, 0.057553, 0.122982, 0.109296, -0.0294411, 0.122982, 0.109296, -0.0294411, -0.123006, -0.123146, 0.057553, -0.123006, 0.030086, -0.143722, 0.122982, 0.030086, -0.143722, -0.123006)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_53aa4"]
+points = PackedVector3Array(0.107623, 0.0401216, 0.122982, -0.067713, 0.0985782, 0.122982, 0.0946176, -0.101419, 0.123006, 0.107623, 0.0401216, -0.123006, -0.131335, -0.026107, 0.122982, -0.067713, 0.0985782, -0.123006, 0.0946176, -0.101419, -0.123006, -0.131335, -0.026107, -0.123006)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_b7fyo"]
+points = PackedVector3Array(0.131335, -0.026107, 0.122982, 0.0676896, 0.0985782, 0.122982, -0.094641, -0.101419, 0.123006, 0.131335, -0.026107, -0.123006, -0.107623, 0.0401216, 0.122982, 0.0676896, 0.0985782, -0.123006, -0.094641, -0.101419, -0.123006, -0.107623, 0.0401216, -0.123006)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3rlpp"]
+height = 0.661017
+radius = 0.0643519
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_i3os8"]
+height = 0.101358
+radius = 0.682557
+
+[sub_resource type="Animation" id="Animation_l51pi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Position Container:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(278.912, -12.2032, -19.0746)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Position Container:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3kjft"]
+_data = {
+"Objects_Scenario": ExtResource("36_5qdfn"),
+"RESET": SubResource("Animation_l51pi")
+}
 
 [sub_resource type="Animation" id="Animation_7qhat"]
 length = 0.001
@@ -86,14 +249,12 @@ size = Vector3(1.14331, 1.15636, 0.648886)
 [sub_resource type="BoxShape3D" id="BoxShape3D_asahx"]
 size = Vector3(1.14691, 0.674832, 1.12945)
 
-[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_xemv2"]
-
 [sub_resource type="Animation" id="Animation_pwg7l"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Plane Container:position")
+tracks/0/path = NodePath("Position Container:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -105,7 +266,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Plane Container:rotation")
+tracks/1/path = NodePath("Position Container:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -390,6 +551,196 @@ current = true
 fov = 60.0
 far = 20000.0
 
+[node name="Third Person Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player", "menu", "quit", "reloading_label", "menu_camera", "camera")]
+script = ExtResource("31_5vdeh")
+animation_player = NodePath("AnimationPlayer")
+menu = NodePath("../UI/GridContainer")
+quit = NodePath("../UI/Button")
+reloading_label = NodePath("../UI/RichTextLabel")
+menu_camera = NodePath("../MenuCamera")
+camera = NodePath("Position Container/Rotation Container/SpringArm2/Camera")
+scenario_name = "Third_Person_Scenario"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Third Person Scenario"]
+libraries = {
+"": SubResource("AnimationLibrary_av501")
+}
+
+[node name="Position Container" type="Node3D" parent="Third Person Scenario"]
+transform = Transform3D(-0.990435, 0, 0.137981, 0, 1, 0, -0.137981, 0, -0.990435, -84.4517, -23.8739, 245.412)
+
+[node name="Rotation Container" type="Node3D" parent="Third Person Scenario/Position Container"]
+
+[node name="mannequiny-0_3_0" parent="Third Person Scenario/Position Container/Rotation Container" instance=ExtResource("33_aotau")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="root" parent="Third Person Scenario/Position Container/Rotation Container/mannequiny-0_3_0" index="0"]
+transform = Transform3D(0.971122, -0.0482925, -0.233646, -0.028149, 0.949269, -0.313204, 0.236918, 0.310736, 0.920496, 0.0531919, -0.0112092, -0.321226)
+
+[node name="Skeleton3D" parent="Third Person Scenario/Position Container/Rotation Container/mannequiny-0_3_0/root" index="0"]
+bones/1/rotation = Quaternion(0.519172, 0.607545, 0.501135, 0.331984)
+bones/1/scale = Vector3(0.9744, 1.02795, 0.998528)
+bones/2/rotation = Quaternion(-0.175994, -0.0253522, 0.887151, 0.425849)
+bones/3/rotation = Quaternion(0.0864274, 0.587087, -0.0204569, 0.804637)
+bones/3/scale = Vector3(1.00041, 1.00122, 0.998389)
+bones/4/rotation = Quaternion(0.044936, 0.940369, 0.337173, 0.00109471)
+bones/4/scale = Vector3(1, 0.999962, 1.00004)
+bones/6/rotation = Quaternion(-0.627183, 0.167653, 0.751356, -0.118314)
+bones/6/scale = Vector3(0.999327, 1.00069, 0.999997)
+bones/7/rotation = Quaternion(-0.0706827, -0.0508594, -0.237689, 0.96743)
+bones/8/rotation = Quaternion(0.466834, -0.48994, 0.336147, 0.655004)
+bones/8/scale = Vector3(1.00011, 1.00001, 0.999883)
+bones/9/rotation = Quaternion(-0.0477029, 0.89994, 0.433303, -0.00894713)
+bones/9/scale = Vector3(1, 0.999324, 1.00069)
+bones/11/rotation = Quaternion(-0.081108, 0.0295798, -0.010401, 0.996212)
+bones/12/rotation = Quaternion(0.0127966, 0.070855, 0.00329269, 0.997399)
+bones/13/rotation = Quaternion(0.159832, 0.00943262, 0.0040031, 0.987091)
+bones/14/rotation = Quaternion(-0.17796, -0.00352386, 0.00112866, 0.984031)
+bones/16/rotation = Quaternion(-0.616285, 0.491036, -0.430783, -0.439889)
+bones/17/rotation = Quaternion(0.522019, 0.74499, 0.342822, 0.234433)
+bones/18/rotation = Quaternion(0.459824, -0.00399879, 0.358357, 0.812481)
+bones/18/scale = Vector3(1.00007, 0.99982, 1.00011)
+bones/19/rotation = Quaternion(0.145679, 0.595469, 0.110393, 0.78231)
+bones/19/scale = Vector3(0.999975, 1.00003, 1)
+bones/20/rotation = Quaternion(0.403251, -0.58185, 0.450277, 0.544142)
+bones/21/rotation = Quaternion(-0.233057, -0.324042, 0.18078, 0.898888)
+bones/22/rotation = Quaternion(-0.145473, 0.482989, -0.0589074, 0.861446)
+bones/24/rotation = Quaternion(-0.710981, 0.0159466, -0.104659, 0.695197)
+bones/25/rotation = Quaternion(-0.496511, -0.0112036, -0.0204257, 0.867718)
+bones/26/rotation = Quaternion(-0.39466, -0.00105434, -0.0317621, 0.918277)
+bones/28/rotation = Quaternion(-0.682772, 0.0246595, -0.0591277, 0.727818)
+bones/29/rotation = Quaternion(-0.500354, 0.00627235, -0.0492122, 0.864399)
+bones/30/rotation = Quaternion(-0.407395, -0.000851933, -0.0413173, 0.912316)
+bones/32/rotation = Quaternion(-0.67302, 0.000862914, -0.0408162, 0.738497)
+bones/33/rotation = Quaternion(-0.485871, 0.0067242, -0.048872, 0.872637)
+bones/34/rotation = Quaternion(-0.417238, -0.0122598, -0.0141709, 0.908604)
+bones/36/rotation = Quaternion(0.593742, 0.512875, -0.501504, 0.364586)
+bones/37/rotation = Quaternion(-0.275921, 0.486895, 0.345881, -0.753105)
+bones/38/rotation = Quaternion(0.250637, 0.00217721, -0.19093, 0.949064)
+bones/38/scale = Vector3(1.00001, 0.999963, 1.00002)
+bones/39/rotation = Quaternion(0.0109953, -0.660172, 0.00375789, 0.751025)
+bones/39/scale = Vector3(1, 1, 1)
+bones/40/rotation = Quaternion(0.357036, 0.601832, -0.443834, 0.559763)
+bones/41/rotation = Quaternion(-0.216542, 0.326109, -0.175997, 0.90321)
+bones/42/rotation = Quaternion(-0.16393, -0.489281, 0.0555818, 0.854776)
+bones/44/rotation = Quaternion(-0.686124, -0.0384863, 0.0944065, 0.720305)
+bones/45/rotation = Quaternion(-0.49472, 0.0109812, 0.0309279, 0.868433)
+bones/46/rotation = Quaternion(-0.393772, 0.000938997, 0.040163, 0.91833)
+bones/48/rotation = Quaternion(-0.686489, -0.0249583, 0.0741936, 0.722914)
+bones/49/rotation = Quaternion(-0.498965, -0.00626388, 0.0595624, 0.86455)
+bones/50/rotation = Quaternion(-0.406557, 0.000810042, 0.0498888, 0.912262)
+bones/52/rotation = Quaternion(-0.678277, -0.00723311, 0.0492793, 0.733116)
+bones/53/rotation = Quaternion(-0.483947, -0.0069139, 0.0591912, 0.873066)
+bones/54/rotation = Quaternion(-0.416635, 0.012279, 0.0227574, 0.908706)
+
+[node name="AnimationPlayer" parent="Third Person Scenario/Position Container/Rotation Container/mannequiny-0_3_0" index="1"]
+autoplay = "Run"
+
+[node name="SpringArm2" type="SpringArm3D" parent="Third Person Scenario/Position Container/Rotation Container"]
+transform = Transform3D(0.999997, 0, 1.63913e-07, 0, 0.999999, 0, -1.78814e-07, 0, 0.999997, 0, 1.58259, 0)
+shape = SubResource("SeparationRayShape3D_xemv2")
+spring_length = 2.855
+
+[node name="Camera" type="Camera3D" parent="Third Person Scenario/Position Container/Rotation Container/SpringArm2"]
+fov = 60.0
+far = 20000.0
+
+[node name="First Person Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player", "menu", "quit", "reloading_label", "menu_camera", "camera")]
+script = ExtResource("31_5vdeh")
+animation_player = NodePath("AnimationPlayer")
+menu = NodePath("../UI/GridContainer")
+quit = NodePath("../UI/Button")
+reloading_label = NodePath("../UI/RichTextLabel")
+menu_camera = NodePath("../MenuCamera")
+camera = NodePath("Position Container/Rotation Container/SpringArm2/Camera")
+scenario_name = "First_Person_Scenario"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="First Person Scenario"]
+libraries = {
+"": SubResource("AnimationLibrary_la5cj")
+}
+
+[node name="Position Container" type="Node3D" parent="First Person Scenario"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 301.094, -21.246, -26.1471)
+
+[node name="Rotation Container" type="Node3D" parent="First Person Scenario/Position Container"]
+
+[node name="SpringArm2" type="SpringArm3D" parent="First Person Scenario/Position Container/Rotation Container"]
+transform = Transform3D(0.999997, 0, 1.63913e-07, 0, 0.999999, 0, -1.78814e-07, 0, 0.999997, 0, 1.58259, 0)
+shape = SubResource("SeparationRayShape3D_xemv2")
+spring_length = 0.0
+
+[node name="Camera" type="Camera3D" parent="First Person Scenario/Position Container/Rotation Container/SpringArm2"]
+fov = 60.0
+far = 20000.0
+
+[node name="Placeholder" type="AnimatableBody3D" parent="First Person Scenario/Position Container/Rotation Container"]
+transform = Transform3D(-0.832194, -0.432223, -0.347329, 0.532139, -0.446518, -0.71934, 0.155826, -0.783457, 0.601592, 0.94, 1.535, -0.355)
+
+[node name="Placeholder_Mesh" type="MeshInstance3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.700722, 0)
+gi_mode = 2
+visibility_range_end = 300.0
+mesh = SubResource("ArrayMesh_q806f")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2793, 0)
+shape = SubResource("ConvexPolygonShape3D_ncn4t")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.537609, 1.62705, 0)
+shape = SubResource("ConvexPolygonShape3D_3smw8")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.537609, 1.62705, 0)
+shape = SubResource("ConvexPolygonShape3D_x0cm2")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197751, 1.87565, 0)
+shape = SubResource("ConvexPolygonShape3D_53aa4")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.197751, 1.87565, 0)
+shape = SubResource("ConvexPolygonShape3D_b7fyo")
+
+[node name="Collider_Stand" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.429764, 0)
+shape = SubResource("CylinderShape3D_3rlpp")
+
+[node name="Collider_Base" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050783, 0)
+shape = SubResource("CylinderShape3D_i3os8")
+
+[node name="Objects Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player", "menu", "quit", "reloading_label", "menu_camera", "camera")]
+script = ExtResource("31_5vdeh")
+animation_player = NodePath("AnimationPlayer")
+menu = NodePath("../UI/GridContainer")
+quit = NodePath("../UI/Button")
+reloading_label = NodePath("../UI/RichTextLabel")
+menu_camera = NodePath("../MenuCamera")
+camera = NodePath("Position Container/Rotation Container/SpringArm2/Camera")
+scenario_name = "Objects_Scenario"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Objects Scenario"]
+libraries = {
+"": SubResource("AnimationLibrary_3kjft")
+}
+
+[node name="Position Container" type="Node3D" parent="Objects Scenario"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 278.912, -12.2032, -19.0746)
+
+[node name="Rotation Container" type="Node3D" parent="Objects Scenario/Position Container"]
+
+[node name="SpringArm2" type="SpringArm3D" parent="Objects Scenario/Position Container/Rotation Container"]
+transform = Transform3D(0.999997, 0, 1.63913e-07, 0, 0.999999, 0, -1.78814e-07, 0, 0.999997, 0, 1.58259, 0)
+shape = SubResource("SeparationRayShape3D_xemv2")
+spring_length = 0.0
+
+[node name="Camera" type="Camera3D" parent="Objects Scenario/Position Container/Rotation Container/SpringArm2"]
+fov = 60.0
+far = 20000.0
+
 [node name="Car Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player", "menu", "quit", "reloading_label", "menu_camera", "camera")]
 script = ExtResource("31_5vdeh")
 animation_player = NodePath("AnimationPlayer")
@@ -408,10 +759,9 @@ libraries = {
 }
 
 [node name="Car Container" type="Node3D" parent="Car Scenario"]
-transform = Transform3D(-0.978484, 0.0110303, -0.206022, -0.000258669, 0.998502, 0.0546881, 0.206317, 0.0535648, -0.977017, 38.3689, -16.2105, -421.178)
+transform = Transform3D(-0.978484, 0.0110303, -0.206021, -0.000258669, 0.998502, 0.0546881, 0.206316, 0.0535648, -0.977017, 38.3689, -16.2105, -421.178)
 
 [node name="Car2" type="AnimatableBody3D" parent="Car Scenario/Car Container"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 sync_to_physics = false
 
 [node name="Car2" parent="Car Scenario/Car Container/Car2" instance=ExtResource("31_h4jea")]
@@ -509,7 +859,7 @@ menu = NodePath("../UI/GridContainer")
 quit = NodePath("../UI/Button")
 reloading_label = NodePath("../UI/RichTextLabel")
 menu_camera = NodePath("../MenuCamera")
-camera = NodePath("Plane Container/SpringArm2/Camera")
+camera = NodePath("Position Container/SpringArm2/Camera")
 scenario_name = "Plane_Scenario"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Plane Scenario"]
@@ -519,67 +869,71 @@ libraries = {
 "": SubResource("AnimationLibrary_hil6l")
 }
 
-[node name="Plane Container" type="Node3D" parent="Plane Scenario"]
-transform = Transform3D(-0.56737, 0, -0.823463, 0, 1, 0, 0.823463, 0, -0.56737, -290.387, 16.3964, 2.67211)
+[node name="Position Container" type="Node3D" parent="Plane Scenario"]
+transform = Transform3D(-0.567366, 0, -0.823466, 0, 1, 0, 0.823466, 0, -0.567366, -290.387, 16.3964, 2.67211)
 
-[node name="Plane2" type="AnimatableBody3D" parent="Plane Scenario/Plane Container"]
+[node name="Plane2" type="AnimatableBody3D" parent="Plane Scenario/Position Container"]
 sync_to_physics = false
 
-[node name="Plane2" type="Node3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="Plane2" type="Node3D" parent="Plane Scenario/Position Container/Plane2"]
 
-[node name="Plane" type="MeshInstance3D" parent="Plane Scenario/Plane Container/Plane2/Plane2"]
+[node name="Plane" type="MeshInstance3D" parent="Plane Scenario/Position Container/Plane2/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0720738, 1.27111)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_b2c4v")
 skeleton = NodePath("")
 
-[node name="TailWings" type="MeshInstance3D" parent="Plane Scenario/Plane Container/Plane2/Plane2"]
+[node name="TailWings" type="MeshInstance3D" parent="Plane Scenario/Position Container/Plane2/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70023e-05, 0.0226938, 4.61643)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_p2be2")
 skeleton = NodePath("")
 
-[node name="Wings" type="MeshInstance3D" parent="Plane Scenario/Plane Container/Plane2/Plane2"]
+[node name="Wings" type="MeshInstance3D" parent="Plane Scenario/Position Container/Plane2/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38905e-05, 0.780281, 0.0977366)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_ao8cx")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane Scenario/Position Container/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0353518, -1.74797)
 shape = SubResource("ConvexPolygonShape3D_7ms42")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Plane Scenario/Position Container/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0100012, 0.0813013)
 shape = SubResource("ConvexPolygonShape3D_we3i0")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Plane Scenario/Position Container/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0533339, 2.84407)
 shape = SubResource("ConvexPolygonShape3D_fvyfp")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Plane Scenario/Position Container/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.656753, 4.89247)
 shape = SubResource("ConvexPolygonShape3D_qpxrv")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Plane Scenario/Position Container/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00462851, 0.787881, 0.0821953)
 shape = SubResource("ConvexPolygonShape3D_5fd80")
 
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="Plane Scenario/Plane Container/Plane2"]
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Plane Scenario/Position Container/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000288023, 0.0294657, 4.62013)
 shape = SubResource("ConvexPolygonShape3D_vwx1k")
 
-[node name="SpringArm2" type="SpringArm3D" parent="Plane Scenario/Plane Container"]
+[node name="SpringArm2" type="SpringArm3D" parent="Plane Scenario/Position Container"]
 transform = Transform3D(0.999997, 0, 0, 0, 0.991444, 0.130526, 0, -0.130526, 0.991442, 0, 0.53093, 0)
 shape = SubResource("SeparationRayShape3D_xemv2")
 spring_length = 17.5
 
-[node name="Camera" type="Camera3D" parent="Plane Scenario/Plane Container/SpringArm2"]
+[node name="Camera" type="Camera3D" parent="Plane Scenario/Position Container/SpringArm2"]
 fov = 60.0
 far = 20000.0
 
+[connection signal="pressed" from="UI/GridContainer/Button" to="Third Person Scenario" method="play_scenario"]
+[connection signal="pressed" from="UI/GridContainer/Button2" to="First Person Scenario" method="play_scenario"]
+[connection signal="pressed" from="UI/GridContainer/Button3" to="Objects Scenario" method="play_scenario"]
 [connection signal="pressed" from="UI/GridContainer/Button4" to="Car Scenario" method="play_scenario"]
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Plane Scenario" method="play_scenario"]
 [connection signal="pressed" from="UI/Button" to="Car Scenario" method="stop_scenario"]
 
+[editable path="Third Person Scenario/Position Container/Rotation Container/mannequiny-0_3_0"]
 [editable path="Car Scenario/Car Container/Car2/Car2"]
