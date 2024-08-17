@@ -208,7 +208,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Car Container:position")
+tracks/0/path = NodePath("Position Container:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -220,7 +220,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Car Container:rotation")
+tracks/1/path = NodePath("Position Container:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -748,7 +748,7 @@ menu = NodePath("../UI/GridContainer")
 quit = NodePath("../UI/Button")
 reloading_label = NodePath("../UI/RichTextLabel")
 menu_camera = NodePath("../MenuCamera")
-camera = NodePath("Car Container/SpringArm/Camera")
+camera = NodePath("Position Container/Rotation Container/SpringArm/Camera")
 scenario_name = "Car_Scenario"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Car Scenario"]
@@ -758,71 +758,73 @@ libraries = {
 "": SubResource("AnimationLibrary_4fypr")
 }
 
-[node name="Car Container" type="Node3D" parent="Car Scenario"]
+[node name="Position Container" type="Node3D" parent="Car Scenario"]
 transform = Transform3D(-0.978484, 0.0110303, -0.206021, -0.000258669, 0.998502, 0.0546881, 0.206316, 0.0535648, -0.977017, 38.3689, -16.2105, -421.178)
 
-[node name="Car2" type="AnimatableBody3D" parent="Car Scenario/Car Container"]
+[node name="Rotation Container" type="Node3D" parent="Car Scenario/Position Container"]
+
+[node name="Car2" type="AnimatableBody3D" parent="Car Scenario/Position Container/Rotation Container"]
 sync_to_physics = false
 
-[node name="Car2" parent="Car Scenario/Car Container/Car2" instance=ExtResource("31_h4jea")]
+[node name="Car2" parent="Car Scenario/Position Container/Rotation Container/Car2" instance=ExtResource("31_h4jea")]
 
-[node name="Wheel_Front_Left" parent="Car Scenario/Car Container/Car2/Car2" index="0"]
+[node name="Wheel_Front_Left" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="0"]
 visibility_range_end = 600.0
 
-[node name="Wheel_Back_Right" parent="Car Scenario/Car Container/Car2/Car2" index="1"]
+[node name="Wheel_Back_Right" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="1"]
 visibility_range_end = 600.0
 
-[node name="Car" parent="Car Scenario/Car Container/Car2/Car2" index="2"]
+[node name="Car" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="2"]
 visibility_range_end = 600.0
 surface_material_override/0 = ExtResource("33_qpygn")
 surface_material_override/3 = ExtResource("34_at2fh")
 surface_material_override/4 = ExtResource("35_gn6j3")
 
-[node name="Wheel_Front_Right" parent="Car Scenario/Car Container/Car2/Car2" index="3"]
+[node name="Wheel_Front_Right" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="3"]
 visibility_range_end = 600.0
 
-[node name="Wheel_Back_Left" parent="Car Scenario/Car Container/Car2/Car2" index="4"]
+[node name="Wheel_Back_Left" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="4"]
 visibility_range_end = 600.0
 
-[node name="Axle_Front" parent="Car Scenario/Car Container/Car2/Car2" index="5"]
+[node name="Axle_Front" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="5"]
 visibility_range_end = 600.0
 
-[node name="Axle_Back" parent="Car Scenario/Car Container/Car2/Car2" index="6"]
+[node name="Axle_Back" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="6"]
 visibility_range_end = 600.0
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Car Scenario/Position Container/Rotation Container/Car2"]
 transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, -0.781105, 0.309319, -1.43595)
 shape = SubResource("CylinderShape3D_ix8ou")
 
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Car Scenario/Position Container/Rotation Container/Car2"]
 transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, 0.781962, 0.309319, -1.43595)
 shape = SubResource("CylinderShape3D_ix8ou")
 
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Car Scenario/Position Container/Rotation Container/Car2"]
 transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, -0.781105, 0.309319, 1.31062)
 shape = SubResource("CylinderShape3D_ix8ou")
 
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Car Scenario/Position Container/Rotation Container/Car2"]
 transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, 0.781962, 0.309319, 1.31062)
 shape = SubResource("CylinderShape3D_ix8ou")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Car Scenario/Position Container/Rotation Container/Car2"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00172424, 0.607008, -0.00108337)
 shape = SubResource("BoxShape3D_jdoxy")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Car Scenario/Position Container/Rotation Container/Car2"]
 transform = Transform3D(-1, 7.78665e-08, -3.97434e-08, 0, 0.454612, 0.890689, 8.74228e-08, 0.890689, -0.454612, 0.00500482, 0.969465, -0.634884)
 shape = SubResource("BoxShape3D_f466h")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Car Scenario/Position Container/Rotation Container/Car2"]
 transform = Transform3D(-1, -7.76896e-08, -4.00882e-08, 0, 0.458556, -0.888665, 8.74228e-08, -0.888665, -0.458556, 1.05075e-07, 0.955408, 1.20192)
 shape = SubResource("BoxShape3D_f466h")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Car Scenario/Car Container/Car2"]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Car Scenario/Position Container/Rotation Container/Car2"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0032654, 1.17779, 0.285099)
 shape = SubResource("BoxShape3D_asahx")
 
-[node name="Headlights" type="SpotLight3D" parent="Car Scenario/Car Container/Car2"]
+[node name="Headlights" type="SpotLight3D" parent="Car Scenario/Position Container/Rotation Container/Car2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.613525, -2.40953)
 light_intensity_lumens = 3000.0
 light_temperature = 5000.0
@@ -834,7 +836,7 @@ spot_attenuation = 1.75
 spot_angle = 60.0
 spot_angle_attenuation = 5.0
 
-[node name="Brakelights" type="SpotLight3D" parent="Car Scenario/Car Container/Car2"]
+[node name="Brakelights" type="SpotLight3D" parent="Car Scenario/Position Container/Rotation Container/Car2"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.03932e-08, 0.613525, 2.38187)
 light_intensity_lumens = 400.0
 light_color = Color(0.776197, 0.234777, 0.234157, 1)
@@ -843,12 +845,12 @@ distance_fade_begin = 300.0
 spot_attenuation = 1.75
 spot_angle = 80.0
 
-[node name="SpringArm" type="SpringArm3D" parent="Car Scenario/Car Container"]
-transform = Transform3D(0.999998, 0, 0, 0, 0.993572, 0.113203, 0, -0.113203, 0.99357, -9.73932e-09, 1.32371, -6.47372e-09)
+[node name="SpringArm" type="SpringArm3D" parent="Car Scenario/Position Container/Rotation Container"]
+transform = Transform3D(0.999998, -3.72529e-09, 2.98023e-08, 0, 0.993572, 0.113203, 0, -0.113203, 0.99357, 0, 1.32371, 0)
 shape = SubResource("SeparationRayShape3D_xemv2")
 spring_length = 5.725
 
-[node name="Camera" type="Camera3D" parent="Car Scenario/Car Container/SpringArm"]
+[node name="Camera" type="Camera3D" parent="Car Scenario/Position Container/Rotation Container/SpringArm"]
 fov = 60.0
 far = 20000.0
 
@@ -859,7 +861,7 @@ menu = NodePath("../UI/GridContainer")
 quit = NodePath("../UI/Button")
 reloading_label = NodePath("../UI/RichTextLabel")
 menu_camera = NodePath("../MenuCamera")
-camera = NodePath("Position Container/SpringArm2/Camera")
+camera = NodePath("Position Container/Rotation Container/SpringArm2/Camera")
 scenario_name = "Plane_Scenario"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Plane Scenario"]
@@ -872,59 +874,61 @@ libraries = {
 [node name="Position Container" type="Node3D" parent="Plane Scenario"]
 transform = Transform3D(-0.567366, 0, -0.823466, 0, 1, 0, 0.823466, 0, -0.567366, -290.387, 16.3964, 2.67211)
 
-[node name="Plane2" type="AnimatableBody3D" parent="Plane Scenario/Position Container"]
+[node name="Rotation Container" type="Node3D" parent="Plane Scenario/Position Container"]
+
+[node name="Plane2" type="AnimatableBody3D" parent="Plane Scenario/Position Container/Rotation Container"]
 sync_to_physics = false
 
-[node name="Plane2" type="Node3D" parent="Plane Scenario/Position Container/Plane2"]
+[node name="Plane2" type="Node3D" parent="Plane Scenario/Position Container/Rotation Container/Plane2"]
 
-[node name="Plane" type="MeshInstance3D" parent="Plane Scenario/Position Container/Plane2/Plane2"]
+[node name="Plane" type="MeshInstance3D" parent="Plane Scenario/Position Container/Rotation Container/Plane2/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0720738, 1.27111)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_b2c4v")
 skeleton = NodePath("")
 
-[node name="TailWings" type="MeshInstance3D" parent="Plane Scenario/Position Container/Plane2/Plane2"]
+[node name="TailWings" type="MeshInstance3D" parent="Plane Scenario/Position Container/Rotation Container/Plane2/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70023e-05, 0.0226938, 4.61643)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_p2be2")
 skeleton = NodePath("")
 
-[node name="Wings" type="MeshInstance3D" parent="Plane Scenario/Position Container/Plane2/Plane2"]
+[node name="Wings" type="MeshInstance3D" parent="Plane Scenario/Position Container/Rotation Container/Plane2/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38905e-05, 0.780281, 0.0977366)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_ao8cx")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane Scenario/Position Container/Plane2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane Scenario/Position Container/Rotation Container/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0353518, -1.74797)
 shape = SubResource("ConvexPolygonShape3D_7ms42")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Plane Scenario/Position Container/Plane2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Plane Scenario/Position Container/Rotation Container/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0100012, 0.0813013)
 shape = SubResource("ConvexPolygonShape3D_we3i0")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Plane Scenario/Position Container/Plane2"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Plane Scenario/Position Container/Rotation Container/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0533339, 2.84407)
 shape = SubResource("ConvexPolygonShape3D_fvyfp")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Plane Scenario/Position Container/Plane2"]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Plane Scenario/Position Container/Rotation Container/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.656753, 4.89247)
 shape = SubResource("ConvexPolygonShape3D_qpxrv")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="Plane Scenario/Position Container/Plane2"]
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Plane Scenario/Position Container/Rotation Container/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00462851, 0.787881, 0.0821953)
 shape = SubResource("ConvexPolygonShape3D_5fd80")
 
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="Plane Scenario/Position Container/Plane2"]
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Plane Scenario/Position Container/Rotation Container/Plane2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000288023, 0.0294657, 4.62013)
 shape = SubResource("ConvexPolygonShape3D_vwx1k")
 
-[node name="SpringArm2" type="SpringArm3D" parent="Plane Scenario/Position Container"]
-transform = Transform3D(0.999997, 0, 0, 0, 0.991444, 0.130526, 0, -0.130526, 0.991442, 0, 0.53093, 0)
+[node name="SpringArm2" type="SpringArm3D" parent="Plane Scenario/Position Container/Rotation Container"]
+transform = Transform3D(0.999997, -3.72529e-09, 0, 0, 0.991444, 0.130526, 0, -0.130526, 0.991442, 0, 0.53093, 0)
 shape = SubResource("SeparationRayShape3D_xemv2")
 spring_length = 17.5
 
-[node name="Camera" type="Camera3D" parent="Plane Scenario/Position Container/SpringArm2"]
+[node name="Camera" type="Camera3D" parent="Plane Scenario/Position Container/Rotation Container/SpringArm2"]
 fov = 60.0
 far = 20000.0
 
@@ -936,4 +940,4 @@ far = 20000.0
 [connection signal="pressed" from="UI/Button" to="Car Scenario" method="stop_scenario"]
 
 [editable path="Third Person Scenario/Position Container/Rotation Container/mannequiny-0_3_0"]
-[editable path="Car Scenario/Car Container/Car2/Car2"]
+[editable path="Car Scenario/Position Container/Rotation Container/Car2/Car2"]
