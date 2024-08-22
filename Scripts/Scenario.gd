@@ -15,6 +15,5 @@ func _process(delta: float) -> void:
 
 func play_scenario():
 	camera.current = true
-	await get_tree().create_timer(1.5).timeout
 	animation_player.play(scenario_name)
 	
