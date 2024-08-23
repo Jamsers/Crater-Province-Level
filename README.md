@@ -5,6 +5,7 @@ There is no motion blur enabled in the project by default: you must install and 
 
 https://github.com/user-attachments/assets/76b9c52c-ac26-472b-8146-7458d58a0921
 
+Scenarios are brief and fast on purpose, so that motion blur is triggered generously, and so that you can slow video recordings of it down in a video player/editor and pick apart at the details of the motion blur implementation.
 Only the car scenario has been implemented for now.
 
 ## Time Of Day
