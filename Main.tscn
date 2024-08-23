@@ -892,6 +892,14 @@ transform = Transform3D(0.91706, -0.0589389, 0.394369, 0, 0.989016, 0.147809, -0
 transform = Transform3D(-0.236194, 0, 0.971706, 0, 1, 0, -0.971706, 0, -0.236194, 52.3838, -16.0834, -389.167)
 follow_target = NodePath("../../Position Container/Camera Follow Target")
 
+[node name="Following Camera3" parent="Car Scenario/Following Cameras" node_paths=PackedStringArray("follow_target") instance=ExtResource("44_jo3rq")]
+transform = Transform3D(-0.236194, 0, 0.971706, 0, 1, 0, -0.971706, 0, -0.236194, 84.7901, -22.5164, -194.02)
+follow_target = NodePath("../../Position Container/Camera Follow Target")
+
+[node name="Following Camera4" parent="Car Scenario/Following Cameras" node_paths=PackedStringArray("follow_target") instance=ExtResource("44_jo3rq")]
+transform = Transform3D(-0.236194, 0, 0.971706, 0, 1, 0, -0.971706, 0, -0.236194, 96.58, -23.391, -154.827)
+follow_target = NodePath("../../Position Container/Camera Follow Target")
+
 [node name="Physics Objects" parent="Car Scenario" instance=ExtResource("44_olg38")]
 transform = Transform3D(0.857041, 0, -0.515248, 0, 1, 0, 0.515248, 0, 0.857041, 55.9203, -20.1199, -338.486)
 
