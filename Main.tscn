@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=4 uid="uid://c77e1yn8ifgkx"]
+[gd_scene load_steps=96 format=4 uid="uid://c77e1yn8ifgkx"]
 
 [ext_resource type="Script" path="res://Scripts/LightingChanger.gd" id="1_c06e6"]
 [ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="1_wutcc"]
@@ -49,6 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://k5ru4wgsw0hm" path="res://Scenes/Following_Camera.tscn" id="44_jo3rq"]
 [ext_resource type="PackedScene" uid="uid://dc0ya1cet1gdb" path="res://Scenes/Physics_Objects.tscn" id="44_olg38"]
 [ext_resource type="PackedScene" uid="uid://d3qsflugcn67e" path="res://Scenes/Attached_Camera.tscn" id="44_pqwvy"]
+[ext_resource type="Material" uid="uid://d28fdvq5513f7" path="res://Materials/Smoke.tres" id="45_etuum"]
 
 [sub_resource type="Animation" id="Animation_ujows"]
 length = 0.001
@@ -375,6 +376,29 @@ size = Vector3(1.14331, 1.15636, 0.648886)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_asahx"]
 size = Vector3(1.14691, 0.674832, 1.12945)
+
+[sub_resource type="Gradient" id="Gradient_ge808"]
+colors = PackedColorArray(1, 1, 1, 0.545098, 1, 1, 1, 0.0627451)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fdykc"]
+gradient = SubResource("Gradient_ge808")
+
+[sub_resource type="Curve" id="Curve_240km"]
+_data = [Vector2(0, 0.446154), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_el3ns"]
+curve = SubResource("Curve_240km")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sn0tg"]
+angle_min = 1.07288e-05
+angle_max = 359.0
+gravity = Vector3(0, 0, 0)
+scale_max = 5.0
+scale_curve = SubResource("CurveTexture_el3ns")
+color_ramp = SubResource("GradientTexture1D_fdykc")
+
+[sub_resource type="QuadMesh" id="QuadMesh_livcf"]
 
 [sub_resource type="Animation" id="Animation_pwg7l"]
 length = 0.001
@@ -989,6 +1013,42 @@ spot_angle = 80.0
 [node name="Bumper Cam" parent="Car Scenario/Position Container/Rotation Container" instance=ExtResource("44_pqwvy")]
 transform = Transform3D(0.996917, -0.010241, 0.0777879, 9.31323e-10, 0.991445, 0.130526, -0.0784591, -0.130124, 0.988389, 1.23, 1.01, 2.16501)
 spring_length = 0.0
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Car Scenario/Position Container/Rotation Container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.79, -0.008, 1.305)
+material_override = ExtResource("45_etuum")
+cast_shadow = 0
+gi_mode = 2
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_sn0tg")
+draw_pass_1 = SubResource("QuadMesh_livcf")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="Car Scenario/Position Container/Rotation Container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79, -0.008, 1.305)
+material_override = ExtResource("45_etuum")
+cast_shadow = 0
+gi_mode = 2
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_sn0tg")
+draw_pass_1 = SubResource("QuadMesh_livcf")
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="Car Scenario/Position Container/Rotation Container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.79, -0.008, -1.445)
+material_override = ExtResource("45_etuum")
+cast_shadow = 0
+gi_mode = 2
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_sn0tg")
+draw_pass_1 = SubResource("QuadMesh_livcf")
+
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="Car Scenario/Position Container/Rotation Container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79, -0.008, -1.445)
+material_override = ExtResource("45_etuum")
+cast_shadow = 0
+gi_mode = 2
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_sn0tg")
+draw_pass_1 = SubResource("QuadMesh_livcf")
 
 [node name="Camera Follow Target" type="Node3D" parent="Car Scenario/Position Container"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.705, 0)
