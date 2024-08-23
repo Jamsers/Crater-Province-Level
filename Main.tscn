@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=4 uid="uid://c77e1yn8ifgkx"]
+[gd_scene load_steps=89 format=4 uid="uid://c77e1yn8ifgkx"]
 
 [ext_resource type="Script" path="res://Scripts/LightingChanger.gd" id="1_c06e6"]
 [ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="1_wutcc"]
@@ -251,6 +251,116 @@ tracks/2/keys = {
 _data = {
 "Car_Scenario": ExtResource("31_3riuw"),
 "RESET": SubResource("Animation_7qhat")
+}
+
+[sub_resource type="Animation" id="Animation_t3tlo"]
+resource_name = "Car_Wheels_Rotation"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Wheel_Front_Left:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-2.0944, 0, 0), Vector3(-4.18879, 0, 0), Vector3(-6.28319, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Wheel_Back_Right:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-2.0944, 0, 0), Vector3(-4.18879, 0, 0), Vector3(-6.28319, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Wheel_Front_Right:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-2.0944, 0, 0), Vector3(-4.18879, 0, 0), Vector3(-6.28319, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Wheel_Back_Left:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-2.0944, 0, 0), Vector3(-4.18879, 0, 0), Vector3(-6.28319, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5uw7q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Wheel_Front_Left:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Wheel_Back_Right:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Wheel_Front_Right:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Wheel_Back_Left:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oril7"]
+_data = {
+"Car_Wheels_Rotation": SubResource("Animation_t3tlo"),
+"RESET": SubResource("Animation_5uw7q")
 }
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ix8ou"]
@@ -793,28 +903,34 @@ sync_to_physics = false
 
 [node name="Car2" parent="Car Scenario/Position Container/Rotation Container/Car2" instance=ExtResource("31_h4jea")]
 
-[node name="Wheel_Front_Left" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="0"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2"]
+libraries = {
+"": SubResource("AnimationLibrary_oril7")
+}
+autoplay = "Car_Wheels_Rotation"
+
+[node name="Wheel_Front_Left" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="1"]
 visibility_range_end = 600.0
 
-[node name="Wheel_Back_Right" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="1"]
+[node name="Wheel_Back_Right" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="2"]
 visibility_range_end = 600.0
 
-[node name="Car" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="2"]
+[node name="Car" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="3"]
 visibility_range_end = 600.0
 surface_material_override/0 = ExtResource("33_qpygn")
 surface_material_override/3 = ExtResource("34_at2fh")
 surface_material_override/4 = ExtResource("35_gn6j3")
 
-[node name="Wheel_Front_Right" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="3"]
+[node name="Wheel_Front_Right" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="4"]
 visibility_range_end = 600.0
 
-[node name="Wheel_Back_Left" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="4"]
+[node name="Wheel_Back_Left" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="5"]
 visibility_range_end = 600.0
 
-[node name="Axle_Front" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="5"]
+[node name="Axle_Front" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="6"]
 visibility_range_end = 600.0
 
-[node name="Axle_Back" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="6"]
+[node name="Axle_Back" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="7"]
 visibility_range_end = 600.0
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="Car Scenario/Position Container/Rotation Container/Car2"]
@@ -990,8 +1106,8 @@ far = 20000.0
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Scenario Manager" method="play_scenario"]
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Plane Scenario" method="play_scenario"]
 [connection signal="pressed" from="UI/Button" to="Scenario Manager" method="stop_scenario"]
-[connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="switch_to_ghfs"]
 [connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="play_scenario"]
+[connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="switch_to_ghfs"]
 
 [editable path="Third Person Scenario/Position Container/Rotation Container/mannequiny-0_3_0"]
 [editable path="Car Scenario/Position Container/Rotation Container/Car2/Car2"]
