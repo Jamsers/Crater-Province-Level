@@ -247,6 +247,54 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Position Container/Rotation Container/GPUParticles3D:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Position Container/Rotation Container/GPUParticles3D2:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Position Container/Rotation Container/GPUParticles3D3:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Position Container/Rotation Container/GPUParticles3D4:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4fypr"]
 _data = {
@@ -1019,6 +1067,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.79, -0.008, 1.305)
 material_override = ExtResource("45_etuum")
 cast_shadow = 0
 gi_mode = 2
+emitting = false
 amount = 20
 process_material = SubResource("ParticleProcessMaterial_sn0tg")
 draw_pass_1 = SubResource("QuadMesh_livcf")
@@ -1028,6 +1077,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79, -0.008, 1.305)
 material_override = ExtResource("45_etuum")
 cast_shadow = 0
 gi_mode = 2
+emitting = false
 amount = 20
 process_material = SubResource("ParticleProcessMaterial_sn0tg")
 draw_pass_1 = SubResource("QuadMesh_livcf")
@@ -1037,6 +1087,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.79, -0.008, -1.445)
 material_override = ExtResource("45_etuum")
 cast_shadow = 0
 gi_mode = 2
+emitting = false
 amount = 20
 process_material = SubResource("ParticleProcessMaterial_sn0tg")
 draw_pass_1 = SubResource("QuadMesh_livcf")
@@ -1046,6 +1097,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79, -0.008, -1.445)
 material_override = ExtResource("45_etuum")
 cast_shadow = 0
 gi_mode = 2
+emitting = false
 amount = 20
 process_material = SubResource("ParticleProcessMaterial_sn0tg")
 draw_pass_1 = SubResource("QuadMesh_livcf")
