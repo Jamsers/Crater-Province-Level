@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=4 uid="uid://c77e1yn8ifgkx"]
+[gd_scene load_steps=86 format=4 uid="uid://c77e1yn8ifgkx"]
 
 [ext_resource type="Script" path="res://Scripts/LightingChanger.gd" id="1_c06e6"]
 [ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="1_wutcc"]
@@ -48,6 +48,7 @@
 [ext_resource type="Material" uid="uid://w7x7mj8tckm3" path="res://Materials/Generic/Car_Window.tres" id="39_7m7bm"]
 [ext_resource type="PackedScene" uid="uid://k5ru4wgsw0hm" path="res://Scenes/Following_Camera.tscn" id="44_jo3rq"]
 [ext_resource type="PackedScene" uid="uid://dc0ya1cet1gdb" path="res://Scenes/Physics_Objects.tscn" id="44_olg38"]
+[ext_resource type="PackedScene" uid="uid://d3qsflugcn67e" path="res://Scenes/Attached_Camera.tscn" id="44_pqwvy"]
 
 [sub_resource type="Animation" id="Animation_ujows"]
 length = 0.001
@@ -869,31 +870,21 @@ distance_fade_begin = 300.0
 spot_attenuation = 1.75
 spot_angle = 80.0
 
+[node name="Attached Camera3" parent="Car Scenario/Position Container/Rotation Container" instance=ExtResource("44_pqwvy")]
+transform = Transform3D(0.996917, -0.010241, 0.0777879, 9.31323e-10, 0.991445, 0.130526, -0.0784591, -0.130124, 0.988389, 1.23, 1.01, 2.16501)
+spring_length = 0.0
+
 [node name="Camera Follow Target" type="Node3D" parent="Car Scenario/Position Container"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.705, 0)
 
-[node name="SpringArm" type="SpringArm3D" parent="Car Scenario/Position Container"]
-transform = Transform3D(0.999998, 0, 0, 0, 0.993572, 0.113203, 0, -0.113203, 0.99357, 0, 1.32371, 0)
-shape = SubResource("SeparationRayShape3D_xemv2")
-spring_length = 5.725
+[node name="Attached Camera" parent="Car Scenario/Position Container" instance=ExtResource("44_pqwvy")]
+transform = Transform3D(1, 0, 0, 0, 0.989016, 0.147809, 0, -0.147809, 0.989016, 0, 1.15865, -3.72529e-09)
 
-[node name="Camera" type="Camera3D" parent="Car Scenario/Position Container/SpringArm"]
-fov = 60.0
-far = 20000.0
+[node name="Attached Camera2" parent="Car Scenario/Position Container" instance=ExtResource("44_pqwvy")]
+transform = Transform3D(-0.953717, 0.0444471, -0.297403, 0, 0.989016, 0.147809, 0.300706, 0.140968, -0.943241, 0, 1.159, 0)
 
-[node name="SpringArm2" type="SpringArm3D" parent="Car Scenario/Position Container"]
-transform = Transform3D(0.887009, -0.0522715, 0.45878, 3.72529e-09, 0.993572, 0.113203, -0.461748, -0.100412, 0.881307, 0, 1.32371, 0)
-shape = SubResource("SeparationRayShape3D_xemv2")
-spring_length = 5.725
-
-[node name="Camera" type="Camera3D" parent="Car Scenario/Position Container/SpringArm2"]
-fov = 60.0
-far = 20000.0
-
-[node name="Camera2" type="Camera3D" parent="Car Scenario/Position Container"]
-transform = Transform3D(-1, 1.15484e-07, -5.66244e-07, 4.65661e-10, 0.978149, 0.207912, 5.81145e-07, 0.207912, -0.978149, -1.06901, 0.735001, 0.545013)
-fov = 60.0
-far = 20000.0
+[node name="Attached Camera4" parent="Car Scenario/Position Container" instance=ExtResource("44_pqwvy")]
+transform = Transform3D(0.91706, -0.0589389, 0.394369, 0, 0.989016, 0.147809, -0.398749, -0.13555, 0.906987, 0, 1.159, 0)
 
 [node name="Following Cameras" type="Node3D" parent="Car Scenario"]
 
@@ -991,8 +982,8 @@ far = 20000.0
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Scenario Manager" method="play_scenario"]
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Plane Scenario" method="play_scenario"]
 [connection signal="pressed" from="UI/Button" to="Scenario Manager" method="stop_scenario"]
-[connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="switch_to_ghfs"]
 [connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="play_scenario"]
+[connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="switch_to_ghfs"]
 
 [editable path="Third Person Scenario/Position Container/Rotation Container/mannequiny-0_3_0"]
 [editable path="Car Scenario/Position Container/Rotation Container/Car2/Car2"]

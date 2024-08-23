@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3qsflugcn67e"]
+
+[ext_resource type="Script" path="res://CameraAttached.gd" id="1_8r3lh"]
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_xemv2"]
+
+[node name="SpringArm" type="SpringArm3D" node_paths=PackedStringArray("camera")]
+shape = SubResource("SeparationRayShape3D_xemv2")
+spring_length = 5.725
+script = ExtResource("1_8r3lh")
+camera = NodePath("Camera")
+
+[node name="Camera" type="Camera3D" parent="."]
+fov = 60.0
+far = 20000.0
