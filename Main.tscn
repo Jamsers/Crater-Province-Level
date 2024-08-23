@@ -856,8 +856,8 @@ light_temperature = 5000.0
 shadow_enabled = true
 distance_fade_enabled = true
 distance_fade_begin = 300.0
-spot_range = 15.0
-spot_attenuation = 1.75
+spot_range = 100.0
+spot_attenuation = 1.35
 spot_angle = 60.0
 spot_angle_attenuation = 5.0
 
@@ -990,8 +990,8 @@ far = 20000.0
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Scenario Manager" method="play_scenario"]
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Plane Scenario" method="play_scenario"]
 [connection signal="pressed" from="UI/Button" to="Scenario Manager" method="stop_scenario"]
-[connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="play_scenario"]
 [connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="switch_to_ghfs"]
+[connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="play_scenario"]
 
 [editable path="Third Person Scenario/Position Container/Rotation Container/mannequiny-0_3_0"]
 [editable path="Car Scenario/Position Container/Rotation Container/Car2/Car2"]
