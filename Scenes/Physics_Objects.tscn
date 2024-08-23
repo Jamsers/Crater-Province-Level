@@ -1,0 +1,80 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc0ya1cet1gdb"]
+
+[ext_resource type="PackedScene" uid="uid://bh6kftr5cmcrt" path="res://Scenes/Placeholder.tscn" id="1_j1w10"]
+
+[node name="Physics Objects" type="Node3D"]
+transform = Transform3D(-0.802838, 0, 0.596197, 0, 1, 0, -0.596197, 0, -0.802838, 54.7016, -20.129, -339.173)
+
+[node name="Placeholder" parent="." instance=ExtResource("1_j1w10")]
+
+[node name="Placeholder2" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4103, 0, 0)
+
+[node name="Placeholder4" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82, 0, 0)
+
+[node name="Placeholder5" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.82, 0, 0)
+
+[node name="Placeholder3" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41, 0, 0)
+
+[node name="Placeholder6" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.41)
+
+[node name="Placeholder7" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4103, 0, 1.41)
+
+[node name="Placeholder8" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82, 0, 1.41)
+
+[node name="Placeholder9" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.82, 0, 1.41)
+
+[node name="Placeholder10" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41, 0, 1.41)
+
+[node name="Placeholder11" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.41)
+
+[node name="Placeholder12" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4103, 0, -1.41)
+
+[node name="Placeholder13" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82, 0, -1.41)
+
+[node name="Placeholder14" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.82, 0, -1.41)
+
+[node name="Placeholder15" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41, 0, -1.41)
+
+[node name="Placeholder16" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.82)
+
+[node name="Placeholder17" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4103, 0, 2.82)
+
+[node name="Placeholder18" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82, 0, 2.82)
+
+[node name="Placeholder19" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.82, 0, 2.82)
+
+[node name="Placeholder20" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41, 0, 2.82)
+
+[node name="Placeholder21" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.82)
+
+[node name="Placeholder22" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4103, 0, -2.82)
+
+[node name="Placeholder23" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82, 0, -2.82)
+
+[node name="Placeholder24" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.82, 0, -2.82)
+
+[node name="Placeholder25" parent="." instance=ExtResource("1_j1w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41, 0, -2.82)
