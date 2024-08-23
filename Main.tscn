@@ -975,35 +975,35 @@ sync_to_physics = false
 
 [node name="Car2" parent="Car Scenario/Position Container/Rotation Container/Car2" instance=ExtResource("31_h4jea")]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2"]
-libraries = {
-"": SubResource("AnimationLibrary_oril7")
-}
-autoplay = "Car_Wheels_Rotation"
-
-[node name="Wheel_Front_Left" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="1"]
+[node name="Wheel_Front_Left" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="0"]
 visibility_range_end = 600.0
 
-[node name="Wheel_Back_Right" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="2"]
+[node name="Wheel_Back_Right" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="1"]
 visibility_range_end = 600.0
 
-[node name="Car" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="3"]
+[node name="Car" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="2"]
 visibility_range_end = 600.0
 surface_material_override/0 = ExtResource("33_qpygn")
 surface_material_override/3 = ExtResource("34_at2fh")
 surface_material_override/4 = ExtResource("35_gn6j3")
 
-[node name="Wheel_Front_Right" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="4"]
+[node name="Wheel_Front_Right" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="3"]
 visibility_range_end = 600.0
 
-[node name="Wheel_Back_Left" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="5"]
+[node name="Wheel_Back_Left" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="4"]
 visibility_range_end = 600.0
 
-[node name="Axle_Front" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="6"]
+[node name="Axle_Front" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="5"]
 visibility_range_end = 600.0
 
-[node name="Axle_Back" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="7"]
+[node name="Axle_Back" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2" index="6"]
 visibility_range_end = 600.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Car Scenario/Position Container/Rotation Container/Car2/Car2"]
+libraries = {
+"": SubResource("AnimationLibrary_oril7")
+}
+autoplay = "Car_Wheels_Rotation"
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="Car Scenario/Position Container/Rotation Container/Car2"]
 transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, -0.781105, 0.309319, -1.43595)
@@ -1110,6 +1110,9 @@ transform = Transform3D(1, 0, 0, 0, 0.989016, 0.147809, 0, -0.147809, 0.989016, 
 
 [node name="ForwardSide Cam" parent="Car Scenario/Position Container" instance=ExtResource("44_pqwvy")]
 transform = Transform3D(-0.953717, 0.0444471, -0.297403, 0, 0.989016, 0.147809, 0.300706, 0.140968, -0.943241, 0, 1.159, 0)
+
+[node name="Side Cam" parent="Car Scenario/Position Container" instance=ExtResource("44_pqwvy")]
+transform = Transform3D(-0.147809, 0.146186, -0.978152, 0, 0.989016, 0.147809, 0.989016, 0.0218476, -0.146186, 0, 1.159, 0)
 
 [node name="BehindSide Cam" parent="Car Scenario/Position Container" instance=ExtResource("44_pqwvy")]
 transform = Transform3D(0.953717, -0.0444471, 0.297403, 0, 0.989016, 0.147809, -0.300706, -0.140968, 0.943241, 0, 1.159, 0)
@@ -1218,8 +1221,8 @@ far = 20000.0
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Scenario Manager" method="play_scenario"]
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Plane Scenario" method="play_scenario"]
 [connection signal="pressed" from="UI/Button" to="Scenario Manager" method="stop_scenario"]
-[connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="play_scenario"]
 [connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="switch_to_ghfs"]
+[connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="play_scenario"]
 
 [editable path="Third Person Scenario/Position Container/Rotation Container/mannequiny-0_3_0"]
 [editable path="Car Scenario/Position Container/Rotation Container/Car2/Car2"]
