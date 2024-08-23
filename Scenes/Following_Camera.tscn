@@ -10,7 +10,6 @@ script = ExtResource("1_d3eqg")
 camera = NodePath("Camera3")
 
 [node name="Camera3" type="Camera3D" parent="."]
-transform = Transform3D(0.978485, -0.0320452, 0.203814, 0.000258702, 0.988054, 0.154108, -0.206317, -0.150739, 0.966805, 0, 0, 0)
 fov = 21.0
 far = 20000.0
 

@@ -12,7 +12,7 @@ func activate():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	camera.look_at(follow_target.position)
+	camera.look_at(follow_target.global_position)
 	if camera.current:
 		#dof logic
 		if !get_node("%Scenario Manager").list_of_following_cameras_active.has(self):
