@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://bh6kftr5cmcrt" path="res://Scenes/Placeholder.tscn" id="1_j1w10"]
 
 [node name="Physics Objects" type="Node3D"]
-transform = Transform3D(-0.802838, 0, 0.596197, 0, 1, 0, -0.596197, 0, -0.802838, 54.7016, -20.129, -339.173)
 
 [node name="Placeholder" parent="." instance=ExtResource("1_j1w10")]
 

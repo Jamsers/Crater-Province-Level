@@ -1,7 +1,6 @@
 extends Node
 
 @export var animation_player: AnimationPlayer
-@export var camera: Camera3D
 @export var scenario_name: String
 
 # Called when the node enters the scene tree for the first time.
@@ -14,6 +13,5 @@ func _process(delta: float) -> void:
 	pass
 
 func play_scenario():
-	camera.current = true
 	animation_player.play(scenario_name)
 	
