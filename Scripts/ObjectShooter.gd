@@ -24,6 +24,7 @@ func shoot():
 	get_node("../").add_child(object)
 	object.global_position = global_position
 	object.global_rotation = global_rotation
-	#object.global_basis.z = global_basis.y
-	#object.global_basis.y = -global_basis.z
+	object.global_basis.z = global_basis.x
+	object.global_basis.y = -global_basis.z
+	object.global_basis.x = -global_basis.y
 	object.apply_central_impulse(-global_basis.z * 500)

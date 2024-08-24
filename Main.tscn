@@ -1029,13 +1029,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050783, 0)
 shape = SubResource("CylinderShape3D_i3os8")
 
 [node name="RightObjectShooter" parent="Objects Scenario" instance=ExtResource("40_le1rk")]
-transform = Transform3D(-0.809215, 0.00359615, -0.587501, 0.00218468, 0.999993, 0.00311192, 0.587508, 0.00123471, -0.809217, 415.95, -6.44706, -289.729)
+transform = Transform3D(-0.809017, 0, -0.587785, 0, 1, 0, 0.587785, 0, -0.809017, 415.946, -5.531, -289.726)
 
 [node name="LefObjectShooter" parent="Objects Scenario" instance=ExtResource("40_le1rk")]
-transform = Transform3D(0.809215, 0.00359615, 0.587501, -0.00218468, 0.999993, -0.00311192, -0.587508, 0.00123471, 0.809217, 426.125, -6.50095, -275.713)
+transform = Transform3D(0.809017, 0, 0.587785, 0, 1, 0, -0.587785, 0, 0.809017, 426.124, -5.531, -275.718)
 
 [node name="BackObjectShooter" parent="Objects Scenario" instance=ExtResource("40_le1rk")]
-transform = Transform3D(0.587501, 0.00359615, -0.809215, -0.00311192, 0.999993, 0.00218468, 0.809217, 0.00123471, 0.587508, 414.03, -6.45509, -277.633)
+transform = Transform3D(0.587785, 0, -0.809017, 0, 1, 0, 0.809017, 0, 0.587785, 414.031, -5.531, -277.633)
 
 [node name="Car Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player")]
 script = ExtResource("31_5vdeh")
