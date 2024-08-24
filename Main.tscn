@@ -1037,6 +1037,16 @@ transform = Transform3D(0.809017, 0, 0.587785, 0, 1, 0, -0.587785, 0, 0.809017, 
 [node name="BackObjectShooter" parent="Objects Scenario" instance=ExtResource("40_le1rk")]
 transform = Transform3D(0.587785, 0, -0.809017, 0, 1, 0, 0.809017, 0, 0.587785, 414.031, -5.531, -277.633)
 
+[node name="Light_Bonfire2" type="OmniLight3D" parent="Objects Scenario"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 431.05, -4.98427, -279.628)
+light_intensity_lumens = 4000.0
+light_color = Color(0.862745, 0.529412, 0.243137, 1)
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+distance_fade_shadow = 500.0
+omni_range = 45.0
+
 [node name="Car Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player")]
 script = ExtResource("31_5vdeh")
 animation_player = NodePath("AnimationPlayer")
