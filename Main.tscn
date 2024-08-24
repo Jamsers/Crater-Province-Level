@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=4 uid="uid://c77e1yn8ifgkx"]
+[gd_scene load_steps=105 format=4 uid="uid://c77e1yn8ifgkx"]
 
 [ext_resource type="Script" path="res://Scripts/LightingChanger.gd" id="1_c06e6"]
 [ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="1_wutcc"]
@@ -113,6 +113,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Position Container/Rotation Container/AnimationPlayer:current_animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_la5cj"]
 _data = {
@@ -177,6 +189,95 @@ radius = 0.0643519
 height = 0.101358
 radius = 0.682557
 
+[sub_resource type="Animation" id="Animation_y63u0"]
+resource_name = "sprint_anim"
+length = 0.75
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Placeholder:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.375, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.549779, -0.602139, 2.16421), Vector3(0.270526, -0.375246, 1.8326), Vector3(0.549779, -0.602139, 2.16421)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Placeholder:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.375, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.655, -0.12, -0.32), Vector3(0.6, -0.175, -0.32), Vector3(0.655, -0.12, -0.32)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Placeholder2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1875, 0.375, 0.5667, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -3.14159), Vector3(0, 0, -6.28319), Vector3(0, 0, -9.42478), Vector3(0, 0, -12.5664)]
+}
+
+[sub_resource type="Animation" id="Animation_rccqv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Placeholder:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.549779, -0.602139, 2.16421)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Placeholder:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.655, -0.07, -0.32)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Placeholder2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ac6p7"]
+_data = {
+"RESET": SubResource("Animation_rccqv"),
+"sprint_anim": SubResource("Animation_y63u0")
+}
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rh1jn"]
+size = Vector2(0.5, 0.5)
+
 [sub_resource type="Animation" id="Animation_l51pi"]
 length = 0.001
 tracks/0/type = "value"
@@ -201,6 +302,21 @@ _data = {
 [sub_resource type="PlaneMesh" id="PlaneMesh_qrwnv"]
 size = Vector2(0.5, 0.5)
 
+[sub_resource type="Animation" id="Animation_8i1q1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Punter:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.19911, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_ybxwj"]
 resource_name = "punter_rotation"
 length = 1.5
@@ -216,21 +332,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 2.19911, 0), Vector3(0.741765, 2.60054, 0.706858), Vector3(1.90241, 5.39307, 0.349066), Vector3(-0.331613, 6.34427, 0.986111), Vector3(0, 2.19911, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_8i1q1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Punter:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 2.19911, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6gkn3"]
@@ -903,6 +1004,9 @@ animation_player = NodePath("AnimationPlayer")
 scenario_name = "First_Person_Scenario"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="First Person Scenario"]
+callback_mode_process = 0
+callback_mode_method = 1
+callback_mode_discrete = 2
 libraries = {
 "": SubResource("AnimationLibrary_la5cj")
 }
@@ -912,17 +1016,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 301.094, -21.246, -26.1471)
 
 [node name="Rotation Container" type="Node3D" parent="First Person Scenario/Position Container"]
 
-[node name="SpringArm2" type="SpringArm3D" parent="First Person Scenario/Position Container/Rotation Container"]
-transform = Transform3D(0.999997, 0, 1.63913e-07, 0, 0.999999, 0, -1.78814e-07, 0, 0.999997, 0, 1.58259, 0)
-shape = SubResource("SeparationRayShape3D_xemv2")
-spring_length = 0.0
-
-[node name="Camera" type="Camera3D" parent="First Person Scenario/Position Container/Rotation Container/SpringArm2"]
-fov = 60.0
-far = 20000.0
-
 [node name="Placeholder" type="AnimatableBody3D" parent="First Person Scenario/Position Container/Rotation Container"]
-transform = Transform3D(-0.832194, -0.432223, -0.347329, 0.532139, -0.446518, -0.71934, 0.155826, -0.783457, 0.601592, 0.94, 1.535, -0.355)
+transform = Transform3D(-0.353098, -0.25887, -0.24147, 0.353435, -0.238395, -0.261249, 0.0201286, -0.355182, 0.351342, 0.655, -0.07, -0.32)
 sync_to_physics = false
 
 [node name="Placeholder_Mesh" type="MeshInstance3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder"]
@@ -960,6 +1055,60 @@ shape = SubResource("CylinderShape3D_3rlpp")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050783, 0)
 shape = SubResource("CylinderShape3D_i3os8")
 
+[node name="Placeholder2" type="AnimatableBody3D" parent="First Person Scenario/Position Container/Rotation Container"]
+transform = Transform3D(0.075, 0, 0, 0, 0.075, 0, 0, 0, 0.075, -0.315, -0.095, -0.485)
+sync_to_physics = false
+
+[node name="Placeholder_Mesh" type="MeshInstance3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.700722, 0)
+gi_mode = 2
+visibility_range_end = 300.0
+mesh = SubResource("ArrayMesh_q806f")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2793, 0)
+shape = SubResource("ConvexPolygonShape3D_ncn4t")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.537609, 1.62705, 0)
+shape = SubResource("ConvexPolygonShape3D_3smw8")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.537609, 1.62705, 0)
+shape = SubResource("ConvexPolygonShape3D_x0cm2")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197751, 1.87565, 0)
+shape = SubResource("ConvexPolygonShape3D_53aa4")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.197751, 1.87565, 0)
+shape = SubResource("ConvexPolygonShape3D_b7fyo")
+
+[node name="Collider_Stand" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.429764, 0)
+shape = SubResource("CylinderShape3D_3rlpp")
+
+[node name="Collider_Base" type="CollisionShape3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050783, 0)
+shape = SubResource("CylinderShape3D_i3os8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="First Person Scenario/Position Container/Rotation Container"]
+libraries = {
+"": SubResource("AnimationLibrary_ac6p7")
+}
+
+[node name="First Person Cam" parent="First Person Scenario/Position Container/Rotation Container" instance=ExtResource("44_pqwvy")]
+transform = Transform3D(0.999997, 0, 1.63913e-07, 0, 0.999999, 0, -1.78814e-07, 0, 0.999997, 0, 0, 0)
+spring_length = 0.0
+
+[node name="Floor" type="MeshInstance3D" parent="First Person Scenario/Position Container/Rotation Container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8, 0)
+cast_shadow = 0
+gi_mode = 2
+mesh = SubResource("PlaneMesh_rh1jn")
+
 [node name="Objects Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player")]
 script = ExtResource("31_5vdeh")
 animation_player = NodePath("AnimationPlayer")
@@ -990,7 +1139,7 @@ libraries = {
 }
 
 [node name="Punter" type="AnimatableBody3D" parent="Objects Scenario"]
-transform = Transform3D(-0.587785, 0, 0.809017, 0, 1, 0, -0.809017, 0, -0.587785, 421.035, -7.181, -282.722)
+transform = Transform3D(-0.587781, 0, 0.80902, 0, 1, 0, -0.80902, 0, -0.587781, 421.035, -7.181, -282.722)
 sync_to_physics = false
 
 [node name="Placeholder_Mesh" type="MeshInstance3D" parent="Objects Scenario/Punter"]
@@ -1316,9 +1465,10 @@ far = 20000.0
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Scenario Manager" method="play_scenario"]
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Plane Scenario" method="play_scenario"]
 [connection signal="pressed" from="UI/Button" to="Scenario Manager" method="stop_scenario"]
-[connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="play_scenario"]
 [connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="switch_to_ghfs"]
+[connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="play_scenario"]
 
 [editable path="Third Person Scenario/Position Container/Rotation Container/mannequiny-0_3_0"]
+[editable path="First Person Scenario/Position Container/Rotation Container/First Person Cam"]
 [editable path="Objects Scenario/Objects Cam"]
 [editable path="Car Scenario/Position Container/Rotation Container/Car2/Car2"]
