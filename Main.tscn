@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=4 uid="uid://c77e1yn8ifgkx"]
+[gd_scene load_steps=109 format=4 uid="uid://c77e1yn8ifgkx"]
 
 [ext_resource type="Script" path="res://Scripts/LightingChanger.gd" id="1_c06e6"]
 [ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="1_wutcc"]
@@ -46,7 +46,10 @@
 [ext_resource type="Animation" uid="uid://7cnr31x5e3a2" path="res://Animations/Plane_Scenario.res" id="37_pvakd"]
 [ext_resource type="Material" uid="uid://l7arlkarpt8b" path="res://Materials/Generic/Car_Paint_White.tres" id="38_8cy26"]
 [ext_resource type="Material" uid="uid://w7x7mj8tckm3" path="res://Materials/Generic/Car_Window.tres" id="39_7m7bm"]
+[ext_resource type="Texture2D" uid="uid://bhk6cc81sooe4" path="res://Textures/Explosion_Smoke/Explosion_Smoke_Albedo.png" id="39_lnt2b"]
+[ext_resource type="Texture2D" uid="uid://c8fso3ju0opq4" path="res://Textures/Explosion_Smoke/Explosion_Smoke_Metal_Rough_Occ.png" id="40_454un"]
 [ext_resource type="PackedScene" uid="uid://dkd5cjttwcm8m" path="res://Scenes/Object_Shooter.tscn" id="40_le1rk"]
+[ext_resource type="Texture2D" uid="uid://eyq0ue0s5" path="res://Textures/Explosion_Smoke/Explosion_Smoke_Normal.png" id="41_q1aow"]
 [ext_resource type="PackedScene" uid="uid://k5ru4wgsw0hm" path="res://Scenes/Following_Camera.tscn" id="44_jo3rq"]
 [ext_resource type="PackedScene" uid="uid://dc0ya1cet1gdb" path="res://Scenes/Physics_Objects.tscn" id="44_olg38"]
 [ext_resource type="PackedScene" uid="uid://d3qsflugcn67e" path="res://Scenes/Attached_Camera.tscn" id="44_pqwvy"]
@@ -302,6 +305,25 @@ _data = {
 [sub_resource type="PlaneMesh" id="PlaneMesh_rh1jn"]
 size = Vector2(0.5, 0.5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3kdx"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("39_lnt2b")
+metallic = 1.0
+metallic_texture = ExtResource("40_454un")
+roughness_texture = ExtResource("40_454un")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("41_q1aow")
+texture_filter = 5
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+proximity_fade_enabled = true
+proximity_fade_distance = 0.15
+
 [sub_resource type="Gradient" id="Gradient_ge808"]
 colors = PackedColorArray(1, 1, 1, 0.545098, 1, 1, 1, 0.0627451)
 
@@ -315,9 +337,15 @@ point_count = 2
 [sub_resource type="CurveTexture" id="CurveTexture_el3ns"]
 curve = SubResource("Curve_240km")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sn0tg"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h0g2r"]
 angle_min = 1.07288e-05
 angle_max = 359.0
+direction = Vector3(0, 1, 0)
+spread = 90.0
+initial_velocity_min = 30.0
+initial_velocity_max = 30.0
+angular_velocity_min = -150.0
+angular_velocity_max = 150.0
 gravity = Vector3(0, 0, 0)
 scale_max = 5.0
 scale_curve = SubResource("CurveTexture_el3ns")
@@ -602,6 +630,16 @@ size = Vector3(1.14331, 1.15636, 0.648886)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_asahx"]
 size = Vector3(1.14691, 0.674832, 1.12945)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sn0tg"]
+angle_min = 1.07288e-05
+angle_max = 359.0
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+scale_max = 5.0
+scale_curve = SubResource("CurveTexture_el3ns")
+color_ramp = SubResource("GradientTexture1D_fdykc")
 
 [sub_resource type="Animation" id="Animation_pwg7l"]
 length = 0.001
@@ -1151,13 +1189,14 @@ omni_range = 20.0
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="First Person Scenario/Position Container/Rotation Container"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8, 0)
-material_override = ExtResource("45_etuum")
+material_override = SubResource("StandardMaterial3D_r3kdx")
 cast_shadow = 0
 gi_mode = 2
 emitting = false
-amount = 30
-lifetime = 0.3
-process_material = SubResource("ParticleProcessMaterial_sn0tg")
+amount = 250
+lifetime = 0.5
+visibility_aabb = AABB(-16.5467, -0.999788, -15.8943, 33.1913, 17.7055, 32.4449)
+process_material = SubResource("ParticleProcessMaterial_h0g2r")
 draw_pass_1 = SubResource("QuadMesh_livcf")
 
 [node name="Objects Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player")]
@@ -1364,6 +1403,7 @@ cast_shadow = 0
 gi_mode = 2
 emitting = false
 amount = 20
+visibility_aabb = AABB(-50, -50, -50, 100, 100, 100)
 process_material = SubResource("ParticleProcessMaterial_sn0tg")
 draw_pass_1 = SubResource("QuadMesh_livcf")
 
@@ -1374,6 +1414,7 @@ cast_shadow = 0
 gi_mode = 2
 emitting = false
 amount = 20
+visibility_aabb = AABB(-50, -50, -50, 100, 100, 100)
 process_material = SubResource("ParticleProcessMaterial_sn0tg")
 draw_pass_1 = SubResource("QuadMesh_livcf")
 
@@ -1384,6 +1425,7 @@ cast_shadow = 0
 gi_mode = 2
 emitting = false
 amount = 20
+visibility_aabb = AABB(-50, -50, -50, 100, 100, 100)
 process_material = SubResource("ParticleProcessMaterial_sn0tg")
 draw_pass_1 = SubResource("QuadMesh_livcf")
 
@@ -1394,6 +1436,7 @@ cast_shadow = 0
 gi_mode = 2
 emitting = false
 amount = 20
+visibility_aabb = AABB(-50, -50, -50, 100, 100, 100)
 process_material = SubResource("ParticleProcessMaterial_sn0tg")
 draw_pass_1 = SubResource("QuadMesh_livcf")
 
