@@ -6,9 +6,6 @@
 
 [node name="Placeholder" parent="." instance=ExtResource("1_m844w")]
 
-[node name="Placeholder5" parent="." instance=ExtResource("1_m844w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39355, 0, -2.57934)
-
 [node name="Placeholder6" parent="." instance=ExtResource("1_m844w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.394, 0, -2.57934)
 
