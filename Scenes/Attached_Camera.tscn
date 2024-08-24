@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3qsflugcn67e"]
 
-[ext_resource type="Script" path="res://CameraAttached.gd" id="1_8r3lh"]
+[ext_resource type="Script" path="res://Scripts/CameraAttached.gd" id="1_8r3lh"]
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_xemv2"]
 

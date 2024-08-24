@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=4 uid="uid://c77e1yn8ifgkx"]
+[gd_scene load_steps=103 format=4 uid="uid://c77e1yn8ifgkx"]
 
 [ext_resource type="Script" path="res://Scripts/LightingChanger.gd" id="1_c06e6"]
 [ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="1_wutcc"]
@@ -46,6 +46,8 @@
 [ext_resource type="Animation" uid="uid://7cnr31x5e3a2" path="res://Animations/Plane_Scenario.res" id="37_pvakd"]
 [ext_resource type="Material" uid="uid://l7arlkarpt8b" path="res://Materials/Generic/Car_Paint_White.tres" id="38_8cy26"]
 [ext_resource type="Material" uid="uid://w7x7mj8tckm3" path="res://Materials/Generic/Car_Window.tres" id="39_7m7bm"]
+[ext_resource type="Script" path="res://Scripts/ObjectShooter.gd" id="40_46j3t"]
+[ext_resource type="PackedScene" uid="uid://bh6kftr5cmcrt" path="res://Scenes/Placeholder.tscn" id="41_xpvps"]
 [ext_resource type="PackedScene" uid="uid://k5ru4wgsw0hm" path="res://Scenes/Following_Camera.tscn" id="44_jo3rq"]
 [ext_resource type="PackedScene" uid="uid://dc0ya1cet1gdb" path="res://Scenes/Physics_Objects.tscn" id="44_olg38"]
 [ext_resource type="PackedScene" uid="uid://d3qsflugcn67e" path="res://Scenes/Attached_Camera.tscn" id="44_pqwvy"]
@@ -181,26 +183,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Position Container:position")
+tracks/0/path = NodePath("PunterAnimator:current_animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(278.912, -12.2032, -19.0746)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Position Container:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
+"update": 1,
+"values": [""]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3kjft"]
@@ -208,6 +198,50 @@ _data = {
 "Objects_Scenario": ExtResource("36_5qdfn"),
 "RESET": SubResource("Animation_l51pi")
 }
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qrwnv"]
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="Animation" id="Animation_ybxwj"]
+resource_name = "punter_rotation"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Punter:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.366667, 0.766667, 1.13333, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 2.19911, 0), Vector3(0.741765, 2.60054, 0.706858), Vector3(1.90241, 5.39307, 0.349066), Vector3(-0.331613, 6.34427, 0.986111), Vector3(0, 2.19911, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8i1q1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Punter:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.19911, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6gkn3"]
+_data = {
+"RESET": SubResource("Animation_8i1q1"),
+"punter_rotation": SubResource("Animation_ybxwj")
+}
+
+[sub_resource type="PrismMesh" id="PrismMesh_is6eb"]
+size = Vector3(0.2, 0.2, 0.2)
 
 [sub_resource type="Animation" id="Animation_7qhat"]
 length = 0.001
@@ -893,6 +927,7 @@ far = 20000.0
 
 [node name="Placeholder" type="AnimatableBody3D" parent="First Person Scenario/Position Container/Rotation Container"]
 transform = Transform3D(-0.832194, -0.432223, -0.347329, 0.532139, -0.446518, -0.71934, 0.155826, -0.783457, 0.601592, 0.94, 1.535, -0.355)
+sync_to_physics = false
 
 [node name="Placeholder_Mesh" type="MeshInstance3D" parent="First Person Scenario/Position Container/Rotation Container/Placeholder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.700722, 0)
@@ -935,23 +970,76 @@ animation_player = NodePath("AnimationPlayer")
 scenario_name = "Objects_Scenario"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Objects Scenario"]
+callback_mode_process = 0
+callback_mode_method = 1
+callback_mode_discrete = 2
 libraries = {
 "": SubResource("AnimationLibrary_3kjft")
 }
 
-[node name="Position Container" type="Node3D" parent="Objects Scenario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 278.912, -12.2032, -19.0746)
-
-[node name="Rotation Container" type="Node3D" parent="Objects Scenario/Position Container"]
-
-[node name="SpringArm2" type="SpringArm3D" parent="Objects Scenario/Position Container/Rotation Container"]
-transform = Transform3D(0.999997, 0, 1.63913e-07, 0, 0.999999, 0, -1.78814e-07, 0, 0.999997, 0, 1.58259, 0)
-shape = SubResource("SeparationRayShape3D_xemv2")
+[node name="Objects Cam" parent="Objects Scenario" instance=ExtResource("44_pqwvy")]
+transform = Transform3D(-0.605988, 0, 0.795474, 0, 1, 0, -0.795473, 0, -0.605989, 426.85, -6.3507, -287.362)
 spring_length = 0.0
 
-[node name="Camera" type="Camera3D" parent="Objects Scenario/Position Container/Rotation Container/SpringArm2"]
-fov = 60.0
-far = 20000.0
+[node name="Floor" type="MeshInstance3D" parent="Objects Scenario/Objects Cam"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8, 0)
+mesh = SubResource("PlaneMesh_qrwnv")
+
+[node name="PunterAnimator" type="AnimationPlayer" parent="Objects Scenario"]
+callback_mode_process = 0
+callback_mode_method = 1
+callback_mode_discrete = 2
+libraries = {
+"": SubResource("AnimationLibrary_6gkn3")
+}
+
+[node name="Punter" type="AnimatableBody3D" parent="Objects Scenario"]
+transform = Transform3D(-0.587785, 0, 0.809017, 0, 1, 0, -0.809017, 0, -0.587785, 421.035, -7.181, -282.722)
+sync_to_physics = false
+
+[node name="Placeholder_Mesh" type="MeshInstance3D" parent="Objects Scenario/Punter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.700722, 0)
+gi_mode = 2
+visibility_range_end = 300.0
+mesh = SubResource("ArrayMesh_q806f")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects Scenario/Punter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2793, 0)
+shape = SubResource("ConvexPolygonShape3D_ncn4t")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Objects Scenario/Punter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.537609, 1.62705, 0)
+shape = SubResource("ConvexPolygonShape3D_3smw8")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Objects Scenario/Punter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.537609, 1.62705, 0)
+shape = SubResource("ConvexPolygonShape3D_x0cm2")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Objects Scenario/Punter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197751, 1.87565, 0)
+shape = SubResource("ConvexPolygonShape3D_53aa4")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Objects Scenario/Punter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.197751, 1.87565, 0)
+shape = SubResource("ConvexPolygonShape3D_b7fyo")
+
+[node name="Collider_Stand" type="CollisionShape3D" parent="Objects Scenario/Punter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.429764, 0)
+shape = SubResource("CylinderShape3D_3rlpp")
+
+[node name="Collider_Base" type="CollisionShape3D" parent="Objects Scenario/Punter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050783, 0)
+shape = SubResource("CylinderShape3D_i3os8")
+
+[node name="ObjectShooter" type="Node3D" parent="Objects Scenario"]
+transform = Transform3D(-0.809017, 0, -0.587785, 0, 1, 0, 0.587785, 0, -0.809017, 415.946, -6.44742, -289.726)
+script = ExtResource("40_46j3t")
+object_to_shoot = ExtResource("41_xpvps")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects Scenario/ObjectShooter"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PrismMesh_is6eb")
 
 [node name="Car Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player")]
 script = ExtResource("31_5vdeh")
@@ -960,6 +1048,7 @@ scenario_name = "Car_Scenario"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Car Scenario"]
 callback_mode_process = 0
+callback_mode_method = 1
 callback_mode_discrete = 2
 libraries = {
 "": SubResource("AnimationLibrary_4fypr")
@@ -1221,8 +1310,9 @@ far = 20000.0
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Scenario Manager" method="play_scenario"]
 [connection signal="pressed" from="UI/GridContainer/Button5" to="Plane Scenario" method="play_scenario"]
 [connection signal="pressed" from="UI/Button" to="Scenario Manager" method="stop_scenario"]
-[connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="switch_to_ghfs"]
 [connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="play_scenario"]
+[connection signal="pressed" from="UI/Button2" to="Scenario Manager" method="switch_to_ghfs"]
 
 [editable path="Third Person Scenario/Position Container/Rotation Container/mannequiny-0_3_0"]
+[editable path="Objects Scenario/Objects Cam"]
 [editable path="Car Scenario/Position Container/Rotation Container/Car2/Car2"]
