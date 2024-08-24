@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=4 uid="uid://c77e1yn8ifgkx"]
+[gd_scene load_steps=101 format=4 uid="uid://c77e1yn8ifgkx"]
 
 [ext_resource type="Script" path="res://Scripts/LightingChanger.gd" id="1_c06e6"]
 [ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="1_wutcc"]
@@ -46,8 +46,7 @@
 [ext_resource type="Animation" uid="uid://7cnr31x5e3a2" path="res://Animations/Plane_Scenario.res" id="37_pvakd"]
 [ext_resource type="Material" uid="uid://l7arlkarpt8b" path="res://Materials/Generic/Car_Paint_White.tres" id="38_8cy26"]
 [ext_resource type="Material" uid="uid://w7x7mj8tckm3" path="res://Materials/Generic/Car_Window.tres" id="39_7m7bm"]
-[ext_resource type="Script" path="res://Scripts/ObjectShooter.gd" id="40_46j3t"]
-[ext_resource type="PackedScene" uid="uid://bh6kftr5cmcrt" path="res://Scenes/Placeholder.tscn" id="41_xpvps"]
+[ext_resource type="PackedScene" uid="uid://dkd5cjttwcm8m" path="res://Scenes/Object_Shooter.tscn" id="40_le1rk"]
 [ext_resource type="PackedScene" uid="uid://k5ru4wgsw0hm" path="res://Scenes/Following_Camera.tscn" id="44_jo3rq"]
 [ext_resource type="PackedScene" uid="uid://dc0ya1cet1gdb" path="res://Scenes/Physics_Objects.tscn" id="44_olg38"]
 [ext_resource type="PackedScene" uid="uid://d3qsflugcn67e" path="res://Scenes/Attached_Camera.tscn" id="44_pqwvy"]
@@ -239,9 +238,6 @@ _data = {
 "RESET": SubResource("Animation_8i1q1"),
 "punter_rotation": SubResource("Animation_ybxwj")
 }
-
-[sub_resource type="PrismMesh" id="PrismMesh_is6eb"]
-size = Vector3(0.2, 0.2, 0.2)
 
 [sub_resource type="Animation" id="Animation_7qhat"]
 length = 0.001
@@ -1032,14 +1028,14 @@ shape = SubResource("CylinderShape3D_3rlpp")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050783, 0)
 shape = SubResource("CylinderShape3D_i3os8")
 
-[node name="ObjectShooter" type="Node3D" parent="Objects Scenario"]
-transform = Transform3D(-0.809017, 0, -0.587785, 0, 1, 0, 0.587785, 0, -0.809017, 415.946, -6.44742, -289.726)
-script = ExtResource("40_46j3t")
-object_to_shoot = ExtResource("41_xpvps")
+[node name="RightObjectShooter" parent="Objects Scenario" instance=ExtResource("40_le1rk")]
+transform = Transform3D(-0.809215, 0.00359615, -0.587501, 0.00218468, 0.999993, 0.00311192, 0.587508, 0.00123471, -0.809217, 415.95, -6.44706, -289.729)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects Scenario/ObjectShooter"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
-mesh = SubResource("PrismMesh_is6eb")
+[node name="LefObjectShooter" parent="Objects Scenario" instance=ExtResource("40_le1rk")]
+transform = Transform3D(0.809215, 0.00359615, 0.587501, -0.00218468, 0.999993, -0.00311192, -0.587508, 0.00123471, 0.809217, 426.125, -6.50095, -275.713)
+
+[node name="BackObjectShooter" parent="Objects Scenario" instance=ExtResource("40_le1rk")]
+transform = Transform3D(0.587501, 0.00359615, -0.809215, -0.00311192, 0.999993, 0.00218468, 0.809217, 0.00123471, 0.587508, 414.03, -6.45509, -277.633)
 
 [node name="Car Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player")]
 script = ExtResource("31_5vdeh")

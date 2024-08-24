@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkd5cjttwcm8m"]
+
+[ext_resource type="Script" path="res://Scripts/ObjectShooter.gd" id="1_6k473"]
+[ext_resource type="PackedScene" uid="uid://bh6kftr5cmcrt" path="res://Scenes/Placeholder.tscn" id="2_r6wui"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_is6eb"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="ObjectShooter" type="Node3D"]
+script = ExtResource("1_6k473")
+object_to_shoot = ExtResource("2_r6wui")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PrismMesh_is6eb")
