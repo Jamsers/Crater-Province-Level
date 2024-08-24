@@ -1112,6 +1112,15 @@ cast_shadow = 0
 gi_mode = 2
 mesh = SubResource("PlaneMesh_rh1jn")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="First Person Scenario/Position Container/Rotation Container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.565, 0.385, 0.44)
+light_intensity_lumens = 300.0
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 20.0
+
 [node name="Objects Scenario" type="Node" parent="." node_paths=PackedStringArray("animation_player")]
 script = ExtResource("31_5vdeh")
 animation_player = NodePath("AnimationPlayer")
