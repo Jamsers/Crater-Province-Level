@@ -806,6 +806,7 @@ grow_vertical = 2
 [node name="Button" type="Button" parent="UI/GridContainer"]
 layout_mode = 2
 mouse_filter = 1
+disabled = true
 text = "Third Person Scenario"
 
 [node name="Button2" type="Button" parent="UI/GridContainer"]
@@ -826,6 +827,7 @@ text = "Car Scenario"
 [node name="Button5" type="Button" parent="UI/GridContainer"]
 layout_mode = 2
 mouse_filter = 1
+disabled = true
 text = "Plane Scenario"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI"]
