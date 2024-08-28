@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://c77e1yn8ifgkx"]
+[gd_scene load_steps=83 format=3 uid="uid://c77e1yn8ifgkx"]
 
 [ext_resource type="Script" path="res://Scripts/LightingChanger.gd" id="1_c06e6"]
 [ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="1_wutcc"]
@@ -43,6 +43,7 @@
 [ext_resource type="Resource" uid="uid://cym57oestwev2" path="res://Resources/Lighting/InterimCorrections/TIME_PM_6_38.tres" id="22_5rbir"]
 [ext_resource type="PackedScene" uid="uid://dpjgsjma5dxpb" path="res://Scenes/Park.tscn" id="22_hy5xu"]
 [ext_resource type="Script" path="res://Scripts/Profiler.gd" id="22_xngbd"]
+[ext_resource type="Compositor" uid="uid://1c5tgrylhb66" path="res://Resources/Compositor_Addons/MotionBlurCompositor.tres" id="29_b87y7"]
 [ext_resource type="PackedScene" uid="uid://cvdgqvgtggj30" path="res://Models/Terrain_Physics_Blocker.glb" id="33_gejc5"]
 [ext_resource type="PackedScene" uid="uid://b6whnguxtreo2" path="res://Models/Terrain_Blocker.glb" id="34_as1if"]
 [ext_resource type="PackedScene" uid="uid://cnxrel57kprjr" path="res://Scenes/Walls_All.tscn" id="35_1htir"]
@@ -142,6 +143,7 @@ script = ExtResource("22_xngbd")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_wutcc")
 camera_attributes = ExtResource("2_qbce3")
+compositor = ExtResource("29_b87y7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-4.37114e-08, -0.258819, 0.965925, 0, 0.965925, 0.258819, -1, 1.13133e-08, -4.22219e-08, 0, 0, 0)

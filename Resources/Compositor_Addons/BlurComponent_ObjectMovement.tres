@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BlurVelocityComponentResource" load_steps=2 format=3 uid="uid://dsflq244bbrfo"]
+
+[ext_resource type="Script" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/blur_velocity_component_resource.gd" id="1_4n2ma"]
+
+[resource]
+script = ExtResource("1_4n2ma")
+multiplier = 1.0
+lower_threshold = 0.0
+upper_threshold = 0.02

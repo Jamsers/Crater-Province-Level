@@ -1,0 +1,21 @@
+[gd_resource type="CompositorEffect" script_class="PreBlurProcessor" load_steps=6 format=3 uid="uid://lxromjk3g25p"]
+
+[ext_resource type="Resource" uid="uid://c60t26e3yts70" path="res://Resources/Compositor_Addons/BlurComponent_CameraMovement.tres" id="1_w8pmn"]
+[ext_resource type="Resource" uid="uid://1gbw8fqnhjfs" path="res://Resources/Compositor_Addons/BlurComponent_CameraRotation.tres" id="2_2qrlr"]
+[ext_resource type="Resource" uid="uid://dsflq244bbrfo" path="res://Resources/Compositor_Addons/BlurComponent_ObjectMovement.tres" id="3_wf5so"]
+[ext_resource type="Resource" uid="uid://c8ulad7utgrg7" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/pre_blur_processing_stage.tres" id="4_jxmat"]
+[ext_resource type="Script" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/pre_blur_processor.gd" id="5_5nymv"]
+
+[resource]
+resource_local_to_scene = false
+resource_name = ""
+enabled = true
+effect_callback_type = 4
+needs_motion_vectors = false
+needs_normal_roughness = false
+script = ExtResource("5_5nymv")
+pre_blur_processor_stage = ExtResource("4_jxmat")
+camera_rotation_component = ExtResource("2_2qrlr")
+camera_movement_component = ExtResource("1_w8pmn")
+object_movement_component = ExtResource("3_wf5so")
+debug = false

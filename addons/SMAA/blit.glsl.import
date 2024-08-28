@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://bhvkb5ox88iur"
+path="res://.godot/imported/blit.glsl-795adb583dcb32df0aa107d93159b10c.res"
+
+[deps]
+
+source_file="res://addons/SMAA/blit.glsl"
+dest_files=["res://.godot/imported/blit.glsl-795adb583dcb32df0aa107d93159b10c.res"]
+
+[params]
+

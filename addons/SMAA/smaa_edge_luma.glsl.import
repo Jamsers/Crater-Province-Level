@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://d3ru0f6vweynx"
+path="res://.godot/imported/smaa_edge_luma.glsl-f75b0cd5c97369c4c331261b2024c9c5.res"
+
+[deps]
+
+source_file="res://addons/SMAA/smaa_edge_luma.glsl"
+dest_files=["res://.godot/imported/smaa_edge_luma.glsl-f75b0cd5c97369c4c331261b2024c9c5.res"]
+
+[params]
+

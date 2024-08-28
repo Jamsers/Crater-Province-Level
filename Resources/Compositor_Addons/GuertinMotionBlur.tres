@@ -1,0 +1,30 @@
+[gd_resource type="CompositorEffect" script_class="GuertinMotionBlur" load_steps=8 format=3 uid="uid://sv667bafq0to"]
+
+[ext_resource type="Resource" uid="uid://ca45noqewsyvp" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_experimental_blur_stage.tres" id="1_j58i3"]
+[ext_resource type="Resource" uid="uid://cvb65hfs2lrxo" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_neighbor_max_stage.tres" id="2_0vpwp"]
+[ext_resource type="Resource" uid="uid://bidsfymvdyhek" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_overlay_stage.tres" id="3_epv0x"]
+[ext_resource type="Script" path="res://addons/SphynxMotionBlurToolkit/Guertin/new_guertin_motion_blur.gd" id="4_64re4"]
+[ext_resource type="Resource" uid="uid://dipvwksvqb3dm" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_max_x_stage.tres" id="5_bhvwb"]
+[ext_resource type="Resource" uid="uid://bxfg45ubc2pv7" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_max_y_stage.tres" id="6_dcsr7"]
+[ext_resource type="Resource" uid="uid://bqehecsdgt70s" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_variance_stage.tres" id="7_uifqc"]
+
+[resource]
+resource_local_to_scene = false
+resource_name = ""
+enabled = true
+effect_callback_type = 4
+needs_motion_vectors = false
+needs_normal_roughness = false
+script = ExtResource("4_64re4")
+blur_stage = ExtResource("1_j58i3")
+overlay_stage = ExtResource("3_epv0x")
+tile_max_x_stage = ExtResource("5_bhvwb")
+tile_max_y_stage = ExtResource("6_dcsr7")
+neighbor_max_stage = ExtResource("2_0vpwp")
+tile_variance_stage = ExtResource("7_uifqc")
+tile_size = 40
+linear_falloff_slope = 1.0
+importance_bias = 40.0
+maximum_jitter_value = 0.95
+minimum_user_threshold = 1.5
+debug = false
