@@ -13,6 +13,7 @@ layout(constant_id = 4) const int SMAA_CORNER_ROUNDING = 0;
 
 layout(push_constant, std430) uniform Params {
     vec4 smaa_rt_metrics;
+    vec4 subsample_indices;
 } params;
 
 void main() {
@@ -67,6 +68,7 @@ layout(constant_id = 4) const int SMAA_CORNER_ROUNDING = 0;
 
 layout(push_constant, std430) uniform Params {
     vec4 smaa_rt_metrics;
+    vec4 subsample_indices;
 } params;
 
 void SMAAMovc(bvec2 cond, inout vec2 variable, vec2 value) {
@@ -284,15 +286,13 @@ void SMAADetectVerticalCornerPattern(inout vec2 weights, vec4 coord, vec2 d) {
     }
 }
 
-const vec4 subsample_indices = vec4(0.0, 0.0, 0.0, 0.0);
-
 void main() {
     weights = vec4(0.0, 0.0, 0.0, 0.0);
     vec2 e = textureLod(edges_tex, tex_coord, 0.0).rg;
 
     if (e.g > 0.0) { // Edge at north
         if (!SMAA_DISABLE_DIAG_DETECTION) {
-            weights.rg = SMAACalculateDiagWeights(tex_coord, e, subsample_indices);
+            weights.rg = SMAACalculateDiagWeights(tex_coord, e, params.subsample_indices);
             if (weights.r == -weights.g) {
                 vec2 d;
                 vec3 coords;
@@ -312,7 +312,7 @@ void main() {
 
                 float e2 = textureLodOffset(edges_tex, coords.zy, 0.0, ivec2(1, 0)).r;
 
-                weights.rg = SMAAArea(sqrt_d, e1, e2, subsample_indices.y);
+                weights.rg = SMAAArea(sqrt_d, e1, e2, params.subsample_indices.y);
 
                 coords.y = tex_coord.y;
                 SMAADetectHorizontalCornerPattern(weights.rg, coords.xyzy, d);
@@ -338,7 +338,7 @@ void main() {
 
             float e2 = textureLodOffset(edges_tex, coords.zy, 0.0, ivec2(1, 0)).r;
 
-            weights.rg = SMAAArea(sqrt_d, e1, e2, subsample_indices.y);
+            weights.rg = SMAAArea(sqrt_d, e1, e2, params.subsample_indices.y);
 
             coords.y = tex_coord.y;
             SMAADetectHorizontalCornerPattern(weights.rg, coords.xyzy, d);
@@ -364,7 +364,7 @@ void main() {
 
         float e2 = textureLodOffset(edges_tex, coords.xz, 0.0, ivec2(0, 1)).g;
 
-        weights.ba = SMAAArea(sqrt_d, e1, e2, subsample_indices.x);
+        weights.ba = SMAAArea(sqrt_d, e1, e2, params.subsample_indices.x);
 
         coords.x = tex_coord.x;
         SMAADetectVerticalCornerPattern(weights.ba, coords.xyxz, d);

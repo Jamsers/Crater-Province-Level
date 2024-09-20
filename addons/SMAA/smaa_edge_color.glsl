@@ -68,11 +68,11 @@ void main() {
     vec2 max_delta = max(delta.xy, delta.zw);
 
     vec3 Cleftleft = textureGamma(color_tex, offset[2].xy).rgb;
-    t = abs(C - Cleftleft);
+    t = abs(Cleft - Cleftleft);
     delta.z = max(max(t.r, t.g), t.b);
 
     vec3 Ctoptop = textureGamma(color_tex, offset[2].zw).rgb;
-    t = abs(C - Ctoptop);
+    t = abs(Ctop - Ctoptop);
     delta.w = max(max(t.r, t.g), t.b);
 
     max_delta = max(max_delta.xy, delta.zw);
