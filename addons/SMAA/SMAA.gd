@@ -549,13 +549,14 @@ func _render_callback(p_effect_callback_type: int, p_render_data: RenderData) ->
 			rd.draw_command_begin_label("SMAA", Color.WHITE)
 			for view in view_count:
 				var color_image : RID = render_scene_buffers.get_color_layer(view, S2x)
+				var output_image : RID = render_scene_buffers.get_color_layer(view, false)
 				var depth_image : RID
 				if edge_detection_method == EdgeDetectionMethod.DEPTH:
 					depth_image = render_scene_buffers.get_depth_layer(view, false)
-				var copy_framebuffer = FramebufferCacheRD.get_cache_multipass([copy_tex], [], 1)
-				var output_framebuffer = FramebufferCacheRD.get_cache_multipass([color_image], [], 1)
+				var output_framebuffer = FramebufferCacheRD.get_cache_multipass([output_image], [], 1)
 
 				if !S2x:
+					var copy_framebuffer = FramebufferCacheRD.get_cache_multipass([copy_tex], [], 1)
 					# Copy source image to copy buffer for input in 3rd pass
 					# Note: color_image doesn't support any copy opperations, so we have to use a shader for this
 					rd.draw_command_begin_label("SMAA Copy Source Image" + str(view), Color.WHITE)

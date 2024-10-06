@@ -34,20 +34,18 @@ layout(push_constant, std430) uniform Params {
 } params;
 
 #define SMAA_LOCAL_CONTRAST_ADAPTATION_FACTOR 2.0
-// SMAA requires that the source image isn't in sRGB
-#define textureGamma(tex, uv) pow(texture(tex, uv), vec4(1 / 2.2))
 
 void main() {
     vec2 threshold = vec2(SMAA_THRESHOLD);
     
     vec4 delta;
-    vec3 C = textureGamma(color_tex, tex_coord).rgb;
+    vec3 C = texture(color_tex, tex_coord).rgb;
 
-    vec3 Cleft = textureGamma(color_tex, offset[0].xy).rgb;
+    vec3 Cleft = texture(color_tex, offset[0].xy).rgb;
     vec3 t = abs(C - Cleft);
     delta.x = max(max(t.r, t.g), t.b);
 
-    vec3 Ctop = textureGamma(color_tex, offset[0].zw).rgb;
+    vec3 Ctop = texture(color_tex, offset[0].zw).rgb;
     t = abs(C - Ctop);
     delta.y = max(max(t.r, t.g), t.b);
 
@@ -57,21 +55,21 @@ void main() {
         discard;
     }
 
-    vec3 Cright = textureGamma(color_tex, offset[1].xy).rgb;
+    vec3 Cright = texture(color_tex, offset[1].xy).rgb;
     t = abs(C - Cright);
     delta.z = max(max(t.r, t.g), t.b);
 
-    vec3 Cbottom = textureGamma(color_tex, offset[1].zw).rgb;
+    vec3 Cbottom = texture(color_tex, offset[1].zw).rgb;
     t = abs(C - Cbottom);
     delta.w = max(max(t.r, t.g), t.b);
 
     vec2 max_delta = max(delta.xy, delta.zw);
 
-    vec3 Cleftleft = textureGamma(color_tex, offset[2].xy).rgb;
+    vec3 Cleftleft = texture(color_tex, offset[2].xy).rgb;
     t = abs(Cleft - Cleftleft);
     delta.z = max(max(t.r, t.g), t.b);
 
-    vec3 Ctoptop = textureGamma(color_tex, offset[2].zw).rgb;
+    vec3 Ctoptop = texture(color_tex, offset[2].zw).rgb;
     t = abs(Ctop - Ctoptop);
     delta.w = max(max(t.r, t.g), t.b);
 
