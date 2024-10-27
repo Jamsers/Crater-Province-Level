@@ -1,30 +1,28 @@
 #[vertex]
 #version 450
+
+#include "smaa_settings_inc.glsl"
+
 layout(location = 0) in vec4 vert;
 layout(location = 0) out vec2 tex_coord;
 layout(location = 1) out vec4 offset;
 
-layout(push_constant, std430) uniform Params {
-    vec4 smaa_rt_metrics;
-} params;
-
 void main() {
-    offset = fma(params.smaa_rt_metrics.xyxy, vec4(1.0, 0.0, 0.0, 1.0), vert.zwzw);
+    offset = fma(smaa.settings.SMAA_RT_METRICS.xyxy, vec4(1.0, 0.0, 0.0, 1.0), vert.zwzw);
     gl_Position = vec4(vert.xy, 1.0, 1.0);
     tex_coord = vert.zw;
 }
 
 #[fragment]
 #version 450
+
+#include "smaa_settings_inc.glsl"
+
 layout(location = 0) in vec2 tex_coord;
 layout(location = 1) in vec4 offset;
-layout(set = 0, binding = 0) uniform sampler2D color_tex;
-layout(set = 0, binding = 1) uniform sampler2D blend_tex;
+layout(set = 1, binding = 0) uniform sampler2D color_tex;
+layout(set = 1, binding = 1) uniform sampler2D blend_tex;
 layout(location = 0) out vec4 out_color;
-
-layout(push_constant, std430) uniform Params {
-    vec4 smaa_rt_metrics;
-} params;
 
 void SMAAMovc(bvec2 cond, inout vec2 variable, vec2 value) {
     if (cond.x) variable.x = value.x;
@@ -54,7 +52,7 @@ void main() {
         SMAAMovc(bvec2(h, h), blending_weight, a.xz);
         blending_weight /= dot(blending_weight, vec2(1.0, 1.0));
 
-        vec4 blending_coord = fma(blending_offset, vec4(params.smaa_rt_metrics.xy, -params.smaa_rt_metrics.xy), tex_coord.xyxy);
+        vec4 blending_coord = fma(blending_offset, vec4(smaa.settings.SMAA_RT_METRICS.xy, -smaa.settings.SMAA_RT_METRICS.xy), tex_coord.xyxy);
 
         out_color = blending_weight.x * textureLod(color_tex, blending_coord.xy, 0.0);
         out_color += blending_weight.y * textureLod(color_tex, blending_coord.zw, 0.0);

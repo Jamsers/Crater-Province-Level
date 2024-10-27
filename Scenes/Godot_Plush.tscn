@@ -14,6 +14,7 @@ height = 0.372572
 radius = 0.0693581
 
 [node name="GodotPlush" type="RigidBody3D"]
+physics_interpolation_mode = 1
 mass = 2.0
 
 [node name="Godot_Plush" parent="." instance=ExtResource("1_mnmyg")]

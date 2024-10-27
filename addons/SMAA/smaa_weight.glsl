@@ -1,35 +1,33 @@
 #[vertex]
 #version 450
+
+#include "smaa_settings_inc.glsl"
+
 layout(location = 0) in vec4 vert;
 layout(location = 0) out vec2 tex_coord;
 layout(location = 1) out vec2 pix_coord;
 layout(location = 2) out vec4 offset[3];
 
-layout(constant_id = 0) const int SMAA_MAX_SEARCH_STEPS = 8;
-layout(constant_id = 1) const bool SMAA_DISABLE_DIAG_DETECTION = true;
-layout(constant_id = 2) const int SMAA_MAX_SEARCH_STEPS_DIAG = 0;
-layout(constant_id = 3) const bool SMAA_DISABLE_CORNER_DETECTION = true;
-layout(constant_id = 4) const int SMAA_CORNER_ROUNDING = 0;
-
 layout(push_constant, std430) uniform Params {
-    vec4 smaa_rt_metrics;
     vec4 subsample_indices;
 } params;
 
 void main() {
     tex_coord = vert.zw;
-    pix_coord = tex_coord * params.smaa_rt_metrics.zw;
-    offset[0] = fma(params.smaa_rt_metrics.xyxy, vec4(-0.25, -0.125, 1.25, -0.125), tex_coord.xyxy);
-    offset[1] = fma(params.smaa_rt_metrics.xyxy, vec4(-0.125, -0.25, -0.125, 1.25), tex_coord.xyxy);
+    pix_coord = tex_coord * smaa.settings.SMAA_RT_METRICS.zw;
+    offset[0] = fma(smaa.settings.SMAA_RT_METRICS.xyxy, vec4(-0.25, -0.125, 1.25, -0.125), tex_coord.xyxy);
+    offset[1] = fma(smaa.settings.SMAA_RT_METRICS.xyxy, vec4(-0.125, -0.25, -0.125, 1.25), tex_coord.xyxy);
 
-    offset[2] = fma(params.smaa_rt_metrics.xxyy,
-            vec4(-2.0, 2.0, -2.0, 2.0) * SMAA_MAX_SEARCH_STEPS,
+    offset[2] = fma(smaa.settings.SMAA_RT_METRICS.xxyy,
+            vec4(-2.0, 2.0, -2.0, 2.0) * smaa.settings.max_search_steps,
             vec4(offset[0].xz, offset[1].yw));
     gl_Position = vec4(vert.xy, 1.0, 1.0);
 }
 
 #[fragment]
 #version 450
+
+#include "smaa_settings_inc.glsl"
 
 #ifndef SMAA_AREATEX_SELECT
 #define SMAA_AREATEX_SELECT(sample) sample.rg
@@ -49,25 +47,14 @@ void main() {
 layout(location = 0) in vec2 tex_coord;
 layout(location = 1) in vec2 pix_coord;
 layout(location = 2) in vec4 offset[3];
-layout(set = 0, binding = 0) uniform sampler2D edges_tex;
-layout(set = 0, binding = 1) uniform sampler2D area_tex;
-layout(set = 0, binding = 2) uniform sampler2D search_tex;
+layout(set = 1, binding = 0) uniform sampler2D edges_tex;
+layout(set = 1, binding = 1) uniform sampler2D area_tex;
+layout(set = 1, binding = 2) uniform sampler2D search_tex;
 layout(location = 0) out vec4 weights;
 
-/* Back when SMAA was developed, diag detection was very expensive for older
- * graphics cards. However, I wouldn't worry too much about hardware that was
- * considered old 11 years ago, as it likely isn't vulkan compatible.
- */
-layout(constant_id = 0) const int SMAA_MAX_SEARCH_STEPS = 8;
-layout(constant_id = 1) const bool SMAA_DISABLE_DIAG_DETECTION = true;
-layout(constant_id = 2) const int SMAA_MAX_SEARCH_STEPS_DIAG = 0;
-layout(constant_id = 3) const bool SMAA_DISABLE_CORNER_DETECTION = true;
-layout(constant_id = 4) const int SMAA_CORNER_ROUNDING = 0;
-
-#define SMAA_CORNER_ROUNDING_NORM (float(SMAA_CORNER_ROUNDING) / 100.0)
+#define SMAA_CORNER_ROUNDING_NORM (float(smaa.settings.corner_rounding) / 100.0)
 
 layout(push_constant, std430) uniform Params {
-    vec4 smaa_rt_metrics;
     vec4 subsample_indices;
 } params;
 
@@ -88,8 +75,8 @@ vec4 SMAADecodeDiagBilinearAccess(vec4 e) {
 
 vec2 SMAASearchDiag1(vec2 tex_coord, vec2 dir, out vec2 e) {
     vec4 coord = vec4(tex_coord, -1.0, 1.0);
-    vec3 t = vec3(params.smaa_rt_metrics.xy, 1.0);
-    while (coord.z < float(SMAA_MAX_SEARCH_STEPS_DIAG - 1) &&
+    vec3 t = vec3(smaa.settings.SMAA_RT_METRICS.xy, 1.0);
+    while (coord.z < float(smaa.settings.max_search_steps_diag - 1) &&
             coord.w > 0.9) {
         coord.xyz = fma(t, vec3(dir, 1.0), coord.xyz);
         e = textureLod(edges_tex, coord.xy, 0.0).rg;
@@ -100,9 +87,9 @@ vec2 SMAASearchDiag1(vec2 tex_coord, vec2 dir, out vec2 e) {
 
 vec2 SMAASearchDiag2(vec2 tex_coord, vec2 dir, out vec2 e) {
     vec4 coord = vec4(tex_coord, -1.0, 1.0);
-    coord.x += 0.25 * params.smaa_rt_metrics.x;
-    vec3 t = vec3(params.smaa_rt_metrics.xy, 1.0);
-    while (coord.z < float(SMAA_MAX_SEARCH_STEPS_DIAG - 1) &&
+    coord.x += 0.25 * smaa.settings.SMAA_RT_METRICS.x;
+    vec3 t = vec3(smaa.settings.SMAA_RT_METRICS.xy, 1.0);
+    while (coord.z < float(smaa.settings.max_search_steps_diag - 1) &&
             coord.w > 0.9) {
         coord.xyz = fma(t, vec3(dir, 1.0), coord.xyz);
 
@@ -140,7 +127,7 @@ vec2 SMAACalculateDiagWeights(vec2 tex_coord, vec2 e, vec4 subsample_indices) {
     d.yw = SMAASearchDiag1(tex_coord, vec2(1.0, -1.0), end);
 
     if (d.x + d.y > 2.0) {
-        vec4 coords = fma(vec4(-d.x + 0.25, d.x, d.y, -d.y - 0.25), params.smaa_rt_metrics.xyxy, tex_coord.xyxy);
+        vec4 coords = fma(vec4(-d.x + 0.25, d.x, d.y, -d.y - 0.25), smaa.settings.SMAA_RT_METRICS.xyxy, tex_coord.xyxy);
         vec4 c;
         c.xy = textureLodOffset(edges_tex, coords.xy, 0.0, ivec2(-1, 0)).rg;
         c.zw = textureLodOffset(edges_tex, coords.zw, 0.0, ivec2(1, 0)).rg;
@@ -162,7 +149,7 @@ vec2 SMAACalculateDiagWeights(vec2 tex_coord, vec2 e, vec4 subsample_indices) {
     }
 
     if (d.x + d.y > 2.0) {
-        vec4 coords = fma(vec4(-d.x, -d.x, d.y, d.y), params.smaa_rt_metrics.xyxy, tex_coord.xyxy);
+        vec4 coords = fma(vec4(-d.x, -d.x, d.y, d.y), smaa.settings.SMAA_RT_METRICS.xyxy, tex_coord.xyxy);
         vec4 c;
         c.x = textureLodOffset(edges_tex, coords.xy, 0.0, ivec2(-1, 0)).g;
         c.y = textureLodOffset(edges_tex, coords.xy, 0.0, ivec2(0, -1)).r;
@@ -196,11 +183,11 @@ float SMAASearchXLeft(vec2 tex_coord, float end) {
             e.g > 0.8281 &&
             e.r == 0.0) {
         e = textureLod(edges_tex, tex_coord, 0.0).rg;
-        tex_coord = fma(-vec2(2.0, 0.0), params.smaa_rt_metrics.xy, tex_coord);
+        tex_coord = fma(-vec2(2.0, 0.0), smaa.settings.SMAA_RT_METRICS.xy, tex_coord);
     }
 
     float offset = fma(-(255.0 / 127.0), SMAASearchLength(e, 0.0), 3.25);
-    return fma(params.smaa_rt_metrics.x, offset, tex_coord.x);
+    return fma(smaa.settings.SMAA_RT_METRICS.x, offset, tex_coord.x);
 }
 
 float SMAASearchXRight(vec2 tex_coord, float end) {
@@ -209,11 +196,11 @@ float SMAASearchXRight(vec2 tex_coord, float end) {
             e.g > 0.8281 &&
             e.r == 0.0) {
         e = textureLod(edges_tex, tex_coord, 0.0).rg;
-        tex_coord = fma(vec2(2.0, 0.0), params.smaa_rt_metrics.xy, tex_coord);
+        tex_coord = fma(vec2(2.0, 0.0), smaa.settings.SMAA_RT_METRICS.xy, tex_coord);
     }
 
     float offset = fma(-(255.0 / 127.0), SMAASearchLength(e, 0.5), 3.25);
-    return fma(-params.smaa_rt_metrics.x, offset, tex_coord.x);
+    return fma(-smaa.settings.SMAA_RT_METRICS.x, offset, tex_coord.x);
 }
 
 float SMAASearchYUp(vec2 tex_coord, float end) {
@@ -222,11 +209,11 @@ float SMAASearchYUp(vec2 tex_coord, float end) {
             e.r > 0.8281 &&
             e.g == 0.0) {
         e = textureLod(edges_tex, tex_coord, 0.0).rg;
-        tex_coord = fma(-vec2(0.0, 2.0), params.smaa_rt_metrics.xy, tex_coord);
+        tex_coord = fma(-vec2(0.0, 2.0), smaa.settings.SMAA_RT_METRICS.xy, tex_coord);
     }
 
     float offset = fma(-(255.0 / 127.0), SMAASearchLength(e.gr, 0.0), 3.25);
-    return fma(params.smaa_rt_metrics.y, offset, tex_coord.y);
+    return fma(smaa.settings.SMAA_RT_METRICS.y, offset, tex_coord.y);
 }
 
 float SMAASearchYDown(vec2 tex_coord, float end) {
@@ -235,11 +222,11 @@ float SMAASearchYDown(vec2 tex_coord, float end) {
             e.r > 0.8281 &&
             e.g == 0.0) {
         e = textureLod(edges_tex, tex_coord, 0.0).rg;
-        tex_coord = fma(vec2(0.0, 2.0), params.smaa_rt_metrics.xy, tex_coord);
+        tex_coord = fma(vec2(0.0, 2.0), smaa.settings.SMAA_RT_METRICS.xy, tex_coord);
     }
 
     float offset = fma(-(255.0 / 127.0), SMAASearchLength(e.gr, 0.5), 3.25);
-    return fma(-params.smaa_rt_metrics.y, offset, tex_coord.y);
+    return fma(-smaa.settings.SMAA_RT_METRICS.y, offset, tex_coord.y);
 }
 
 vec2 SMAAArea(vec2 dist, float e1, float e2, float offset) {
@@ -253,7 +240,7 @@ vec2 SMAAArea(vec2 dist, float e1, float e2, float offset) {
 }
 
 void SMAADetectHorizontalCornerPattern(inout vec2 weights, vec4 coord, vec2 d) {
-    if (!SMAA_DISABLE_CORNER_DETECTION) {
+    if (!smaa.settings.disable_corner_detection) {
         vec2 left_right = step(d.xy, d.yx);
         vec2 rounding = (1.0 - SMAA_CORNER_ROUNDING_NORM) * left_right;
 
@@ -270,7 +257,7 @@ void SMAADetectHorizontalCornerPattern(inout vec2 weights, vec4 coord, vec2 d) {
 }
 
 void SMAADetectVerticalCornerPattern(inout vec2 weights, vec4 coord, vec2 d) {
-    if (!SMAA_DISABLE_CORNER_DETECTION) {
+    if (!smaa.settings.disable_corner_detection) {
         vec2 left_right = step(d.xy, d.yx);
         vec2 rounding = (1.0 - SMAA_CORNER_ROUNDING_NORM) * left_right;
 
@@ -291,7 +278,7 @@ void main() {
     vec2 e = textureLod(edges_tex, tex_coord, 0.0).rg;
 
     if (e.g > 0.0) { // Edge at north
-        if (!SMAA_DISABLE_DIAG_DETECTION) {
+        if (!smaa.settings.disable_diag_detection) {
             weights.rg = SMAACalculateDiagWeights(tex_coord, e, params.subsample_indices);
             if (weights.r == -weights.g) {
                 vec2 d;
@@ -305,7 +292,7 @@ void main() {
                 coords.z = SMAASearchXRight(offset[0].zw, offset[2].y);
                 d.y = coords.z;
 
-                d = abs(round(fma(params.smaa_rt_metrics.zz, d, -pix_coord.xx)));
+                d = abs(round(fma(smaa.settings.SMAA_RT_METRICS.zz, d, -pix_coord.xx)));
 
 
                 vec2 sqrt_d = sqrt(d);
@@ -331,7 +318,7 @@ void main() {
             coords.z = SMAASearchXRight(offset[0].zw, offset[2].y);
             d.y = coords.z;
 
-            d = abs(round(fma(params.smaa_rt_metrics.zz, d, -pix_coord.xx)));
+            d = abs(round(fma(smaa.settings.SMAA_RT_METRICS.zz, d, -pix_coord.xx)));
 
 
             vec2 sqrt_d = sqrt(d);
@@ -357,7 +344,7 @@ void main() {
         coords.z = SMAASearchYDown(offset[1].zw, offset[2].w);
         d.y = coords.z;
 
-        d = abs(round(fma(params.smaa_rt_metrics.ww, d, -pix_coord.yy)));
+        d = abs(round(fma(smaa.settings.SMAA_RT_METRICS.ww, d, -pix_coord.yy)));
 
 
         vec2 sqrt_d = sqrt(d);

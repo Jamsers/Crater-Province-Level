@@ -103,6 +103,7 @@ data = PackedVector3Array(7.041, 0, 2.3, -7.041, 0, 2.3, 7.041, 0, -2.3, -7.041,
 data = PackedVector3Array(7.041, 0, 2.3, -7.041, 0, 2.3, 7.041, 0, -2.3, -7.041, 0, 2.3, -7.041, 0, -2.3, 7.041, 0, -2.3)
 
 [node name="Main" type="Node"]
+physics_interpolation_mode = 2
 
 [node name="LightingChanger" type="Node" parent="." node_paths=PackedStringArray("environment", "sun")]
 script = ExtResource("1_c06e6")

@@ -13,8 +13,8 @@ class_name LightingChanger
 		military_time_mins = int(value)
 		run_apply_lighting_exec()
 
-@export_category("Dump Lighting")
-@export var dump_lighting: bool = false : set = dump_lighting_exec
+@export_tool_button("Dump Lighting")
+var dump_lighting = dump_lighting_exec
 
 @export_category("Lighting to apply")
 @export var lighting: Array[Lighting]
@@ -78,7 +78,7 @@ func apply_lighting(time_hour, time_mins):
 		await get_tree().create_timer(0.1).timeout
 		environment.environment.sdfgi_enabled = true
 
-func dump_lighting_exec(dummy: bool) -> void:
+func dump_lighting_exec():
 	current_lighting_dump()
 
 func current_lighting_dump():

@@ -26,6 +26,7 @@ size = Vector3(1.14331, 1.15636, 0.648886)
 size = Vector3(1.14691, 0.674832, 1.12945)
 
 [node name="Car" type="RigidBody3D" node_paths=PackedStringArray("car_mesh", "car_lights")]
+physics_interpolation_mode = 1
 mass = 1500.0
 script = ExtResource("1_3ec32")
 lights_on = true
