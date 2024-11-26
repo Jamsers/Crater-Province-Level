@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "Dark": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/LightBlocker.tres"
+"use_external/path": "uid://v47r680qpppi"
 }
 }
 }

@@ -36,11 +36,11 @@ _subresources={
 "materials": {
 "Bricks": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Brick_Walls_Unified.tres"
+"use_external/path": "uid://dykiv2fwlu2ir"
 },
 "Railing": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Metal_Railings_Unified.tres"
+"use_external/path": "uid://dhi8sxx1unxxf"
 }
 }
 }

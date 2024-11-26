@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://1gbw8fqnhjfs" path="res://Resources/Compositor_Addons/BlurComponent_CameraRotation.tres" id="2_2qrlr"]
 [ext_resource type="Resource" uid="uid://dsflq244bbrfo" path="res://Resources/Compositor_Addons/BlurComponent_ObjectMovement.tres" id="3_wf5so"]
 [ext_resource type="Resource" uid="uid://c8ulad7utgrg7" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/pre_blur_processing_stage.tres" id="4_jxmat"]
-[ext_resource type="Script" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/pre_blur_processor.gd" id="5_5nymv"]
+[ext_resource type="Script" uid="uid://b4n1i7gnlrx1n" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/pre_blur_processor.gd" id="5_5nymv"]
 
 [resource]
 resource_local_to_scene = false

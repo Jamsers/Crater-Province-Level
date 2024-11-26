@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://okcxpebn2fbk"]
 
-[ext_resource type="Script" path="res://Scripts/Placement_Tools/VegetationPlant.gd" id="1_anw2q"]
+[ext_resource type="Script" uid="uid://bux13ulijdnbe" path="res://Scripts/Placement_Tools/VegetationPlant.gd" id="1_anw2q"]
 [ext_resource type="ArrayMesh" uid="uid://me3y3yay6bpi" path="res://Models/Rock_Mesh.res" id="2_6swsg"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_iwa88"]

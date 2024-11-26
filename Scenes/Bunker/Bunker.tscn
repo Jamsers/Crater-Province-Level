@@ -1,0 +1,446 @@
+[gd_scene load_steps=18 format=3 uid="uid://bdvii5s8ms0aq"]
+
+[ext_resource type="PackedScene" uid="uid://bno3vs1m6yv8" path="res://Models/Bunker/Bunker.glb" id="1_bfxcd"]
+[ext_resource type="PackedScene" uid="uid://dbkqysbsh2pdf" path="res://Scenes/Bunker/Sub_Scenes/Bunker_Interior.tscn" id="2_tifr4"]
+[ext_resource type="PackedScene" uid="uid://dwtjehbfaiu7v" path="res://Scenes/Bunker/Bunker_Interior_Structure.tscn" id="3_0vxja"]
+[ext_resource type="PackedScene" uid="uid://4kdlnxfqfhcj" path="res://Scenes/Bunker/Bunker_Cafeteria.tscn" id="4_engtw"]
+[ext_resource type="PackedScene" uid="uid://2e1u0ccn1mp5" path="res://Scenes/Bunker/Bunker_Interior_Fence.tscn" id="4_tix8h"]
+[ext_resource type="PackedScene" uid="uid://dswmlsxabi3hg" path="res://Scenes/Bunker/Bunker_Interior_Entrance_Desks.tscn" id="5_2jsgb"]
+[ext_resource type="PackedScene" uid="uid://b8onwtukxk6ca" path="res://Scenes/Bunker/Bunker_Storage.tscn" id="5_2qnju"]
+[ext_resource type="PackedScene" uid="uid://6o3xh2bkp8ju" path="res://Models/Bunker/Bunker_Power_Transformer.glb" id="5_l6jgb"]
+[ext_resource type="PackedScene" uid="uid://e6ddber5lfwn" path="res://Models/Bunker/Bunker_Power_Core.glb" id="6_7dy3s"]
+[ext_resource type="PackedScene" uid="uid://bjt82eulrcv1g" path="res://Scenes/Bunker/Bunker_Office.tscn" id="6_sbw3q"]
+[ext_resource type="PackedScene" uid="uid://bcd62ghwnk8n" path="res://Scenes/Bunker/Bunker_Stairs.tscn" id="7_283u4"]
+[ext_resource type="PackedScene" uid="uid://dmta6vfh1mwju" path="res://Scenes/Bunker/Bunker_Elevator.tscn" id="8_dtt36"]
+[ext_resource type="PackedScene" uid="uid://bbmrsar4ukix4" path="res://Scenes/Bunker/Bunker_Stairs_Flipped.tscn" id="10_8tu2l"]
+[ext_resource type="PackedScene" uid="uid://b54axuh3vowj8" path="res://Scenes/Bunker/Bunker_Blast_Doors_Big.tscn" id="12_soac1"]
+[ext_resource type="PackedScene" uid="uid://glm0vpdaivwv" path="res://Scenes/Bunker/Bunker_Blast_Doors_Normal.tscn" id="13_q78db"]
+[ext_resource type="PackedScene" uid="uid://b2pcv35385qha" path="res://Scenes/Bunker/Bunker_Blast_Doors_Normal_Thinner.tscn" id="14_e63bo"]
+[ext_resource type="PackedScene" uid="uid://bcfemv4oiyg1" path="res://Scenes/Bunker/Bunker_Blast_Doors_Normal_Thin.tscn" id="15_udbm8"]
+
+[node name="Bunker" instance=ExtResource("1_bfxcd")]
+
+[node name="Bunker_Interior" parent="." index="4" instance=ExtResource("2_tifr4")]
+
+[node name="Bunker_Interior_Structure" parent="." index="5" instance=ExtResource("3_0vxja")]
+
+[node name="Bunker_Interior_Fence" parent="." index="6" instance=ExtResource("4_tix8h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004, 7.078, 11.379)
+
+[node name="Bunker_Interior_Entrance_Desks" parent="." index="7" instance=ExtResource("5_2jsgb")]
+
+[node name="Bunker_Elevator" parent="." index="8" instance=ExtResource("8_dtt36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005, 53.659)
+
+[node name="Bunker_Power_Transformer" parent="." index="9" instance=ExtResource("5_l6jgb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.619, 0.005, -50.924)
+
+[node name="Bunker_Power_Core" parent="." index="10" instance=ExtResource("6_7dy3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.389, 0.005, -47.635)
+
+[node name="Rooms" type="Node3D" parent="." index="11"]
+
+[node name="Bunker_Cafeteria" parent="Rooms" index="0" instance=ExtResource("4_engtw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.197, 0.005, 43.532)
+
+[node name="Bunker_Storage" parent="Rooms" index="1" instance=ExtResource("5_2qnju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.023, 7.078, 43.532)
+
+[node name="Bunker_Storage2" parent="Rooms" index="2" instance=ExtResource("5_2qnju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.023, 0.005, 43.532)
+
+[node name="Bunker_Storage3" parent="Rooms" index="3" instance=ExtResource("5_2qnju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.023, 7.078, 43.532)
+
+[node name="Bunker_Office" parent="Rooms" index="4" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 57.371, 7.078, 43.532)
+
+[node name="Bunker_Office2" parent="Rooms" index="5" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 57.371, 7.078, 3.01)
+
+[node name="Bunker_Office3" parent="Rooms" index="6" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.023, 7.078, 3.01)
+
+[node name="Bunker_Office4" parent="Rooms" index="7" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 57.371, 0.005, 3.01)
+
+[node name="Bunker_Office5" parent="Rooms" index="8" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.023, 0.005, 3.01)
+
+[node name="Bunker_Office6" parent="Rooms" index="9" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.023, 7.078, 3.01)
+
+[node name="Bunker_Office7" parent="Rooms" index="10" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -57.371, 7.078, 3.01)
+
+[node name="Bunker_Office8" parent="Rooms" index="11" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -57.371, 7.078, 43.532)
+
+[node name="Bunker_Office9" parent="Rooms" index="12" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.023, 0.005, 3.01)
+
+[node name="Bunker_Office10" parent="Rooms" index="13" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -57.371, 0.005, 3.01)
+
+[node name="Bunker_Office11" parent="Rooms" index="14" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -57.371, 0.005, 43.532)
+
+[node name="Stairs" type="Node3D" parent="." index="12"]
+
+[node name="Bunker_Stairs_Flipped" parent="Stairs" index="0" instance=ExtResource("10_8tu2l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 61.189, 0.005, -17.248)
+
+[node name="Bunker_Stairs_Flipped2" parent="Stairs" index="1" instance=ExtResource("10_8tu2l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 61.189, 0.005, 23.273)
+
+[node name="Bunker_Stairs_Flipped3" parent="Stairs" index="2" instance=ExtResource("10_8tu2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.845, 0.005, 53.435)
+
+[node name="Bunker_Stairs4" parent="Stairs" index="3" instance=ExtResource("7_283u4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.849, 0.005, 53.435)
+
+[node name="Bunker_Stairs5" parent="Stairs" index="4" instance=ExtResource("7_283u4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -61.189, 0.005, 23.269)
+
+[node name="Bunker_Stairs6" parent="Stairs" index="5" instance=ExtResource("7_283u4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -61.189, 0.005, -17.253)
+
+[node name="Bunker_Stairs7" parent="Stairs" index="6" instance=ExtResource("7_283u4")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -24.709, 0.005, -53.434)
+
+[node name="Bunker Doors" type="Node3D" parent="." index="13"]
+
+[node name="Bunker_Blast_Doors_Big" parent="Bunker Doors" index="0" instance=ExtResource("12_soac1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.689, 0.005, -41.611)
+
+[node name="bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Big" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.54087, 0)
+
+[node name="bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Big" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.2172, 0)
+
+[node name="@StaticBody3D@18582" parent="Bunker Doors/Bunker_Blast_Doors_Big" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.541, 0)
+
+[node name="@StaticBody3D@18583" parent="Bunker Doors/Bunker_Blast_Doors_Big" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.217, 0)
+
+[node name="Bunker_Blast_Doors_Big2" parent="Bunker Doors" index="1" instance=ExtResource("12_soac1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002, 0.005, -59.951)
+
+[node name="bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Big2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.97151, 0)
+
+[node name="bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Big2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.2837, 0)
+
+[node name="@StaticBody3D@18582" parent="Bunker Doors/Bunker_Blast_Doors_Big2" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.972, 0)
+
+[node name="@StaticBody3D@18583" parent="Bunker Doors/Bunker_Blast_Doors_Big2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.284, 0)
+
+[node name="Bunker_Blast_Doors_Normal" parent="Bunker Doors" index="2" instance=ExtResource("13_q78db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.001, 0.005, -23.273)
+
+[node name="normal_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.02502, 0)
+
+[node name="normal_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.67899, 0)
+
+[node name="normal_bunker_door_top_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.02502, 0)
+
+[node name="normal_bunker_door_bottom_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.67899, 0)
+
+[node name="Bunker_Blast_Doors_Normal2" parent="Bunker Doors" index="3" instance=ExtResource("13_q78db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.195, 0.005, -23.273)
+
+[node name="normal_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.52926, 0)
+
+[node name="normal_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.48914, 0)
+
+[node name="normal_bunker_door_top_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal2" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.52926, 0)
+
+[node name="normal_bunker_door_bottom_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.48914, 0)
+
+[node name="Bunker_Blast_Doors_Normal3" parent="Bunker Doors" index="4" instance=ExtResource("13_q78db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.195, 0.005, -35.319)
+
+[node name="normal_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.60291, 0)
+
+[node name="normal_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal3" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5916, 0)
+
+[node name="normal_bunker_door_top_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal3" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.60291, 0)
+
+[node name="normal_bunker_door_bottom_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal3" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5916, 0)
+
+[node name="Bunker_Blast_Doors_Normal4" parent="Bunker Doors" index="5" instance=ExtResource("13_q78db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.195, 7.078, -23.273)
+
+[node name="normal_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal4" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.56073, 0)
+
+[node name="normal_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal4" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.47343, 0)
+
+[node name="normal_bunker_door_top_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal4" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.56073, 0)
+
+[node name="normal_bunker_door_bottom_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal4" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.47343, 0)
+
+[node name="Bunker_Blast_Doors_Normal5" parent="Bunker Doors" index="6" instance=ExtResource("13_q78db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.195, 7.078, -35.319)
+
+[node name="normal_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal5" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.67636, 0)
+
+[node name="normal_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal5" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.51553, 0)
+
+[node name="normal_bunker_door_top_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal5" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.67636, 0)
+
+[node name="normal_bunker_door_bottom_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal5" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.51553, 0)
+
+[node name="Bunker_Blast_Doors_Normal_Thinner" parent="Bunker Doors" index="7" instance=ExtResource("14_e63bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005, -11.746)
+
+[node name="normal_slim_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thinner" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6229, 0)
+
+[node name="normal_slim_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thinner" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.72126, 0)
+
+[node name="normal_slim_bunker_door_bottom_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thinner" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6229, 0)
+
+[node name="normal_slim_bunker_door_top_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thinner" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.72126, 0)
+
+[node name="Bunker_Blast_Doors_Normal_Thin" parent="Bunker Doors" index="8" instance=ExtResource("15_udbm8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48.233)
+
+[node name="normal_slim_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thin" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.64665, 0)
+
+[node name="normal_slim_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thin" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.81232, 0)
+
+[node name="@StaticBody3D@18594" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thin" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.647, 0)
+
+[node name="@StaticBody3D@18595" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thin" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.812, 0)
+
+[node name="Bunker_Blast_Doors_Normal_Thin2" parent="Bunker Doors" index="9" instance=ExtResource("15_udbm8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.078, 48.233)
+
+[node name="normal_slim_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thin2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.76343, 0)
+
+[node name="normal_slim_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thin2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.74583, 0)
+
+[node name="@StaticBody3D@18594" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thin2" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.763, 0)
+
+[node name="@StaticBody3D@18595" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thin2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.746, 0)
+
+[node name="lights" type="Node3D" parent="." index="14"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="lights" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.8604, -12.5003)
+light_intensity_lumens = 30000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D21" type="SpotLight3D" parent="lights" index="1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.276123, 11.8604, -42.5981)
+light_intensity_lumens = 30000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D22" type="SpotLight3D" parent="lights" index="2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 44.0422, 11.8604, -42.322)
+light_intensity_lumens = 30000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="lights" index="3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.8604, 13.0566)
+light_intensity_lumens = 30000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="lights" index="4"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.8604, 38.8397)
+light_intensity_lumens = 30000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="lights" index="5"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -60.8581, 11.8604, -15.6321)
+light_intensity_lumens = 30000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="lights" index="6"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -47.8976, 11.8604, -48.1273)
+light_intensity_lumens = 10000.0
+light_color = Color(0.381995, 0.612699, 0.867173, 1)
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="lights" index="7"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -43.0139, 11.8604, -15.6321)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="lights" index="8"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -44.1409, 11.8604, 24.1886)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="lights" index="9"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 42.6383, 11.8604, -15.6321)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="lights" index="10"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 41.5112, 11.8604, 24.1886)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="lights" index="11"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -47.8976, 5.20696, -48.1273)
+light_intensity_lumens = 10000.0
+light_color = Color(0.380392, 0.611765, 0.866667, 1)
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="lights" index="12"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -43.0139, 5.20696, -15.6321)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="lights" index="13"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -44.1409, 5.20696, 24.1886)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D19" type="SpotLight3D" parent="lights" index="14"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 42.6383, 5.20696, -15.6321)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D20" type="SpotLight3D" parent="lights" index="15"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 41.5112, 5.20696, 24.1886)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D23" type="SpotLight3D" parent="lights" index="16"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.260181, 3.93572, -16.2039)
+light_intensity_lumens = 4000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[editable path="Bunker Doors/Bunker_Blast_Doors_Big"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Big2"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal2"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal3"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal4"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal5"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal_Thinner"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal_Thin"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal_Thin2"]

@@ -36,11 +36,11 @@ _subresources={
 "materials": {
 "Leaves": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Leaf_Tree.tres"
+"use_external/path": "uid://bd2l242yaw0o4"
 },
 "Wood": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Wood_Tree.tres"
+"use_external/path": "uid://12wi42t55eqq"
 }
 },
 "meshes": {
@@ -49,10 +49,7 @@ _subresources={
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
-"lods/normal_split_angle": 25.0,
-"lods/raycast_normals": false,
 "save_to_file/enabled": true,
-"save_to_file/make_streamable": "",
 "save_to_file/path": "res://Models/Tree_Pine_Mesh.res"
 }
 }

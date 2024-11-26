@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "Grass": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Grass_Park.tres"
+"use_external/path": "uid://dl5l07g2bppk3"
 }
 }
 }

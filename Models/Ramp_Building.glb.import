@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "Concrete": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Concrete_Ramp.tres"
+"use_external/path": "uid://wrqmgmu8uada"
 }
 }
 }

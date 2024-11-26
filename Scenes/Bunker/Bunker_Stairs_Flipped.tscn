@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbmrsar4ukix4"]
+
+[ext_resource type="PackedScene" uid="uid://dkn0w8oaipwwe" path="res://Models/Bunker/Bunker_Stairs_Flipped.glb" id="1_xmsjn"]
+
+[node name="Bunker_Stairs_Flipped" instance=ExtResource("1_xmsjn")]
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.86, 2.89956)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0

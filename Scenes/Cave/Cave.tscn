@@ -1,0 +1,365 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfnq80nuv2dea"]
+
+[ext_resource type="PackedScene" uid="uid://cc6wyqmamab3w" path="res://Models/Cave/Cave.glb" id="1_lgr5o"]
+[ext_resource type="PackedScene" uid="uid://cxf3j2xjqhq8u" path="res://Scenes/Cave/Sub_Scenes/Cave_Interior.tscn" id="2_njosq"]
+[ext_resource type="PackedScene" uid="uid://ccuw775sn14qv" path="res://Scenes/Cave/Cave_Water.tscn" id="3_nhi4o"]
+
+[node name="Cave" instance=ExtResource("1_lgr5o")]
+
+[node name="Cave_Interior" parent="." index="3" instance=ExtResource("2_njosq")]
+
+[node name="Cave_Water2" parent="." index="4" instance=ExtResource("3_nhi4o")]
+
+[node name="Lights" type="Node3D" parent="." index="5"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6282, 0.329293, -20.6108)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D28" type="OmniLight3D" parent="Lights" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3932, 0.329293, -28.2222)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D29" type="OmniLight3D" parent="Lights" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.56234, 0.329293, -23.9752)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9423, 0.329293, -21.2981)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.0292, 0.329293, -24.5378)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lights" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.7599, 0.329293, -29.0539)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Lights" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.0305, 0.329293, -31.7047)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Lights" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.5774, 0.329293, -27.5813)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Lights" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.9336, 0.329293, -22.5253)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Lights" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.0501, 0.329293, -16.2911)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Lights" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.332, 0.329293, -10.106)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Lights" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.865, 0.329293, -3.28283)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D30" type="OmniLight3D" parent="Lights" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3863, 0.329293, -7.61843)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D31" type="OmniLight3D" parent="Lights" index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.8398, 0.329294, 3.16616)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D32" type="OmniLight3D" parent="Lights" index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.8722, 0.329293, 1.66259)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D33" type="OmniLight3D" parent="Lights" index="15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1734, 0.329293, -9.01956)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Lights" index="16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3627, 3.57749, -30.8376)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Lights" index="17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.2365, 7.93087, -1.28791)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Lights" index="18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.4806, 7.79846, -11.2928)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Lights" index="19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5666, 7.18135, -21.1198)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="Lights" index="20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.9194, 5.6285, -26.7226)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="Lights" index="21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.7159, 5.14703, -31.2581)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D17" type="OmniLight3D" parent="Lights" index="22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.7139, 3.48199, -24.855)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D18" type="OmniLight3D" parent="Lights" index="23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.9619, 2.66698, -19.8303)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D19" type="OmniLight3D" parent="Lights" index="24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5864, 3.40094, -13.605)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D38" type="OmniLight3D" parent="Lights" index="25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.0919, 0.161671, -4.55322)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D20" type="OmniLight3D" parent="Lights" index="26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.0934, 8.30534, 7.88334)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D21" type="OmniLight3D" parent="Lights" index="27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.1489, 8.30534, 9.00073)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D22" type="OmniLight3D" parent="Lights" index="28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.1931, 8.30534, 14.8432)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D23" type="OmniLight3D" parent="Lights" index="29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.8112, 8.30534, 24.6856)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D24" type="OmniLight3D" parent="Lights" index="30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.1827, 8.30534, 18.169)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D25" type="OmniLight3D" parent="Lights" index="31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.1599, 8.30534, 33.0449)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D26" type="OmniLight3D" parent="Lights" index="32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.8682, 8.30534, 28.4159)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D27" type="OmniLight3D" parent="Lights" index="33"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5761, 8.30534, 40.5503)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D34" type="OmniLight3D" parent="Lights" index="34"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8121, 8.30534, 31.2638)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D35" type="OmniLight3D" parent="Lights" index="35"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6622, 8.30534, 41.2588)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D36" type="OmniLight3D" parent="Lights" index="36"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.6272, 8.30534, 38.4533)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="OmniLight3D37" type="OmniLight3D" parent="Lights" index="37"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5231, 8.30534, 28.2544)
+light_temperature = 2000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 1.75
+
+[node name="Light_Bonfire" type="OmniLight3D" parent="Lights" index="38"]
+transform = Transform3D(0.980271, 0, 0.197657, 0, 1, 0, -0.197657, 0, 0.980271, -48.0497, 0.322975, 5.5442)
+light_intensity_lumens = 10000.0
+light_color = Color(0.422874, 0.630047, 0.904227, 1)
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+distance_fade_shadow = 500.0
+omni_range = 50.0

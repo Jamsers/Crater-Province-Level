@@ -1,8 +1,8 @@
 [gd_scene load_steps=84 format=3 uid="uid://hut6ojunfxk"]
 
-[ext_resource type="Script" path="res://Scripts/Placement_Tools/VegetationTools.gd" id="1_fioln"]
+[ext_resource type="Script" uid="uid://vpin0urixa5b" path="res://Scripts/Placement_Tools/VegetationTools.gd" id="1_fioln"]
 [ext_resource type="ArrayMesh" uid="uid://bm51n0qxyqy5o" path="res://Models/Tree_Pine_Mesh.res" id="2_k5yf1"]
-[ext_resource type="Script" path="res://Scripts/Placement_Tools/VegetationInstance.gd" id="3_oqxsk"]
+[ext_resource type="Script" uid="uid://cjj3tnjplcwhc" path="res://Scripts/Placement_Tools/VegetationInstance.gd" id="3_oqxsk"]
 [ext_resource type="PackedScene" uid="uid://ccnpmrm87lee7" path="res://Scenes/Tree_Pine.tscn" id="4_orfwc"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_pbgrk"]

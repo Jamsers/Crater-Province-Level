@@ -34,9 +34,17 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
-"Water": {
+"Water_Bottom": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Water.tres"
+"use_external/path": "uid://baqfym6mufwwf"
+},
+"Water_Fall": {
+"use_external/enabled": true,
+"use_external/path": "uid://cnnkop22m881g"
+},
+"Water_Top": {
+"use_external/enabled": true,
+"use_external/path": "uid://dun46tju52s24"
 }
 }
 }

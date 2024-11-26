@@ -36,11 +36,11 @@ _subresources={
 "materials": {
 "Concrete": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Concrete_Village.tres"
+"use_external/path": "uid://bbkd2m2sokdhv"
 },
 "Metal": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Metal_Light.tres"
+"use_external/path": "uid://byvrgoqd6g1cv"
 }
 }
 }

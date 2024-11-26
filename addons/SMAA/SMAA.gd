@@ -114,8 +114,6 @@ func _notification(what: int) -> void:
 
 		if vertex_buffer.is_valid():
 			rd.free_rid(vertex_buffer)
-		if vertex_array.is_valid():
-			rd.free_rid(vertex_array)
 		if smaa_settings_ubo.is_valid():
 			rd.free_rid(smaa_settings_ubo)
 

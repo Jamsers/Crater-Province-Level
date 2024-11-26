@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cjvhwknvgwhoc"]
 
-[ext_resource type="Script" path="res://Scripts/Placement_Tools/VegetationTools.gd" id="1_ferpo"]
+[ext_resource type="Script" uid="uid://vpin0urixa5b" path="res://Scripts/Placement_Tools/VegetationTools.gd" id="1_ferpo"]
 [ext_resource type="PackedScene" uid="uid://okcxpebn2fbk" path="res://Scenes/Rock_Doodad.tscn" id="2_0v2b1"]
 [ext_resource type="PackedScene" uid="uid://6uo55qutx466" path="res://Scenes/Bush.tscn" id="3_sbjdy"]
 

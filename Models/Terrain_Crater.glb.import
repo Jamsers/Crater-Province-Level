@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "Ground": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Ground.tres"
+"use_external/path": "uid://cb86spmwkq0qi"
 }
 }
 }

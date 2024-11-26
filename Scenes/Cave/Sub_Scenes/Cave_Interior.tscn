@@ -14,25 +14,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7245, -2.22019, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5188, -2.23095, 0)
 
 [node name="Placeholder16" parent="." instance=ExtResource("1_swa24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7245, -2.08028, 22.5827)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.0903, 5.69722, 22.8959)
 
 [node name="Placeholder17" parent="." instance=ExtResource("1_swa24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5188, -1.7608, 22.5827)
+transform = Transform3D(1, 0, 0, 0, 0.937519, 0.347934, 0, -0.347934, 0.937519, -34.5188, 1.6812, 22.5827)
 
 [node name="Placeholder14" parent="." instance=ExtResource("1_swa24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7245, -1.83817, -21.7703)
-
-[node name="Placeholder15" parent="." instance=ExtResource("1_swa24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5188, -1.97122, -21.7703)
+transform = Transform3D(0.995406, 0.0957415, 0, -0.0957415, 0.995406, 0, 0, 0, 1, 31.7245, 0.563558, -21.7703)
 
 [node name="Placeholder10" parent="." instance=ExtResource("1_swa24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.37949, -21.2934)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.173723, -2.34335, -22.2865)
 
 [node name="Placeholder11" parent="." instance=ExtResource("1_swa24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.24135, 22.4467)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.27615, 30.0896)
 
 [node name="Placeholder2" parent="." instance=ExtResource("1_swa24")]
-transform = Transform3D(0.966412, -0.256998, 0, 0.256998, 0.966412, 0, 0, 0, 1, 63.3498, -0.302813, 0)
+transform = Transform3D(0.999794, 0.0202792, 0, -0.0201367, 0.992768, 0.118352, 0.00240008, -0.118328, 0.992972, 63.3498, 5.28169, 0)
 
 [node name="Placeholder3" parent="." instance=ExtResource("1_swa24")]
 transform = Transform3D(0.986478, 0.163894, 0, -0.163894, 0.986478, 0, 0, 0, 1, -63.3327, -0.750146, 0)
@@ -41,4 +38,4 @@ transform = Transform3D(0.986478, 0.163894, 0, -0.163894, 0.986478, 0, 0, 0, 1, 
 transform = Transform3D(1, 0, 0, 0, 0.96377, -0.266734, 0, 0.266734, 0.96377, 0, -1.08568, -43.7074)
 
 [node name="Placeholder7" parent="." instance=ExtResource("1_swa24")]
-transform = Transform3D(1, 0, 0, 0, 0.943078, 0.332573, 0, -0.332573, 0.943078, 0, -0.818589, 43.7386)
+transform = Transform3D(1, 0, 0, 0, 0.998771, -0.0495818, 0, 0.0495818, 0.998771, 0, 5.64678, 43.7386)

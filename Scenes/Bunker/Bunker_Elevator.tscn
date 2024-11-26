@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmta6vfh1mwju"]
+
+[ext_resource type="PackedScene" uid="uid://uhwu64lafjnn" path="res://Models/Bunker/Bunker_Elevator.glb" id="1_saab2"]
+
+[node name="Bunker_Elevator" instance=ExtResource("1_saab2")]

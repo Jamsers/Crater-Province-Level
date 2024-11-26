@@ -5,6 +5,7 @@
 [node name="Bunker_Interior" type="Node3D"]
 
 [node name="Placeholder" parent="." instance=ExtResource("1_2ba24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12824, 0.20193)
 
 [node name="Placeholder2" parent="." instance=ExtResource("1_2ba24")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.212, 0, 0)
@@ -25,10 +26,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.212, 0, -28.218)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 28.218)
 
 [node name="Placeholder14" parent="." instance=ExtResource("1_2ba24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.212, 0, 28.218)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.212, 0, 29.6176)
 
 [node name="Placeholder15" parent="." instance=ExtResource("1_2ba24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.212, 0, 28.218)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.212, 0, 29.5104)
 
 [node name="Placeholder4" parent="." instance=ExtResource("1_2ba24")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -56.4355)
@@ -49,7 +50,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.106, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.106, 0, -28.218)
 
 [node name="Placeholder18" parent="." instance=ExtResource("1_2ba24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.106, 0, 28.218)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.106, 0, 27.3333)
 
 [node name="Placeholder19" parent="." instance=ExtResource("1_2ba24")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.106, 0, -56.4355)
@@ -64,10 +65,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.106, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.106, 0, -28.218)
 
 [node name="Placeholder23" parent="." instance=ExtResource("1_2ba24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.106, 0, 28.218)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.106, 0, 27.4162)
 
 [node name="Placeholder24" parent="." instance=ExtResource("1_2ba24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.106, 0, -56.4355)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.6706, 0, -56.4355)
 
 [node name="Placeholder25" parent="." instance=ExtResource("1_2ba24")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.106, 0, 56.435)

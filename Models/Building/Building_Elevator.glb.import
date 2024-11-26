@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "Elevator": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Cloth_Torch.tres"
+"use_external/path": "uid://br8psuxe6nq4l"
 }
 }
 }

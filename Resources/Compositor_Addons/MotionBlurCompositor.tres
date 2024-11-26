@@ -1,7 +1,7 @@
 [gd_resource type="Compositor" script_class="MotionBlurCompositor" load_steps=5 format=3 uid="uid://1c5tgrylhb66"]
 
 [ext_resource type="CompositorEffect" uid="uid://lxromjk3g25p" path="res://Resources/Compositor_Addons/PreBlurProcessor.tres" id="1_s7f4o"]
-[ext_resource type="Script" path="res://addons/SphynxMotionBlurToolkit/BaseClasses/mb_compositor.gd" id="1_ug774"]
+[ext_resource type="Script" uid="uid://miqeye1gjimr" path="res://addons/SphynxMotionBlurToolkit/BaseClasses/mb_compositor.gd" id="1_ug774"]
 [ext_resource type="CompositorEffect" uid="uid://sv667bafq0to" path="res://Resources/Compositor_Addons/GuertinMotionBlur.tres" id="2_ctado"]
 [ext_resource type="CompositorEffect" uid="uid://dpdsv65cv1uvn" path="res://Resources/Compositor_Addons/SMAA.tres" id="3_e3wwp"]
 

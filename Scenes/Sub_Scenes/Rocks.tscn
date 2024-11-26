@@ -1,8 +1,8 @@
 [gd_scene load_steps=79 format=3 uid="uid://cteiwserfsosb"]
 
-[ext_resource type="Script" path="res://Scripts/Placement_Tools/RockTools.gd" id="1_6y5pj"]
+[ext_resource type="Script" uid="uid://dy1ccd8i3dlhx" path="res://Scripts/Placement_Tools/RockTools.gd" id="1_6y5pj"]
 [ext_resource type="ArrayMesh" uid="uid://me3y3yay6bpi" path="res://Models/Rock_Mesh.res" id="2_cpb8q"]
-[ext_resource type="Script" path="res://Scripts/Placement_Tools/RockInstance.gd" id="3_62hla"]
+[ext_resource type="Script" uid="uid://bjwpemubicydf" path="res://Scripts/Placement_Tools/RockInstance.gd" id="3_62hla"]
 [ext_resource type="PackedScene" uid="uid://ppherspsd1yo" path="res://Scenes/Rock.tscn" id="4_wvgrx"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_ksb8p"]

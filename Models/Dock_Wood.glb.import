@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "Wood": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Wood_Village.tres"
+"use_external/path": "uid://cmjjve251y5oj"
 }
 }
 }

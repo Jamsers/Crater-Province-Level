@@ -1,6 +1,6 @@
 [gd_resource type="CompositorEffect" script_class="SMAA" load_steps=2 format=3 uid="uid://dpdsv65cv1uvn"]
 
-[ext_resource type="Script" path="res://addons/SMAA/SMAA.gd" id="1_4p5j2"]
+[ext_resource type="Script" uid="uid://c3phau7jmmjv8" path="res://addons/SMAA/SMAA.gd" id="1_4p5j2"]
 
 [resource]
 resource_local_to_scene = false

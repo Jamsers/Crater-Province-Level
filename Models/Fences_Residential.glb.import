@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "Metal": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Metal_Railing_Residential.tres"
+"use_external/path": "uid://ch36n5f6kfsmq"
 }
 }
 }

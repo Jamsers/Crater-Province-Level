@@ -36,11 +36,11 @@ _subresources={
 "materials": {
 "Light": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Glass_WallLight.tres"
+"use_external/path": "uid://cctts0kbrh23o"
 },
 "Metal": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Metal_Lamppost.tres"
+"use_external/path": "uid://dolj7t2tmt4ty"
 }
 }
 }

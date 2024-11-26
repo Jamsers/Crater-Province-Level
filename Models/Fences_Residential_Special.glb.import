@@ -36,11 +36,11 @@ _subresources={
 "materials": {
 "Cement": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Brick_Residential_Unified.tres"
+"use_external/path": "uid://w5okhqsq67h5"
 },
 "Metal": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Metal_Railing_Residential_Unified.tres"
+"use_external/path": "uid://bav4bgoqbx85g"
 }
 }
 }

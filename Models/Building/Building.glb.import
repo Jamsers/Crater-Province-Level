@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "Concrete": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Concrete_Buildings.tres"
+"use_external/path": "uid://7qu3fnkocp0"
 }
 }
 }
