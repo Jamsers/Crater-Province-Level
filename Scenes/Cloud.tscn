@@ -1,0 +1,16 @@
+[gd_scene load_steps=6 format=3 uid="uid://krcuwfmkcptc"]
+
+[ext_resource type="Material" uid="uid://cvpclx8ssrcna" path="res://Materials/Generic/Cloud/Cloud_1.tres" id="1_d2ojt"]
+[ext_resource type="ArrayMesh" uid="uid://d2e7ydw3nog1r" path="res://Models/Bent_Quad.obj" id="2_yswr7"]
+[ext_resource type="Script" uid="uid://d3p4dibo63r3e" path="res://Scripts/Placement_Tools/CloudPlant.gd" id="3_yswr7"]
+[ext_resource type="Material" uid="uid://ydgsjws0en1t" path="res://Materials/Generic/Cloud/Cloud_2.tres" id="4_5sttq"]
+[ext_resource type="Material" uid="uid://crurcexjp01ln" path="res://Materials/Generic/Cloud/Cloud_3.tres" id="5_gcn0j"]
+
+[node name="Cloud" type="MeshInstance3D" node_paths=PackedStringArray("cloud_mesh")]
+transform = Transform3D(1000, 0, 0, 0, -4.37114e-05, -1000, 0, 1000, -4.37114e-05, 0, 0, 0)
+material_override = ExtResource("1_d2ojt")
+mesh = ExtResource("2_yswr7")
+skeleton = NodePath("../..")
+script = ExtResource("3_yswr7")
+cloud_materials = Array[BaseMaterial3D]([ExtResource("1_d2ojt"), ExtResource("4_5sttq"), ExtResource("5_gcn0j")])
+cloud_mesh = NodePath(".")

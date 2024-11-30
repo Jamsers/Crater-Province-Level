@@ -1,5 +1,7 @@
 extends Node
 
+class_name TimeOfDaySystem
+
 @export_category("Pause")
 @export var time_pause: bool = false
 

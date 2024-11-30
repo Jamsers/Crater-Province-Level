@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=3 uid="uid://c77e1yn8ifgkx"]
+[gd_scene load_steps=94 format=3 uid="uid://c77e1yn8ifgkx"]
 
 [ext_resource type="Script" uid="uid://bebx2cuwjgata" path="res://Scripts/LightingChanger.gd" id="1_c06e6"]
 [ext_resource type="Environment" uid="uid://bwyhcylblj1si" path="res://Resources/Environment.tres" id="1_wutcc"]
@@ -65,6 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://bj82mxcbbuc51" path="res://Textures/Glass/Glass_Metal_Rough_Occ.png" id="44_62gd7"]
 [ext_resource type="Texture2D" uid="uid://c0fnqpgirhf3j" path="res://Textures/Glass/Glass_Normal.png" id="45_6rb27"]
 [ext_resource type="PackedScene" uid="uid://cmdirl3sce2qt" path="res://Scenes/Torch_Village.tscn" id="45_k4lx4"]
+[ext_resource type="PackedScene" uid="uid://bpcm6yyd8vnjh" path="res://Scenes/Sub_Scenes/Clouds.tscn" id="47_1nwvn"]
 [ext_resource type="PackedScene" uid="uid://bpj0ekfentggn" path="res://Scenes/Sub_Scenes/Railing_Posts.tscn" id="48_ul5yf"]
 [ext_resource type="PackedScene" uid="uid://sigubqqxaeiy" path="res://Scenes/Park_Structures.tscn" id="51_2aows"]
 [ext_resource type="PackedScene" uid="uid://boor8o87nx7qo" path="res://Scenes/Park_Ground_Light.tscn" id="52_5ukpe"]
@@ -153,7 +154,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="Profiler" type="RichTextLabel" parent="Control"]
+[node name="Profiler" type="RichTextLabel" parent="Control" node_paths=PackedStringArray("tod_system")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -161,13 +162,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-text = "FPS: 60
+text = "Time of day: 7:00 AM
+FPS: 60
 Frame time: 16 ms
 Physics frame time: 16 ms
 Draw calls: 1000
 RAM: 1024 MB
 VRAM: 1024 MB"
 script = ExtResource("22_xngbd")
+tod_system = NodePath("../../TimeOfDaySystem")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_wutcc")
@@ -259,6 +262,9 @@ enable_depth_of_field = true
 [node name="Park" parent="UnifiedMeshes" instance=ExtResource("22_hy5xu")]
 
 [node name="Fences_Residential_Special" parent="UnifiedMeshes" instance=ExtResource("41_d1p8h")]
+
+[node name="Clouds" parent="." instance=ExtResource("47_1nwvn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2000, 0)
 
 [node name="Forest" parent="." instance=ExtResource("39_rcoer")]
 
