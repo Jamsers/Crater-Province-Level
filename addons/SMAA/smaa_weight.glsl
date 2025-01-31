@@ -3,7 +3,6 @@
 
 #include "smaa_settings_inc.glsl"
 
-layout(location = 0) in vec4 vert;
 layout(location = 0) out vec2 tex_coord;
 layout(location = 1) out vec2 pix_coord;
 layout(location = 2) out vec4 offset[3];
@@ -13,15 +12,23 @@ layout(push_constant, std430) uniform Params {
 } params;
 
 void main() {
-    tex_coord = vert.zw;
+	vec2 vertex_base;
+	if (gl_VertexIndex == 0) {
+		vertex_base = vec2(-1.0, -1.0);
+	} else if (gl_VertexIndex == 1) {
+		vertex_base = vec2(-1.0, 3.0);
+	} else {
+		vertex_base = vec2(3.0, -1.0);
+	}
+	gl_Position = vec4(vertex_base, 0.0, 1.0);
+	tex_coord = clamp(vertex_base, vec2(0.0, 0.0), vec2(1.0, 1.0)) * 2.0; // saturate(x) * 2.0
     pix_coord = tex_coord * smaa.settings.SMAA_RT_METRICS.zw;
+
     offset[0] = fma(smaa.settings.SMAA_RT_METRICS.xyxy, vec4(-0.25, -0.125, 1.25, -0.125), tex_coord.xyxy);
     offset[1] = fma(smaa.settings.SMAA_RT_METRICS.xyxy, vec4(-0.125, -0.25, -0.125, 1.25), tex_coord.xyxy);
-
     offset[2] = fma(smaa.settings.SMAA_RT_METRICS.xxyy,
             vec4(-2.0, 2.0, -2.0, 2.0) * smaa.settings.max_search_steps,
             vec4(offset[0].xz, offset[1].yw));
-    gl_Position = vec4(vert.xy, 1.0, 1.0);
 }
 
 #[fragment]

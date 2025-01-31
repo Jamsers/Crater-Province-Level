@@ -68,9 +68,6 @@ var framebuffer_size : Vector2i = Vector2i(0, 0)
 
 var S2x : bool = false
 
-var vertex_buffer : RID
-var vertex_array : RID
-
 var smaa_settings_ubo : RID
 var scene_data_ubo : RID
 
@@ -112,8 +109,6 @@ func _notification(what: int) -> void:
 		if linear_sampler.is_valid():
 			rd.free_rid(linear_sampler)
 
-		if vertex_buffer.is_valid():
-			rd.free_rid(vertex_buffer)
 		if smaa_settings_ubo.is_valid():
 			rd.free_rid(smaa_settings_ubo)
 
@@ -146,10 +141,6 @@ func _get_smaa_parameters() -> void:
 			smaa_corner_rounding = 25
 
 func _create_pipelines() -> void:
-	var va := RDVertexAttribute.new()
-	va.stride = 16
-	va.format = RenderingDevice.DATA_FORMAT_R32G32B32A32_SFLOAT
-
 	var no_blend_attachment := RDPipelineColorBlendStateAttachment.new()
 	var blend_attachment := RDPipelineColorBlendStateAttachment.new()
 	blend_attachment.enable_blend = true
@@ -194,7 +185,7 @@ func _create_pipelines() -> void:
 
 	if edge_shader.is_valid():
 		edge_pipeline = rd.render_pipeline_create(edge_shader, edge_framebuffer_format,
-			rd.vertex_format_create([va]), RenderingDevice.RENDER_PRIMITIVE_TRIANGLES, RDPipelineRasterizationState.new(),
+			-1, RenderingDevice.RENDER_PRIMITIVE_TRIANGLES, RDPipelineRasterizationState.new(),
 			RDPipelineMultisampleState.new(), stencil_state,
 			no_blend
 		)
@@ -204,25 +195,25 @@ func _create_pipelines() -> void:
 		stencil_state.front_op_compare = RenderingDevice.COMPARE_OP_EQUAL
 		stencil_state.front_op_write_mask = 0
 		weight_pipeline = rd.render_pipeline_create(weight_shader, blend_framebuffer_format,
-			rd.vertex_format_create([va]), RenderingDevice.RENDER_PRIMITIVE_TRIANGLES, RDPipelineRasterizationState.new(),
+			-1, RenderingDevice.RENDER_PRIMITIVE_TRIANGLES, RDPipelineRasterizationState.new(),
 			RDPipelineMultisampleState.new(), stencil_state,
 			no_blend
 		)
 	if blend_shader.is_valid():
 		blend_pipeline = rd.render_pipeline_create(blend_shader, output_framebuffer_format,
-			rd.vertex_format_create([va]), RenderingDevice.RENDER_PRIMITIVE_TRIANGLES, RDPipelineRasterizationState.new(),
+			-1, RenderingDevice.RENDER_PRIMITIVE_TRIANGLES, RDPipelineRasterizationState.new(),
 			RDPipelineMultisampleState.new(), RDPipelineDepthStencilState.new(),
 			blend_constant_alpha, RenderingDevice.DYNAMIC_STATE_BLEND_CONSTANTS
 		)
 	if blit_shader.is_valid():
 		blit_pipeline = rd.render_pipeline_create(blit_shader, output_framebuffer_format,
-			rd.vertex_format_create([va]), RenderingDevice.RENDER_PRIMITIVE_TRIANGLES, RDPipelineRasterizationState.new(),
+			-1, RenderingDevice.RENDER_PRIMITIVE_TRIANGLES, RDPipelineRasterizationState.new(),
 			RDPipelineMultisampleState.new(), RDPipelineDepthStencilState.new(),
 			no_blend
 		)
 	if separate_shader.is_valid():
 		separate_pipeline = rd.render_pipeline_create(separate_shader, dual_output_framebuffer_format,
-			rd.vertex_format_create([va]), RenderingDevice.RENDER_PRIMITIVE_TRIANGLES, RDPipelineRasterizationState.new(),
+			-1, RenderingDevice.RENDER_PRIMITIVE_TRIANGLES, RDPipelineRasterizationState.new(),
 			RDPipelineMultisampleState.new(), RDPipelineDepthStencilState.new(),
 			dual_color_blend
 		)
@@ -270,10 +261,6 @@ func _recreate_edge_pipeline() -> void:
 	var shader_spirv = shader_file.get_spirv()
 	edge_shader = rd.shader_create_from_spirv(shader_spirv)
 
-	var va := RDVertexAttribute.new()
-	va.stride = 16
-	va.format = RenderingDevice.DATA_FORMAT_R32G32B32A32_SFLOAT
-
 	var color_blend := RDPipelineColorBlendState.new()
 	color_blend.attachments = [RDPipelineColorBlendStateAttachment.new()]
 
@@ -298,7 +285,7 @@ func _recreate_edge_pipeline() -> void:
 
 	if edge_shader.is_valid():
 		edge_pipeline = rd.render_pipeline_create(edge_shader, edge_framebuffer_format,
-			rd.vertex_format_create([va]), RenderingDevice.RENDER_PRIMITIVE_TRIANGLES, RDPipelineRasterizationState.new(),
+			-1, RenderingDevice.RENDER_PRIMITIVE_TRIANGLES, RDPipelineRasterizationState.new(),
 			RDPipelineMultisampleState.new(), stencil_state,
 			color_blend
 		)
@@ -346,18 +333,6 @@ func _initiate_post_process() -> void:
 	# The difference should be unnoticeable
 	smaa_tex = preload(SMAA_dir + "AreaTex.dds")
 	area_tex = RenderingServer.texture_get_rd_texture(smaa_tex.get_rid())
-
-	var verts := PackedFloat32Array([
-		-1.0, -1.0, 0.0, 0.0,
-		-1.0, 3.0, 0.0, 2.0,
-		3.0, -1.0, 2.0, 0.0,
-	])
-	var va := RDVertexAttribute.new()
-	va.stride = 16
-	va.format = RenderingDevice.DATA_FORMAT_R32G32B32A32_SFLOAT
-
-	vertex_buffer = rd.vertex_buffer_create(verts.size() * 4, verts.to_byte_array(), true)
-	vertex_array = rd.vertex_array_create(3, rd.vertex_format_create([va]), [vertex_buffer], [])
 
 	var sampler_state := RDSamplerState.new()
 	sampler_state.min_filter = RenderingDevice.SAMPLER_FILTER_NEAREST
@@ -526,18 +501,14 @@ func _smaa_process(input : RID, edges_input : RID, output_framebuffer : RID, vie
 	var uniform_set : RID = _edge_pipeline_create_uniforms(edges_input)
 	var settings_uniform_set : RID = UniformSetCacheRD.get_cache(edge_shader, 0, settings_uniform)
 	var draw_list = rd.draw_list_begin(edges_framebuffer,
-		RenderingDevice.INITIAL_ACTION_CLEAR,
-		RenderingDevice.FINAL_ACTION_STORE,
-		RenderingDevice.INITIAL_ACTION_CLEAR,
-		RenderingDevice.FINAL_ACTION_STORE,
+		RenderingDevice.DRAW_CLEAR_COLOR_ALL | RenderingDevice.DRAW_CLEAR_STENCIL,
 		PackedColorArray([Color(0.0, 0.0, 0.0, 0.0)]),
 		1.0, 0
 	)
 	rd.draw_list_bind_render_pipeline(draw_list, edge_pipeline)
 	rd.draw_list_bind_uniform_set(draw_list, settings_uniform_set, 0)
 	rd.draw_list_bind_uniform_set(draw_list, uniform_set, 1)
-	rd.draw_list_bind_vertex_array(draw_list, vertex_array)
-	rd.draw_list_draw(draw_list, false, 1)
+	rd.draw_list_draw(draw_list, false, 1, 3)
 	rd.draw_list_end()
 	rd.draw_command_end_label()
 
@@ -551,36 +522,26 @@ func _smaa_process(input : RID, edges_input : RID, output_framebuffer : RID, vie
 	rd.draw_command_begin_label("SMAA Blending Weight Calculation" + str(view), Color.WHITE)
 	uniform_set = _weight_pipeline_create_uniforms()
 	draw_list = rd.draw_list_begin(blend_framebuffer,
-		RenderingDevice.INITIAL_ACTION_CLEAR,
-		RenderingDevice.FINAL_ACTION_STORE,
-		RenderingDevice.INITIAL_ACTION_LOAD,
-		RenderingDevice.FINAL_ACTION_DISCARD,
+		RenderingDevice.DRAW_CLEAR_COLOR_ALL,
 		PackedColorArray([Color(0.0, 0.0, 0.0, 0.0)])
 	)
 	rd.draw_list_bind_render_pipeline(draw_list, weight_pipeline)
 	rd.draw_list_bind_uniform_set(draw_list, settings_uniform_set, 0)
 	rd.draw_list_bind_uniform_set(draw_list, uniform_set, 1)
 	rd.draw_list_set_push_constant(draw_list, push_constant.to_byte_array(), push_constant.size() * 4)
-	rd.draw_list_bind_vertex_array(draw_list, vertex_array)
-	rd.draw_list_draw(draw_list, false, 1)
+	rd.draw_list_draw(draw_list, false, 1, 3)
 	rd.draw_list_end()
 	rd.draw_command_end_label()
 
 	# Third Pass: Neighborhood Blending
 	rd.draw_command_begin_label("SMAA Neighborhood Blending" + str(view), Color.WHITE)
 	uniform_set = _blend_pipeline_create_uniforms(input)
-	draw_list = rd.draw_list_begin(output_framebuffer,
-		RenderingDevice.INITIAL_ACTION_DISCARD,
-		RenderingDevice.FINAL_ACTION_STORE,
-		RenderingDevice.INITIAL_ACTION_DISCARD,
-		RenderingDevice.FINAL_ACTION_DISCARD,
-	)
+	draw_list = rd.draw_list_begin(output_framebuffer)
 	rd.draw_list_bind_render_pipeline(draw_list, blend_pipeline)
 	rd.draw_list_bind_uniform_set(draw_list, settings_uniform_set, 0)
 	rd.draw_list_bind_uniform_set(draw_list, uniform_set, 1)
-	rd.draw_list_bind_vertex_array(draw_list, vertex_array)
 	rd.draw_list_set_blend_constants(draw_list, Color(blend_alpha, blend_alpha, blend_alpha, blend_alpha))
-	rd.draw_list_draw(draw_list, false, 1)
+	rd.draw_list_draw(draw_list, false, 1, 3)
 	rd.draw_list_end()
 	rd.draw_command_end_label()
 
@@ -634,15 +595,11 @@ func _render_callback(p_effect_callback_type: int, p_render_data: RenderData) ->
 					rd.draw_command_begin_label("SMAA Copy Source Image" + str(view), Color.WHITE)
 					var uniform_set = _blit_pipeline_create_uniforms(color_image)
 					var draw_list = rd.draw_list_begin(copy_framebuffer,
-						RenderingDevice.INITIAL_ACTION_DISCARD,
-						RenderingDevice.FINAL_ACTION_STORE,
-						RenderingDevice.INITIAL_ACTION_DISCARD,
-						RenderingDevice.FINAL_ACTION_DISCARD,
+						RenderingDevice.DRAW_IGNORE_ALL,
 					)
 					rd.draw_list_bind_render_pipeline(draw_list, blit_pipeline)
 					rd.draw_list_bind_uniform_set(draw_list, uniform_set, 0)
-					rd.draw_list_bind_vertex_array(draw_list, vertex_array)
-					rd.draw_list_draw(draw_list, false, 1)
+					rd.draw_list_draw(draw_list, false, 1, 3)
 					rd.draw_list_end()
 					rd.draw_command_end_label()
 
@@ -655,16 +612,12 @@ func _render_callback(p_effect_callback_type: int, p_render_data: RenderData) ->
 					rd.draw_command_begin_label("SMAA Separate MSAA" + str(view), Color.WHITE)
 					var uniform_set = _separate_pipeline_create_uniforms(color_image)
 					var draw_list = rd.draw_list_begin(single_sample_framebuffer,
-						RenderingDevice.INITIAL_ACTION_DISCARD,
-						RenderingDevice.FINAL_ACTION_STORE,
-						RenderingDevice.INITIAL_ACTION_DISCARD,
-						RenderingDevice.FINAL_ACTION_DISCARD,
+						RenderingDevice.DRAW_IGNORE_ALL,
 					)
 					rd.draw_list_bind_render_pipeline(draw_list, separate_pipeline)
 					rd.draw_list_bind_uniform_set(draw_list, uniform_set, 0)
 					rd.draw_list_set_push_constant(draw_list, push_constant.to_byte_array(), push_constant.size() * 4)
-					rd.draw_list_bind_vertex_array(draw_list, vertex_array)
-					rd.draw_list_draw(draw_list, false, 1)
+					rd.draw_list_draw(draw_list, false, 1, 3)
 					rd.draw_list_end()
 					rd.draw_command_end_label()
 
