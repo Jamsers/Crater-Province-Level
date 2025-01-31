@@ -38,7 +38,8 @@ var player_is_in_max_exposure_area = false
 var player_is_in_halfway_exposure_area = false
 
 func _process(delta):
-	camera_tracker.global_position = godot_human_for_scale_camera.global_position
+	# camera_tracker.global_position = godot_human_for_scale_camera.global_position
+	pass
 
 func force_max_exposure_exec(is_in):
 	set_player_is_in_max_exposure_area(is_in)

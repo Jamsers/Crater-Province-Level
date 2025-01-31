@@ -10,7 +10,6 @@
 [ext_resource type="Material" uid="uid://dv3nmr37d666h" path="res://Materials/FogMaterial.tres" id="3_denfd"]
 [ext_resource type="Resource" uid="uid://b1u0xjy8gj3rw" path="res://Resources/Lighting/InterimCorrections/TIME_AM_5_22.tres" id="4_a1kk8"]
 [ext_resource type="PackedScene" uid="uid://0n051nblmwko" path="res://Scenes/Terrain_Crater.tscn" id="4_g5r0g"]
-[ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="4_jgqeu"]
 [ext_resource type="Resource" uid="uid://c7kl22jqdcch7" path="res://Resources/Lighting/Core/TIME_AM_5_40.tres" id="4_olts1"]
 [ext_resource type="Resource" uid="uid://bu4k1pg0qwo8p" path="res://Resources/Lighting/Core/TIME_AM_6.tres" id="5_dxjhp"]
 [ext_resource type="Resource" uid="uid://c8nmwfaxnfbnb" path="res://Resources/Lighting/InterimCorrections/TIME_AM_5_27.tres" id="5_p1or3"]
@@ -45,7 +44,7 @@
 [ext_resource type="Script" uid="uid://dqvcjwgxnmikj" path="res://Scripts/Profiler.gd" id="22_xngbd"]
 [ext_resource type="Resource" uid="uid://b5y41f0uw1oxi" path="res://Resources/Lighting/Max_Exposure_Lighting.tres" id="25_d646h"]
 [ext_resource type="Resource" uid="uid://ccys7ovr542oa" path="res://Resources/Lighting/Halfway_Exposure_Lighting.tres" id="26_5y3io"]
-[ext_resource type="Compositor" uid="uid://1c5tgrylhb66" path="res://Resources/Compositor_Addons/MotionBlurCompositor.tres" id="29_b87y7"]
+[ext_resource type="CompositorEffect" uid="uid://dpdsv65cv1uvn" path="res://Resources/Compositor_Addons/SMAA.tres" id="31_lo0ny"]
 [ext_resource type="Script" uid="uid://br2wm4tsqhddg" path="res://Scripts/ExposureArea.gd" id="31_nmx32"]
 [ext_resource type="PackedScene" uid="uid://cvdgqvgtggj30" path="res://Models/Terrain_Physics_Blocker.glb" id="33_gejc5"]
 [ext_resource type="PackedScene" uid="uid://b6whnguxtreo2" path="res://Models/Terrain_Blocker.glb" id="34_as1if"]
@@ -82,6 +81,9 @@
 [ext_resource type="PackedScene" uid="uid://6rrd5jcd7h52" path="res://Scenes/Tree_Pine_Trunk.tscn" id="69_aet3k"]
 [ext_resource type="PackedScene" uid="uid://ltpmev1pcp0q" path="res://Scenes/Dock_Wood.tscn" id="71_f2q2f"]
 [ext_resource type="PackedScene" uid="uid://db7cd6df3m6ea" path="res://Scenes/Tree_Pine_Chopped.tscn" id="74_cyetc"]
+
+[sub_resource type="Compositor" id="Compositor_mitij"]
+compositor_effects = Array[CompositorEffect]([ExtResource("31_lo0ny")])
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_5y3io"]
 radius = 0.25
@@ -130,7 +132,7 @@ data = PackedVector3Array(7.041, 0, 2.3, -7.041, 0, 2.3, 7.041, 0, -2.3, -7.041,
 [node name="Main" type="Node"]
 physics_interpolation_mode = 2
 
-[node name="LightingChanger" type="Node" parent="." node_paths=PackedStringArray("environment", "sun", "camera_tracker", "godot_human_for_scale_camera")]
+[node name="LightingChanger" type="Node" parent="." node_paths=PackedStringArray("environment", "sun", "camera_tracker")]
 script = ExtResource("1_c06e6")
 military_time_hour = 7.0
 lighting = Array[ExtResource("2_tykvi")]([ExtResource("2_fjhij"), ExtResource("3_0d4dm"), ExtResource("4_a1kk8"), ExtResource("5_p1or3"), ExtResource("4_olts1"), ExtResource("5_dxjhp"), ExtResource("6_43l3o"), ExtResource("7_kf61e"), ExtResource("8_gy806"), ExtResource("6_ctalx"), ExtResource("6_adwvh"), ExtResource("7_7ieaj"), ExtResource("2_p04ay"), ExtResource("13_3wbjl"), ExtResource("14_vr08g"), ExtResource("15_0msdb"), ExtResource("16_4udgj"), ExtResource("9_jg74e"), ExtResource("10_2jb5e"), ExtResource("21_j4ty0"), ExtResource("22_5rbir"), ExtResource("11_8o1sm")])
@@ -139,10 +141,10 @@ halfway_exposure_lighting = ExtResource("26_5y3io")
 environment = NodePath("../WorldEnvironment")
 sun = NodePath("../DirectionalLight3D")
 camera_tracker = NodePath("../CameraTracker")
-godot_human_for_scale_camera = NodePath("../Human-For-Scale/CameraPivot/SpringArm/Camera")
 
 [node name="TimeOfDaySystem" type="Node" parent="." node_paths=PackedStringArray("lighting_changer")]
 script = ExtResource("21_yw3r5")
+time_pause = true
 lighting_changer = NodePath("../LightingChanger")
 
 [node name="Control" type="Control" parent="."]
@@ -175,7 +177,7 @@ tod_system = NodePath("../../TimeOfDaySystem")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_wutcc")
 camera_attributes = ExtResource("2_qbce3")
-compositor = ExtResource("29_b87y7")
+compositor = SubResource("Compositor_mitij")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-4.37114e-08, -0.258819, 0.965925, 0, 0.965925, 0.258819, -1, 1.13133e-08, -4.22219e-08, 0, 0, 0)
@@ -193,7 +195,6 @@ shape = 4
 material = ExtResource("3_denfd")
 
 [node name="CameraTracker" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -202.136, 3.7244, 39.2959)
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraTracker"]
@@ -235,11 +236,6 @@ shape = SubResource("ConvexPolygonShape3D_mnudv")
 [node name="tunnel_halfway_exposure" type="CollisionShape3D" parent="HalfwayExposureAreas"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -337.07, -12.2799, 258.811)
 shape = SubResource("ConvexPolygonShape3D_vsxxm")
-
-[node name="Human-For-Scale" parent="." instance=ExtResource("4_jgqeu")]
-transform = Transform3D(-0.579707, 0, -0.814823, 0, 1, 0, 0.814823, 0, -0.579707, -201.846, 2.1804, 38.8885)
-enable_physics_gun = true
-enable_depth_of_field = true
 
 [node name="UnifiedMeshes" type="Node3D" parent="."]
 
@@ -3730,3 +3726,6 @@ transform = Transform3D(-0.819113, 0.507609, -0.267172, 0.342019, 0.0582671, -0.
 
 [node name="Tree_Pine_Trunk2" parent="Bonfire" instance=ExtResource("69_aet3k")]
 transform = Transform3D(-0.359299, -0.103872, -0.927422, -0.933154, 0.0281518, 0.358368, -0.0111159, 0.994189, -0.107044, -22.0551, -0.42053, 4.07438)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.998242, 0.00299665, -0.0591979, 0, 0.998721, 0.0505562, 0.0592737, 0.0504673, -0.996965, 71.425, -23.4883, 74.4954)
