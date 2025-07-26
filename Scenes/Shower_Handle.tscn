@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc2k87go4lkps"]
+
+[ext_resource type="PackedScene" uid="uid://diam8qn2xuq1g" path="res://Models/Shower_Handle.glb" id="1_uw36n"]
+
+[node name="Shower_Handle" instance=ExtResource("1_uw36n")]

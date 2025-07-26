@@ -4,16 +4,18 @@
 
 [node name="Park_Ground_Light" instance=ExtResource("1_uvi6j")]
 
-[node name="Cube" parent="." index="0"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
-visibility_range_end = 250.0
+[node name="Light" parent="." index="0"]
+layers = 2
+gi_mode = 2
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." index="2"]
-transform = Transform3D(1, 0, 0, 0, 0.752277, -0.658847, 0, 0.658847, 0.752277, 0, 0.462768, -0.197262)
-light_intensity_lumens = 10000.0
+transform = Transform3D(1, 0, 0, 0, 0.752277, -0.658847, 0, 0.658847, 0.752277, 0, 0.198482, 0.104502)
+light_intensity_lumens = 13000.0
+light_temperature = 6300.0
 shadow_enabled = true
+shadow_caster_mask = 4294967293
 distance_fade_enabled = true
 distance_fade_begin = 1000.0
 spot_range = 30.0
-spot_attenuation = 1.75
+spot_attenuation = 2.0
 spot_angle = 60.0

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://csx5nslknuou3"]
+
+[ext_resource type="PackedScene" uid="uid://dc8f0rmb7j0dn" path="res://Models/Broom.glb" id="1_rhugu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rhugu"]
+size = Vector3(0.0288238, 1.02431, 0.0280151)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nwbc0"]
+size = Vector3(0.293823, 0.23822, 0.00837708)
+
+[node name="Broom" instance=ExtResource("1_rhugu")]
+physics_interpolation_mode = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000389107, 0.571327, 3.05204e-05)
+shape = SubResource("BoxShape3D_rhugu")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000427261, -0.216217, 0.000556937)
+shape = SubResource("BoxShape3D_nwbc0")

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cij644fe0seae"]
+
+[ext_resource type="PackedScene" uid="uid://w4y2h40mm064" path="res://Models/Magazine_Box.glb" id="1_5b37a"]
+
+[node name="Magazine_Box" instance=ExtResource("1_5b37a")]

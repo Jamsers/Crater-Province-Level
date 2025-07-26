@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpjgsjma5dxpb"]
-
-[ext_resource type="PackedScene" uid="uid://g2mncp05eg38" path="res://Models/Park.glb" id="1_cjws2"]
-
-[node name="Park" instance=ExtResource("1_cjws2")]

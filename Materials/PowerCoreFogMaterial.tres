@@ -1,0 +1,5 @@
+[gd_resource type="FogMaterial" format=3 uid="uid://dxbiijiaxi5yj"]
+
+[resource]
+density = 0.059
+edge_fade = 1e-05

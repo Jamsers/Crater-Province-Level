@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq0bo0nexa0fn"]
+
+[ext_resource type="PackedScene" uid="uid://6qi3n0vb4mi6" path="res://Models/Building/Table_Executive.glb" id="1_bfbc8"]
+
+[node name="Table_Executive" instance=ExtResource("1_bfbc8")]

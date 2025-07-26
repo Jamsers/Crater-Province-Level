@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmdirl3sce2qt"]
+
+[ext_resource type="PackedScene" uid="uid://cf1frtvlhh24j" path="res://Models/Torch_Tiki.glb" id="1_adl3s"]
+[ext_resource type="PackedScene" uid="uid://dlg0mdfc71nad" path="res://Scenes/Fire.tscn" id="2_crqr6"]
+
+[node name="Torch_Tiki" instance=ExtResource("1_adl3s")]
+
+[node name="Torch" parent="." index="0"]
+visibility_range_end = 100.0
+
+[node name="Torch_Head" parent="." index="1"]
+layers = 2
+gi_mode = 2
+visibility_range_end = 100.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.53645, 0)
+light_intensity_lumens = 410.0
+light_temperature = 2100.0
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 15.0
+omni_attenuation = 2.0
+
+[node name="Fire" parent="." index="3" instance=ExtResource("2_crqr6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.52994, 0)

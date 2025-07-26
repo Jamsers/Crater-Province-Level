@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5s6j4ex2y4ke"]
+
+[ext_resource type="PackedScene" uid="uid://bf2k682quy3tn" path="res://Models/Door_Building_Elevator.glb" id="1_sro1n"]
+
+[node name="Door_Building_Elevator" instance=ExtResource("1_sro1n")]
+
+[node name="Door_Lef" parent="." index="0"]
+physics_interpolation_mode = 1
+sync_to_physics = false
+
+[node name="Door_Righ" parent="." index="1"]
+physics_interpolation_mode = 1
+sync_to_physics = false

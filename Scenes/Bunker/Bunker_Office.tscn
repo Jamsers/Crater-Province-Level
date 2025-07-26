@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjt82eulrcv1g"]
+
+[ext_resource type="PackedScene" uid="uid://0lcc64y4fbjh" path="res://Models/Bunker/Bunker_Office.glb" id="1_t4nyc"]
+[ext_resource type="PackedScene" uid="uid://cfeqaxlov4uqa" path="res://Scenes/Bunker/Bunker_Blast_Doors_Office.tscn" id="2_4tvcw"]
+[ext_resource type="PackedScene" uid="uid://o6bibjkuthfy" path="res://Models/Bunker/Bunker_Office_Interior.glb" id="3_x1m0q"]
+
+[node name="Bunker_Office" instance=ExtResource("1_t4nyc")]
+
+[node name="SpotLight3D39" type="SpotLight3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 4.983, 0)
+light_intensity_lumens = 4000.0
+light_temperature = 4500.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="Bunker_Blast_Doors_Office" parent="." index="4" instance=ExtResource("2_4tvcw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.079)
+
+[node name="door_left" parent="Bunker_Blast_Doors_Office" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.64569, 0, 0)
+
+[node name="door_right" parent="Bunker_Blast_Doors_Office" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.47488, 0, 0)
+
+[node name="Bunker_Office_Interior" parent="." index="5" instance=ExtResource("3_x1m0q")]
+
+[editable path="Bunker_Blast_Doors_Office"]

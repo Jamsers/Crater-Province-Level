@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg1j1yrcuw14l"]
+
+[ext_resource type="PackedScene" uid="uid://ds1rfw0u5auds" path="res://Models/Lamppost.glb" id="1_7abun"]
+
+[node name="Lamppost" instance=ExtResource("1_7abun")]
+
+[node name="Lamppost" parent="." index="0"]
+visibility_range_end = 400.0
+
+[node name="Lamppost_Head" parent="." index="1"]
+layers = 2
+gi_mode = 2
+visibility_range_end = 400.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.13345, 0.991056, 0, -0.991056, 0.13345, 0, 8.28421, -2.41965)
+light_intensity_lumens = 10000.0
+light_temperature = 2900.0
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 20.0
+spot_attenuation = 2.0
+spot_angle = 60.0

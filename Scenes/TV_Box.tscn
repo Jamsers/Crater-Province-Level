@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dap41564du1se"]
+
+[ext_resource type="PackedScene" uid="uid://daurrp6g3582y" path="res://Models/TV_Box.glb" id="1_1xo7d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1xo7d"]
+size = Vector3(0.100525, 0.384491, 0.25407)
+
+[node name="TV_Box" instance=ExtResource("1_1xo7d")]
+physics_interpolation_mode = 1
+mass = 4.5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000213623, 0.00251777, -0.00118442)
+shape = SubResource("BoxShape3D_1xo7d")

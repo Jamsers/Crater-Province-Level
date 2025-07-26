@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://u7p1huajp21d"]
+
+[ext_resource type="PackedScene" uid="uid://dy2cj4d652wpw" path="res://Models/Door_Building_Entrance_Right.glb" id="1_jry3k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jry3k"]
+size = Vector3(2.38013, 2.61008, 0.0801697)
+
+[node name="Door_Building_Entrance_Right" instance=ExtResource("1_jry3k")]
+physics_interpolation_mode = 1
+mass = 85.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+shape = SubResource("BoxShape3D_jry3k")

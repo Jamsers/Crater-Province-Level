@@ -1,0 +1,55 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dmqlb7spteknv"
+path="res://.godot/imported/House_Village.glb-23b4fc054b7a6c30282467b8e608a0f1.scn"
+
+[deps]
+
+source_file="res://Models/House_Village/House_Village.glb"
+dest_files=["res://.godot/imported/House_Village.glb-23b4fc054b7a6c30282467b8e608a0f1.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=2
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Concrete": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materials/Generic/Concrete/Concrete_UV_2.tres",
+"use_external/path": "uid://bbkd2m2sokdhv"
+},
+"Wood": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materials/Generic/Wood/Wood_UV_10.tres",
+"use_external/path": "uid://12wi42t55eqq"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

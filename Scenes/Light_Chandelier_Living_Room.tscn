@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://s7bpks7fimso"]
+
+[ext_resource type="PackedScene" uid="uid://6w8o06qau5wk" path="res://Models/Light_Chandelier_Living_Room.glb" id="1_oeic3"]
+
+[node name="Light_Chandelier_Living_Room" instance=ExtResource("1_oeic3")]
+
+[node name="Frame" parent="." index="0"]
+layers = 2
+gi_mode = 2
+
+[node name="Fabric_1" parent="." index="1"]
+layers = 2
+gi_mode = 2
+
+[node name="Fabric_2" parent="." index="2"]
+layers = 2
+gi_mode = 2
+
+[node name="Fabric_3" parent="." index="3"]
+layers = 2
+gi_mode = 2
+
+[node name="Fabric_4" parent="." index="4"]
+layers = 2
+gi_mode = 2
+
+[node name="Fabric_5" parent="." index="5"]
+layers = 2
+gi_mode = 2
+
+[node name="Fabric_6" parent="." index="6"]
+layers = 2
+gi_mode = 2
+
+[node name="Residential_Light" type="SpotLight3D" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.511, 0)
+light_intensity_lumens = 3500.0
+light_temperature = 3500.0
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+distance_fade_enabled = true
+distance_fade_begin = 300.0
+spot_range = 15.0
+spot_attenuation = 2.0
+spot_angle = 80.0
+spot_angle_attenuation = 16.0

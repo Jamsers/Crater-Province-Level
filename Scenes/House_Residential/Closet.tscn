@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqudkyyxwkv36"]
+
+[ext_resource type="PackedScene" uid="uid://dsacnuje0rmu" path="res://Models/House_Residential/Closet.glb" id="1_hfcoy"]
+
+[node name="Closet" instance=ExtResource("1_hfcoy")]

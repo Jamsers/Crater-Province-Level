@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://0wfl3blv04bx"]
+
+[ext_resource type="Script" uid="uid://t7gosqakqqc5" path="res://Scripts/Door.gd" id="1_y2stl"]
+[ext_resource type="PackedScene" uid="uid://dak2uwo5kf1nh" path="res://Scenes/Door_Building_Wooden_Rigidbody.tscn" id="3_4vhkw"]
+
+[node name="Door_Building_Wood" type="Node3D" node_paths=PackedStringArray("hinge")]
+physics_interpolation_mode = 1
+script = ExtResource("1_y2stl")
+hinge = NodePath("Hinge")
+
+[node name="Hinge" type="HingeJoint3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.96, 1.318, 0)
+node_b = NodePath("../Door_Building_Wooden_Rigidbody")
+angular_limit/enable = true
+
+[node name="Door_Building_Wooden_Rigidbody" parent="." instance=ExtResource("3_4vhkw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.318, 0)

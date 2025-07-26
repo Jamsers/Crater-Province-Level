@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ppherspsd1yo"]
+
+[ext_resource type="PackedScene" uid="uid://gckfelprf6dl" path="res://Models/Overworld/Boulder.glb" id="1_2hu6j"]
+[ext_resource type="Script" uid="uid://bcloe4cdnenjr" path="res://Scripts/Placement_Tools/RockPlant.gd" id="2_4merl"]
+
+[node name="Boulder" node_paths=PackedStringArray("mesh") instance=ExtResource("1_2hu6j")]
+script = ExtResource("2_4merl")
+mesh = NodePath("Boulder")
+
+[node name="Boulder" parent="." index="0"]
+visible = false

@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://qe18yg6rspuc"]
+
+[ext_resource type="PackedScene" uid="uid://bhvd4cohnhhjb" path="res://Models/Building/Cubicle.glb" id="1_q4ja4"]
+[ext_resource type="PackedScene" uid="uid://b731rodp5fj1a" path="res://Scenes/House_Residential/Chair.tscn" id="2_2p8ew"]
+[ext_resource type="PackedScene" uid="uid://bcunj5lxg7vn8" path="res://Scenes/Monitor.tscn" id="3_hxq1m"]
+[ext_resource type="PackedScene" uid="uid://1bsjtax458bd" path="res://Scenes/PC_Tower.tscn" id="4_sxslc"]
+[ext_resource type="PackedScene" uid="uid://b1f185flp15og" path="res://Scenes/Keyboard.tscn" id="5_uxfaf"]
+[ext_resource type="PackedScene" uid="uid://vw0p4cwvjte8" path="res://Scenes/Mouse.tscn" id="6_x68v2"]
+
+[node name="Cubicle" instance=ExtResource("1_q4ja4")]
+
+[node name="Chair" parent="." index="2" instance=ExtResource("2_2p8ew")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.487402, 0.25727)
+
+[node name="Monitor" parent="." index="3" instance=ExtResource("3_hxq1m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267025, 0.952806, 0.679897)
+
+[node name="PC_Tower" parent="." index="4" instance=ExtResource("4_sxslc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.618738, 1.02419, 0.585484)
+
+[node name="Keyboard" parent="." index="5" instance=ExtResource("5_uxfaf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.126705, 0.761164, 0.362428)
+
+[node name="Mouse" parent="." index="6" instance=ExtResource("6_x68v2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.281373, 0.771301, 0.370414)

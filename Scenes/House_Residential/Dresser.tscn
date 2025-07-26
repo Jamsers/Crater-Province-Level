@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5w7082akn73r"]
+
+[ext_resource type="PackedScene" uid="uid://d0f5hw28a1ime" path="res://Models/House_Residential/Dresser.glb" id="1_pbpkf"]
+
+[node name="Dresser" instance=ExtResource("1_pbpkf")]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpu8nga0kbuma"]
+
+[ext_resource type="PackedScene" uid="uid://bye47skt06odf" path="res://Models/Light_Industrial.glb" id="1_8qklj"]
+
+[node name="Light_Industrial" instance=ExtResource("1_8qklj")]
+
+[node name="Light" parent="." index="0"]
+layers = 2
+gi_mode = 2
+visibility_range_end = 150.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.533, 1.08451e-08)
+light_intensity_lumens = 14000.0
+light_temperature = 5800.0
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 16.0
+spot_attenuation = 2.0
+spot_angle = 80.0

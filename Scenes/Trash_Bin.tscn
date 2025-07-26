@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwrmmve8eiy84"]
+
+[ext_resource type="PackedScene" uid="uid://bg5amw1nyyv3w" path="res://Models/Trash_Bin.glb" id="1_g3dbb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g3dbb"]
+size = Vector3(0.639, 1.164, 0.639)
+
+[node name="Trash_Bin" instance=ExtResource("1_g3dbb")]
+physics_interpolation_mode = 1
+mass = 10.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000335693, -0.0255737, -8.05855e-05)
+shape = SubResource("BoxShape3D_g3dbb")

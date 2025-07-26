@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm5fpubq8wy05"]
+
+[ext_resource type="PackedScene" uid="uid://bgt5qpvif4alc" path="res://Models/Barrel.glb" id="1_smejn"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_smejn"]
+height = 1.215
+radius = 0.425
+
+[node name="Barrel" instance=ExtResource("1_smejn")]
+physics_interpolation_mode = 1
+mass = 20.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("CylinderShape3D_smejn")

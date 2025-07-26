@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://60hsuh2bmxcy"]
+
+[ext_resource type="PackedScene" uid="uid://gy2j3vpluxb0" path="res://Models/Light_Lantern_Hanging.glb" id="1_gcmmu"]
+[ext_resource type="Script" uid="uid://bpagroiyvxti0" path="res://Scripts/PhysicalBoneSimulatorStarter.gd" id="2_3of8d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gcmmu"]
+size = Vector3(0.201, 0.376526, 0.201)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gcmmu"]
+radius = 0.006
+height = 0.165242
+
+[node name="Light_Lantern_Hanging" instance=ExtResource("1_gcmmu")]
+
+[node name="Lantern" parent="." index="1"]
+physics_interpolation_mode = 1
+
+[node name="Lantern" parent="Lantern" index="0"]
+layers = 4
+gi_mode = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lantern" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00423521, 0)
+shape = SubResource("BoxShape3D_gcmmu")
+
+[node name="Residential_Light" type="OmniLight3D" parent="Lantern" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0297634, 0)
+light_intensity_lumens = 410.0
+light_temperature = 2100.0
+shadow_enabled = true
+shadow_caster_mask = 4294967291
+distance_fade_enabled = true
+distance_fade_begin = 300.0
+omni_range = 15.0
+omni_attenuation = 2.0
+
+[node name="ConeTwistJoint3D" type="ConeTwistJoint3D" parent="Lantern" index="3"]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2005, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../Wire/PhysicalBoneSimulator3D/Physical Bone Bone2")
+twist_span = 0.174533
+
+[node name="Wire" parent="." index="2"]
+physics_interpolation_mode = 1
+
+[node name="Wire_Mesh" parent="Wire" index="0"]
+gi_mode = 2
+
+[node name="PhysicalBoneSimulator3D" type="PhysicalBoneSimulator3D" parent="Wire" index="1"]
+script = ExtResource("2_3of8d")
+
+[node name="Physical Bone Bone" type="PhysicalBone3D" parent="Wire/PhysicalBoneSimulator3D" index="0"]
+transform = Transform3D(3.54446e-07, -1, 5.94057e-08, 5.94057e-08, 5.94058e-08, 1, -1, -3.54446e-07, 5.94058e-08, -4.92459e-09, -0.082621, -4.92459e-09)
+collision_layer = 0
+collision_mask = 0
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64315e-11, -1.64321e-11, 0.082621)
+body_offset = Transform3D(1, -3.18209e-09, 1.98881e-10, 1.98895e-10, 1.98891e-10, -1, 3.18212e-09, 1, 1.98888e-10, -2.22045e-16, 0.082621, -2.22045e-16)
+mass = 0.75
+bone_name = "Bone"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire/PhysicalBoneSimulator3D/Physical Bone Bone" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_gcmmu")
+
+[node name="Physical Bone Bone2" type="PhysicalBone3D" parent="Wire/PhysicalBoneSimulator3D" index="1"]
+transform = Transform3D(3.54462e-07, -1, 5.94067e-08, 5.94067e-08, 5.94068e-08, 1, -1, -3.54462e-07, 5.94068e-08, -1.47738e-08, -0.247863, -1.47738e-08)
+collision_layer = 0
+collision_mask = 0
+joint_type = 2
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63493e-11, -1.63498e-11, 0.082621)
+body_offset = Transform3D(1, -3.16595e-09, 1.97872e-10, 1.97886e-10, 1.97882e-10, -1, 3.16598e-09, 1, 1.97879e-10, 8.88178e-16, 0.082621, 8.88178e-16)
+mass = 0.75
+bone_name = "Bone.001"
+joint_constraints/swing_span = 45.0
+joint_constraints/twist_span = 10.0
+joint_constraints/bias = 0.3
+joint_constraints/softness = 0.8
+joint_constraints/relaxation = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire/PhysicalBoneSimulator3D/Physical Bone Bone2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_gcmmu")
+
+[node name="ConeTwistJoint3D" type="ConeTwistJoint3D" parent="." index="4"]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0195675, 0)
+node_a = NodePath("..")
+node_b = NodePath("../Wire/PhysicalBoneSimulator3D/Physical Bone Bone")
+twist_span = 0.174533

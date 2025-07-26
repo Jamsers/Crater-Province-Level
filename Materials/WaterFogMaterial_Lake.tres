@@ -1,0 +1,9 @@
+[gd_resource type="FogMaterial" load_steps=2 format=3 uid="uid://bbtarrl1y73fy"]
+
+[ext_resource type="CompressedTexture3D" uid="uid://dx2y2fm1nq36w" path="res://Textures/water_fog_area.png" id="1_awaru"]
+
+[resource]
+density = 0.108
+albedo = Color(0.206, 0.701102, 0.814343, 1)
+edge_fade = 0.0
+density_texture = ExtResource("1_awaru")

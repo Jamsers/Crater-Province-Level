@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvgy7l722m2ip"]
+
+[ext_resource type="PackedScene" uid="uid://2onxvihrc81q" path="res://Models/Light_Alley.glb" id="1_6xei6"]
+
+[node name="Light_Alley" instance=ExtResource("1_6xei6")]
+
+[node name="Light" parent="." index="0"]
+layers = 2
+gi_mode = 2
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.0697565, 0.997565, 0, -0.997565, 0.0697565, 0, -0.378906, -0.917801)
+light_intensity_lumens = 2500.0
+light_temperature = 2800.0
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 20.0
+spot_attenuation = 2.0
+spot_angle_attenuation = 2.5

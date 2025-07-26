@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfk81xyy0ph5s"]
+
+[ext_resource type="PackedScene" uid="uid://ppherspsd1yo" path="res://Scenes/Overworld/Boulder.tscn" id="1_mi3tn"]
+
+[node name="Cave_Rock" type="Node3D"]
+
+[node name="Rock" parent="." instance=ExtResource("1_mi3tn")]
+transform = Transform3D(-0.544934, 4.76396e-08, -0.251091, -5.24537e-08, -0.6, 0, -0.251091, 2.19511e-08, 0.544934, 0, 0, 0)
+script = null
+
+[node name="Rock" parent="Rock" index="0"]
+visible = true
+
+[editable path="Rock"]

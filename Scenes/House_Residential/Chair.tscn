@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://b731rodp5fj1a"]
+
+[ext_resource type="PackedScene" uid="uid://d31vo42q36vf4" path="res://Models/House_Residential/Chair.glb" id="1_q3s17"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q3s17"]
+size = Vector3(0.0639038, 0.500732, 0.0641479)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ba5dq"]
+size = Vector3(0.0578308, 1.00122, 0.056488)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lc6yl"]
+size = Vector3(0.49688, 0.0969849, 0.495567)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k1jle"]
+size = Vector3(0.478773, 0.249592, 0.048687)
+
+[node name="Chair" instance=ExtResource("1_q3s17")]
+physics_interpolation_mode = 1
+mass = 7.5
+
+[node name="Leg_Front_Left" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.219879, -0.23645, -0.263214)
+shape = SubResource("BoxShape3D_q3s17")
+
+[node name="Leg_Front_Right" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.218126, -0.23645, -0.263214)
+shape = SubResource("BoxShape3D_q3s17")
+
+[node name="Leg_Back_Left" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.222916, 0.0137939, 0.176717)
+shape = SubResource("BoxShape3D_ba5dq")
+
+[node name="Leg_Back_Right" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.221237, 0.0137939, 0.176717)
+shape = SubResource("BoxShape3D_ba5dq")
+
+[node name="Seat" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00102639, -0.0334167, -0.0452264)
+shape = SubResource("BoxShape3D_lc6yl")
+
+[node name="Backrest" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00492597, 0.389563, 0.178214)
+shape = SubResource("BoxShape3D_k1jle")

@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://ifco6v75qkv1"]
+
+[ext_resource type="PackedScene" uid="uid://bqucrgwxkdpoq" path="res://Models/Building/Water_Cooler.glb" id="1_a55g3"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_a55g3"]
+height = 0.471191
+radius = 0.13916
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xt51k"]
+size = Vector3(0.352905, 0.99646, 0.274902)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5pd7c"]
+size = Vector3(0.352295, 0.531219, 0.119385)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vhnmp"]
+size = Vector3(0.352661, 0.0997009, 0.117676)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fd5qm"]
+size = Vector3(0.0380859, 0.496765, 0.155273)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_akgxp"]
+size = Vector3(0.0297852, 0.060791, 0.122803)
+
+[node name="Water_Cooler" instance=ExtResource("1_a55g3")]
+physics_interpolation_mode = 1
+mass = 35.0
+
+[node name="Bottle_Collider" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.257324, 0)
+shape = SubResource("CylinderShape3D_a55g3")
+
+[node name="Base" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00177002, -0.453918, 0.0373535)
+shape = SubResource("BoxShape3D_xt51k")
+
+[node name="Bottom" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000854492, -0.68898, -0.116821)
+shape = SubResource("BoxShape3D_5pd7c")
+
+[node name="Top" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00189209, -0.0040741, -0.114502)
+shape = SubResource("BoxShape3D_vhnmp")
+
+[node name="Side_1" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158691, -0.22287, -0.0981445)
+shape = SubResource("BoxShape3D_fd5qm")
+
+[node name="Side_2" type="CollisionShape3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.155555, -0.22287, -0.0981445)
+shape = SubResource("BoxShape3D_fd5qm")
+
+[node name="Tap_1" type="CollisionShape3D" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0588379, -0.144897, -0.10022)
+shape = SubResource("BoxShape3D_akgxp")
+
+[node name="Tap_2" type="CollisionShape3D" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0550325, -0.144897, -0.10022)
+shape = SubResource("BoxShape3D_akgxp")

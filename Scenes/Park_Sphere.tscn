@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv5kfruoi1mno"]
+
+[ext_resource type="PackedScene" uid="uid://crdyy6yfn0yil" path="res://Models/Park_Sphere.glb" id="1_x845u"]
+
+[node name="Park_Sphere" instance=ExtResource("1_x845u")]

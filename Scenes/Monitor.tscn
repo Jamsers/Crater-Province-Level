@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcunj5lxg7vn8"]
+
+[ext_resource type="PackedScene" uid="uid://cik7gpyxba7vv" path="res://Models/Monitor.glb" id="1_vmvu7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vmvu7"]
+size = Vector3(0.20871, 0.011322, 0.15921)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bd8wp"]
+size = Vector3(0.0530624, 0.0751553, 0.0263901)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ytm8i"]
+size = Vector3(0.601482, 0.351547, 0.0132218)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4a78q"]
+size = Vector3(0.273842, 0.190685, 0.0308352)
+
+[node name="Monitor" instance=ExtResource("1_vmvu7")]
+physics_interpolation_mode = 1
+mass = 6.0
+
+[node name="Stand_Base" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000198357, -0.193023, 0.0017853)
+shape = SubResource("BoxShape3D_vmvu7")
+
+[node name="Stand_Arm" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000270847, -0.155808, 0.011715)
+shape = SubResource("BoxShape3D_bd8wp")
+
+[node name="Panel" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00038296, 0.0506983, -0.00720596)
+shape = SubResource("BoxShape3D_ytm8i")
+
+[node name="Hump" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000431091, -0.0289041, 0.00893829)
+shape = SubResource("BoxShape3D_4a78q")

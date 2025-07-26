@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcn1t4jtyv0fh"]
+
+[ext_resource type="PackedScene" uid="uid://bpu8nga0kbuma" path="res://Scenes/Light_Industrial.tscn" id="1_lfxvu"]
+
+[node name="Light_Office" instance=ExtResource("1_lfxvu")]
+
+[node name="SpotLight3D" parent="." index="2"]
+light_intensity_lumens = 5000.0
+light_temperature = 4000.0
+spot_angle_attenuation = 4.0

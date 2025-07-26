@@ -1,14 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dd2pxibi1hn8q"]
+[gd_scene load_steps=3 format=3 uid="uid://dd2pxibi1hn8q"]
 
-[ext_resource type="PackedScene" uid="uid://jp3pvomi2muy" path="res://Models/Fences_Residential.glb" id="1_320jm"]
+[ext_resource type="PackedScene" uid="uid://jp3pvomi2muy" path="res://Models/House_Residential/Fences_Residential.glb" id="1_320jm"]
+[ext_resource type="PackedScene" uid="uid://cttm7w52jiae1" path="res://Scenes/Light_Lantern_Residential.tscn" id="2_dfdgf"]
 
 [node name="Fences_Residential" instance=ExtResource("1_320jm")]
 
-[node name="Rails_001" parent="." index="0"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential" parent="." index="2" instance=ExtResource("2_dfdgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.06735, 1.1432, -6.24291)
 
-[node name="Rails_003" parent="." index="1"]
-visibility_range_end = 250.0
-
-[node name="Rails_013" parent="." index="2"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential2" parent="." index="3" instance=ExtResource("2_dfdgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.33278, 1.14667, -6.24291)

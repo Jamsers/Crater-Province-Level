@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://b0y7iow430lqh"]
+
+[ext_resource type="Texture2D" uid="uid://bk8nqo3xhsox8" path="res://Textures/Glass/Glass_Albedo.png" id="1_21w4r"]
+[ext_resource type="Texture2D" uid="uid://bj82mxcbbuc51" path="res://Textures/Glass/Glass_Metal_Rough_Occ.png" id="2_24wmf"]
+[ext_resource type="Texture2D" uid="uid://c0fnqpgirhf3j" path="res://Textures/Glass/Glass_Normal.png" id="3_nifwv"]
+[ext_resource type="Texture2D" uid="uid://cm6wradcjo6j4" path="res://Textures/Glass/Glass_Metal_Rough_Occ_Window.png" id="4_3k2dp"]
+
+[resource]
+albedo_color = Color(1, 1, 1, 0.380392)
+albedo_texture = ExtResource("1_21w4r")
+metallic = 1.0
+metallic_texture = ExtResource("2_24wmf")
+roughness = 0.5
+roughness_texture = ExtResource("4_3k2dp")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_nifwv")
+refraction_enabled = true
+refraction_scale = 0.0
+texture_filter = 5

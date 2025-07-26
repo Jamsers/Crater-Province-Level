@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://crurcexjp01ln"]
+
+[ext_resource type="Texture2D" uid="uid://ihm12mf1pta2" path="res://Textures/Clouds/Cloud_3.png" id="1_6ae3b"]
+[ext_resource type="Texture2D" uid="uid://dbgv58o0kialy" path="res://Textures/Fire/Fire_Albedo.png" id="2_ic0nr"]
+
+[resource]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 0.827451)
+albedo_texture = ExtResource("1_6ae3b")
+metallic = 0.02
+roughness = 0.98
+emission_intensity = 75.0
+emission_texture = ExtResource("2_ic0nr")
+backlight_enabled = true
+backlight = Color(0.666667, 0.666667, 0.666667, 1)
+texture_filter = 5
+billboard_keep_scale = true
+proximity_fade_distance = 0.75

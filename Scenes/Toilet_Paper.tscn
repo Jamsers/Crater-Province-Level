@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://3wtk3pqkibf0"]
+
+[ext_resource type="PackedScene" uid="uid://g34bnvumci4v" path="res://Models/Toilet_Paper.glb" id="1_2taeh"]
+
+[node name="Toilet_Paper" instance=ExtResource("1_2taeh")]

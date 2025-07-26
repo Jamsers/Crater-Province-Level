@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://0n051nblmwko"]
-
-[ext_resource type="PackedScene" uid="uid://dwbqvr3ovbfe1" path="res://Models/Terrain_Crater.glb" id="1_4hb4o"]
-
-[node name="Terrain_Crater" instance=ExtResource("1_4hb4o")]

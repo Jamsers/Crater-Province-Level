@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://rftjlwpq1vd8"]
+
+[ext_resource type="PackedScene" uid="uid://c0t6vtnl6kh75" path="res://Models/Tower_Abandoned/Tower_Abandoned.glb" id="1_sphbu"]
+[ext_resource type="PackedScene" uid="uid://dj5kaxvjiyf2a" path="res://Scenes/Tower_Abandoned/Sub_Scenes/Tower_Ground_Floor.tscn" id="2_gupjh"]
+[ext_resource type="PackedScene" uid="uid://ddfm3heb0ft7" path="res://Scenes/Tower_Abandoned/Sub_Scenes/Tower_Floor.tscn" id="3_tp03s"]
+[ext_resource type="PackedScene" uid="uid://clwc6fcklq46u" path="res://Scenes/Tower_Abandoned/Sub_Scenes/Tower_Top_Floor.tscn" id="4_o8xo0"]
+[ext_resource type="PackedScene" uid="uid://ce437g008v5th" path="res://Models/House_Residential/Sink.glb" id="5_u86ax"]
+[ext_resource type="PackedScene" uid="uid://bhcn0k3qxwafi" path="res://Models/Bunker/Console.glb" id="6_3r6vo"]
+[ext_resource type="PackedScene" uid="uid://c2dpypaljbyc6" path="res://Scenes/Building/Bathroom_Stall.tscn" id="6_j0sel"]
+[ext_resource type="PackedScene" uid="uid://d0f5hw28a1ime" path="res://Models/House_Residential/Dresser.glb" id="7_n0mro"]
+[ext_resource type="PackedScene" uid="uid://by8reunvvn4qf" path="res://Models/Building/TV_Big.glb" id="8_2ftal"]
+[ext_resource type="PackedScene" uid="uid://6qi3n0vb4mi6" path="res://Models/Building/Table_Executive.glb" id="9_h3w2v"]
+[ext_resource type="PackedScene" uid="uid://dsacnuje0rmu" path="res://Models/House_Residential/Closet.glb" id="10_n0mro"]
+
+[node name="Tower_Abandoned" instance=ExtResource("1_sphbu")]
+
+[node name="Tower_Floors" type="Node3D" parent="." index="14"]
+
+[node name="Tower_Ground_Floor" parent="Tower_Floors" index="0" instance=ExtResource("2_gupjh")]
+
+[node name="Tower_Floor2" parent="Tower_Floors" index="1" instance=ExtResource("3_tp03s")]
+transform = Transform3D(-0.194234, 0, 0.980955, 0, 1, 0, -0.980955, 0, -0.194234, 0, 9.57246, 0)
+
+[node name="room" type="Node3D" parent="Tower_Floors/Tower_Floor2" index="1"]
+transform = Transform3D(-0.290702, 0, -0.956814, 0, 1, 0, 0.956814, 0, -0.290702, 0, 0, 0)
+
+[node name="Sink" parent="Tower_Floors/Tower_Floor2/room" index="0" instance=ExtResource("5_u86ax")]
+transform = Transform3D(0.981323, 0, 0.192368, 0, 1, 0, -0.192368, 0, 0.981323, -1.24509, -0.00574017, -6.45288)
+
+[node name="Bathroom_Stall" parent="Tower_Floors/Tower_Floor2/room" index="1" instance=ExtResource("6_j0sel")]
+transform = Transform3D(0.824926, 0, 0.565241, 0, 1, 0, -0.565241, 0, 0.824926, -3.87878, -0.00354004, -5.82423)
+
+[node name="Console" parent="Tower_Floors/Tower_Floor2/room" index="2" instance=ExtResource("6_3r6vo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.66984, 0.750247, -24.0521)
+
+[node name="Console2" parent="Tower_Floors/Tower_Floor2/room" index="3" instance=ExtResource("6_3r6vo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.69043, 0.750247, -24.0521)
+
+[node name="Console3" parent="Tower_Floors/Tower_Floor2/room" index="4" instance=ExtResource("6_3r6vo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.0157795, 0.750247, -24.0521)
+
+[node name="Dresser" parent="Tower_Floors/Tower_Floor2/room" index="5" instance=ExtResource("7_n0mro")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.65463, 0.750248, -22.0574)
+
+[node name="Dresser3" parent="Tower_Floors/Tower_Floor2/room" index="6" instance=ExtResource("7_n0mro")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.94048, 0, -8.56315)
+
+[node name="Dresser4" parent="Tower_Floors/Tower_Floor2/room" index="7" instance=ExtResource("7_n0mro")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.824647, 0, -19.9652)
+
+[node name="Dresser5" parent="Tower_Floors/Tower_Floor2/room" index="8" instance=ExtResource("7_n0mro")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.870078, 0, -19.9658)
+
+[node name="TV_Big" parent="Tower_Floors/Tower_Floor2/room" index="9" instance=ExtResource("8_2ftal")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.65174, 2.32325, -22.0858)
+
+[node name="Dresser2" parent="Tower_Floors/Tower_Floor2/room" index="10" instance=ExtResource("7_n0mro")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.61337, 0.750248, -21.9817)
+
+[node name="TV_Big2" parent="Tower_Floors/Tower_Floor2/room" index="11" instance=ExtResource("8_2ftal")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.65458, 2.32325, -21.9771)
+
+[node name="Table_Executive" parent="Tower_Floors/Tower_Floor2/room" index="12" instance=ExtResource("9_h3w2v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.565055, -0.00574017, -17.6423)
+
+[node name="Closet" parent="Tower_Floors/Tower_Floor2/room" index="13" instance=ExtResource("10_n0mro")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.61502, -0.00574017, -8.31259)
+
+[node name="Closet2" parent="Tower_Floors/Tower_Floor2/room" index="14" instance=ExtResource("10_n0mro")]
+transform = Transform3D(0.883635, 0, -0.468177, 0, 1, 0, 0.468177, 0, 0.883635, 3.11269, -0.00574017, -5.80627)
+
+[node name="Tower_Floor3" parent="Tower_Floors" index="2" instance=ExtResource("3_tp03s")]
+transform = Transform3D(-0.924546, 0, -0.38107, 0, 1, 0, 0.38107, 0, -0.924546, 0, 19.144, 0)
+
+[node name="Tower_Floor4" parent="Tower_Floors" index="3" instance=ExtResource("3_tp03s")]
+transform = Transform3D(0.556296, 0, -0.830984, 0, 1, 0, 0.830984, 0, 0.556296, 0, 28.716, 0)
+
+[node name="Tower_Floor5" parent="Tower_Floors" index="4" instance=ExtResource("3_tp03s")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 38.288, 0)
+
+[node name="Tower_Floor6" parent="Tower_Floors" index="5" instance=ExtResource("3_tp03s")]
+transform = Transform3D(-0.830984, 0, 0.556296, 0, 1, 0, -0.556296, 0, -0.830984, 0, 47.8445, 0)
+
+[node name="Tower_Floor7" parent="Tower_Floors" index="6" instance=ExtResource("3_tp03s")]
+transform = Transform3D(-0.38107, 0, -0.924546, 0, 1, 0, 0.924546, 0, -0.38107, 0, 57.407, 0)
+
+[node name="Tower_Floor8" parent="Tower_Floors" index="7" instance=ExtResource("3_tp03s")]
+transform = Transform3D(0.980955, 0, -0.194234, 0, 1, 0, 0.194234, 0, 0.980955, 0, 66.974, 0)
+
+[node name="Tower_Floor9" parent="Tower_Floors" index="8" instance=ExtResource("3_tp03s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 76.546, 0)
+
+[node name="Tower_Top_Floor" parent="Tower_Floors" index="9" instance=ExtResource("4_o8xo0")]
+transform = Transform3D(-0.980955, 0, -0.194234, 0, 1, 0, 0.194234, 0, -0.980955, 0, 86.103, 0)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2y08vsb8gx5v"]
+
+[ext_resource type="PackedScene" uid="uid://paxjk1rs4f4y" path="res://Models/Overworld/Water_Lake.glb" id="1_ro6uk"]
+[ext_resource type="Material" uid="uid://bbtarrl1y73fy" path="res://Materials/WaterFogMaterial_Lake.tres" id="2_irub4"]
+[ext_resource type="Script" uid="uid://bq63wgy3rnql8" path="res://Scripts/BasicBuoyancy.gd" id="3_yx2rd"]
+
+[node name="Water_Lake" instance=ExtResource("1_ro6uk")]
+
+[node name="Water_Fog" type="FogVolume" parent="." index="0"]
+transform = Transform3D(0.645458, -0.763796, -3.33866e-08, 0, -4.37114e-08, 1, -0.763796, -0.645458, -2.82139e-08, -301.606, -29.652, 55.2495)
+size = Vector3(367.35, 691, 58.5)
+material = ExtResource("2_irub4")
+
+[node name="Physics_A" parent="." index="12"]
+monitorable = false
+linear_damp_space_override = 1
+linear_damp = 0.25
+angular_damp_space_override = 1
+angular_damp = 0.25
+script = ExtResource("3_yx2rd")
+float_force = 12.0

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dj5kaxvjiyf2a"]
+[gd_scene load_steps=3 format=3 uid="uid://dj5kaxvjiyf2a"]
 
 [ext_resource type="PackedScene" uid="uid://bh6kftr5cmcrt" path="res://Scenes/Placeholder.tscn" id="1_od4k0"]
+[ext_resource type="PackedScene" uid="uid://sri7nkbv668a" path="res://Models/Tower_Abandoned/Tower_Floor_Fences_Ground.glb" id="2_82rrq"]
 
 [node name="Tower_Ground_Floor" type="Node3D"]
 
@@ -27,3 +28,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 16)
 
 [node name="Placeholder8" parent="." instance=ExtResource("1_od4k0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 16)
+
+[node name="Tower_Floor_Fences_Ground" parent="." instance=ExtResource("2_82rrq")]

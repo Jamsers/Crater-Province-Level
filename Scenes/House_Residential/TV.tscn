@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://ncdmkatyt7tc"]
+
+[ext_resource type="PackedScene" uid="uid://cuhb6nfcob0m0" path="res://Models/House_Residential/TV.glb" id="1_q6w6f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q6w6f"]
+size = Vector3(0.62146, 0.0238037, 0.25647)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j2it8"]
+size = Vector3(0.0921326, 0.0686951, 0.0557556)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tjrr5"]
+size = Vector3(1.73715, 0.99597, 0.021637)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u5prw"]
+size = Vector3(0.717438, 0.445648, 0.0745125)
+
+[node name="TV" instance=ExtResource("1_q6w6f")]
+physics_interpolation_mode = 1
+mass = 30.0
+
+[node name="Stand_Base" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.10352e-05, -0.432556, -0.00457764)
+shape = SubResource("BoxShape3D_q6w6f")
+
+[node name="Stand_Arm" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000595093, -0.395126, 0.0253754)
+shape = SubResource("BoxShape3D_j2it8")
+
+[node name="Panel" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52588e-05, 0.128831, -0.0132904)
+shape = SubResource("BoxShape3D_tjrr5")
+
+[node name="Hump" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000259399, -0.14633, 0.0198879)
+shape = SubResource("BoxShape3D_u5prw")

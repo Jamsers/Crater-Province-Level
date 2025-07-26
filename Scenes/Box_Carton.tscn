@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://viai8d4ioxa1"]
+
+[ext_resource type="PackedScene" uid="uid://b45todb4dao2a" path="res://Models/Box_Carton.glb" id="1_52a5b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_52a5b"]
+size = Vector3(0.6, 0.45, 0.6)
+
+[node name="Box_Carton" instance=ExtResource("1_52a5b")]
+physics_interpolation_mode = 1
+mass = 15.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("BoxShape3D_52a5b")

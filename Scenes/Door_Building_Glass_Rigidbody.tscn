@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cumlw32fvxdcq"]
+
+[ext_resource type="PackedScene" uid="uid://ci32i5vuupt4e" path="res://Models/Door_Building_Glass.glb" id="1_v5cb1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v5cb1"]
+size = Vector3(1.89038, 2.60168, 0.0805664)
+
+[node name="Door_Building_Glass_Rigidbody" instance=ExtResource("1_v5cb1")]
+physics_interpolation_mode = 1
+mass = 75.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00134277, -0.00189209, -0.00170898)
+shape = SubResource("BoxShape3D_v5cb1")

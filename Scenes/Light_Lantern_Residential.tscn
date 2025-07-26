@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cttm7w52jiae1"]
+
+[ext_resource type="PackedScene" uid="uid://cg4dcd7ckmu6f" path="res://Models/Light_Lantern_Residential.glb" id="1_5l58u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5l58u"]
+cull_mode = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_igjf5"]
+size = Vector2(0.5, 0.5)
+
+[node name="Light_Lantern_Residential" instance=ExtResource("1_5l58u")]
+
+[node name="Lantern" parent="." index="0"]
+layers = 2
+gi_mode = 2
+
+[node name="Residential_Light" type="OmniLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.478517, -2.65992e-08)
+light_intensity_lumens = 2500.0
+light_temperature = 2800.0
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+distance_fade_enabled = true
+distance_fade_begin = 300.0
+omni_range = 15.0
+omni_attenuation = 2.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="3"]
+visible = false
+material_override = SubResource("StandardMaterial3D_5l58u")
+mesh = SubResource("PlaneMesh_igjf5")

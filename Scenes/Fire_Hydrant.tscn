@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dspds5tbsabl7"]
+
+[ext_resource type="PackedScene" uid="uid://bf3dvnjddp2c7" path="res://Models/Fire_Hydrant.glb" id="1_2hawd"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2hawd"]
+size = Vector2(1, 1)
+
+[node name="Fire_Hydrant" instance=ExtResource("1_2hawd")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2"]
+visible = false
+mesh = SubResource("PlaneMesh_2hawd")

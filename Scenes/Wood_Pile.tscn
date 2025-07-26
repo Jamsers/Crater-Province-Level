@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkoy5eygdtmb0"]
+
+[ext_resource type="PackedScene" uid="uid://c6oqifocavie6" path="res://Models/Wood_Pile.glb" id="1_b6pyy"]
+
+[node name="Wood_Pile" instance=ExtResource("1_b6pyy")]

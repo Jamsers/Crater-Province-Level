@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://ltpmev1pcp0q"]
+
+[ext_resource type="PackedScene" uid="uid://dey5wicjldaw8" path="res://Models/Dock.glb" id="1_reern"]
+[ext_resource type="PackedScene" uid="uid://dvbtdtttviil8" path="res://Scenes/Light_Wall.tscn" id="2_sfa71"]
+
+[node name="Dock" instance=ExtResource("1_reern")]
+
+[node name="Lights" type="Node3D" parent="." index="4"]
+
+[node name="Light_Wall" parent="Lights" index="0" instance=ExtResource("2_sfa71")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -4.71975, 1.488, 8.18479)
+
+[node name="Light_Wall2" parent="Lights" index="1" instance=ExtResource("2_sfa71")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 4.75993, 1.488, 8.18245)
+
+[node name="Light_Wall4" parent="Lights" index="2" instance=ExtResource("2_sfa71")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -1.68967, 1.488, 4.57872)
+
+[node name="Light_Wall5" parent="Lights" index="3" instance=ExtResource("2_sfa71")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.68905, 1.488, 1.35312)
+
+[node name="Light_Wall6" parent="Lights" index="4" instance=ExtResource("2_sfa71")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.65266, 1.488, -1.88098)
+
+[node name="Light_Wall8" parent="Lights" index="5" instance=ExtResource("2_sfa71")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 1.91907, 1.488, -5.42925)

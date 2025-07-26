@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b43mbpu0tfhpl"]
+
+[ext_resource type="PackedScene" uid="uid://bjagm3fjwixqb" path="res://Models/Overworld/Tunnel.glb" id="1_8dtkm"]
+[ext_resource type="Script" uid="uid://br2wm4tsqhddg" path="res://Scripts/ExposureArea.gd" id="2_661o0"]
+
+[node name="Tunnel" instance=ExtResource("1_8dtkm")]
+
+[node name="Tunnel_HalfExposu" parent="Tunnel" index="1"]
+monitorable = false
+script = ExtResource("2_661o0")
+area_type = 1

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7g2qvygm5e7k"]
+
+[ext_resource type="Script" uid="uid://t7gosqakqqc5" path="res://Scripts/Door.gd" id="1_1lsiy"]
+[ext_resource type="PackedScene" uid="uid://canfu8h2odupw" path="res://Scenes/Building/Bathroom_Stall_Door_Rigidbody.tscn" id="3_4gtag"]
+
+[node name="Bathroom_Stall_Door" type="Node3D" node_paths=PackedStringArray("hinge")]
+physics_interpolation_mode = 1
+script = ExtResource("1_1lsiy")
+hinge = NodePath("Hinge")
+
+[node name="Hinge" type="HingeJoint3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.4, 1.05, 0)
+node_b = NodePath("../Bathroom_Stall_Door_Rigidbody")
+angular_limit/enable = true
+
+[node name="Bathroom_Stall_Door_Rigidbody" parent="." instance=ExtResource("3_4gtag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)

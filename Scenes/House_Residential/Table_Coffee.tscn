@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://de3r60vjrqagb"]
+
+[ext_resource type="PackedScene" uid="uid://ieewt63kqhqw" path="res://Models/House_Residential/Table_Coffee.glb" id="1_lfryl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lfryl"]
+size = Vector3(0.0654907, 0.498169, 0.0645142)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3abwu"]
+size = Vector3(0.750641, 0.0740204, 1.50056)
+
+[node name="Table_Coffee" instance=ExtResource("1_lfryl")]
+physics_interpolation_mode = 1
+mass = 15.0
+
+[node name="Leg_1" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.344147, -0.194763, 0.719574)
+shape = SubResource("BoxShape3D_lfryl")
+
+[node name="Leg_2" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.343106, -0.194763, 0.719574)
+shape = SubResource("BoxShape3D_lfryl")
+
+[node name="Leg_3" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.344147, -0.194763, -0.718332)
+shape = SubResource("BoxShape3D_lfryl")
+
+[node name="Leg_4" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.343106, -0.194763, -0.718332)
+shape = SubResource("BoxShape3D_lfryl")
+
+[node name="Pane" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000531077, 0.0173111, -0.000306487)
+shape = SubResource("BoxShape3D_3abwu")

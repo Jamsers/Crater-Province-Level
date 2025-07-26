@@ -13,7 +13,7 @@ extends Node3D
 @export_category("References")
 @export var mesh: MeshInstance3D
 
-func plant_exec(dummy: bool) -> void:
+func plant_exec():
 	global_position = global_position + (Vector3.UP * 1000)
 	
 	await get_tree().process_frame
@@ -34,15 +34,15 @@ func plant_exec(dummy: bool) -> void:
 	else:
 		queue_free()
 
-func unplant_exec(dummy: bool) -> void:
+func unplant_exec():
 	global_rotation_degrees = Vector3.ZERO
 	position.y = 0
 	global_scale(Vector3.ONE)
 
-func instance_exec(dummy: bool) -> void:
+func instance_exec():
 	# changes made by @tool code to prefabs don't get saved in scene, so you'll have to toggle mesh visibility yourself manually in the prefab :(
 	mesh.visible = false
 
-func uninstance_exec(dummy: bool) -> void:
+func uninstance_exec():
 	# changes made by @tool code to prefabs don't get saved in scene, so you'll have to toggle mesh visibility yourself manually in the prefab :(
 	mesh.visible = true

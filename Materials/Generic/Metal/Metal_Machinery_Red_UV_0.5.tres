@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://bivwu5y2fs8tv"]
+
+[ext_resource type="Texture2D" uid="uid://cu8xypluy8c7f" path="res://Textures/Machinery_Paint/Machinery_Paint_Albedo.png" id="1_llrnb"]
+[ext_resource type="Texture2D" uid="uid://b0elrhitih8pb" path="res://Textures/Machinery_Paint/Machinery_Paint_Metal_Rough_Occ.png" id="2_q0i3m"]
+[ext_resource type="Texture2D" uid="uid://q65iu4q5261c" path="res://Textures/Machinery_Paint/Machinery_Paint_Normal.png" id="3_op6tl"]
+
+[resource]
+albedo_texture = ExtResource("1_llrnb")
+metallic = 1.0
+metallic_texture = ExtResource("2_q0i3m")
+roughness_texture = ExtResource("2_q0i3m")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_op6tl")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+texture_filter = 5

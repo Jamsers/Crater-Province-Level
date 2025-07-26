@@ -1,5 +1,7 @@
 extends Node
 
+class_name TimeOfDaySystem
+
 @export_category("Pause")
 @export var time_pause: bool = false
 
@@ -17,15 +19,13 @@ func _ready():
 	time = float(lighting_changer.military_time_hour) + mins_converted
 
 func _process(delta):
-	if time_pause:
-		return
-	
 	var hour = floor(time)
 	var mins = time - hour
 	mins = lerp(0, 60, mins)
-	lighting_changer.apply_lighting(hour, mins)
+	lighting_changer.apply_lighting(hour, mins, delta)
 	
-	time += delta * ((24.0 / day_length_mins) / 60.0)
+	if !time_pause:
+		time += delta * ((24.0 / day_length_mins) / 60.0)
 	
 	if time >= 24.0:
 		time = 0.0

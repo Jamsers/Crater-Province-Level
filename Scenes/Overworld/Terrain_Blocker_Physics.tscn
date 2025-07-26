@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://codovou7y7itb"]
+
+[ext_resource type="PackedScene" uid="uid://cvdgqvgtggj30" path="res://Models/Overworld/Terrain_Blocker_Physics.glb" id="1_5wn0u"]
+
+[node name="Terrain_Blocker_Physics" instance=ExtResource("1_5wn0u")]

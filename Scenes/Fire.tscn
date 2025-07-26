@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dlg0mdfc71nad"]
 
-[ext_resource type="Material" uid="uid://cs3s0shbw7t2t" path="res://Materials/Generic/Fire.tres" id="1_cclke"]
+[ext_resource type="Material" uid="uid://cs3s0shbw7t2t" path="res://Materials/Generic/Fire/Fire.tres" id="1_cclke"]
 
 [sub_resource type="Curve" id="Curve_qjmk2"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.156398, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]

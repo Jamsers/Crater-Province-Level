@@ -1,0 +1,50 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dwbqvr3ovbfe1"
+path="res://.godot/imported/Terrain_Crater.glb-aa8c192603f336c0b2c831703ca62373.scn"
+
+[deps]
+
+source_file="res://Models/Overworld/Terrain_Crater.glb"
+dest_files=["res://.godot/imported/Terrain_Crater.glb-aa8c192603f336c0b2c831703ca62373.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=2
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Ground": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materials/Generic/Ground/Ground_UV_100.tres",
+"use_external/path": "uid://cb86spmwkq0qi"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

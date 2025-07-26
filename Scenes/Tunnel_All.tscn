@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b43mbpu0tfhpl"]
-
-[ext_resource type="PackedScene" uid="uid://bjagm3fjwixqb" path="res://Models/Tunnel_All.glb" id="1_8dtkm"]
-
-[node name="Tunnel_All" instance=ExtResource("1_8dtkm")]

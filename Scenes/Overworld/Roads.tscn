@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dacxcsf3evmb6"]
+
+[ext_resource type="PackedScene" uid="uid://y2ibky0d53x7" path="res://Models/Overworld/Roads.glb" id="1_jf53f"]
+
+[node name="Roads" instance=ExtResource("1_jf53f")]

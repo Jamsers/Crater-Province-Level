@@ -1,50 +1,66 @@
-[gd_scene load_steps=2 format=3 uid="uid://bscldb0gb5nty"]
+[gd_scene load_steps=3 format=3 uid="uid://bscldb0gb5nty"]
 
-[ext_resource type="PackedScene" uid="uid://dpabj4misf7po" path="res://Models/Fences_Residential_Special.glb" id="1_1cmm5"]
+[ext_resource type="PackedScene" uid="uid://dpabj4misf7po" path="res://Models/House_Residential/Fences_Residential_Special.glb" id="1_1cmm5"]
+[ext_resource type="PackedScene" uid="uid://cttm7w52jiae1" path="res://Scenes/Light_Lantern_Residential.tscn" id="2_jfmy8"]
 
 [node name="Fences_Residential_Special" instance=ExtResource("1_1cmm5")]
 
-[node name="Rails_001" parent="." index="30"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential" parent="Railing_1" index="2" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.998759, 0, 0.0498085, 0, 1, 0, -0.0498085, 0, 0.998759, -6.07898, 1.14656, -6.09444)
 
-[node name="Rails_002" parent="." index="31"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential2" parent="Railing_1" index="3" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.998867, 0, 0.0475946, 0, 1, 0, -0.0475946, 0, 0.998867, -9.30013, 1.14656, -5.8931)
 
-[node name="Rails_003" parent="." index="32"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential3" parent="Railing_2" index="2" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.09257, 1.14656, -6.20476)
 
-[node name="Rails_004" parent="." index="33"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential4" parent="Railing_2" index="3" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.30478, 1.14656, -6.18777)
 
-[node name="Rails_005" parent="." index="34"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential5" parent="Railing_3" index="2" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.999424, 0, -0.0339227, 0, 1, 0, 0.0339227, 0, 0.999424, -6.10101, 1.14656, -6.4191)
 
-[node name="Rails_006" parent="." index="35"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential6" parent="Railing_3" index="3" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.994243, 0, 0.107149, 0, 1, 0, -0.107149, 0, 0.994243, -9.2944, 1.14656, -6.02499)
 
-[node name="Rails_007" parent="." index="36"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential7" parent="Railing_4" index="2" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.998836, 0, 0.0482396, 0, 1, 0, -0.0482396, 0, 0.998836, -6.06704, 1.14656, -5.9438)
 
-[node name="Rails_008" parent="." index="37"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential8" parent="Railing_4" index="3" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.999245, 0, 0.0388587, 0, 1, 0, -0.0388587, 0, 0.999245, -9.32772, 1.14656, -5.79041)
 
-[node name="Rails_009" parent="." index="38"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential9" parent="Railing_5" index="0" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.987128, 0, 0.159933, 0, 1, 0, -0.159933, 0, 0.987128, -6.1013, 1.14656, -4.69632)
 
-[node name="Rails_010" parent="." index="39"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential10" parent="Railing_5" index="1" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.987767, 0, 0.155935, 0, 1, 0, -0.155935, 0, 0.987767, -9.28804, 1.14656, -4.18358)
 
-[node name="Rails_013" parent="." index="40"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential11" parent="Walls_1" index="2" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27747, 1.45999, -14.1943)
 
-[node name="Rails_014" parent="." index="41"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential12" parent="Walls_1" index="3" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.14038, 1.45999, -14.1948)
 
-[node name="Rails_015" parent="." index="42"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential13" parent="Walls_2" index="2" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.996629, 0, -0.0820429, 0, 1, 0, 0.0820429, 0, 0.996629, 3.26577, 1.45999, -13.7495)
 
-[node name="Rails_016" parent="." index="43"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential14" parent="Walls_2" index="3" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.999887, 0, -0.0150093, 0, 1, 0, 0.0150093, 0, 0.999887, -3.12335, 1.45999, -14.1582)
 
-[node name="Rails_017" parent="." index="44"]
-visibility_range_end = 250.0
+[node name="Light_Lantern_Residential15" parent="Walls_3" index="2" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.999479, 0, -0.032283, 0, 1, 0, 0.032283, 0, 0.999479, 3.25416, 1.45999, -13.8182)
+
+[node name="Light_Lantern_Residential16" parent="Walls_3" index="3" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.999846, 0, -0.0175397, 0, 1, 0, 0.0175397, 0, 0.999846, -3.11986, 1.45999, -13.9924)
+
+[node name="Light_Lantern_Residential17" parent="Walls_4" index="2" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.998266, 0, -0.0588708, 0, 1, 0, 0.0588708, 0, 0.998266, 3.26861, 1.45999, -13.6333)
+
+[node name="Light_Lantern_Residential18" parent="Walls_4" index="3" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.998726, 0, -0.0504535, 0, 1, 0, 0.0504535, 0, 0.998726, -3.14474, 1.45999, -13.9473)
+
+[node name="Light_Lantern_Residential19" parent="Walls_5" index="2" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.977545, 0, -0.210728, 0, 1, 0, 0.210728, 0, 0.977545, 3.24913, 1.45999, -11.9109)
+
+[node name="Light_Lantern_Residential20" parent="Walls_5" index="3" instance=ExtResource("2_jfmy8")]
+transform = Transform3D(0.975692, 0, -0.219148, 0, 1, 0, 0.219148, 0, 0.975692, -3.13676, 1.45999, -13.509)

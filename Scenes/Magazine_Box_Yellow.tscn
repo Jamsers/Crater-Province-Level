@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://k47heb8kt6mf"]
+
+[ext_resource type="PackedScene" uid="uid://cij644fe0seae" path="res://Scenes/Magazine_Box.tscn" id="1_l2jwf"]
+[ext_resource type="Material" uid="uid://dyps7ec8ls3hy" path="res://Materials/Generic/Car/Car_Paint_Green.tres" id="2_sd2g0"]
+
+[node name="Magazine_Box_Yellow" instance=ExtResource("1_l2jwf")]
+
+[node name="Box" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_sd2g0")

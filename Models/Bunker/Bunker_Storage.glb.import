@@ -1,0 +1,50 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cpq7ttm8i7x1w"
+path="res://.godot/imported/Bunker_Storage.glb-5fde0152b0564767339fba55b9ddd815.scn"
+
+[deps]
+
+source_file="res://Models/Bunker/Bunker_Storage.glb"
+dest_files=["res://.godot/imported/Bunker_Storage.glb-5fde0152b0564767339fba55b9ddd815.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Concrete": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materials/Generic/Concrete/Concrete_UV_3.75.tres",
+"use_external/path": "uid://duqf5idt3afqk"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://nve0jdtpl5mj"]
+
+[ext_resource type="PackedScene" uid="uid://c2pdhyv6ptfsq" path="res://Models/House_Residential/Shower_Area.glb" id="1_fj72h"]
+
+[node name="Shower_Area" instance=ExtResource("1_fj72h")]
+
+[node name="Door" parent="." index="3"]
+physics_interpolation_mode = 1
+sync_to_physics = false
+
+[node name="Door_Frame" parent="Door" index="0"]
+gi_mode = 2
+
+[node name="Door_Pane" parent="Door" index="1"]
+gi_mode = 2

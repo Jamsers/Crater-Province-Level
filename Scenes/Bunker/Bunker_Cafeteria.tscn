@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://4kdlnxfqfhcj"]
+
+[ext_resource type="PackedScene" uid="uid://bdelkhkiyxt1q" path="res://Models/Bunker/Bunker_Cafeteria.glb" id="1_ldo8o"]
+
+[node name="Bunker_Cafeteria" instance=ExtResource("1_ldo8o")]
+
+[node name="SpotLight3D39" type="SpotLight3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 17.1224, 4.983, 0)
+light_intensity_lumens = 4000.0
+light_temperature = 4500.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D40" type="SpotLight3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -10.338, 4.983, 0)
+light_intensity_lumens = 4000.0
+light_temperature = 4500.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0

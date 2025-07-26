@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2k1kv15sxexk"]
+
+[ext_resource type="PackedScene" uid="uid://buofrj70g3cly" path="res://Models/House_Residential/Table_Kitchen.glb" id="1_ocaed"]
+
+[node name="Table_Kitchen" instance=ExtResource("1_ocaed")]

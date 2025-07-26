@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://by6861kn2n720"]
+
+[ext_resource type="PackedScene" uid="uid://cdukqyu6u4eta" path="res://Models/Building/Entrance_Chair.glb" id="1_r3v3k"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_r3v3k"]
+height = 0.0263672
+radius = 0.255
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_phlg6"]
+height = 0.0205383
+radius = 0.305
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_op137"]
+size = Vector3(0.064, 0.672, 0.064)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g41q8"]
+size = Vector3(0.442261, 0.0947266, 0.45993)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kcs75"]
+size = Vector3(0.0515137, 0.440765, 0.0524902)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y4lw8"]
+size = Vector3(0.457954, 0.23291, 0.0495605)
+
+[node name="Entrance_Chair" instance=ExtResource("1_r3v3k")]
+physics_interpolation_mode = 1
+mass = 25.0
+
+[node name="Base" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.598145, -0.037115)
+shape = SubResource("CylinderShape3D_r3v3k")
+
+[node name="Feet_Rest" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.379236, -0.0379608)
+shape = SubResource("CylinderShape3D_phlg6")
+
+[node name="Stand" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.260559, -0.0378418)
+shape = SubResource("BoxShape3D_op137")
+
+[node name="Seat" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000427246, 0.0834961, -0.0337372)
+shape = SubResource("BoxShape3D_g41q8")
+
+[node name="Back_Rest_Stand" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00109863, 0.256577, 0.190063)
+shape = SubResource("BoxShape3D_kcs75")
+
+[node name="Back_Rest" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00449753, 0.503662, 0.188599)
+shape = SubResource("BoxShape3D_y4lw8")

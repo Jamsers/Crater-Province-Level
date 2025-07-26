@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://canfu8h2odupw"]
+
+[ext_resource type="PackedScene" uid="uid://dmsm2xpjyn6cv" path="res://Models/Building/Bathroom_Stall_Door.glb" id="1_8y0v2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t51qp"]
+size = Vector3(0.768799, 1.50037, 0.026001)
+
+[node name="Bathroom_Stall_Door_Rigidbody" instance=ExtResource("1_8y0v2")]
+physics_interpolation_mode = 1
+mass = 20.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00109863, 0.00115967, 0.000305176)
+shape = SubResource("BoxShape3D_t51qp")

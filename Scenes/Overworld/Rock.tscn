@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://okcxpebn2fbk"]
+
+[ext_resource type="Script" uid="uid://bux13ulijdnbe" path="res://Scripts/Placement_Tools/VegetationPlant.gd" id="1_anw2q"]
+[ext_resource type="PackedScene" uid="uid://gckfelprf6dl" path="res://Models/Overworld/Boulder.glb" id="2_ltwur"]
+
+[node name="Rock" type="Node3D" node_paths=PackedStringArray("mesh")]
+script = ExtResource("1_anw2q")
+mesh = NodePath("Boulder/Boulder")
+
+[node name="Boulder" parent="." instance=ExtResource("2_ltwur")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="Boulder" parent="Boulder" index="0"]
+visibility_range_end = 250.0
+
+[node name="OccluderInstance3D" parent="Boulder" index="1"]
+visible = false
+
+[editable path="Boulder"]

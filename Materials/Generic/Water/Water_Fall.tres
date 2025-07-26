@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cnnkop22m881g"]
+
+[ext_resource type="Shader" uid="uid://h17m0fwl6ihl" path="res://Scripts/WaterShader.gdshader" id="1_ersib"]
+[ext_resource type="Texture2D" uid="uid://bqyhvb4qj0rbe" path="res://Textures/Water/Water_Normal.png" id="2_8ygiv"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ersib")
+shader_parameter/shallow_alpha = 0.55
+shader_parameter/depth_fade_distance = 27.25
+shader_parameter/water_move_dir = Vector2(0.05, 0)
+shader_parameter/albedo = Color(0.258485, 0.55153, 0.602945, 1)
+shader_parameter/proximity_fade_distance = 1.0
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.035
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.97
+shader_parameter/texture_refraction = ExtResource("2_8ygiv")
+shader_parameter/refraction = 0.12
+shader_parameter/refraction_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/texture_normal = ExtResource("2_8ygiv")
+shader_parameter/normal_scale = 0.120001
+shader_parameter/uv1_scale = Vector3(4, 4, 4)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)

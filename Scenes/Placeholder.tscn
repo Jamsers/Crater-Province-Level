@@ -60,6 +60,7 @@ height = 0.101358
 radius = 0.682557
 
 [node name="Placeholder" type="RigidBody3D"]
+physics_interpolation_mode = 1
 mass = 25.0
 
 [node name="Placeholder_Mesh" type="MeshInstance3D" parent="."]

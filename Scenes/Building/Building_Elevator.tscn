@@ -1,5 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://s73tgvyinonm"]
+[gd_scene load_steps=3 format=3 uid="uid://s73tgvyinonm"]
 
 [ext_resource type="PackedScene" uid="uid://b7bn3vrruav6p" path="res://Models/Building/Building_Elevator.glb" id="1_07jfw"]
+[ext_resource type="PackedScene" uid="uid://c5s6j4ex2y4ke" path="res://Scenes/Door_Building_Elevator.tscn" id="2_wertv"]
 
 [node name="Building_Elevator" instance=ExtResource("1_07jfw")]
+physics_interpolation_mode = 1
+sync_to_physics = false
+
+[node name="Door_Building_Elevator" parent="." index="4" instance=ExtResource("2_wertv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.072)

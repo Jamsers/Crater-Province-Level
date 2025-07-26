@@ -13,15 +13,18 @@ dest_files=["res://.godot/imported/Buoy.glb-11344871ffacee468d19a4c0f0134086.scn
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="RigidBody3D"
 nodes/root_name=""
+nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=1
+meshes/light_baking=3
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
@@ -31,15 +34,25 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "materials": {
 "Buoy": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Metal_Buoy.tres"
+"use_external/fallback_path": "res://Materials/Generic/Metal/Metal_Machinery_Red_UV_0.5.tres",
+"use_external/path": "uid://bivwu5y2fs8tv"
 },
 "Light": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Generic/Glass_BuoyLight.tres"
+"use_external/fallback_path": "res://Materials/Generic/Glass/Glass_BuoyLight.tres",
+"use_external/path": "uid://ei15ba4smigh"
+},
+"Metal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materials/Generic/Metal/Metal.tres",
+"use_external/path": "uid://dolj7t2tmt4ty"
 }
 }
 }

@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://db7cd6df3m6ea"]
 
 [ext_resource type="PackedScene" uid="uid://deyakqfin3bcn" path="res://Models/Tree_Pine_Chopped.glb" id="1_5yc0q"]
-[ext_resource type="Script" path="res://Scripts/Placement_Tools/VegetationPlant.gd" id="2_lxqne"]
+[ext_resource type="Script" uid="uid://bux13ulijdnbe" path="res://Scripts/Placement_Tools/VegetationPlant.gd" id="2_lxqne"]
 
 [node name="Tree_Pine_Chopped" instance=ExtResource("1_5yc0q")]
 script = ExtResource("2_lxqne")
 
-[node name="Tree_Pine" parent="." index="0"]
+[node name="Stump" parent="." index="0"]
 visibility_range_end = 225.0

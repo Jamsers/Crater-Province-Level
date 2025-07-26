@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://vw0p4cwvjte8"]
+
+[ext_resource type="PackedScene" uid="uid://cyujpq8a2350" path="res://Models/Mouse.glb" id="1_wht6p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wht6p"]
+size = Vector3(0.0708618, 0.0340576, 0.0935059)
+
+[node name="Mouse" instance=ExtResource("1_wht6p")]
+physics_interpolation_mode = 1
+mass = 0.1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.15527e-05, 0.00201416, -0.000610352)
+shape = SubResource("BoxShape3D_wht6p")

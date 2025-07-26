@@ -1,28 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ce2hkuwdb7nyq"]
+[gd_scene load_steps=3 format=3 uid="uid://ce2hkuwdb7nyq"]
 
-[ext_resource type="PackedScene" uid="uid://bh6kftr5cmcrt" path="res://Scenes/Placeholder.tscn" id="1_1qn6a"]
+[ext_resource type="PackedScene" uid="uid://b28lwx8gq3ujg" path="res://Scenes/Building/Building_Window_Panes.tscn" id="1_fpi8q"]
+[ext_resource type="PackedScene" uid="uid://bh28dt7sobh2i" path="res://Models/Building/Building_Floor.glb" id="2_3ridd"]
 
-[node name="Building_Floor" type="Node3D"]
+[node name="Building_Floor2" type="Node3D"]
 
-[node name="Placeholder" parent="." instance=ExtResource("1_1qn6a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.6057)
+[node name="Building_Window_Panes" parent="." instance=ExtResource("1_fpi8q")]
 
-[node name="Placeholder8" parent="." instance=ExtResource("1_1qn6a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.578, 0, -16.606)
-
-[node name="Placeholder6" parent="." instance=ExtResource("1_1qn6a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.578, 0, -16.606)
-
-[node name="Placeholder5" parent="." instance=ExtResource("1_1qn6a")]
-
-[node name="Placeholder3" parent="." instance=ExtResource("1_1qn6a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16.606)
-
-[node name="Placeholder7" parent="." instance=ExtResource("1_1qn6a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.578, 0, 16.606)
-
-[node name="Placeholder2" parent="." instance=ExtResource("1_1qn6a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.578, 0, 0)
-
-[node name="Placeholder4" parent="." instance=ExtResource("1_1qn6a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.578, 0, 0)
+[node name="Building_Floor" parent="." instance=ExtResource("2_3ridd")]

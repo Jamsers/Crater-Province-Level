@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtt1362yq3y5n"]
+
+[ext_resource type="PackedScene" uid="uid://b5f5u2huiih3h" path="res://Models/House_Residential/Cabinet_TV.glb" id="1_2py4k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2py4k"]
+size = Vector3(1.74048, 0.0723877, 0.502197)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_42v74"]
+size = Vector3(0.0799866, 0.242218, 0.502197)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jeimp"]
+size = Vector3(0.0799866, 0.18885, 0.502197)
+
+[node name="Cabinet_TV" instance=ExtResource("1_2py4k")]
+physics_interpolation_mode = 1
+mass = 20.0
+
+[node name="Top" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000610352, 0.211853, 0.00134277)
+shape = SubResource("BoxShape3D_2py4k")
+
+[node name="Bottom" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000610352, -0.213688, 0.00134277)
+shape = SubResource("BoxShape3D_2py4k")
+
+[node name="Right" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.962906, 0.000164092, 0.00134277)
+shape = SubResource("BoxShape3D_42v74")
+
+[node name="Left" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.963611, 0.000164092, 0.00134277)
+shape = SubResource("BoxShape3D_42v74")
+
+[node name="Top_Left" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 0.908137, 0.156404, 0.00134277)
+shape = SubResource("BoxShape3D_jeimp")
+
+[node name="Bottom_Left" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 0.907534, -0.157252, 0.00134277)
+shape = SubResource("BoxShape3D_jeimp")
+
+[node name="Top_Right" type="CollisionShape3D" parent="." index="7"]
+transform = Transform3D(-0.707107, -0.707107, 0, 0.707107, -0.707107, 0, 0, 0, 1, -0.907491, 0.155789, 0.00134277)
+shape = SubResource("BoxShape3D_jeimp")
+
+[node name="Bottom_Right" type="CollisionShape3D" parent="." index="8"]
+transform = Transform3D(-0.707107, 0.707107, 0, -0.707107, -0.707107, 0, 0, 0, 1, -0.907798, -0.155826, 0.00134277)
+shape = SubResource("BoxShape3D_jeimp")

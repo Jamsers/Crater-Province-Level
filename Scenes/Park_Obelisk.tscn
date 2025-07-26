@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c21fekdggeitd"]
+
+[ext_resource type="PackedScene" uid="uid://l7br3jsnndon" path="res://Models/Park_Obelisk.glb" id="1_tnp1b"]
+
+[node name="Park_Obelisk" instance=ExtResource("1_tnp1b")]

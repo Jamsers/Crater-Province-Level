@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvm5ywd24cxir"]
-
-[ext_resource type="PackedScene" uid="uid://c7ltvap7qdrpr" path="res://Models/Railing_Post.glb" id="1_1cdsv"]
-
-[node name="Railing_Post2" instance=ExtResource("1_1cdsv")]
-
-[node name="Railing_Post" parent="." index="0"]
-visibility_range_end = 200.0

@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2dpypaljbyc6"]
+
+[ext_resource type="PackedScene" uid="uid://dybqafpuif4qq" path="res://Models/Building/Bathroom_Stall.glb" id="1_pxo4k"]
+[ext_resource type="PackedScene" uid="uid://di44hleqv77k6" path="res://Scenes/House_Residential/Toilet.tscn" id="2_l55fu"]
+[ext_resource type="PackedScene" uid="uid://3wtk3pqkibf0" path="res://Scenes/Toilet_Paper.tscn" id="3_esi7v"]
+[ext_resource type="PackedScene" uid="uid://c7g2qvygm5e7k" path="res://Scenes/Building/Bathroom_Stall_Door.tscn" id="4_84y1e"]
+
+[node name="Bathroom_Stall" instance=ExtResource("1_pxo4k")]
+
+[node name="Toilet2" parent="." index="2" instance=ExtResource("2_l55fu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.359)
+
+[node name="Toilet_Paper" parent="." index="3" instance=ExtResource("3_esi7v")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.727105, 0.632565, 0.134811)
+
+[node name="Bathroom_Stall_Door" parent="." index="4" node_paths=PackedStringArray("parent") instance=ExtResource("4_84y1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.737)
+parent = NodePath("..")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk0cvlufpcgnt"]
+
+[ext_resource type="PackedScene" uid="uid://d4bv3ygyw2tgl" path="res://Models/Pillow.glb" id="1_aotos"]
+
+[node name="Pillow" instance=ExtResource("1_aotos")]
+physics_interpolation_mode = 1

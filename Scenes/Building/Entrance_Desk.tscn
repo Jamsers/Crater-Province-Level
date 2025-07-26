@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8l8s7lfgcbh5"]
+
+[ext_resource type="PackedScene" uid="uid://8bakrr8sm1qh" path="res://Models/Building/Entrance_Desk.glb" id="1_us4qj"]
+
+[node name="Entrance_Desk" instance=ExtResource("1_us4qj")]

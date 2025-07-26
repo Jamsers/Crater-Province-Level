@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyt3jorfp2vmc"]
+
+[ext_resource type="PackedScene" uid="uid://bu4e7fxuoycu0" path="res://Models/House_Residential/Table_Dinner.glb" id="1_h3ycx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h3ycx"]
+size = Vector3(1, 0.0998535, 1.99762)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_suasv"]
+size = Vector3(0.0786133, 0.688995, 0.0752563)
+
+[node name="Table_Dinner" instance=ExtResource("1_h3ycx")]
+physics_interpolation_mode = 1
+mass = 40.0
+
+[node name="Top" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0211182, -0.00259399)
+shape = SubResource("BoxShape3D_h3ycx")
+
+[node name="Leg_1" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.460693, -0.284958, 0.96225)
+shape = SubResource("BoxShape3D_suasv")
+
+[node name="Leg_2" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.463659, -0.284958, 0.96225)
+shape = SubResource("BoxShape3D_suasv")
+
+[node name="Leg_3" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.460693, -0.284958, -0.962553)
+shape = SubResource("BoxShape3D_suasv")
+
+[node name="Leg_4" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.463659, -0.284958, -0.962553)
+shape = SubResource("BoxShape3D_suasv")

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2ew2slnxgmxx"]
+
+[ext_resource type="PackedScene" uid="uid://dvrn2c2cs8pwp" path="res://Models/House_Residential/Mirror_Fullbody.glb" id="1_21eoc"]
+
+[node name="Mirror_Fullbody" instance=ExtResource("1_21eoc")]

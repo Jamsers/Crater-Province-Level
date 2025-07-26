@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c32d67bh2upq5"]
+
+[ext_resource type="PackedScene" uid="uid://6o3xh2bkp8ju" path="res://Models/Bunker/Bunker_Power_Transformer.glb" id="1_gf6vi"]
+
+[node name="Bunker_Power_Transformer" instance=ExtResource("1_gf6vi")]

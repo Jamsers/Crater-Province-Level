@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://toioj4fx6li4"]
+
+[ext_resource type="PackedScene" uid="uid://gtbbqa5lk1vt" path="res://Models/Bucket.glb" id="1_kyrtd"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kyrtd"]
+height = 0.0102234
+radius = 0.138672
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bfxpc"]
+size = Vector3(0.011, 0.339, 0.135)
+
+[node name="Bucket" instance=ExtResource("1_kyrtd")]
+physics_interpolation_mode = 1
+
+[node name="Floor" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.148392, 0)
+shape = SubResource("CylinderShape3D_kyrtd")
+
+[node name="Walls2" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(0.996905, -0.0786157, 0, 0.0786157, 0.996905, 0, 0, 0, 1, -0.146637, 0.017936, 0)
+shape = SubResource("BoxShape3D_bfxpc")
+
+[node name="Walls3" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(-4.35766e-08, 3.42956e-09, 1, 0.0784591, 0.996917, 0, -0.996917, 0.0784591, -4.37114e-08, 0, 0.018, 0.147)
+shape = SubResource("BoxShape3D_bfxpc")
+
+[node name="Walls4" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(0.704927, -0.055479, 0.707107, 0.0784591, 0.996917, 0, -0.704927, 0.055479, 0.707107, -0.101904, 0.017788, 0.103904)
+shape = SubResource("BoxShape3D_bfxpc")
+
+[node name="Walls5" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(-0.704918, 0.0555897, 0.707107, 0.0786157, 0.996905, 0, -0.704918, 0.0555897, -0.707107, 0.103688, 0.017936, 0.103688)
+shape = SubResource("BoxShape3D_bfxpc")
+
+[node name="Walls6" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(-0.704927, 0.0554789, -0.707107, 0.0784591, 0.996917, 0, 0.704927, -0.055479, -0.707107, 0.103945, 0.018, -0.103945)
+shape = SubResource("BoxShape3D_bfxpc")
+
+[node name="Walls7" type="CollisionShape3D" parent="." index="7"]
+transform = Transform3D(-0.996917, 0.0784591, 0, 0.0784591, 0.996917, 0, 0, 0, -1, 0.145529, 0.017788, -0.00141421)
+shape = SubResource("BoxShape3D_bfxpc")
+
+[node name="Walls8" type="CollisionShape3D" parent="." index="8"]
+transform = Transform3D(-4.35761e-08, 3.4364e-09, -1, 0.0786157, 0.996905, 0, 0.996905, -0.0786157, -4.37114e-08, 6.40969e-09, 0.017936, -0.146637)
+shape = SubResource("BoxShape3D_bfxpc")
+
+[node name="Walls9" type="CollisionShape3D" parent="." index="9"]
+transform = Transform3D(0.704927, -0.0554789, -0.707107, 0.0784591, 0.996917, 0, 0.704927, -0.055479, 0.707107, -0.103904, 0.017788, -0.101904)
+shape = SubResource("BoxShape3D_bfxpc")

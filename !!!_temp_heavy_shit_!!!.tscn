@@ -1,0 +1,26 @@
+[gd_scene load_steps=8 format=3 uid="uid://c7u5481kqsy2i"]
+
+[ext_resource type="PackedScene" uid="uid://cteiwserfsosb" path="res://Scenes/Overworld/Boulders.tscn" id="1_pydmt"]
+[ext_resource type="PackedScene" uid="uid://cnxrel57kprjr" path="res://Scenes/Overworld/Fences.tscn" id="2_gremv"]
+[ext_resource type="PackedScene" uid="uid://hut6ojunfxk" path="res://Scenes/Overworld/Forest.tscn" id="3_dymfs"]
+[ext_resource type="PackedScene" uid="uid://dmahd4262m75i" path="res://Scenes/Overworld/Grass.tscn" id="4_6t832"]
+[ext_resource type="PackedScene" uid="uid://cjvhwknvgwhoc" path="res://Scenes/Overworld/Doodads.tscn" id="5_ovtaa"]
+[ext_resource type="PackedScene" uid="uid://ctrxt4ypclwac" path="res://Scenes/Overworld/Doodads_Water.tscn" id="6_cynbw"]
+[ext_resource type="PackedScene" uid="uid://bpcm6yyd8vnjh" path="res://Scenes/Overworld/Clouds.tscn" id="7_7cquu"]
+
+[node name="!!!_temp_heavy_shit_!!!" type="Node3D"]
+
+[node name="Boulders" parent="." instance=ExtResource("1_pydmt")]
+
+[node name="Fences" parent="." instance=ExtResource("2_gremv")]
+
+[node name="Forest" parent="." instance=ExtResource("3_dymfs")]
+
+[node name="Grass" parent="." instance=ExtResource("4_6t832")]
+
+[node name="Doodads" parent="." instance=ExtResource("5_ovtaa")]
+
+[node name="Doodads_Water" parent="." instance=ExtResource("6_cynbw")]
+
+[node name="Clouds" parent="." instance=ExtResource("7_7cquu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2000, 0)

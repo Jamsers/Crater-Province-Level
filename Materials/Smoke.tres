@@ -1,0 +1,29 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://dbla0t272tqt5"]
+
+[ext_resource type="Texture2D" uid="uid://wy4oxg53ufw4" path="res://Textures/Smoke/Explosion_Smoke_Albedo.png" id="1_e8kh4"]
+[ext_resource type="Texture2D" uid="uid://5efb2s622sn8" path="res://Textures/Smoke/Explosion_Smoke_Metal_Rough_Occ.png" id="2_c5bog"]
+[ext_resource type="Texture2D" uid="uid://c68g6i1e5312y" path="res://Textures/Smoke/Explosion_Smoke_Normal.png" id="3_w2jml"]
+
+[resource]
+render_priority = 1
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 0.160784)
+albedo_texture = ExtResource("1_e8kh4")
+metallic = 1.0
+metallic_texture = ExtResource("2_c5bog")
+roughness_texture = ExtResource("2_c5bog")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_scale = 0.1
+normal_texture = ExtResource("3_w2jml")
+backlight_enabled = true
+backlight = Color(0.787759, 0.787759, 0.787759, 1)
+texture_filter = 5
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+proximity_fade_enabled = true
+proximity_fade_distance = 4.0

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmopvxomm1452"]
+
+[ext_resource type="PackedScene" uid="uid://dvp585y8fubng" path="res://Models/Cave/Rock_Stalagtite.glb" id="1_bhlyh"]
+[ext_resource type="Script" uid="uid://cycaiw4btweqy" path="res://Scripts/Placement_Tools/StalagtitePlant.gd" id="2_oxa01"]
+
+[node name="Rock_Stalagtite" instance=ExtResource("1_bhlyh")]
+script = ExtResource("2_oxa01")
+
+[node name="Rock" parent="." index="0"]
+transform = Transform3D(6.01, 0, 0, 0, 2.21, 0, 0, 0, 6.01, 0, 0, 0)

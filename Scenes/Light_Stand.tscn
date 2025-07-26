@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=3 uid="uid://iwfodbi32it3"]
+
+[ext_resource type="PackedScene" uid="uid://cadhps3tkxfol" path="res://Models/Light_Stand.glb" id="1_vgtyj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_od5mb"]
+size = Vector3(0.042, 1.441, 0.042)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jmv4j"]
+size = Vector3(0.042, 0.759, 0.042)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vgtyj"]
+size = Vector3(0.655, 0.02, 0.045)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6bh7b"]
+size = Vector3(0.0045166, 0.125793, 0.0140381)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8s5gg"]
+size = Vector3(0.0043335, 0.114395, 0.0139008)
+
+[node name="Light_Stand" instance=ExtResource("1_vgtyj")]
+physics_interpolation_mode = 1
+mass = 15.0
+
+[node name="Stand_Arms" parent="." index="1"]
+layers = 4
+
+[node name="Light_Left" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.995055, 0.0993197, 0, -0.0993197, 0.995055, 0.238951, 1.32176, -0.014847)
+
+[node name="Light_Left" parent="Light_Left" index="0"]
+layers = 4
+
+[node name="Collider_Stand" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.40802, 0)
+shape = SubResource("BoxShape3D_od5mb")
+
+[node name="Collider_Feet1" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, -0.29404, -0.955793, 0, 0.955793, -0.29404, 0, -0.426119, 0.355688)
+shape = SubResource("BoxShape3D_jmv4j")
+
+[node name="Collider_Feet2" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(-0.5, 0.827741, -0.254646, -2.57058e-08, -0.29404, -0.955793, -0.866026, -0.477896, 0.14702, 0.305786, -0.426119, -0.176275)
+shape = SubResource("BoxShape3D_jmv4j")
+
+[node name="Collider_Feet3" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(-0.5, -0.827741, 0.254646, 2.57058e-08, -0.29404, -0.955793, 0.866026, -0.477896, 0.14702, -0.306, -0.426, -0.176)
+shape = SubResource("BoxShape3D_jmv4j")
+
+[node name="Collider_Arms" type="CollisionShape3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12963, 0)
+shape = SubResource("BoxShape3D_vgtyj")
+
+[node name="Collider_Light_Arm1" type="CollisionShape3D" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.344421, 1.29343, -0.0147095)
+shape = SubResource("BoxShape3D_6bh7b")
+
+[node name="Collider_Light_Arm2" type="CollisionShape3D" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.133728, 1.29343, -0.0147095)
+shape = SubResource("BoxShape3D_6bh7b")
+
+[node name="Collider_Light_Arm3" type="CollisionShape3D" parent="." index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133611, 1.29343, -0.0147095)
+shape = SubResource("BoxShape3D_6bh7b")
+
+[node name="Collider_Light_Arm4" type="CollisionShape3D" parent="." index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.344304, 1.29343, -0.0147095)
+shape = SubResource("BoxShape3D_6bh7b")
+
+[node name="Collider_Light_SideArm1" type="CollisionShape3D" parent="." index="12"]
+transform = Transform3D(0.835827, -0.548994, 0, 0.548994, 0.835827, 0, 0, 0, 1, -0.313848, 1.18413, -0.0147171)
+shape = SubResource("BoxShape3D_8s5gg")
+
+[node name="Collider_Light_SideArm2" type="CollisionShape3D" parent="." index="13"]
+transform = Transform3D(0.835807, 0.549023, 0, -0.549023, 0.835807, 0, 0, 0, 1, -0.164186, 1.18413, -0.0147171)
+shape = SubResource("BoxShape3D_8s5gg")
+
+[node name="Collider_Light_SideArm3" type="CollisionShape3D" parent="." index="14"]
+transform = Transform3D(0.835827, -0.548994, 0, 0.548994, 0.835827, 0, 0, 0, 1, 0.163966, 1.18413, -0.0147171)
+shape = SubResource("BoxShape3D_8s5gg")
+
+[node name="Collider_Light_SideArm4" type="CollisionShape3D" parent="." index="15"]
+transform = Transform3D(0.835807, 0.549023, 0, -0.549023, 0.835807, 0, 0, 0, 1, 0.313628, 1.18413, -0.0147171)
+shape = SubResource("BoxShape3D_8s5gg")
+
+[node name="Light_Right" parent="." index="16"]
+transform = Transform3D(1, 0, 0, 0, 0.995055, 0.0993197, 0, -0.0993197, 0.995055, -0.238943, 1.32176, -0.014847)
+
+[node name="Light_Right" parent="Light_Right" index="0"]
+layers = 4
+
+[node name="Stand Light" type="SpotLight3D" parent="Light_Right" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.238943, 0.0435992, 0.0417449)
+light_intensity_lumens = 8000.0
+light_temperature = 5000.0
+shadow_enabled = true
+shadow_caster_mask = 4294967291
+distance_fade_enabled = true
+distance_fade_begin = 300.0
+spot_range = 25.0
+spot_attenuation = 2.0
+spot_angle = 55.0
+spot_angle_attenuation = 5.0

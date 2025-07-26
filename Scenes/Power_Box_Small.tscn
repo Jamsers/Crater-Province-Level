@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu3kl21fuks7u"]
+
+[ext_resource type="PackedScene" uid="uid://p1axhc5gfdau" path="res://Models/Power_Box_Small.glb" id="1_2sj1w"]
+
+[node name="Power_Box_Small" instance=ExtResource("1_2sj1w")]

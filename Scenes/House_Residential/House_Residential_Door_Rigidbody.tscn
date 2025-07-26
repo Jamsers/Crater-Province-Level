@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://drxxg4o5pavrt"]
+
+[ext_resource type="PackedScene" uid="uid://cg8ciqm2ahuys" path="res://Models/House_Residential/House_Residential_Door.glb" id="1_h8hpr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8hpr"]
+size = Vector3(1.965, 2.605, 0.125)
+
+[node name="House_Residential_Door_Rigidbody" instance=ExtResource("1_h8hpr")]
+physics_interpolation_mode = 1
+mass = 25.0
+
+[node name="Door_Collider" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("BoxShape3D_h8hpr")

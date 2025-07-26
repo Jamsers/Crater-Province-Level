@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnnlogl5arbxx"]
+
+[ext_resource type="PackedScene" uid="uid://by8reunvvn4qf" path="res://Models/Building/TV_Big.glb" id="1_77rr7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_77rr7"]
+size = Vector3(0.62146, 0.0238037, 0.25647)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ogpfa"]
+size = Vector3(0.0921326, 0.0686951, 0.0557556)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3gvrj"]
+size = Vector3(1.91567, 1.09906, 0.021637)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ae68k"]
+size = Vector3(0.717438, 0.445648, 0.0745125)
+
+[node name="TV_Big" instance=ExtResource("1_77rr7")]
+physics_interpolation_mode = 1
+mass = 45.0
+
+[node name="Stand_Base" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.10352e-05, -0.481648, -0.00457764)
+shape = SubResource("BoxShape3D_77rr7")
+
+[node name="Stand_Arm" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000595093, -0.444218, 0.0253754)
+shape = SubResource("BoxShape3D_ogpfa")
+
+[node name="Panel" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.51181e-05, 0.131284, -0.0132904)
+shape = SubResource("BoxShape3D_3gvrj")
+
+[node name="Hump" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000259399, -0.195422, 0.0198879)
+shape = SubResource("BoxShape3D_ae68k")

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjr853inuycdo"]
+
+[ext_resource type="PackedScene" uid="uid://cf1cb8o2xreiy" path="res://Models/Faucet.glb" id="1_wphgb"]
+
+[node name="Faucet" instance=ExtResource("1_wphgb")]

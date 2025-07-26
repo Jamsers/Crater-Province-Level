@@ -12,23 +12,71 @@ class_name LightingChanger
 	set(value):
 		military_time_mins = int(value)
 		run_apply_lighting_exec()
+@export var force_max_exposure: bool = false : set = force_max_exposure_exec
+@export var force_halfway_exposure: bool = false : set = force_halfway_exposure_exec
 
-@export_category("Dump Lighting")
-@export var dump_lighting: bool = false : set = dump_lighting_exec
+@export_tool_button("Dump Lighting")
+var dump_lighting = dump_lighting_exec
 
 @export_category("Lighting to apply")
 @export var lighting: Array[Lighting]
+@export var max_exposure_lighting: Lighting
+@export var halfway_exposure_lighting: Lighting
+
+@export_category("Fog to apply")
+@export var normal_fog: FogMaterial
+@export var underwater_fog: FogMaterial
 
 @export_category("References")
 @export var environment: WorldEnvironment
+@export var global_fog_volume: FogVolume
 @export var sun: DirectionalLight3D
+@export var camera_tracker: Area3D
+@export var godot_human_for_scale_camera: Camera3D
+
+const MAX_EXPOSURE_TRANSITION_SPEED = 0.75
+const MIN_EXPOSURE_TRANSITION_SPEED = 0.01
+const EXPOSURE_CURVE_GOING_DOWN = 0.05
+const EXPOSURE_CURVE_GOING_UP = 0.5
+
+static var self_reference: LightingChanger
+
+var player_is_in_max_exposure_area = false
+var player_is_in_halfway_exposure_area = false
+var player_is_in_water_fog_area = false
+
+func _ready():
+	self_reference = self
+
+func _process(delta):
+	if !Engine.is_editor_hint():
+		camera_tracker.global_position = get_viewport().get_camera_3d().global_position
+
+func force_max_exposure_exec(is_in):
+	set_player_is_in_max_exposure_area(is_in)
+	force_max_exposure = is_in
+	run_apply_lighting_exec()
+	
+func force_halfway_exposure_exec(is_in):
+	set_player_is_in_halfway_exposure_area(is_in)
+	force_halfway_exposure = is_in
+	run_apply_lighting_exec()
+
+func set_player_is_in_max_exposure_area(is_in):
+	player_is_in_max_exposure_area = is_in
+	
+func set_player_is_in_halfway_exposure_area(is_in):
+	player_is_in_halfway_exposure_area = is_in
+
+func set_player_is_in_water_fog_area(is_in):
+	player_is_in_water_fog_area = is_in
 
 func run_apply_lighting_exec():
 	if !Engine.is_editor_hint():
 		return
-	apply_lighting(military_time_hour, military_time_mins)
+	apply_lighting(military_time_hour, military_time_mins, 1.79769e308)
 
-func apply_lighting(time_hour, time_mins):
+func apply_lighting(time_hour, time_mins, delta):
 	var top_lerp
 	var bottom_lerp
 	var prev_lighting_scenario = lighting[lighting.size()-1]
@@ -66,19 +114,74 @@ func apply_lighting(time_hour, time_mins):
 	environment.environment.sky.sky_material.sky_top_color = lerp(bottom_lerp.sky_top_color, top_lerp.sky_top_color, lerp_hour)
 	environment.environment.sky.sky_material.sky_horizon_color = lerp(bottom_lerp.sky_horizon_color, top_lerp.sky_horizon_color, lerp_hour)
 	environment.environment.sky.sky_material.ground_horizon_color = lerp(bottom_lerp.sky_horizon_color, top_lerp.sky_horizon_color, lerp_hour)
-	 
-	environment.camera_attributes.exposure_sensitivity = lerp(bottom_lerp.exposure_sensitivity, top_lerp.exposure_sensitivity, lerp_hour)
 	
-	environment.camera_attributes.auto_exposure_scale = lerp(bottom_lerp.auto_exposure_scale, top_lerp.auto_exposure_scale, lerp_hour)
-	environment.camera_attributes.auto_exposure_min_sensitivity = lerp(bottom_lerp.auto_exposure_min_sensitivity, top_lerp.auto_exposure_min_sensitivity, lerp_hour)
-	environment.camera_attributes.auto_exposure_max_sensitivity = lerp(bottom_lerp.auto_exposure_max_sensitivity, top_lerp.auto_exposure_max_sensitivity, lerp_hour)
+	var true_target_exposure_sensitivity = lerp(bottom_lerp.exposure_sensitivity, top_lerp.exposure_sensitivity, lerp_hour)
+	var true_target_auto_exposure_scale = lerp(bottom_lerp.auto_exposure_scale, top_lerp.auto_exposure_scale, lerp_hour)
+	var true_target_auto_exposure_min_sensitivity = lerp(bottom_lerp.auto_exposure_min_sensitivity, top_lerp.auto_exposure_min_sensitivity, lerp_hour)
+	var true_target_auto_exposure_max_sensitivity = lerp(bottom_lerp.auto_exposure_max_sensitivity, top_lerp.auto_exposure_max_sensitivity, lerp_hour)
+	
+	var target_exposure_sensitivity
+	var target_auto_exposure_scale
+	var target_auto_exposure_min_sensitivity
+	var target_auto_exposure_max_sensitivity
+	
+	if (player_is_in_halfway_exposure_area or (player_is_in_halfway_exposure_area and player_is_in_max_exposure_area)) and (true_target_exposure_sensitivity < halfway_exposure_lighting.exposure_sensitivity):
+		target_exposure_sensitivity = halfway_exposure_lighting.exposure_sensitivity
+		target_auto_exposure_scale = halfway_exposure_lighting.auto_exposure_scale
+		target_auto_exposure_min_sensitivity = halfway_exposure_lighting.auto_exposure_min_sensitivity
+		target_auto_exposure_max_sensitivity = halfway_exposure_lighting.auto_exposure_max_sensitivity
+	elif player_is_in_max_exposure_area and (true_target_exposure_sensitivity < max_exposure_lighting.exposure_sensitivity):
+		target_exposure_sensitivity = max_exposure_lighting.exposure_sensitivity
+		target_auto_exposure_scale = max_exposure_lighting.auto_exposure_scale
+		target_auto_exposure_min_sensitivity = max_exposure_lighting.auto_exposure_min_sensitivity
+		target_auto_exposure_max_sensitivity = max_exposure_lighting.auto_exposure_max_sensitivity
+	else:
+		target_exposure_sensitivity = true_target_exposure_sensitivity
+		target_auto_exposure_scale = true_target_auto_exposure_scale
+		target_auto_exposure_min_sensitivity = true_target_auto_exposure_min_sensitivity
+		target_auto_exposure_max_sensitivity = true_target_auto_exposure_max_sensitivity
+	
+	var exposure_sensitivity_transition_speed
+	var auto_exposure_scale_transition_speed
+	var auto_exposure_min_sensitivity_transition_speed
+	var auto_exposure_max_sensitivity_transition_speed
+	
+	if target_exposure_sensitivity < environment.camera_attributes.exposure_sensitivity:
+		exposure_sensitivity_transition_speed = lerp(MIN_EXPOSURE_TRANSITION_SPEED, MAX_EXPOSURE_TRANSITION_SPEED, ease(abs(environment.camera_attributes.exposure_sensitivity - target_exposure_sensitivity)/749875.0, EXPOSURE_CURVE_GOING_DOWN))
+	else:
+		exposure_sensitivity_transition_speed = lerp(MIN_EXPOSURE_TRANSITION_SPEED, MAX_EXPOSURE_TRANSITION_SPEED, ease(abs(environment.camera_attributes.exposure_sensitivity - target_exposure_sensitivity)/749875.0, EXPOSURE_CURVE_GOING_UP))
+	
+	if target_auto_exposure_scale < environment.camera_attributes.auto_exposure_scale:
+		auto_exposure_scale_transition_speed = lerp(MIN_EXPOSURE_TRANSITION_SPEED, MAX_EXPOSURE_TRANSITION_SPEED, ease(abs(environment.camera_attributes.auto_exposure_scale - target_auto_exposure_scale)/0.12, EXPOSURE_CURVE_GOING_DOWN))
+	else:
+		auto_exposure_scale_transition_speed = lerp(MIN_EXPOSURE_TRANSITION_SPEED, MAX_EXPOSURE_TRANSITION_SPEED, ease(abs(environment.camera_attributes.auto_exposure_scale - target_auto_exposure_scale)/0.12, EXPOSURE_CURVE_GOING_UP))
+	
+	if target_auto_exposure_min_sensitivity < environment.camera_attributes.auto_exposure_min_sensitivity:
+		auto_exposure_min_sensitivity_transition_speed = lerp(MIN_EXPOSURE_TRANSITION_SPEED, MAX_EXPOSURE_TRANSITION_SPEED, ease(abs(environment.camera_attributes.auto_exposure_min_sensitivity - target_auto_exposure_min_sensitivity)/1499950.0, EXPOSURE_CURVE_GOING_DOWN))
+	else:
+		auto_exposure_min_sensitivity_transition_speed = lerp(MIN_EXPOSURE_TRANSITION_SPEED, MAX_EXPOSURE_TRANSITION_SPEED, ease(abs(environment.camera_attributes.auto_exposure_min_sensitivity - target_auto_exposure_min_sensitivity)/1499950.0, EXPOSURE_CURVE_GOING_UP))
+	
+	if target_auto_exposure_max_sensitivity < environment.camera_attributes.auto_exposure_max_sensitivity:
+		auto_exposure_max_sensitivity_transition_speed = lerp(MIN_EXPOSURE_TRANSITION_SPEED, MAX_EXPOSURE_TRANSITION_SPEED, ease(abs(environment.camera_attributes.auto_exposure_max_sensitivity - target_auto_exposure_max_sensitivity)/4999650.0, EXPOSURE_CURVE_GOING_DOWN))
+	else:
+		auto_exposure_max_sensitivity_transition_speed = lerp(MIN_EXPOSURE_TRANSITION_SPEED, MAX_EXPOSURE_TRANSITION_SPEED, ease(abs(environment.camera_attributes.auto_exposure_max_sensitivity - target_auto_exposure_max_sensitivity)/4999650.0, EXPOSURE_CURVE_GOING_UP))
+	
+	environment.camera_attributes.exposure_sensitivity = move_toward(environment.camera_attributes.exposure_sensitivity, target_exposure_sensitivity, (749875.0 * exposure_sensitivity_transition_speed) * delta)
+	environment.camera_attributes.auto_exposure_scale = move_toward(environment.camera_attributes.auto_exposure_scale, target_auto_exposure_scale, (0.12 * auto_exposure_scale_transition_speed) * delta)
+	environment.camera_attributes.auto_exposure_min_sensitivity = move_toward(environment.camera_attributes.auto_exposure_min_sensitivity, target_auto_exposure_min_sensitivity, (1499950.0 * auto_exposure_min_sensitivity_transition_speed) * delta)
+	environment.camera_attributes.auto_exposure_max_sensitivity = move_toward(environment.camera_attributes.auto_exposure_max_sensitivity, target_auto_exposure_max_sensitivity, (4999650.0 * auto_exposure_max_sensitivity_transition_speed) * delta)
+	
+	if player_is_in_water_fog_area:
+		global_fog_volume.material = underwater_fog
+	else:
+		global_fog_volume.material = normal_fog
 	
 	if Engine.is_editor_hint():
 		environment.environment.sdfgi_enabled = false
 		await get_tree().create_timer(0.1).timeout
 		environment.environment.sdfgi_enabled = true
 
-func dump_lighting_exec(dummy: bool) -> void:
+func dump_lighting_exec():
 	current_lighting_dump()
 
 func current_lighting_dump():

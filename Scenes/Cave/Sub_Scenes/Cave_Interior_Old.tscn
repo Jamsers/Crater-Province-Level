@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm0w81lpda80d"]
+
+[ext_resource type="PackedScene" uid="uid://dqtbc7hnnpxnu" path="res://Models/Cave/Cave_Old.glb" id="1_tighy"]
+
+[node name="Cave_Old" instance=ExtResource("1_tighy")]
+
+[node name="stalagtites" type="Node3D" parent="." index="7"]
+
+[node name="entrance" type="Node3D" parent="stalagtites" index="0"]
+
+[node name="top" type="Node3D" parent="stalagtites/entrance" index="0"]
+
+[node name="bottom" type="Node3D" parent="stalagtites/entrance" index="1"]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dswmlsxabi3hg"]
+
+[ext_resource type="PackedScene" uid="uid://bxelfm15wh676" path="res://Models/Bunker/Bunker_Interior_Entrance_Desks.glb" id="1_st42n"]
+
+[node name="Bunker_Interior_Entrance_Desks" instance=ExtResource("1_st42n")]

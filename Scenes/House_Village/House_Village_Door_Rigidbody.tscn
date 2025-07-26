@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://vii7208w4oun"]
+
+[ext_resource type="PackedScene" uid="uid://c4c468lruhkt" path="res://Models/House_Village/House_Village_Door.glb" id="1_c1dxv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c1dxv"]
+size = Vector3(1.24109, 2.24994, 0.0817871)
+
+[node name="House_Village_Door_Rigidbody" instance=ExtResource("1_c1dxv")]
+physics_interpolation_mode = 1
+mass = 10.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="3"]
+shape = SubResource("BoxShape3D_c1dxv")

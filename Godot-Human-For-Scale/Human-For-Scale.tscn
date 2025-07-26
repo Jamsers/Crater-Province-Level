@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5i411e430syd"]
+[gd_scene load_steps=9 format=3 uid="uid://b5i411e430syd"]
 
-[ext_resource type="Script" path="res://Godot-Human-For-Scale/Assets/HumanController.gd" id="1_jh7dy"]
+[ext_resource type="Script" uid="uid://g331mlt8i8n2" path="res://Godot-Human-For-Scale/Assets/HumanController.gd" id="1_jh7dy"]
 [ext_resource type="PackedScene" uid="uid://73ou0sg30v8f" path="res://Godot-Human-For-Scale/Assets/HumanModel.tscn" id="2_ajgv1"]
 [ext_resource type="AudioStream" uid="uid://dsfef5dgmtub1" path="res://Godot-Human-For-Scale/Assets/Audio/Footstep1.wav" id="3_4ysf2"]
 
@@ -10,9 +10,18 @@ height = 1.778
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_xemv2"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3yvbh"]
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_lb5uc"]
+radius = 0.125
+height = 0.25
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6jlvi"]
 
 [node name="Human-For-Scale" type="CharacterBody3D"]
+physics_interpolation_mode = 2
 safe_margin = 0.01
 script = ExtResource("1_jh7dy")
 
@@ -45,6 +54,14 @@ far = 20000.0
 [node name="RayCast3D" type="RayCast3D" parent="CameraPivot/SpringArm/Camera"]
 target_position = Vector3(0, 0, -1)
 hit_back_faces = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CameraPivot/SpringArm/Camera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.425, -0.19, -0.6)
+visible = false
+material_override = SubResource("StandardMaterial3D_3yvbh")
+cast_shadow = 0
+gi_mode = 2
+mesh = SubResource("SphereMesh_lb5uc")
 
 [node name="PhysicsGun" type="Node3D" parent="CameraPivot/SpringArm"]
 

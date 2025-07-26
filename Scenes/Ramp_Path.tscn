@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://e60kpymrvmy3" path="res://Models/Ramp_Path.glb" id="1_s8llv"]
 
-[node name="Ramp_Path2" instance=ExtResource("1_s8llv")]
+[node name="Ramp_Path" instance=ExtResource("1_s8llv")]
 
-[node name="Ramp_Path" parent="." index="0"]
+[node name="Ramp" parent="." index="0"]
 visibility_range_end = 300.0

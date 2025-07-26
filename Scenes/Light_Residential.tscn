@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfkxsn8nj153u"]
+
+[ext_resource type="PackedScene" uid="uid://bhcgxd17or0hb" path="res://Models/Light_Residential.glb" id="1_5n7nd"]
+
+[node name="Light_Residential" instance=ExtResource("1_5n7nd")]
+
+[node name="Light" parent="." index="0"]
+layers = 2
+gi_mode = 2
+
+[node name="Residential_Light" type="SpotLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.490522, 1.57589e-08)
+light_intensity_lumens = 3500.0
+light_temperature = 3500.0
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+distance_fade_enabled = true
+distance_fade_begin = 300.0
+spot_range = 15.0
+spot_attenuation = 2.0
+spot_angle = 80.0
+spot_angle_attenuation = 4.0

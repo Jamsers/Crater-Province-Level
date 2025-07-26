@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://co24xvxale5b4"]
+
+[ext_resource type="PackedScene" uid="uid://b2qhcpr5wqe6j" path="res://Models/Microwave.glb" id="1_ioxth"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ioxth"]
+size = Vector3(0.604431, 0.348938, 0.449463)
+
+[node name="Microwave" instance=ExtResource("1_ioxth")]
+physics_interpolation_mode = 1
+mass = 20.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000579834, 0.000274599, -0.000610352)
+shape = SubResource("BoxShape3D_ioxth")

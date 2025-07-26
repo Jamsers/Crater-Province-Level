@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvbtdtttviil8"]
+
+[ext_resource type="PackedScene" uid="uid://ctm1cgurdga7n" path="res://Models/Light_Wall.glb" id="1_mmxva"]
+
+[node name="Light_Wall" instance=ExtResource("1_mmxva")]
+
+[node name="Light" parent="." index="0"]
+layers = 2
+gi_mode = 2
+visibility_range_end = 75.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.205973, -0.195809)
+light_intensity_lumens = 1100.0
+light_temperature = 4100.0
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+omni_range = 10.0
+omni_attenuation = 2.0

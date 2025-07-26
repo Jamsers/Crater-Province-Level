@@ -3,3 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://d14f38qx17cgw" path="res://Models/Boat.glb" id="1_2fh0m"]
 
 [node name="Boat" instance=ExtResource("1_2fh0m")]
+physics_interpolation_mode = 1
+mass = 40.0
+
+[node name="Boat" parent="." index="0"]
+visibility_range_end = 600.0

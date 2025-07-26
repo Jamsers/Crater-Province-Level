@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfqwxf8iuvame"]
+
+[ext_resource type="PackedScene" uid="uid://p8ode2j17e18" path="res://Models/Bunker/Crate_Big.glb" id="1_uh1yp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uh1yp"]
+size = Vector3(1.61, 2.47, 1.61)
+
+[node name="Crate_Big" instance=ExtResource("1_uh1yp")]
+physics_interpolation_mode = 1
+mass = 50.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("BoxShape3D_uh1yp")

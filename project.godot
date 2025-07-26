@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Crater-Province-Level"
+config/name="Crater-Province-Demo"
 config/version="0.1"
 run/main_scene="res://Main.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Textures/icon.png"
 
 [autoload]
@@ -27,12 +27,25 @@ window/vsync/vsync_mode=0
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
+enabled=PackedStringArray("res://addons/JJ_Import_Fixes/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg")
+
+[jj_import_fixes]
+
+excluded_paths=["res://Godot-Human-For-Scale/"]
+
+[layer_names]
+
+3d_render/layer_1="Default"
+3d_render/layer_2="Doodad Shadow Exemption"
+3d_render/layer_3="Prop Shadow Exemption"
 
 [physics]
 
 common/physics_ticks_per_second=50
+common/max_physics_steps_per_frame=7
 common/physics_jitter_fix=0.0
+3d/physics_engine="Jolt Physics"
+jolt_physics_3d/limits/max_bodies=30720
 common/physics_interpolation=true
 
 [rendering]
@@ -41,6 +54,7 @@ lights_and_shadows/use_physical_light_units=true
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=3
 textures/default_filters/anisotropic_filtering_level=3
+camera/depth_of_field/depth_of_field_bokeh_shape=2
 camera/depth_of_field/depth_of_field_bokeh_quality=2
 environment/ssao/half_size=false
 environment/ssao/fadeout_from=750.0
@@ -61,7 +75,7 @@ lights_and_shadows/positional_shadow/atlas_size=2048
 
 sgt_player_position={
 "type": "vec3",
-"value": Vector3(1e+06, 1e+06, 1e+06)
+"value": Vector3(1000000, 1000000, 1000000)
 }
 sgt_player_mov={
 "type": "vec3",

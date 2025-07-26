@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6vfg26exom7i"]
+
+[ext_resource type="PackedScene" uid="uid://rboukxnjluld" path="res://Models/Fire_Extinguisher_Mount.glb" id="1_dyp15"]
+[ext_resource type="PackedScene" uid="uid://d30ysfls5l8ax" path="res://Scenes/Fire_Extinguisher.tscn" id="2_kxshu"]
+
+[node name="Fire_Extinguisher_Mount" instance=ExtResource("1_dyp15")]
+
+[node name="Fire_Extinguisher" parent="." index="2" instance=ExtResource("2_kxshu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.001, -0.309, -0.097)
+freeze = true
+
+[node name="Fire_Extinguisher" parent="Fire_Extinguisher" index="0"]
+gi_mode = 1
+
+[node name="Strap" parent="Fire_Extinguisher" index="1"]
+gi_mode = 1
+
+[editable path="Fire_Extinguisher"]

@@ -1,15 +1,45 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsjfgvq8nsgll"]
+[gd_scene load_steps=5 format=3 uid="uid://dsjfgvq8nsgll"]
 
 [ext_resource type="PackedScene" uid="uid://fsrnxkph8fup" path="res://Models/Buoy.glb" id="1_040ns"]
 
-[node name="Buoy" instance=ExtResource("1_040ns")]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vyeod"]
+height = 2.83447
+radius = 0.96582
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.03462, 0)
-light_intensity_lumens = 15000.0
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_y6c3w"]
+height = 2.38803
+radius = 0.128418
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_csjid"]
+radius = 0.100792
+height = 0.388621
+
+[node name="Buoy" instance=ExtResource("1_040ns")]
+physics_interpolation_mode = 1
+mass = 1500.0
+
+[node name="Buoy_Light" parent="." index="1"]
+layers = 4
+
+[node name="Base" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.034, 0)
+shape = SubResource("CylinderShape3D_vyeod")
+
+[node name="Spire" type="CollisionShape3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.572, 0)
+shape = SubResource("CylinderShape3D_y6c3w")
+
+[node name="Lightbulb" type="CollisionShape3D" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.949, 0)
+shape = SubResource("CapsuleShape3D_csjid")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.97231, 0)
+light_intensity_lumens = 16000.0
 light_color = Color(1, 0.376471, 0.34902, 1)
 shadow_enabled = true
+shadow_caster_mask = 4294967291
 distance_fade_enabled = true
 distance_fade_begin = 1000.0
-omni_range = 13.0
-omni_attenuation = 1.75
+omni_range = 15.0
+omni_attenuation = 2.0

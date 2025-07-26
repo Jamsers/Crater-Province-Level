@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://gdrjvn6c72dk"]
+
+[ext_resource type="PackedScene" uid="uid://daayxo3jy7ubn" path="res://Models/House_Residential/Bed_Single.glb" id="1_5dh62"]
+
+[node name="Bed_Single" instance=ExtResource("1_5dh62")]

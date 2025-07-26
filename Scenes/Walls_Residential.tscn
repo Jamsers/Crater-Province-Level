@@ -1,5 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6m5mrtx5tgxs"]
+[gd_scene load_steps=3 format=3 uid="uid://b6m5mrtx5tgxs"]
 
-[ext_resource type="PackedScene" uid="uid://b3k78ft18b0jg" path="res://Models/Walls_Residential.glb" id="1_jmnur"]
+[ext_resource type="PackedScene" uid="uid://b3k78ft18b0jg" path="res://Models/House_Residential/Walls_Residential.glb" id="1_jmnur"]
+[ext_resource type="PackedScene" uid="uid://cttm7w52jiae1" path="res://Scenes/Light_Lantern_Residential.tscn" id="2_luiwl"]
 
 [node name="Walls_Residential" instance=ExtResource("1_jmnur")]
+
+[node name="Light_Lantern_Residential" parent="." index="3" instance=ExtResource("2_luiwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29841, 1.45858, -14.1937)
+
+[node name="Light_Lantern_Residential2" parent="." index="4" instance=ExtResource("2_luiwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.16941, 1.45869, -14.1937)

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqlahvbgfcpi6"]
+
+[ext_resource type="PackedScene" uid="uid://dxn0ww5nhcarv" path="res://Models/Building/Building_Window_Panes_Ground_Front_Left.glb" id="1_jsx5t"]
+[ext_resource type="PackedScene" uid="uid://c8l8s7lfgcbh5" path="res://Scenes/Building/Entrance_Desk.tscn" id="2_3l22j"]
+[ext_resource type="PackedScene" uid="uid://c42cux6opsjuv" path="res://Scenes/Door_Building_Entrance.tscn" id="3_nwflj"]
+
+[node name="Ground_Floor_Left" type="Node3D"]
+
+[node name="Building_Window_Panes_Ground_Front_Left" parent="." instance=ExtResource("1_jsx5t")]
+
+[node name="Entrance_Desk" parent="." instance=ExtResource("2_3l22j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0294, 0, -10.6691)
+
+[node name="Door_Building_Entrance" parent="." instance=ExtResource("3_nwflj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0739, 0, -17.5125)

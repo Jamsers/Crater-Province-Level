@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://d30ysfls5l8ax"]
+
+[ext_resource type="PackedScene" uid="uid://pl86ppsfxh4" path="res://Models/Fire_Extinguisher.glb" id="1_jhet0"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jhet0"]
+height = 0.471863
+radius = 0.0893555
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yc4ap"]
+size = Vector3(0.0610046, 0.15387, 0.0603027)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_44o8m"]
+size = Vector3(0.0252686, 0.0268478, 0.0939484)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jhet0"]
+size = Vector3(0.0252686, 0.0268478, 0.106592)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vuihr"]
+size = Vector3(0.0252686, 0.0268478, 0.115796)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ialna"]
+size = Vector3(0.0252686, 0.0268478, 0.129187)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m5qq1"]
+size = Vector3(0.0252686, 0.0268478, 0.158344)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fu61u"]
+size = Vector3(0.0528564, 0.0249634, 0.162445)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xj5n4"]
+size = Vector3(0.0355225, 0.0152893, 0.177414)
+
+[node name="Fire_Extinguisher" instance=ExtResource("1_jhet0")]
+physics_interpolation_mode = 1
+mass = 10.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0167542, 0)
+shape = SubResource("CylinderShape3D_jhet0")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000534058, 0.252594, 0.00134277)
+shape = SubResource("BoxShape3D_yc4ap")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 0.989088, 0.147326, 0, -0.147326, 0.989088, -0.000148028, 0.285587, -0.0617312)
+shape = SubResource("BoxShape3D_44o8m")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 0.679096, 0.73405, 0, -0.73405, 0.679096, -0.000148028, 0.247197, -0.136672)
+shape = SubResource("BoxShape3D_jhet0")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, -0.0894331, 0.995993, 0, -0.995993, -0.0894331, -0.000148028, 0.155369, -0.160588)
+shape = SubResource("BoxShape3D_vuihr")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, -0.328224, 0.9446, 0, -0.9446, -0.328224, -0.000148028, 0.0517191, -0.129933)
+shape = SubResource("BoxShape3D_ialna")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 0.0332947, 0.999445, 0, -0.999445, 0.0332947, -0.000148028, -0.083857, -0.113478)
+shape = SubResource("BoxShape3D_m5qq1")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 0.954714, 0.297525, 0, -0.297525, 0.954714, 0.000305176, 0.341301, 0.0509065)
+shape = SubResource("BoxShape3D_fu61u")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="." index="10"]
+transform = Transform3D(1, 0, 0, 0, 0.905295, -0.424784, 0, 0.424784, 0.905295, 6.10352e-05, 0.27993, 0.0804612)
+shape = SubResource("BoxShape3D_xj5n4")

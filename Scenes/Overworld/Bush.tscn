@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://6uo55qutx466"]
+
+[ext_resource type="Script" uid="uid://bux13ulijdnbe" path="res://Scripts/Placement_Tools/VegetationPlant.gd" id="1_8bcpx"]
+[ext_resource type="PackedScene" uid="uid://bcxbebw2h7h2a" path="res://Models/Overworld/Bush.glb" id="1_dk6ho"]
+
+[node name="Bush" instance=ExtResource("1_dk6ho")]
+visibility_range_end = 200.0
+script = ExtResource("1_8bcpx")

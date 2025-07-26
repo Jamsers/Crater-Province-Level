@@ -1,0 +1,1641 @@
+[gd_scene load_steps=41 format=3 uid="uid://bdvii5s8ms0aq"]
+
+[ext_resource type="PackedScene" uid="uid://bno3vs1m6yv8" path="res://Models/Bunker/Bunker.glb" id="1_bfxcd"]
+[ext_resource type="PackedScene" uid="uid://dwtjehbfaiu7v" path="res://Scenes/Bunker/Bunker_Interior_Structure.tscn" id="3_0vxja"]
+[ext_resource type="PackedScene" uid="uid://4kdlnxfqfhcj" path="res://Scenes/Bunker/Bunker_Cafeteria.tscn" id="4_engtw"]
+[ext_resource type="PackedScene" uid="uid://2e1u0ccn1mp5" path="res://Scenes/Bunker/Bunker_Interior_Fence.tscn" id="4_tix8h"]
+[ext_resource type="PackedScene" uid="uid://dswmlsxabi3hg" path="res://Scenes/Bunker/Bunker_Interior_Entrance_Desks.tscn" id="5_2jsgb"]
+[ext_resource type="PackedScene" uid="uid://b8onwtukxk6ca" path="res://Scenes/Bunker/Bunker_Storage.tscn" id="5_2qnju"]
+[ext_resource type="PackedScene" uid="uid://6o3xh2bkp8ju" path="res://Models/Bunker/Bunker_Power_Transformer.glb" id="5_l6jgb"]
+[ext_resource type="PackedScene" uid="uid://e6ddber5lfwn" path="res://Models/Bunker/Bunker_Power_Core.glb" id="6_7dy3s"]
+[ext_resource type="PackedScene" uid="uid://bjt82eulrcv1g" path="res://Scenes/Bunker/Bunker_Office.tscn" id="6_sbw3q"]
+[ext_resource type="PackedScene" uid="uid://krcgfrhrxwcg" path="res://Models/Bunker/Entrance_Display_Pole.glb" id="6_u4vws"]
+[ext_resource type="PackedScene" uid="uid://bcd62ghwnk8n" path="res://Scenes/Bunker/Bunker_Stairs.tscn" id="7_283u4"]
+[ext_resource type="PackedScene" uid="uid://dmta6vfh1mwju" path="res://Scenes/Bunker/Bunker_Elevator.tscn" id="8_dtt36"]
+[ext_resource type="PackedScene" uid="uid://w4y6isyab352" path="res://Models/Bunker/Bunker_Cafeteria_Interior.glb" id="9_4ct3y"]
+[ext_resource type="PackedScene" uid="uid://bbmrsar4ukix4" path="res://Scenes/Bunker/Bunker_Stairs_Flipped.tscn" id="10_8tu2l"]
+[ext_resource type="PackedScene" uid="uid://7ercss5yeq1s" path="res://Models/Bunker/Bunker_Blast_Doors_Office.glb" id="10_bm287"]
+[ext_resource type="PackedScene" uid="uid://bhcn0k3qxwafi" path="res://Models/Bunker/Console.glb" id="12_h3ffl"]
+[ext_resource type="PackedScene" uid="uid://d0f5hw28a1ime" path="res://Models/House_Residential/Dresser.glb" id="12_hrlr0"]
+[ext_resource type="PackedScene" uid="uid://b54axuh3vowj8" path="res://Scenes/Bunker/Bunker_Blast_Doors_Big.tscn" id="12_soac1"]
+[ext_resource type="PackedScene" uid="uid://by8reunvvn4qf" path="res://Models/Building/TV_Big.glb" id="13_da83u"]
+[ext_resource type="PackedScene" uid="uid://glm0vpdaivwv" path="res://Scenes/Bunker/Bunker_Blast_Doors_Normal.tscn" id="13_q78db"]
+[ext_resource type="PackedScene" uid="uid://b2pcv35385qha" path="res://Scenes/Bunker/Bunker_Blast_Doors_Normal_Thinner.tscn" id="14_e63bo"]
+[ext_resource type="PackedScene" uid="uid://bcae3pfiwt4t5" path="res://Models/Building/Table_Conference.glb" id="14_jqis2"]
+[ext_resource type="PackedScene" uid="uid://ban8qyuy4fiws" path="res://Models/Bunker/Counter_Kafeteria.glb" id="15_g60tk"]
+[ext_resource type="PackedScene" uid="uid://bcfemv4oiyg1" path="res://Scenes/Bunker/Bunker_Blast_Doors_Normal_Thin.tscn" id="15_udbm8"]
+[ext_resource type="PackedScene" uid="uid://buofrj70g3cly" path="res://Models/House_Residential/Table_Kitchen.glb" id="16_o7eum"]
+[ext_resource type="PackedScene" uid="uid://c2dpypaljbyc6" path="res://Scenes/Building/Bathroom_Stall.tscn" id="17_x37g3"]
+[ext_resource type="PackedScene" uid="uid://ce437g008v5th" path="res://Models/House_Residential/Sink.glb" id="18_jqis2"]
+[ext_resource type="PackedScene" uid="uid://d31vo42q36vf4" path="res://Models/House_Residential/Chair.glb" id="19_o7eum"]
+[ext_resource type="PackedScene" uid="uid://6qi3n0vb4mi6" path="res://Models/Building/Table_Executive.glb" id="20_4q7m7"]
+[ext_resource type="PackedScene" uid="uid://ct1lprvkq0ljk" path="res://Models/Bunker/Freezer_Shelf.glb" id="20_ly11a"]
+[ext_resource type="PackedScene" uid="uid://dsacnuje0rmu" path="res://Models/House_Residential/Closet.glb" id="21_rs0mt"]
+[ext_resource type="PackedScene" uid="uid://bfiglq2xxswep" path="res://Models/House_Residential/Cabinet_Garage.glb" id="22_da83u"]
+[ext_resource type="PackedScene" uid="uid://vicdgctkg06o" path="res://Models/Bunker/Vendor_Machine.glb" id="22_ibc8c"]
+[ext_resource type="PackedScene" uid="uid://ucd1bwqa38yn" path="res://Models/Bunker/Bunker_Power_Room.glb" id="23_4q7m7"]
+[ext_resource type="PackedScene" uid="uid://cljgvsjr3mgdj" path="res://Models/Bunker/Cafetaria_Counter.glb" id="26_m475s"]
+[ext_resource type="PackedScene" uid="uid://3w2m55y8rbiq" path="res://Models/Building/TV_Big_No_Stand.glb" id="29_ik3ry"]
+[ext_resource type="PackedScene" uid="uid://br6kls8fsaniy" path="res://Models/Bunker/Crate.glb" id="30_07u55"]
+[ext_resource type="PackedScene" uid="uid://cdukqyu6u4eta" path="res://Models/Building/Entrance_Chair.glb" id="35_w2jgn"]
+[ext_resource type="PackedScene" uid="uid://p8ode2j17e18" path="res://Models/Bunker/Crate_Big.glb" id="38_1tsvf"]
+[ext_resource type="PackedScene" uid="uid://3bbbfjdfs5js" path="res://Models/Bunker/Shipping_Container.glb" id="39_pgf8a"]
+
+[node name="Bunker" instance=ExtResource("1_bfxcd")]
+
+[node name="Bunker_Interior_Structure" parent="." index="4" instance=ExtResource("3_0vxja")]
+
+[node name="Bunker_Interior_Fence" parent="." index="5" instance=ExtResource("4_tix8h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004, 7.078, 11.379)
+
+[node name="Bunker_Interior_Entrance_Desks" parent="." index="6" instance=ExtResource("5_2jsgb")]
+
+[node name="Entrance_Chair" parent="Bunker_Interior_Entrance_Desks" index="9" instance=ExtResource("35_w2jgn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.394543, 0.667758, 0.732512)
+
+[node name="Entrance_Chair2" parent="Bunker_Interior_Entrance_Desks" index="10" instance=ExtResource("35_w2jgn")]
+transform = Transform3D(0.830965, 0, -0.556325, 0, 1, 0, 0.556325, 0, 0.830965, 3.45633, 0.667758, 1.9061)
+
+[node name="Entrance_Chair3" parent="Bunker_Interior_Entrance_Desks" index="11" instance=ExtResource("35_w2jgn")]
+transform = Transform3D(0.59523, 0, 0.803556, 0, 1, 0, -0.803556, 0, 0.59523, -4.92971, 0.667758, 3.64944)
+
+[node name="Entrance_Display_Pole" parent="Bunker_Interior_Entrance_Desks" index="12" instance=ExtResource("6_u4vws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.78697)
+
+[node name="Bunker_Elevator" parent="." index="7" instance=ExtResource("8_dtt36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005, 53.659)
+
+[node name="Bunker_Power_Transformer" parent="." index="8" instance=ExtResource("5_l6jgb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.619, 0.005, -50.924)
+
+[node name="Bunker_Power_Core" parent="." index="9" instance=ExtResource("6_7dy3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.389, 0.005, -47.635)
+
+[node name="Rooms" type="Node3D" parent="." index="10"]
+
+[node name="Bunker_Cafeteria" parent="Rooms" index="0" instance=ExtResource("4_engtw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.197, 0.005, 43.532)
+
+[node name="Bunker_Cafeteria_Interior" parent="Rooms/Bunker_Cafeteria" index="5" instance=ExtResource("9_4ct3y")]
+
+[node name="Bunker_Blast_Doors_Office" parent="Rooms/Bunker_Cafeteria" index="6" instance=ExtResource("10_bm287")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.7994, -0.00788826, 12.6261)
+
+[node name="Bathroom_Stall" parent="Rooms/Bunker_Cafeteria" index="7" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.9996, 0.0245996, -14.2491)
+
+[node name="Bathroom_Stall2" parent="Rooms/Bunker_Cafeteria" index="8" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.9996, 0.0245996, -12.748)
+
+[node name="Bathroom_Stall3" parent="Rooms/Bunker_Cafeteria" index="9" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.9996, 0.0245996, -11.2504)
+
+[node name="Sink" parent="Rooms/Bunker_Cafeteria" index="10" instance=ExtResource("18_jqis2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.4471, -6.5689e-05, -8.84496)
+
+[node name="Bathroom_Stall4" parent="Rooms/Bunker_Cafeteria" index="11" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.2359, 0.0245994, 14.253)
+
+[node name="Bathroom_Stall5" parent="Rooms/Bunker_Cafeteria" index="12" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22.3376, 0.0245994, 14.247)
+
+[node name="Bathroom_Stall6" parent="Rooms/Bunker_Cafeteria" index="13" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.2359, 0.0245994, 12.7508)
+
+[node name="Bathroom_Stall7" parent="Rooms/Bunker_Cafeteria" index="14" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22.3376, 0.0245994, 12.7448)
+
+[node name="Bathroom_Stall8" parent="Rooms/Bunker_Cafeteria" index="15" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.2359, 0.0245994, 11.2546)
+
+[node name="Bathroom_Stall9" parent="Rooms/Bunker_Cafeteria" index="16" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22.3376, 0.0245994, 11.2486)
+
+[node name="Bathroom_Stall10" parent="Rooms/Bunker_Cafeteria" index="17" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.2359, 0.0245994, 9.75665)
+
+[node name="Bathroom_Stall11" parent="Rooms/Bunker_Cafeteria" index="18" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22.3376, 0.0245994, 9.75062)
+
+[node name="Sink2" parent="Rooms/Bunker_Cafeteria" index="19" instance=ExtResource("18_jqis2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16.7796, -6.59274e-05, 7.31104)
+
+[node name="Sink3" parent="Rooms/Bunker_Cafeteria" index="20" instance=ExtResource("18_jqis2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22.7914, -6.59274e-05, 7.31104)
+
+[node name="Closet" parent="Rooms/Bunker_Cafeteria" index="21" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.777, -6.5689e-05, 12.5584)
+
+[node name="Closet4" parent="Rooms/Bunker_Cafeteria" index="22" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6448, -6.5689e-05, 14.6824)
+
+[node name="Closet5" parent="Rooms/Bunker_Cafeteria" index="23" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7184, -6.5689e-05, 14.6824)
+
+[node name="Closet2" parent="Rooms/Bunker_Cafeteria" index="24" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.777, -6.5689e-05, 8.84272)
+
+[node name="Closet3" parent="Rooms/Bunker_Cafeteria" index="25" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16.6546, -6.5689e-05, -6.75838)
+
+[node name="Dresser" parent="Rooms/Bunker_Cafeteria" index="26" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.2878, -6.59274e-05, 1.74839)
+
+[node name="Dresser3" parent="Rooms/Bunker_Cafeteria" index="27" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.7868, -6.59274e-05, -4.99734)
+
+[node name="Dresser2" parent="Rooms/Bunker_Cafeteria" index="28" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.2878, -6.59274e-05, 8.72323)
+
+[node name="Dresser4" parent="Rooms/Bunker_Cafeteria" index="29" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.341, -6.59274e-05, 1.74839)
+
+[node name="Dresser5" parent="Rooms/Bunker_Cafeteria" index="30" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.3428, -6.59274e-05, 8.72323)
+
+[node name="Counter_Kafeteria" parent="Rooms/Bunker_Cafeteria" index="31" instance=ExtResource("15_g60tk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.7629, -6.5689e-05, 1.70174)
+
+[node name="Table_Kitchen" parent="Rooms/Bunker_Cafeteria" index="32" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.2785, -6.61658e-05, -0.0240479)
+
+[node name="Table_Kitchen9" parent="Rooms/Bunker_Cafeteria" index="33" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.6797, -6.61658e-05, -2.42324)
+
+[node name="Table_Kitchen7" parent="Rooms/Bunker_Cafeteria" index="34" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.2785, -6.61658e-05, -2.42324)
+
+[node name="Table_Kitchen2" parent="Rooms/Bunker_Cafeteria" index="35" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.6797, -6.61658e-05, -0.0240479)
+
+[node name="Table_Kitchen4" parent="Rooms/Bunker_Cafeteria" index="36" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.2785, -6.61658e-05, -1.22737)
+
+[node name="Table_Kitchen6" parent="Rooms/Bunker_Cafeteria" index="37" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.6797, -6.61658e-05, -1.22737)
+
+[node name="Table_Kitchen10" parent="Rooms/Bunker_Cafeteria" index="38" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9525, -6.61658e-05, -0.0240479)
+
+[node name="Table_Kitchen12" parent="Rooms/Bunker_Cafeteria" index="39" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9525, -6.61658e-05, -2.42324)
+
+[node name="Table_Kitchen11" parent="Rooms/Bunker_Cafeteria" index="40" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9525, -6.61658e-05, -1.22737)
+
+[node name="Table_Kitchen3" parent="Rooms/Bunker_Cafeteria" index="41" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.5583, -6.61658e-05, -0.0240479)
+
+[node name="Table_Kitchen5" parent="Rooms/Bunker_Cafeteria" index="42" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.5583, -6.61658e-05, -1.22737)
+
+[node name="Table_Kitchen8" parent="Rooms/Bunker_Cafeteria" index="43" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.5583, -6.61658e-05, -2.42324)
+
+[node name="Table_Kitchen13" parent="Rooms/Bunker_Cafeteria" index="44" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.2785, -6.61658e-05, 3.56114)
+
+[node name="Table_Kitchen14" parent="Rooms/Bunker_Cafeteria" index="45" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.6797, -6.61658e-05, 1.16195)
+
+[node name="Table_Kitchen15" parent="Rooms/Bunker_Cafeteria" index="46" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.2785, -6.61658e-05, 1.16195)
+
+[node name="Table_Kitchen16" parent="Rooms/Bunker_Cafeteria" index="47" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.6797, -6.61658e-05, 3.56114)
+
+[node name="Table_Kitchen17" parent="Rooms/Bunker_Cafeteria" index="48" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.2785, -6.61658e-05, 2.35782)
+
+[node name="Table_Kitchen18" parent="Rooms/Bunker_Cafeteria" index="49" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.6797, -6.61658e-05, 2.35782)
+
+[node name="Table_Kitchen19" parent="Rooms/Bunker_Cafeteria" index="50" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9525, -6.61658e-05, 3.56114)
+
+[node name="Table_Kitchen20" parent="Rooms/Bunker_Cafeteria" index="51" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9525, -6.61658e-05, 1.16195)
+
+[node name="Table_Kitchen21" parent="Rooms/Bunker_Cafeteria" index="52" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9525, -6.61658e-05, 2.35782)
+
+[node name="Table_Kitchen22" parent="Rooms/Bunker_Cafeteria" index="53" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.5583, -6.61658e-05, 3.56114)
+
+[node name="Table_Kitchen23" parent="Rooms/Bunker_Cafeteria" index="54" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.5583, -6.61658e-05, 2.35782)
+
+[node name="Table_Kitchen24" parent="Rooms/Bunker_Cafeteria" index="55" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.5583, -6.61658e-05, 1.16195)
+
+[node name="Table_Kitchen26" parent="Rooms/Bunker_Cafeteria" index="56" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.6797, -6.61658e-05, 4.7569)
+
+[node name="Table_Kitchen27" parent="Rooms/Bunker_Cafeteria" index="57" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.2785, -6.61658e-05, 4.7569)
+
+[node name="Table_Kitchen29" parent="Rooms/Bunker_Cafeteria" index="58" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.2785, -6.61658e-05, 5.95278)
+
+[node name="Table_Kitchen30" parent="Rooms/Bunker_Cafeteria" index="59" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.6797, -6.61658e-05, 5.95278)
+
+[node name="Table_Kitchen32" parent="Rooms/Bunker_Cafeteria" index="60" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9525, -6.61658e-05, 4.7569)
+
+[node name="Table_Kitchen33" parent="Rooms/Bunker_Cafeteria" index="61" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9525, -6.61658e-05, 5.95278)
+
+[node name="Table_Kitchen35" parent="Rooms/Bunker_Cafeteria" index="62" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.5583, -6.61658e-05, 5.95278)
+
+[node name="Table_Kitchen36" parent="Rooms/Bunker_Cafeteria" index="63" instance=ExtResource("16_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.5583, -6.61658e-05, 4.7569)
+
+[node name="TV_Big" parent="Rooms/Bunker_Cafeteria" index="64" instance=ExtResource("13_da83u")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.2619, 1.57293, 1.80036)
+
+[node name="TV_Big2" parent="Rooms/Bunker_Cafeteria" index="65" instance=ExtResource("13_da83u")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.3352, 1.57293, 1.64521)
+
+[node name="Dresser6" parent="Rooms/Bunker_Cafeteria" index="66" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0355, -6.59274e-05, 14.6987)
+
+[node name="Dresser7" parent="Rooms/Bunker_Cafeteria" index="67" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.726, -6.59274e-05, 14.6987)
+
+[node name="TV_Big3" parent="Rooms/Bunker_Cafeteria" index="68" instance=ExtResource("13_da83u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7656, 1.57293, 14.7005)
+
+[node name="Dresser10" parent="Rooms/Bunker_Cafeteria" index="69" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.47516, -6.59274e-05, 14.6987)
+
+[node name="Dresser11" parent="Rooms/Bunker_Cafeteria" index="70" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.16571, -6.59274e-05, 14.6987)
+
+[node name="TV_Big5" parent="Rooms/Bunker_Cafeteria" index="71" instance=ExtResource("13_da83u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.20526, 1.57293, 14.7005)
+
+[node name="Dresser12" parent="Rooms/Bunker_Cafeteria" index="72" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.04718, -6.59274e-05, 14.6987)
+
+[node name="Dresser13" parent="Rooms/Bunker_Cafeteria" index="73" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35663, -6.59274e-05, 14.6987)
+
+[node name="TV_Big6" parent="Rooms/Bunker_Cafeteria" index="74" instance=ExtResource("13_da83u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.31709, 1.57293, 14.7005)
+
+[node name="Dresser8" parent="Rooms/Bunker_Cafeteria" index="75" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(0.00347322, 0, -0.999994, 0, 1, 0, 0.999994, 0, 0.00347322, -15.9191, -6.59274e-05, 9.61601)
+
+[node name="Dresser9" parent="Rooms/Bunker_Cafeteria" index="76" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(0.00347322, 0, -0.999994, 0, 1, 0, 0.999994, 0, 0.00347322, -15.925, -6.59274e-05, 7.92546)
+
+[node name="TV_Big4" parent="Rooms/Bunker_Cafeteria" index="77" instance=ExtResource("13_da83u")]
+transform = Transform3D(0.00347322, 0, -0.999994, 0, 1, 0, 0.999994, 0, 0.00347322, -15.9234, 1.57293, 8.88593)
+
+[node name="Dresser14" parent="Rooms/Bunker_Cafeteria" index="78" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-0.999992, 0, 0.00406657, 0, 1, 0, -0.00406657, 0, -0.999992, -14.2416, -6.59274e-05, -14.7095)
+
+[node name="Dresser15" parent="Rooms/Bunker_Cafeteria" index="79" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-0.999992, 0, 0.00406657, 0, 1, 0, -0.00406657, 0, -0.999992, -12.5511, -6.59274e-05, -14.7026)
+
+[node name="TV_Big7" parent="Rooms/Bunker_Cafeteria" index="80" instance=ExtResource("13_da83u")]
+transform = Transform3D(-0.999992, 0, 0.00406657, 0, 1, 0, -0.00406657, 0, -0.999992, -13.5115, 1.57293, -14.7083)
+
+[node name="Dresser16" parent="Rooms/Bunker_Cafeteria" index="81" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-0.999992, 0, 0.00406657, 0, 1, 0, -0.00406657, 0, -0.999992, -21.0057, -6.59274e-05, -14.7095)
+
+[node name="Dresser17" parent="Rooms/Bunker_Cafeteria" index="82" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-0.999992, 0, 0.00406657, 0, 1, 0, -0.00406657, 0, -0.999992, -19.3152, -6.59274e-05, -14.7026)
+
+[node name="TV_Big8" parent="Rooms/Bunker_Cafeteria" index="83" instance=ExtResource("13_da83u")]
+transform = Transform3D(-0.999992, 0, 0.00406657, 0, 1, 0, -0.00406657, 0, -0.999992, -20.2756, 1.57293, -14.7083)
+
+[node name="Table_Executive" parent="Rooms/Bunker_Cafeteria" index="84" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20.0657, -6.5689e-05, 11.5588)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria" index="85" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.1768, 0.452313, 10.874)
+
+[node name="Freezer_Shelf" parent="Rooms/Bunker_Cafeteria" index="86" instance=ExtResource("20_ly11a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.3945, -6.55698e-05, -12.2984)
+
+[node name="Freezer_Shelf9" parent="Rooms/Bunker_Cafeteria" index="87" instance=ExtResource("20_ly11a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1659, -6.55698e-05, -14.6982)
+
+[node name="Freezer_Shelf10" parent="Rooms/Bunker_Cafeteria" index="88" instance=ExtResource("20_ly11a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9651, -6.55698e-05, -14.6982)
+
+[node name="Freezer_Shelf2" parent="Rooms/Bunker_Cafeteria" index="89" instance=ExtResource("20_ly11a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.3945, -6.55698e-05, -10.4985)
+
+[node name="Freezer_Shelf3" parent="Rooms/Bunker_Cafeteria" index="90" instance=ExtResource("20_ly11a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.3945, -6.55698e-05, -8.70135)
+
+[node name="Freezer_Shelf5" parent="Rooms/Bunker_Cafeteria" index="91" instance=ExtResource("20_ly11a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.7899, -6.55698e-05, -12.2984)
+
+[node name="Freezer_Shelf4" parent="Rooms/Bunker_Cafeteria" index="92" instance=ExtResource("20_ly11a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.3945, -6.55698e-05, -14.0967)
+
+[node name="Freezer_Shelf8" parent="Rooms/Bunker_Cafeteria" index="93" instance=ExtResource("20_ly11a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.7899, -6.55698e-05, -14.0967)
+
+[node name="Freezer_Shelf6" parent="Rooms/Bunker_Cafeteria" index="94" instance=ExtResource("20_ly11a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.7899, -6.55698e-05, -10.4985)
+
+[node name="Freezer_Shelf7" parent="Rooms/Bunker_Cafeteria" index="95" instance=ExtResource("20_ly11a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.7899, -6.55698e-05, -8.70135)
+
+[node name="Vendor_Machine" parent="Rooms/Bunker_Cafeteria" index="96" instance=ExtResource("22_ibc8c")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.2529, -6.5689e-05, -9.61981)
+
+[node name="Vendor_Machine2" parent="Rooms/Bunker_Cafeteria" index="97" instance=ExtResource("22_ibc8c")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.2529, -6.5689e-05, -10.8455)
+
+[node name="Vendor_Machine3" parent="Rooms/Bunker_Cafeteria" index="98" instance=ExtResource("22_ibc8c")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.2529, -6.5689e-05, -12.1023)
+
+[node name="Vendor_Machine4" parent="Rooms/Bunker_Cafeteria" index="99" instance=ExtResource("22_ibc8c")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.2529, -6.5689e-05, -13.3122)
+
+[node name="Vendor_Machine5" parent="Rooms/Bunker_Cafeteria" index="100" instance=ExtResource("22_ibc8c")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.2529, -6.5689e-05, -8.4344)
+
+[node name="kafeteria" type="Node3D" parent="Rooms/Bunker_Cafeteria" index="101"]
+
+[node name="table_and_chairs" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="0"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10.031, 0, 10.2653)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs2" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="1"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.3926, 0, 10.2653)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs2" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs2" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs2" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs2" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs2" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs2" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs2" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs2" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs2" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs3" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="2"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.21059, 0, 10.2653)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs3" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs3" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs3" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs3" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs3" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs3" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs3" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs3" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs3" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs4" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="3"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10.031, 0, 4.84357)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs4" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs4" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs4" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs4" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs4" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs4" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs4" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs4" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs4" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs5" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="4"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.3926, 0, 4.84357)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs5" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs5" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs5" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs5" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs5" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs5" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs5" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs5" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs5" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs6" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="5"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.21059, 0, 4.84357)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs6" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs6" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs6" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs6" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs6" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs6" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs6" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs6" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs6" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs7" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="6"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10.031, 0, 0.255543)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs7" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs7" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs7" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs7" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs7" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs7" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs7" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs7" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs7" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs8" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="7"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.3926, 0, 0.255543)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs8" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs8" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs8" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs8" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs8" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs8" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs8" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs8" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs8" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs9" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="8"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.21059, 0, 0.255543)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs9" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs9" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs9" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs9" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs9" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs9" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs9" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs9" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs9" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs10" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="9"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10.031, 0, -4.74441)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs10" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs10" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs10" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs10" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs10" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs10" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs10" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs10" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs10" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs11" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="10"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.3926, 0, -4.74441)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs11" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs11" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs11" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs11" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs11" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs11" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs11" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs11" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs11" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs12" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="11"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.21059, 0, -4.74441)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs12" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs12" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs12" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs12" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs12" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs12" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs12" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs12" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs12" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs13" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="12"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10.031, 0, -9.35658)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs13" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs13" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs13" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs13" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs13" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs13" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs13" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs13" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs13" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs16" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="13"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.4976, 0, 0.255543)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs16" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs16" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs16" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs16" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs16" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs16" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs16" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs16" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs16" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs17" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="14"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.4976, 0, -4.74441)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs17" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs17" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs17" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs17" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs17" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs17" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs17" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs17" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs17" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs18" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="15"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.4976, 0, -9.35658)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs18" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs18" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs18" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs18" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs18" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs18" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs18" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs18" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs18" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs14" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="16"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.3926, 0, -9.35658)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs14" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs14" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs14" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs14" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs14" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs14" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs14" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs14" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs14" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="table_and_chairs15" type="Node3D" parent="Rooms/Bunker_Cafeteria/kafeteria" index="17"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.21059, 0, -9.35658)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs15" index="0" instance=ExtResource("14_jqis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061657, -6.58082e-05, 0.0895195)
+
+[node name="Chair" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs15" index="1" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, -0.792778)
+
+[node name="Chair4" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs15" index="2" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.00891876)
+
+[node name="Chair5" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs15" index="3" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.538185, 0.452313, 0.966702)
+
+[node name="Chair6" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs15" index="4" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.432236, 0.452313, 0.985447)
+
+[node name="Chair7" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs15" index="5" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.452847, 0.452313, 0.184013)
+
+[node name="Chair8" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs15" index="6" instance=ExtResource("19_o7eum")]
+transform = Transform3D(0.0257059, 0, 0.999669, 0, 1, 0, -0.999669, 0, 0.0257059, 0.477463, 0.452313, -0.773453)
+
+[node name="Chair2" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs15" index="7" instance=ExtResource("19_o7eum")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0645981, 0.452313, -1.53057)
+
+[node name="Chair3" parent="Rooms/Bunker_Cafeteria/kafeteria/table_and_chairs15" index="8" instance=ExtResource("19_o7eum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0645981, 0.452313, 1.71938)
+
+[node name="Closet6" parent="Rooms/Bunker_Cafeteria" index="102" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22.5339, -6.54506e-05, -7.44877)
+
+[node name="Closet7" parent="Rooms/Bunker_Cafeteria" index="103" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22.5339, -6.54506e-05, -9.93994)
+
+[node name="Closet10" parent="Rooms/Bunker_Cafeteria" index="104" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22.5339, -6.54506e-05, 1.18619)
+
+[node name="Closet11" parent="Rooms/Bunker_Cafeteria" index="105" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22.5339, -6.54506e-05, -1.30499)
+
+[node name="Bunker_Storage" parent="Rooms" index="1" instance=ExtResource("5_2qnju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.023, 7.078, 43.532)
+
+[node name="Bunker_Storage2" parent="Rooms" index="2" instance=ExtResource("5_2qnju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.023, 0.005, 43.532)
+
+[node name="Bunker_Storage3" parent="Rooms" index="3" instance=ExtResource("5_2qnju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.023, 7.078, 43.532)
+
+[node name="Bunker_Office" parent="Rooms" index="4" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 57.371, 7.078, 43.532)
+
+[node name="Table_Executive" parent="Rooms/Bunker_Office" index="6" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.8143, -7.07307, -34.2538)
+
+[node name="Table_Executive2" parent="Rooms/Bunker_Office" index="7" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 44.357, -7.07307, -22.0559)
+
+[node name="Dresser" parent="Rooms/Bunker_Office" index="8" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 43.027, -7.07307, -33.9126)
+
+[node name="TV_Big" parent="Rooms/Bunker_Office" index="9" instance=ExtResource("13_da83u")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 42.9772, -5.50007, -33.792)
+
+[node name="Table_Conference" parent="Rooms/Bunker_Office" index="10" instance=ExtResource("14_jqis2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 49.1344, -7.07307, -33.9722)
+
+[node name="Closet" parent="Rooms/Bunker_Office" index="11" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 35.1121, -7.07307, -36.9517)
+
+[node name="Closet2" parent="Rooms/Bunker_Office" index="12" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.029, -7.07307, -19.751)
+
+[node name="Table_Executive3" parent="Rooms/Bunker_Office" index="13" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 39.9448, -7.07307, -22.0559)
+
+[node name="Closet5" parent="Rooms/Bunker_Office" index="14" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.6169, -7.07307, -19.751)
+
+[node name="Table_Executive4" parent="Rooms/Bunker_Office" index="15" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 52.8175, -7.07307, -22.0559)
+
+[node name="Closet6" parent="Rooms/Bunker_Office" index="16" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.4896, -7.07307, -19.751)
+
+[node name="Table_Executive5" parent="Rooms/Bunker_Office" index="17" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 48.4054, -7.07307, -22.0559)
+
+[node name="Closet7" parent="Rooms/Bunker_Office" index="18" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.0774, -7.07307, -19.751)
+
+[node name="Table_Executive6" parent="Rooms/Bunker_Office" index="19" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 27.3152, -7.07307, -22.0559)
+
+[node name="Closet8" parent="Rooms/Bunker_Office" index="20" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9873, -7.07307, -19.751)
+
+[node name="Table_Executive8" parent="Rooms/Bunker_Office" index="21" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 35.7757, -7.07307, -22.0559)
+
+[node name="Closet10" parent="Rooms/Bunker_Office" index="22" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4478, -7.07307, -19.751)
+
+[node name="Table_Executive9" parent="Rooms/Bunker_Office" index="23" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 31.3636, -7.07307, -22.0559)
+
+[node name="Closet11" parent="Rooms/Bunker_Office" index="24" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.0357, -7.07307, -19.751)
+
+[node name="Closet3" parent="Rooms/Bunker_Office" index="25" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 55.2029, -7.07307, -32.3845)
+
+[node name="Closet4" parent="Rooms/Bunker_Office" index="26" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 55.2029, -7.07307, -35.5155)
+
+[node name="Bathroom_Stall12" parent="Rooms/Bunker_Office" index="27" instance=ExtResource("17_x37g3")]
+transform = Transform3D(0.0027576, 0, 0.999996, 0, 1, 0, -0.999996, 0, 0.0027576, 31.0957, -7.07087, -36.5113)
+
+[node name="Bathroom_Stall13" parent="Rooms/Bunker_Office" index="28" instance=ExtResource("17_x37g3")]
+transform = Transform3D(0.0027576, 0, 0.999996, 0, 1, 0, -0.999996, 0, 0.0027576, 31.0916, -7.07087, -35.0198)
+
+[node name="Bathroom_Stall14" parent="Rooms/Bunker_Office" index="29" instance=ExtResource("17_x37g3")]
+transform = Transform3D(0.0027576, 0, 0.999996, 0, 1, 0, -0.999996, 0, 0.0027576, 31.0874, -7.07087, -33.5177)
+
+[node name="Bathroom_Stall15" parent="Rooms/Bunker_Office" index="30" instance=ExtResource("17_x37g3")]
+transform = Transform3D(0.0027576, 0, 0.999996, 0, 1, 0, -0.999996, 0, 0.0027576, 31.0833, -7.07087, -32.0152)
+
+[node name="Sink4" parent="Rooms/Bunker_Office" index="31" instance=ExtResource("18_jqis2")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 27.2919, -7.07307, -36.9521)
+
+[node name="Bunker_Office2" parent="Rooms" index="5" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 57.371, 7.078, 3.01)
+
+[node name="Bunker_Office3" parent="Rooms" index="6" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.023, 7.078, 3.01)
+
+[node name="Bunker_Office4" parent="Rooms" index="7" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 57.371, 0.005, 3.01)
+
+[node name="Bunker_Office5" parent="Rooms" index="8" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.023, 0.005, 3.01)
+
+[node name="Bunker_Office6" parent="Rooms" index="9" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.023, 7.078, 3.01)
+
+[node name="Bunker_Office7" parent="Rooms" index="10" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -57.371, 7.078, 3.01)
+
+[node name="Bunker_Office8" parent="Rooms" index="11" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -57.371, 7.078, 43.532)
+
+[node name="Bunker_Office9" parent="Rooms" index="12" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.023, 0.005, 3.01)
+
+[node name="Bunker_Office10" parent="Rooms" index="13" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -57.371, 0.005, 3.01)
+
+[node name="Bunker_Office11" parent="Rooms" index="14" instance=ExtResource("6_sbw3q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -57.371, 0.005, 43.532)
+
+[node name="power room" type="Node3D" parent="Rooms" index="15"]
+
+[node name="Console" parent="Rooms/power room" index="0" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -61.9348, 0.00493431, -33.9287)
+
+[node name="Console2" parent="Rooms/power room" index="1" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -60.4038, 0.00493431, -33.9287)
+
+[node name="Console3" parent="Rooms/power room" index="2" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -58.8668, 0.00493431, -33.9287)
+
+[node name="Console4" parent="Rooms/power room" index="3" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -57.3358, 0.00493431, -33.9287)
+
+[node name="Console5" parent="Rooms/power room" index="4" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -55.8364, 0.00493431, -33.9287)
+
+[node name="Console6" parent="Rooms/power room" index="5" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -54.3054, 0.00493431, -33.9287)
+
+[node name="Console7" parent="Rooms/power room" index="6" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -52.7684, 0.00493431, -33.9287)
+
+[node name="Console8" parent="Rooms/power room" index="7" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.3185, 0.00493431, -40.6773)
+
+[node name="Console9" parent="Rooms/power room" index="8" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.3185, 0.00493431, -42.2259)
+
+[node name="Console10" parent="Rooms/power room" index="9" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.3185, 0.00493431, -43.8112)
+
+[node name="Dresser" parent="Rooms/power room" index="10" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -66.3032, 0.00493407, -32.1966)
+
+[node name="Dresser2" parent="Rooms/power room" index="11" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -66.3032, 0.00493407, -30.5006)
+
+[node name="Dresser8" parent="Rooms/power room" index="12" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.3173, 0.00493407, -32.3001)
+
+[node name="Dresser11" parent="Rooms/power room" index="13" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(1, 0, -0.000837745, 0, 1, 0, 0.000837745, 0, 1, -27.6261, 0.00493407, -29.8565)
+
+[node name="Dresser12" parent="Rooms/power room" index="14" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(1, 0, -0.000837745, 0, 1, 0, 0.000837745, 0, 1, -25.9301, 0.00493407, -29.8551)
+
+[node name="TV_Big6" parent="Rooms/power room" index="15" instance=ExtResource("13_da83u")]
+transform = Transform3D(1, 0, -0.000837745, 0, 1, 0, 0.000837745, 0, 1, -26.681, 1.57793, -29.8681)
+
+[node name="Dresser9" parent="Rooms/power room" index="16" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.3173, 0.00493407, -37.3555)
+
+[node name="Dresser10" parent="Rooms/power room" index="17" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.3173, 0.00493407, -34.8128)
+
+[node name="Dresser5" parent="Rooms/power room" index="18" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-0.00204209, 0, 0.999998, 0, 1, 0, -0.999998, 0, -0.00204209, -48.6746, 0.00493407, -30.7303)
+
+[node name="Dresser6" parent="Rooms/power room" index="19" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-0.00204209, 0, 0.999998, 0, 1, 0, -0.999998, 0, -0.00204209, -48.6781, 0.00493407, -32.4263)
+
+[node name="TV_Big3" parent="Rooms/power room" index="20" instance=ExtResource("13_da83u")]
+transform = Transform3D(-0.00204209, 0, 0.999998, 0, 1, 0, -0.999998, 0, -0.00204209, -48.6889, 1.57793, -31.6754)
+
+[node name="Dresser3" parent="Rooms/power room" index="21" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -66.3032, 0.00493407, -27.9648)
+
+[node name="Dresser4" parent="Rooms/power room" index="22" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -66.3032, 0.00493407, -26.2687)
+
+[node name="Table_Executive" parent="Rooms/power room" index="23" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -63.5433, 0.00493431, -27.6003)
+
+[node name="Table_Executive2" parent="Rooms/power room" index="24" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -60.2016, 0.00493431, -27.6003)
+
+[node name="Table_Executive3" parent="Rooms/power room" index="25" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -56.9556, 0.00493431, -27.6003)
+
+[node name="Table_Executive4" parent="Rooms/power room" index="26" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -53.796, 0.00493431, -27.6003)
+
+[node name="Closet" parent="Rooms/power room" index="27" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.8947, 0.00493431, -24.6804)
+
+[node name="Closet2" parent="Rooms/power room" index="28" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.566, 0.00493431, -24.6804)
+
+[node name="Closet3" parent="Rooms/power room" index="29" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.2509, 0.00493431, -24.6804)
+
+[node name="Closet4" parent="Rooms/power room" index="30" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.093, 0.00493431, -24.6804)
+
+[node name="Table_Executive5" parent="Rooms/power room" index="31" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-0.00631798, 0, -0.99998, 0, 1, 0, 0.99998, 0, -0.00631798, -23.0237, 0.00493431, -41.8493)
+
+[node name="Closet5" parent="Rooms/power room" index="32" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(0.00631807, 0, 0.99998, 0, 1, 0, -0.99998, 0, 0.00631807, -20.0994, 0.00493431, -42.5339)
+
+[node name="Table_Executive6" parent="Rooms/power room" index="33" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-0.00631798, 0, -0.99998, 0, 1, 0, 0.99998, 0, -0.00631798, -23.0237, 0.00493431, -38.5023)
+
+[node name="Closet6" parent="Rooms/power room" index="34" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(0.00631807, 0, 0.99998, 0, 1, 0, -0.99998, 0, 0.00631807, -20.0994, 0.00493431, -39.1868)
+
+[node name="Table_Executive7" parent="Rooms/power room" index="35" instance=ExtResource("20_4q7m7")]
+transform = Transform3D(-0.00631798, 0, -0.99998, 0, 1, 0, 0.99998, 0, -0.00631798, -23.0237, 0.00493431, -35.2043)
+
+[node name="Closet7" parent="Rooms/power room" index="36" instance=ExtResource("21_rs0mt")]
+transform = Transform3D(0.00631807, 0, 0.99998, 0, 1, 0, -0.99998, 0, 0.00631807, -20.0994, 0.00493431, -35.8889)
+
+[node name="Cabinet_Garage2" parent="Rooms/power room" index="37" instance=ExtResource("22_da83u")]
+transform = Transform3D(-0.836439, 0, -0.54806, 0, 1, 0, 0.54806, 0, -0.836439, -53.3676, 0.00493431, -42.7213)
+
+[node name="Cabinet_Garage3" parent="Rooms/power room" index="38" instance=ExtResource("22_da83u")]
+transform = Transform3D(-0.574334, 0, 0.818621, 0, 1, 0, -0.818621, 0, -0.574334, -38.2939, 0.0049336, -48.9707)
+
+[node name="Bathroom_Stall" parent="Rooms/power room" index="39" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -37.2539, 0.00713152, -33.4847)
+
+[node name="Bathroom_Stall2" parent="Rooms/power room" index="40" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -35.7583, 0.00713152, -33.4847)
+
+[node name="Bathroom_Stall3" parent="Rooms/power room" index="41" instance=ExtResource("17_x37g3")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -34.2596, 0.00713152, -33.4847)
+
+[node name="Sink" parent="Rooms/power room" index="42" instance=ExtResource("18_jqis2")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -31.5972, 0.00493419, -33.9211)
+
+[node name="TV_Big_No_Stand" parent="Rooms/power room" index="43" instance=ExtResource("29_ik3ry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -66.5595, 2.53897, -27.0928)
+
+[node name="TV_Big_No_Stand2" parent="Rooms/power room" index="44" instance=ExtResource("29_ik3ry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -66.5595, 2.53897, -29.155)
+
+[node name="TV_Big_No_Stand3" parent="Rooms/power room" index="45" instance=ExtResource("29_ik3ry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -66.5595, 2.53897, -31.2009)
+
+[node name="TV_Big_No_Stand4" parent="Rooms/power room" index="46" instance=ExtResource("29_ik3ry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -66.5595, 3.77342, -27.0928)
+
+[node name="TV_Big_No_Stand5" parent="Rooms/power room" index="47" instance=ExtResource("29_ik3ry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -66.5595, 3.77342, -29.155)
+
+[node name="TV_Big_No_Stand6" parent="Rooms/power room" index="48" instance=ExtResource("29_ik3ry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -66.5595, 3.77342, -31.2009)
+
+[node name="TV_Big_No_Stand7" parent="Rooms/power room" index="49" instance=ExtResource("29_ik3ry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.5743, 2.53897, -32.7059)
+
+[node name="TV_Big_No_Stand8" parent="Rooms/power room" index="50" instance=ExtResource("29_ik3ry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.5743, 2.53897, -34.7681)
+
+[node name="TV_Big_No_Stand9" parent="Rooms/power room" index="51" instance=ExtResource("29_ik3ry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.5743, 2.53897, -36.8139)
+
+[node name="TV_Big_No_Stand10" parent="Rooms/power room" index="52" instance=ExtResource("29_ik3ry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.5743, 3.77342, -32.7059)
+
+[node name="TV_Big_No_Stand11" parent="Rooms/power room" index="53" instance=ExtResource("29_ik3ry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.5743, 3.77342, -34.7681)
+
+[node name="TV_Big_No_Stand12" parent="Rooms/power room" index="54" instance=ExtResource("29_ik3ry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.5743, 3.77342, -36.8139)
+
+[node name="Cafetaria_Counter" parent="Rooms" index="16" instance=ExtResource("26_m475s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.2472, 0.00493431, 53.1254)
+
+[node name="Cafetaria_Counter2" parent="Rooms" index="17" instance=ExtResource("26_m475s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.2472, 0.00493431, 51.3292)
+
+[node name="Cafetaria_Counter3" parent="Rooms" index="18" instance=ExtResource("26_m475s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.2472, 0.00493431, 49.5283)
+
+[node name="Cafetaria_Counter4" parent="Rooms" index="19" instance=ExtResource("26_m475s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.2472, 0.00493431, 47.7357)
+
+[node name="Cafetaria_Counter5" parent="Rooms" index="20" instance=ExtResource("26_m475s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.2472, 0.00493431, 45.9395)
+
+[node name="Cafetaria_Counter6" parent="Rooms" index="21" instance=ExtResource("26_m475s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.2472, 0.00493431, 44.1386)
+
+[node name="Cafetaria_Counter7" parent="Rooms" index="22" instance=ExtResource("26_m475s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.2472, 0.00493431, 42.3411)
+
+[node name="Cafetaria_Counter8" parent="Rooms" index="23" instance=ExtResource("26_m475s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.2472, 0.00493431, 40.5449)
+
+[node name="Cafetaria_Counter9" parent="Rooms" index="24" instance=ExtResource("26_m475s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.2472, 0.00493431, 38.744)
+
+[node name="Cafetaria_Counter10" parent="Rooms" index="25" instance=ExtResource("26_m475s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.9409, 0.00493431, 37.4101)
+
+[node name="Cafetaria_Counter11" parent="Rooms" index="26" instance=ExtResource("26_m475s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.1439, 0.00493431, 37.4101)
+
+[node name="Dresser" parent="Rooms" index="27" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 45.4886, 0.00493431, 28.832)
+
+[node name="Dresser2" parent="Rooms" index="28" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 47.1576, 0.00493431, 28.832)
+
+[node name="Dresser3" parent="Rooms" index="29" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 48.858, 0.00493431, 28.832)
+
+[node name="Dresser4" parent="Rooms" index="30" instance=ExtResource("12_hrlr0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 50.5359, 0.00493431, 28.832)
+
+[node name="Stairs" type="Node3D" parent="." index="11"]
+
+[node name="Bunker_Stairs_Flipped" parent="Stairs" index="0" instance=ExtResource("10_8tu2l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 61.189, 0.005, -17.248)
+
+[node name="Bunker_Stairs_Flipped2" parent="Stairs" index="1" instance=ExtResource("10_8tu2l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 61.189, 0.005, 23.273)
+
+[node name="Bunker_Stairs_Flipped3" parent="Stairs" index="2" instance=ExtResource("10_8tu2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.845, 0.005, 53.435)
+
+[node name="Bunker_Stairs4" parent="Stairs" index="3" instance=ExtResource("7_283u4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.849, 0.005, 53.435)
+
+[node name="Bunker_Stairs5" parent="Stairs" index="4" instance=ExtResource("7_283u4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -61.189, 0.005, 23.269)
+
+[node name="Bunker_Stairs6" parent="Stairs" index="5" instance=ExtResource("7_283u4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -61.189, 0.005, -17.253)
+
+[node name="Bunker_Stairs7" parent="Stairs" index="6" instance=ExtResource("7_283u4")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -24.709, 0.005, -53.434)
+
+[node name="Bunker Doors" type="Node3D" parent="." index="12"]
+
+[node name="Bunker_Blast_Doors_Big" parent="Bunker Doors" index="0" instance=ExtResource("12_soac1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.689, 0.005, -41.611)
+
+[node name="bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Big" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.54087, 0)
+
+[node name="bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Big" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.2172, 0)
+
+[node name="Bunker_Blast_Doors_Big2" parent="Bunker Doors" index="1" instance=ExtResource("12_soac1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002, 0.005, -59.951)
+
+[node name="bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Big2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.97151, 0)
+
+[node name="bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Big2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.2837, 0)
+
+[node name="Bunker_Blast_Doors_Normal" parent="Bunker Doors" index="2" instance=ExtResource("13_q78db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.001, 0.005, -23.273)
+
+[node name="normal_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.02502, 0)
+
+[node name="normal_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.67899, 0)
+
+[node name="normal_bunker_door_top_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.02502, 0)
+
+[node name="normal_bunker_door_bottom_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.67899, 0)
+
+[node name="Bunker_Blast_Doors_Normal2" parent="Bunker Doors" index="3" instance=ExtResource("13_q78db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.195, 0.005, -23.273)
+
+[node name="normal_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.52926, 0)
+
+[node name="normal_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.48914, 0)
+
+[node name="normal_bunker_door_top_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal2" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.52926, 0)
+
+[node name="normal_bunker_door_bottom_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.48914, 0)
+
+[node name="Bunker_Blast_Doors_Normal3" parent="Bunker Doors" index="4" instance=ExtResource("13_q78db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.195, 0.005, -35.319)
+
+[node name="normal_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.60291, 0)
+
+[node name="normal_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal3" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5916, 0)
+
+[node name="normal_bunker_door_top_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal3" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.60291, 0)
+
+[node name="normal_bunker_door_bottom_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal3" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5916, 0)
+
+[node name="Bunker_Blast_Doors_Normal4" parent="Bunker Doors" index="5" instance=ExtResource("13_q78db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.195, 7.078, -23.273)
+
+[node name="normal_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal4" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.56073, 0)
+
+[node name="normal_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal4" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.47343, 0)
+
+[node name="normal_bunker_door_top_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal4" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.56073, 0)
+
+[node name="normal_bunker_door_bottom_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal4" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.47343, 0)
+
+[node name="Bunker_Blast_Doors_Normal5" parent="Bunker Doors" index="6" instance=ExtResource("13_q78db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.195, 7.078, -35.319)
+
+[node name="normal_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal5" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.67636, 0)
+
+[node name="normal_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal5" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.51553, 0)
+
+[node name="normal_bunker_door_top_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal5" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.67636, 0)
+
+[node name="normal_bunker_door_bottom_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal5" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.51553, 0)
+
+[node name="Bunker_Blast_Doors_Normal_Thinner" parent="Bunker Doors" index="7" instance=ExtResource("14_e63bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005, -11.746)
+
+[node name="normal_slim_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thinner" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6229, 0)
+
+[node name="normal_slim_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thinner" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.72126, 0)
+
+[node name="normal_slim_bunker_door_bottom_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thinner" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6229, 0)
+
+[node name="normal_slim_bunker_door_top_001" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thinner" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.72126, 0)
+
+[node name="Bunker_Blast_Doors_Normal_Thin" parent="Bunker Doors" index="8" instance=ExtResource("15_udbm8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48.233)
+
+[node name="normal_slim_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thin" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.64665, 0)
+
+[node name="normal_slim_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thin" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.81232, 0)
+
+[node name="Bunker_Blast_Doors_Normal_Thin2" parent="Bunker Doors" index="9" instance=ExtResource("15_udbm8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.078, 48.233)
+
+[node name="normal_slim_bunker_door_top" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thin2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.76343, 0)
+
+[node name="normal_slim_bunker_door_bottom" parent="Bunker Doors/Bunker_Blast_Doors_Normal_Thin2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.74583, 0)
+
+[node name="lights" type="Node3D" parent="." index="13"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="lights" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.8604, -12.5003)
+light_intensity_lumens = 30000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D21" type="SpotLight3D" parent="lights" index="1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.276123, 11.8604, -42.5981)
+light_intensity_lumens = 30000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D22" type="SpotLight3D" parent="lights" index="2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 44.0422, 11.8604, -42.322)
+light_intensity_lumens = 30000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="lights" index="3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.8604, 13.0566)
+light_intensity_lumens = 30000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="lights" index="4"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.8604, 38.8397)
+light_intensity_lumens = 30000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="lights" index="5"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -60.8581, 11.8604, -15.6321)
+light_intensity_lumens = 30000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="lights" index="6"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -47.8976, 11.8604, -48.1273)
+light_intensity_lumens = 10000.0
+light_color = Color(0.381995, 0.612699, 0.867173, 1)
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="lights" index="7"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -43.0139, 11.8604, -15.6321)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="lights" index="8"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -44.1409, 11.8604, 24.1886)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="lights" index="9"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 42.6383, 11.8604, -15.6321)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="lights" index="10"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 41.5112, 11.8604, 24.1886)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="lights" index="11"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -47.8976, 5.20696, -48.1273)
+light_intensity_lumens = 10000.0
+light_color = Color(0.380392, 0.611765, 0.866667, 1)
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="lights" index="12"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -43.0139, 5.20696, -15.6321)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="lights" index="13"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -44.1409, 5.20696, 24.1886)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D19" type="SpotLight3D" parent="lights" index="14"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 42.6383, 5.20696, -15.6321)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D20" type="SpotLight3D" parent="lights" index="15"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 41.5112, 5.20696, 24.1886)
+light_intensity_lumens = 10000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="SpotLight3D23" type="SpotLight3D" parent="lights" index="16"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.260181, 3.93572, -16.2039)
+light_intensity_lumens = 4000.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 1000.0
+spot_range = 25.0
+spot_attenuation = 1.75
+spot_angle = 60.0
+
+[node name="Bunker_Power_Room" parent="." index="14" instance=ExtResource("23_4q7m7")]
+
+[node name="entrance" type="Node3D" parent="." index="15"]
+
+[node name="Console" parent="entrance" index="0" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42387, 0.00493431, -14.4279)
+
+[node name="Console3" parent="entrance" index="1" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42387, 0.00493431, -16.3622)
+
+[node name="Console5" parent="entrance" index="2" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42387, 0.00493431, -18.1656)
+
+[node name="Console6" parent="entrance" index="3" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42387, 0.00493431, -20.1213)
+
+[node name="Console7" parent="entrance" index="4" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(0.00572458, 0, -0.999984, 0, 1, 0, 0.999984, 0, 0.00572458, 7.38029, 0.00493431, -20.1287)
+
+[node name="Console8" parent="entrance" index="5" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(0.00572458, 0, -0.999984, 0, 1, 0, 0.999984, 0, 0.00572458, 7.3885, 0.00493431, -18.2621)
+
+[node name="Console10" parent="entrance" index="6" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(0.00572458, 0, -0.999984, 0, 1, 0, 0.999984, 0, 0.00572458, 7.40468, 0.00493431, -16.3442)
+
+[node name="Console11" parent="entrance" index="7" instance=ExtResource("12_h3ffl")]
+transform = Transform3D(0.00572458, 0, -0.999984, 0, 1, 0, 0.999984, 0, 0.00572458, 7.41288, 0.00493431, -14.4355)
+
+[node name="bicc_storage" type="Node3D" parent="." index="16"]
+
+[node name="Crate" parent="bicc_storage" index="0" instance=ExtResource("30_07u55")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.0722, 0.629934, -45.7777)
+
+[node name="Crate_Big" parent="bicc_storage" index="1" instance=ExtResource("38_1tsvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.0115, 1.25493, -48.2222)
+
+[node name="Shipping_Container" parent="bicc_storage" index="2" instance=ExtResource("39_pgf8a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 59.6463, 0.00493431, -54.8436)
+
+[node name="Shipping_Container2" parent="bicc_storage" index="3" instance=ExtResource("39_pgf8a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 59.5984, 0.00493431, -52.3129)
+
+[node name="Shipping_Container3" parent="bicc_storage" index="4" instance=ExtResource("39_pgf8a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 59.6824, 2.68353, -53.7416)
+
+[node name="Shipping_Container4" parent="bicc_storage" index="5" instance=ExtResource("39_pgf8a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 59.6463, 0.00493431, -47.1505)
+
+[node name="Shipping_Container5" parent="bicc_storage" index="6" instance=ExtResource("39_pgf8a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 59.5984, 0.00493431, -44.6198)
+
+[node name="Shipping_Container6" parent="bicc_storage" index="7" instance=ExtResource("39_pgf8a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 59.6824, 2.68353, -47.1063)
+
+[editable path="Bunker Doors/Bunker_Blast_Doors_Big"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Big2"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal2"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal3"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal4"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal5"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal_Thinner"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal_Thin"]
+[editable path="Bunker Doors/Bunker_Blast_Doors_Normal_Thin2"]
+[editable path="Bunker_Power_Room"]

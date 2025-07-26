@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://1bsjtax458bd"]
+
+[ext_resource type="PackedScene" uid="uid://b5uk6elmyhc45" path="res://Models/PC_Tower.glb" id="1_vkmtx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vkmtx"]
+size = Vector3(0.199219, 0.55249, 0.453125)
+
+[node name="PC_Tower" instance=ExtResource("1_vkmtx")]
+physics_interpolation_mode = 1
+mass = 15.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.000610352, 0)
+shape = SubResource("BoxShape3D_vkmtx")

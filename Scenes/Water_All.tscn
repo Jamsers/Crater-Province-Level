@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2y08vsb8gx5v"]
-
-[ext_resource type="PackedScene" uid="uid://paxjk1rs4f4y" path="res://Models/Water_All.glb" id="1_ro6uk"]
-
-[node name="Water_All" instance=ExtResource("1_ro6uk")]

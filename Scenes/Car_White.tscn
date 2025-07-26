@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsanvww66ymne"]
+
+[ext_resource type="PackedScene" uid="uid://tobi5yekprc5" path="res://Scenes/Car.tscn" id="1_6ahnc"]
+[ext_resource type="Material" uid="uid://l7arlkarpt8b" path="res://Materials/Generic/Car/Car_Paint_White.tres" id="2_vfq2k"]
+
+[node name="Car_White" instance=ExtResource("1_6ahnc")]
+
+[node name="Car" parent="Meshes" index="2"]
+surface_material_override/0 = ExtResource("2_vfq2k")
+
+[node name="Car_Ends" parent="Meshes" index="3"]
+surface_material_override/0 = ExtResource("2_vfq2k")

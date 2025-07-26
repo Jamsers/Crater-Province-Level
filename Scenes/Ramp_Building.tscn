@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://wso2ixeda74e" path="res://Models/Ramp_Building.glb" id="1_0enuc"]
 
-[node name="Ramp_Building2" instance=ExtResource("1_0enuc")]
+[node name="Ramp_Building" instance=ExtResource("1_0enuc")]
 
-[node name="Ramp_Building" parent="." index="0"]
+[node name="Ramp" parent="." index="0"]
 visibility_range_end = 300.0

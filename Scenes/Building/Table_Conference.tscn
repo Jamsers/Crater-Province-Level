@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://byeqc1dnys56t"]
+
+[ext_resource type="PackedScene" uid="uid://bcae3pfiwt4t5" path="res://Models/Building/Table_Conference.glb" id="1_trq55"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_trq55"]
+size = Vector3(1.19879, 0.100342, 3.50244)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q7vju"]
+size = Vector3(0.0737305, 0.721313, 0.0764771)
+
+[node name="Table_Conference" instance=ExtResource("1_trq55")]
+physics_interpolation_mode = 1
+mass = 125.0
+
+[node name="Base" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000640869, 0.0098877, -0.000732422)
+shape = SubResource("BoxShape3D_trq55")
+
+[node name="Leg_1" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.563232, -0.326355, -1.71201)
+shape = SubResource("BoxShape3D_q7vju")
+
+[node name="Leg_2" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.562656, -0.326355, -1.71201)
+shape = SubResource("BoxShape3D_q7vju")
+
+[node name="Leg_3" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.563232, -0.326355, 1.71282)
+shape = SubResource("BoxShape3D_q7vju")
+
+[node name="Leg_4" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.562656, -0.326355, 1.71282)
+shape = SubResource("BoxShape3D_q7vju")

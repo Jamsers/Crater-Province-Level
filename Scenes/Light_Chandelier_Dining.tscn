@@ -1,0 +1,318 @@
+[gd_scene load_steps=11 format=3 uid="uid://744yfigtnckr"]
+
+[ext_resource type="PackedScene" uid="uid://cm70hih8qsv7y" path="res://Models/Light_Chandelier_Dining.glb" id="1_bbmj2"]
+[ext_resource type="Script" uid="uid://bpagroiyvxti0" path="res://Scripts/PhysicalBoneSimulatorStarter.gd" id="2_c7j53"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c7j53"]
+height = 0.02668
+radius = 0.015
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bbmj2"]
+size = Vector3(0.624084, 0.0471191, 0.046875)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c7j53"]
+size = Vector3(0.0469055, 0.263, 0.046875)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mvujo"]
+size = Vector3(0.031579, 0.0226994, 0.677689)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u5ypg"]
+size = Vector3(0.0225563, 0.327103, 0.0234375)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pw47t"]
+size = Vector3(0.503744, 0.330197, 0.00147656)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_bbmj2"]
+height = 0.0938873
+radius = 0.03
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c7j53"]
+radius = 0.006
+height = 0.252992
+
+[node name="Light_Chandelier_Dining" instance=ExtResource("1_bbmj2")]
+
+[node name="Chandelie" parent="." index="1"]
+physics_interpolation_mode = 1
+mass = 4.0
+
+[node name="Fabric_1" parent="Chandelie" index="0"]
+layers = 4
+gi_mode = 2
+
+[node name="Fabric_2" parent="Chandelie" index="1"]
+layers = 4
+gi_mode = 2
+
+[node name="Frame" parent="Chandelie" index="2"]
+layers = 4
+gi_mode = 2
+
+[node name="Rivet_1" type="CollisionShape3D" parent="Chandelie" index="3"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.160586, 0.375651, 4.53489e-09)
+shape = SubResource("CylinderShape3D_c7j53")
+
+[node name="Rivet_2" type="CollisionShape3D" parent="Chandelie" index="4"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.160467, 0.375651, 4.53489e-09)
+shape = SubResource("CylinderShape3D_c7j53")
+
+[node name="Top_Frame" type="CollisionShape3D" parent="Chandelie" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000396729, 0.345337, 0)
+shape = SubResource("BoxShape3D_bbmj2")
+
+[node name="Frame_Leg_1" type="CollisionShape3D" parent="Chandelie" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288193, 0.237396, 0)
+shape = SubResource("BoxShape3D_c7j53")
+
+[node name="Frame_Leg_2" type="CollisionShape3D" parent="Chandelie" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.288445, 0.237396, 0)
+shape = SubResource("BoxShape3D_c7j53")
+
+[node name="Lantern_Frame_1_Top_1" type="CollisionShape3D" parent="Chandelie" index="8"]
+transform = Transform3D(0.70702, 0, -0.707193, 0, 1, 0, 0.707193, 0, 0.70702, 0.2881, 0.107511, -0.000228105)
+shape = SubResource("BoxShape3D_mvujo")
+
+[node name="Lantern_Frame_1_Top_2" type="CollisionShape3D" parent="Chandelie" index="9"]
+transform = Transform3D(0.706749, 0, 0.707465, 0, 1, 0, -0.707465, 0, 0.706749, 0.2881, 0.107511, -0.000228105)
+shape = SubResource("BoxShape3D_mvujo")
+
+[node name="Lantern_Frame_1_Leg_1" type="CollisionShape3D" parent="Chandelie" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.528388, -0.0451908, -0.239773)
+shape = SubResource("BoxShape3D_u5ypg")
+
+[node name="Lantern_Frame_1_Leg_2" type="CollisionShape3D" parent="Chandelie" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0499933, -0.0451908, -0.239773)
+shape = SubResource("BoxShape3D_u5ypg")
+
+[node name="Lantern_Frame_1_Leg_3" type="CollisionShape3D" parent="Chandelie" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.528388, -0.0451908, 0.238365)
+shape = SubResource("BoxShape3D_u5ypg")
+
+[node name="Lantern_Frame_1_Leg_4" type="CollisionShape3D" parent="Chandelie" index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0499933, -0.0451908, 0.238365)
+shape = SubResource("BoxShape3D_u5ypg")
+
+[node name="Lantern_1_Cloth_1" type="CollisionShape3D" parent="Chandelie" index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288669, -0.0462384, 0.25153)
+shape = SubResource("BoxShape3D_pw47t")
+
+[node name="Lantern_1_Cloth_2" type="CollisionShape3D" parent="Chandelie" index="15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288669, -0.0462384, -0.252)
+shape = SubResource("BoxShape3D_pw47t")
+
+[node name="Lantern_1_Cloth_3" type="CollisionShape3D" parent="Chandelie" index="16"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0374167, -0.046, 7.0507e-09)
+shape = SubResource("BoxShape3D_pw47t")
+
+[node name="Lantern_1_Cloth_4" type="CollisionShape3D" parent="Chandelie" index="17"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.540464, -0.046, 4.53489e-09)
+shape = SubResource("BoxShape3D_pw47t")
+
+[node name="Light_1" type="CollisionShape3D" parent="Chandelie" index="18"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.288196, 0.0488535, 4.53489e-09)
+shape = SubResource("CylinderShape3D_bbmj2")
+
+[node name="Lantern_Frame_2_Top_1" type="CollisionShape3D" parent="Chandelie" index="19"]
+transform = Transform3D(0.70702, 0, -0.707193, 0, 1, 0, 0.707193, 0, 0.70702, -0.2883, 0.107511, -0.000228105)
+shape = SubResource("BoxShape3D_mvujo")
+
+[node name="Lantern_Frame_2_Top_2" type="CollisionShape3D" parent="Chandelie" index="20"]
+transform = Transform3D(0.706749, 0, 0.707465, 0, 1, 0, -0.707465, 0, 0.706749, -0.2883, 0.107511, -0.000228105)
+shape = SubResource("BoxShape3D_mvujo")
+
+[node name="Lantern_Frame_2_Leg_1" type="CollisionShape3D" parent="Chandelie" index="21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0492192, -0.0451908, -0.239773)
+shape = SubResource("BoxShape3D_u5ypg")
+
+[node name="Lantern_Frame_2_Leg_2" type="CollisionShape3D" parent="Chandelie" index="22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.527614, -0.0451908, -0.239773)
+shape = SubResource("BoxShape3D_u5ypg")
+
+[node name="Lantern_Frame_2_Leg_3" type="CollisionShape3D" parent="Chandelie" index="23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0492192, -0.0451908, 0.238365)
+shape = SubResource("BoxShape3D_u5ypg")
+
+[node name="Lantern_Frame_2_Leg_4" type="CollisionShape3D" parent="Chandelie" index="24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.527614, -0.0451908, 0.238365)
+shape = SubResource("BoxShape3D_u5ypg")
+
+[node name="Lantern_2_Cloth_1" type="CollisionShape3D" parent="Chandelie" index="25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.289, -0.046, 0.252)
+shape = SubResource("BoxShape3D_pw47t")
+
+[node name="Lantern_2_Cloth_2" type="CollisionShape3D" parent="Chandelie" index="26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.289, -0.046, -0.252)
+shape = SubResource("BoxShape3D_pw47t")
+
+[node name="Lantern_2_Cloth_3" type="CollisionShape3D" parent="Chandelie" index="27"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.540301, -0.046, 7.0507e-09)
+shape = SubResource("BoxShape3D_pw47t")
+
+[node name="Lantern_2_Cloth_4" type="CollisionShape3D" parent="Chandelie" index="28"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0372537, -0.046, 4.53489e-09)
+shape = SubResource("BoxShape3D_pw47t")
+
+[node name="Light_2" type="CollisionShape3D" parent="Chandelie" index="29"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.287337, 0.0493293, 4.53489e-09)
+shape = SubResource("CylinderShape3D_bbmj2")
+
+[node name="Joint_1" type="ConeTwistJoint3D" parent="Chandelie" index="30"]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.160751, 0.38911, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../Wire_1/PhysicalBoneSimulator3D/Physical Bone Bone_002")
+twist_span = 0.174533
+
+[node name="Joint_2" type="ConeTwistJoint3D" parent="Chandelie" index="31"]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.160751, 0.38911, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../Wire_2/PhysicalBoneSimulator3D/Physical Bone Bone_001_3")
+twist_span = 0.174533
+
+[node name="Residential_Light" type="SpotLight3D" parent="Chandelie" index="32"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.0373585, 1.57589e-08)
+light_intensity_lumens = 1800.0
+light_temperature = 2900.0
+shadow_enabled = true
+shadow_caster_mask = 4294967291
+distance_fade_enabled = true
+distance_fade_begin = 300.0
+spot_range = 15.0
+spot_attenuation = 2.0
+spot_angle = 80.0
+spot_angle_attenuation = 16.0
+
+[node name="Wire_1" parent="." index="2"]
+physics_interpolation_mode = 1
+
+[node name="Wire_Mesh_1" parent="Wire_1" index="0"]
+gi_mode = 2
+
+[node name="PhysicalBoneSimulator3D" type="PhysicalBoneSimulator3D" parent="Wire_1" index="1"]
+script = ExtResource("2_c7j53")
+
+[node name="Physical Bone Bone" type="PhysicalBone3D" parent="Wire_1/PhysicalBoneSimulator3D" index="0"]
+transform = Transform3D(3.57628e-07, -1, -4.89302e-14, -2.10641e-14, -4.89302e-14, 1, -1, -3.57628e-07, -2.10641e-14, 0, -0.126496, -1.00993e-10)
+collision_layer = 0
+collision_mask = 0
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.88189e-16, -6.18948e-15, 0.126496)
+body_offset = Transform3D(1, 8.52651e-14, 2.10641e-14, 2.10641e-14, 4.89302e-14, -1, -8.52651e-14, 1, 4.89302e-14, -3.55271e-15, 0.126496, 0)
+mass = 1.33
+bone_name = "Bone"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire_1/PhysicalBoneSimulator3D/Physical Bone Bone" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_c7j53")
+
+[node name="Physical Bone Bone_001" type="PhysicalBone3D" parent="Wire_1/PhysicalBoneSimulator3D" index="1"]
+transform = Transform3D(3.57628e-07, -1, -4.89303e-14, -2.10642e-14, -4.89303e-14, 1, -1, -3.57628e-07, -2.10642e-14, 0, -0.379489, -1.00988e-10)
+collision_layer = 0
+collision_mask = 0
+joint_type = 2
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.88177e-16, -6.18949e-15, 0.126496)
+body_offset = Transform3D(1, 8.52651e-14, 2.10642e-14, 2.10642e-14, 4.89303e-14, -1, -8.52651e-14, 1, 4.89303e-14, -3.55271e-15, 0.126496, 0)
+mass = 1.33
+bone_name = "Bone.001"
+joint_constraints/swing_span = 45.0
+joint_constraints/twist_span = 10.0
+joint_constraints/bias = 0.3
+joint_constraints/softness = 0.8
+joint_constraints/relaxation = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire_1/PhysicalBoneSimulator3D/Physical Bone Bone_001" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_c7j53")
+
+[node name="Physical Bone Bone_002" type="PhysicalBone3D" parent="Wire_1/PhysicalBoneSimulator3D" index="2"]
+transform = Transform3D(3.57628e-07, -1, -4.89303e-14, -2.10642e-14, -4.89303e-14, 1, -1, -3.57628e-07, -2.10642e-14, 0, -0.632481, -1.00982e-10)
+collision_layer = 0
+collision_mask = 0
+joint_type = 2
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.88176e-16, -6.18949e-15, 0.126496)
+body_offset = Transform3D(1, 8.52651e-14, 2.10642e-14, 2.10642e-14, 4.89303e-14, -1, -8.52651e-14, 1, 4.89303e-14, -3.55271e-15, 0.126496, 0)
+mass = 1.33
+bone_name = "Bone.002"
+joint_constraints/swing_span = 45.0
+joint_constraints/twist_span = 10.0
+joint_constraints/bias = 0.3
+joint_constraints/softness = 0.8
+joint_constraints/relaxation = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire_1/PhysicalBoneSimulator3D/Physical Bone Bone_002" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_c7j53")
+
+[node name="Wire_2" parent="." index="3"]
+physics_interpolation_mode = 1
+
+[node name="Wire_Mesh_2" parent="Wire_2" index="0"]
+gi_mode = 2
+
+[node name="PhysicalBoneSimulator3D" type="PhysicalBoneSimulator3D" parent="Wire_2" index="1"]
+script = ExtResource("2_c7j53")
+
+[node name="Physical Bone Bone_2" type="PhysicalBone3D" parent="Wire_2/PhysicalBoneSimulator3D" index="0"]
+transform = Transform3D(3.57628e-07, -1, -4.89302e-14, 2.10641e-14, -4.89302e-14, 1, -1, -3.57628e-07, 2.10641e-14, 0, -0.126496, -1.01e-10)
+collision_layer = 0
+collision_mask = 0
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.88189e-16, -6.18948e-15, 0.126496)
+body_offset = Transform3D(1, 8.52651e-14, -2.10641e-14, -2.10641e-14, 4.89302e-14, -1, -8.52651e-14, 1, 4.89302e-14, 3.55271e-15, 0.126496, 0)
+mass = 1.33
+bone_name = "Bone_2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire_2/PhysicalBoneSimulator3D/Physical Bone Bone_2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_c7j53")
+
+[node name="Physical Bone Bone_001_2" type="PhysicalBone3D" parent="Wire_2/PhysicalBoneSimulator3D" index="1"]
+transform = Transform3D(3.57628e-07, -1, -4.89303e-14, 2.10642e-14, -4.89303e-14, 1, -1, -3.57628e-07, 2.10642e-14, 0, -0.379489, -1.01002e-10)
+collision_layer = 0
+collision_mask = 0
+joint_type = 2
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.66454e-15, -6.18949e-15, 0.126496)
+body_offset = Transform3D(1, 8.52651e-14, -2.10642e-14, -2.10642e-14, 4.89303e-14, -1, -8.52651e-14, 1, 4.89303e-14, 0, 0.126496, 0)
+mass = 1.33
+bone_name = "Bone.001_2"
+joint_constraints/swing_span = 45.0
+joint_constraints/twist_span = 10.0
+joint_constraints/bias = 0.3
+joint_constraints/softness = 0.8
+joint_constraints/relaxation = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire_2/PhysicalBoneSimulator3D/Physical Bone Bone_001_2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_c7j53")
+
+[node name="Physical Bone Bone_001_3" type="PhysicalBone3D" parent="Wire_2/PhysicalBoneSimulator3D" index="2"]
+transform = Transform3D(3.57628e-07, -1, -4.89303e-14, 2.10642e-14, -4.89303e-14, 1, -1, -3.57628e-07, 2.10642e-14, 0, -0.632481, -1.01007e-10)
+collision_layer = 0
+collision_mask = 0
+joint_type = 2
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.66454e-15, -6.18949e-15, 0.126496)
+body_offset = Transform3D(1, 8.52651e-14, -2.10642e-14, -2.10642e-14, 4.89303e-14, -1, -8.52651e-14, 1, 4.89303e-14, 0, 0.126496, 0)
+mass = 1.33
+bone_name = "Bone.002_2"
+joint_constraints/swing_span = 45.0
+joint_constraints/twist_span = 10.0
+joint_constraints/bias = 0.3
+joint_constraints/softness = 0.8
+joint_constraints/relaxation = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire_2/PhysicalBoneSimulator3D/Physical Bone Bone_001_3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_c7j53")
+
+[node name="Joint_1" type="ConeTwistJoint3D" parent="." index="5"]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.160751, -0.0538425, 0)
+node_a = NodePath("..")
+node_b = NodePath("../Wire_1/PhysicalBoneSimulator3D/Physical Bone Bone")
+twist_span = 0.174533
+
+[node name="Joint_2" type="ConeTwistJoint3D" parent="." index="6"]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.160751, -0.0538426, 0)
+node_a = NodePath("..")
+node_b = NodePath("../Wire_2/PhysicalBoneSimulator3D/Physical Bone Bone_2")
+twist_span = 0.174533

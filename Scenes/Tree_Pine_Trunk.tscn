@@ -4,5 +4,5 @@
 
 [node name="Tree_Pine_Trunk" instance=ExtResource("1_tefpg")]
 
-[node name="Tree_Pine" parent="." index="0"]
+[node name="Trunk" parent="." index="0"]
 visibility_range_end = 225.0

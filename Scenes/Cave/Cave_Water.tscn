@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccuw775sn14qv"]
+
+[ext_resource type="PackedScene" uid="uid://b88t6ak85g5bu" path="res://Models/Cave/Cave_Water.glb" id="1_rx0ep"]
+
+[node name="Cave_Water2" instance=ExtResource("1_rx0ep")]

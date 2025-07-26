@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://wrqmgmu8uada"]
+
+[ext_resource type="Texture2D" uid="uid://fyfcpu2an0gt" path="res://Textures/Concrete/Concrete_Albedo.png" id="1_7ctcq"]
+[ext_resource type="Texture2D" uid="uid://dedfcunjtfph8" path="res://Textures/Concrete/Concrete_Metal_Rough_Occ.png" id="2_716ys"]
+[ext_resource type="Texture2D" uid="uid://wn1cygj87qb6" path="res://Textures/Concrete/Concrete_Normal.png" id="3_lpe0f"]
+
+[resource]
+albedo_texture = ExtResource("1_7ctcq")
+metallic = 1.0
+metallic_texture = ExtResource("2_716ys")
+roughness_texture = ExtResource("2_716ys")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_lpe0f")
+uv1_scale = Vector3(0.8, 0.8, 0.8)
+texture_filter = 5

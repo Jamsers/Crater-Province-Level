@@ -517,7 +517,7 @@ func grab_physics_gun():
 	var rigidbodies_detected = []
 	
 	for node in physics_object_collector.get_overlapping_bodies():
-		if node is RigidBody3D:
+		if node is RigidBody3D and node.freeze == false:
 			rigidbodies_detected.append(node)
 	
 	if physics_gun_raycast.is_colliding():

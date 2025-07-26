@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b28lwx8gq3ujg"]
+
+[ext_resource type="PackedScene" uid="uid://bcv6wucnmjqe" path="res://Models/Building/Building_Window_Panes.glb" id="1_pp2ck"]
+
+[node name="Building_Window_Panes" instance=ExtResource("1_pp2ck")]

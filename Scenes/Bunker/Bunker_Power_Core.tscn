@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b83lmwvtapq3a"]
+
+[ext_resource type="PackedScene" uid="uid://e6ddber5lfwn" path="res://Models/Bunker/Bunker_Power_Core.glb" id="1_mnofj"]
+
+[node name="Bunker_Power_Core" instance=ExtResource("1_mnofj")]

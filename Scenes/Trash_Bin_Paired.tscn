@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk76wpc36inyl"]
+
+[ext_resource type="PackedScene" uid="uid://hq6dlotq7cv8" path="res://Models/Trash_Bin_Paired.glb" id="1_3i61o"]
+
+[node name="Trash_Bin_Paired" instance=ExtResource("1_3i61o")]
