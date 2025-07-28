@@ -1,6 +1,6 @@
 # Crater-Province-Level
 
-A level meant to test and showcase Godot features and use cases for big and open worlds.
+A level meant to test and showcase [Godot](https://godotengine.org/) features and use cases for big and open worlds.
 
 ![day](https://github.com/user-attachments/assets/4f9af73d-4d0e-434f-825a-a685d9bc6c13)
 
@@ -16,16 +16,7 @@ Currently in active development, but development happens on a private Azure DevO
 1. Download [Godot 4.5](https://godotengine.org/releases/4.5/) and open the repository folder with Godot.
 1. To run the project, click the Run Project button, found on the upper right corner of Godot's interface.
 
-[![Godot 4.5](https://img.shields.io/badge/Godot-4.5-478cbf?style=for-the-badge&logo=godot-engine&logoColor=white)](https://godotengine.org/releases/4.4/)
-
-> [!NOTE]  
-> When opening the project for the first time, you may notice hundreds of modified `*.res` files in your source control. This is a quirk of the Godot importer and these changes can be safely discarded once project has already been opened once.
-
-## Releases
-
-You can download builds for Windows, Mac, and Linux from the releases page.
-
-[![Crater-Province-Level GitHub release](https://img.shields.io/github/v/release/Jamsers/Crater-Province-Level?style=for-the-badge)](https://github.com/Jamsers/Crater-Province-Level/releases/latest)
+[![Godot 4.5](https://img.shields.io/badge/Godot-4.5-478cbf?style=for-the-badge&logo=godot-engine&logoColor=white)](https://godotengine.org/releases/4.5/)
 
 ## Controls
 
