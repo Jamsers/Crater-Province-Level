@@ -1,0 +1,37 @@
+ATTRIBUTION
+
+This document details attribution for content within this project.
+
+---------------------------------------------------------------------------------------------------------
+
+1. PROJECT CONTENT
+
+Project is "Crater-Province-Level"
+  By John James Gutib (https://github.com/Jamsers)
+  Code:
+    Licensed under MIT (LICENSE-CODE)
+  Assets:
+    Licensed under CC BY 4.0 (LICENSE-ASSETS)
+
+---------------------------------------------------------------------------------------------------------
+
+2. EXTERNAL CONTENT
+
+addons/SphynxMotionBlurToolkit/ is:
+  "JFA_driven_motion_blur_addon" (https://github.com/sphynx-owner/JFA_driven_motion_blur_addon)
+    By Lavie Shaked Golan (https://github.com/sphynx-owner)
+    Licensed under MIT (https://github.com/sphynx-owner/JFA_driven_motion_blur_addon/blob/master/LICENSE)
+
+addons/simplegrasstextured/ is:
+  "SimpleGrassTextured" (https://github.com/IcterusGames/SimpleGrassTextured)
+    By IcterusGames (https://github.com/IcterusGames)
+    Licensed under MIT (https://github.com/IcterusGames/SimpleGrassTextured/blob/main/LICENSE)
+    This asset has its own internal attributions. For details, see its source.
+
+Godot-Human-For-Scale/ is:
+  "Godot-Human-For-Scale" (https://github.com/Jamsers/Godot-Human-For-Scale)
+    By John James Gutib (https://github.com/Jamsers)
+    Licensed under MIT (https://github.com/Jamsers/Godot-Human-For-Scale/blob/main/LICENSE)
+    This asset has its own internal attributions. For details, see its source.
+
+---------------------------------------------------------------------------------------------------------
