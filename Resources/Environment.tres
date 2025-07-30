@@ -21,7 +21,6 @@ ssao_sharpness = 1.0
 ssil_radius = 2.3
 ssil_intensity = 1.5
 ssil_sharpness = 1.0
-sdfgi_enabled = true
 sdfgi_use_occlusion = true
 sdfgi_bounce_feedback = 1.0
 sdfgi_cascades = 7
