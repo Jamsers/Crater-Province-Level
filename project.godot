@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Crater-Province-Demo"
 config/version="0.1"
-run/main_scene="res://Main.tscn"
+run/main_scene="uid://c3jnsn7h4cmew"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Textures/icon.png"
 

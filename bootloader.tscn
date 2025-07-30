@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3jnsn7h4cmew"]
+
+[ext_resource type="Script" uid="uid://kkagx4vdapqe" path="res://load_heavy_shit.gd" id="1_jhfp3"]
+[ext_resource type="PackedScene" uid="uid://c77e1yn8ifgkx" path="res://Main.tscn" id="2_kabrm"]
+
+[node name="Bootloader" type="Node3D"]
+script = ExtResource("1_jhfp3")
+heavy_shit = ExtResource("2_kabrm")
